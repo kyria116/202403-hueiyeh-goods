@@ -1,0 +1,152 @@
+@import "base/mixin";
+@import "base/variable";
+
+$product_color_1: #F9EDE2;
+$product_color_2: #797979;
+$product_color_3: #94693C;
+$product_color_4: #E4E4E4;
+$product_color_5: #E30400;
+
+*{
+    color: #000;
+}
+main{
+    padding: 106px 0 150px;
+    background-color: $product_color_1;
+    @include mediaquery(null, 767px){
+        padding: 42px 0 176px;
+    }
+}
+
+.product_sort{
+    margin-bottom: 24px;
+    @include mediaquery(null, 767px){
+        margin-bottom: 30px;
+    }
+    select{
+        appearance: none;
+        width: 300px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $product_color_4;
+        padding: 13px 20px 15px;
+        line-height: 1;
+        background: #fff url('../images/common/select.jpg') center right 16px / 16px 7px no-repeat;
+        @include mediaquery(null, 767px){
+            width: 166px;
+            height: 54px;
+            font-size: 15px;
+            border-radius: 3px;
+            padding: 15px 22px 15px;
+            background: #fff url('../images/common/select.jpg') center right 20px / 15px 7px no-repeat;
+        }
+    }
+}
+.productBox{
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    li{
+        max-width: 376px;
+        @include mediaquery(992px, null){
+            width: calc((100% - 102px) / 4);
+            margin: 0 34px 57px 0;
+            &:nth-child(4n){
+                margin-right: 0;
+            }
+        }
+        @include mediaquery(992px, 1400px){
+            width: calc((100% - 42px) / 4);
+            margin: 0 14px 57px 0;
+        }
+        @include mediaquery(768px, 991px){
+            width: calc((100% - 30px) / 2);
+            margin: 0 30px 52px 0;
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
+        @include mediaquery(null, 767px){
+            width: calc((100% - 10px) / 2);
+            margin: 0 10px 52px 0;
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
+        a{
+            position: relative;
+            display: block;
+        }
+        .icon{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            max-width: 60px;
+            @include mediaquery(null, 767px){
+                top: 5px;
+                left: 5px;
+                max-width: 44px;
+            }
+        }
+        .img{
+            border: 1px solid $product_color_4;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 12px;
+            @include mediaquery(null, 767px){
+                margin-bottom: 10px;
+            }
+            img{
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 1.1011;
+            }
+        }
+        .proId{
+            font-size: 16px;
+            color: $product_color_2;
+            margin-bottom: 4px;
+            @include mediaquery(null, 767px){
+                font-size: 15px;
+                margin-bottom: 2px;
+            }
+        }
+        .proName{
+            margin-bottom: 2px;
+            span{
+                font-family: $font-tw;
+                font-size: 22px;
+                line-height: 1.45;
+                @include clamp(1.45, 2);
+                height: auto;
+                @include mediaquery(null, 767px){
+                    font-size: 18px;
+                }
+            }
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            .originalPrice{
+                font-size: 16px;
+                color: $product_color_2;
+                @include mediaquery(null, 767px){
+                    font-size: 15px;
+                }
+            }
+            i{
+                color: $product_color_2;
+            }
+            .specialOffer{
+                font-size: 20px;
+                color: $product_color_3;
+                @include mediaquery(null, 767px){
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
