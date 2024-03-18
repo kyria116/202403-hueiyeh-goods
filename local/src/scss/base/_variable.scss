@@ -1,19 +1,15 @@
-$font: 'Roboto', 'Noto Sans TC', sans-serif;
-$font-tw: 'Noto Sans TC', sans-serif;
-$font-en: 'Shippori Mincho', sans-serif;
+$font: 'Inter', 'Noto Sans TC', sans-serif;
 
 $maxwidth: 1920px;
-$headerH-pc: 87px;
-$headerH-mo: 70px;
+$headerH-pc: 88px;
+$headerH-mo: 130px;
 //----------- color ------------//
 
-$primary-color: #221e1f;
-$secondary-color: #749294;
-$hover-color: #9e8470;
-$tag-color: #cdb0a7;
-$line-color: #dadada;
-$gray-color: #868686;
-
+$primary-color: #94693C; 
+$secondary-color: #F9EDE2;
+$hover-color: #CF8E55;
+$select-color: #BFAEA4;
+$line-color:#DFCBB9;
 
 //----------- RWD break ------------//
 

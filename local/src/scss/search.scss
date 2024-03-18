@@ -136,7 +136,6 @@ select{
     .title{
         font-size: 26px;
         color: $primary-color;
-        font-family: $font-tw;
         margin-bottom: 7px;
         @include mediaquery(null, 767px){
             font-size: 25px;
@@ -154,7 +153,6 @@ select{
             font-size: 16px;
             font-weight: 500;
             color: $primary-color;
-            font-family: $font-tw;
             @include clamp(1.875, 1);
             @include mediaquery(null, 767px){
                 @include clamp(1.6, 3);

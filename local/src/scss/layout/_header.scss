@@ -212,7 +212,6 @@ header{
     >li{
         position: relative;
         font-size: 16px;
-        font-family: $font-tw;
         color: $primary-color;
         letter-spacing: 1px;
         @include mediaquery(1501px, null){
@@ -446,7 +445,6 @@ header{
             font-size: 16px;
             letter-spacing: 1px;
             color: $secondary-color;
-            font-family: $font-tw;
             @include mediaquery(992px, 1365px){
                 display: none;
             }
@@ -480,76 +478,6 @@ header{
                 .txt::after{
                     opacity: 1;
                 }
-            }
-        }
-    }
-}
-.langBox{
-    display: flex;
-    align-items: center;
-    padding: 0 11px;
-    margin-left: 10px;
-    @include mediaquery(992px, 1500px){
-        margin-left: 0px;
-    }
-    @include mediaquery(null, 991px){
-        padding: 0 10px 2px;
-    }
-    li{
-        position: relative;
-        font-size: 16px;
-        letter-spacing: 1px;
-        padding: 10px;
-        line-height: 20px;
-        color: $primary-color;
-        transition: color 0.75s;
-        @include mediaquery(null, 767px){
-            letter-spacing: 0;
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            bottom: 2px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1.2em;
-            height: 2px;
-            background-color: $hover-color;
-            opacity: 0;
-            transition: opacity 0.75s;
-            @include mediaquery(null, 991px){
-                bottom: 6px;
-                width: 0.8em;
-                height: 1px;
-            }
-        }
-        &.active{
-            color: $hover-color;
-            &::after{
-                opacity: 1;
-            }
-        }
-        &:hover{
-            @include mediaquery(768px, null){
-                color: $hover-color;
-                &::after{
-                    opacity: 1;
-                }
-            }
-        }
-    }
-    li + li{
-        &::before{
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 1px;
-            height: 16px;
-            background-color: $primary-color;
-            @include mediaquery(null, 991px){
-                height: 14px;
             }
         }
     }

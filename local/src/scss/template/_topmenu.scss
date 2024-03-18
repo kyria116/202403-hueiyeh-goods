@@ -352,7 +352,6 @@
             display: block;
             padding: 0 38px;
             font-size: 18px;
-            font-family: $font-tw;
             transition: 0.75s;
             @include mediaquery(null, 767px){
                 padding: 0 26px;
