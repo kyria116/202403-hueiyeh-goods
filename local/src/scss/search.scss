@@ -1,0 +1,169 @@
+@import "base/mixin";
+@import "base/variable";
+
+.searchBar{
+    display: flex;
+    align-items: flex-end;
+    padding: 150px 0 80px;
+    @include mediaquery(null, 767px){
+        padding: 42px 0 26px;
+    }
+    input{
+        flex: 1;
+        margin-right: 32px;
+        border: 0;
+        border-bottom: 1px solid $line-color;
+        font-size: 16px;
+        color: $primary-color;
+        line-height: 2.4;
+        @include mediaquery(null, 767px){
+            line-height: 2;
+            font-size: 15px;
+        }
+    }
+    .searchBtn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 150px;
+        height: 49px;
+        line-height: 49px;
+        border-radius: 24px;
+        border: 1px solid #749294;
+        background-color: #749294;
+        transition: 0.75s;
+        margin-bottom: 7px;
+        @include mediaquery(null, 767px){
+            flex: 0 0 100px;
+            height: 35px;
+            line-height: 40px;
+            border-radius: 17px;
+            margin-bottom: 0;
+        }
+        &:hover{
+            @include mediaquery(768px, null){
+                background-color: #fff;
+                .img::after{
+                    opacity: 1;
+                }
+                .txt{
+                    color: #749294;
+                }
+            }
+        }
+        .img{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-bottom: 2px;
+            @include mediaquery(null, 767px){
+                width: 13px;
+                height: 13px;
+                margin-bottom: 0px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/searchIcon_w.png') center / contain no-repeat;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/searchIcon_b.png') center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+        .txt{
+            font-size: 16px;
+            color: #fff;
+            transition: color 0.75s;
+            margin-left: 10px;
+            @include mediaquery(null, 767px){
+                font-size: 15px;
+                margin-left: 6px;
+            }
+        }
+    }
+}
+select{
+    appearance: none;
+    display: block;
+    border: none;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 4px;
+    padding: 0 24px;
+    background: $hover-color url('../images/common/select.png') center right 24px / 12px 8px no-repeat;
+}
+.searchItems{
+    padding-bottom: 117px;
+    @include mediaquery(null, 767px){
+        padding-bottom: 48px;
+    }
+    li{
+        padding: 10px 0;
+        border-bottom: 1px solid $line-color;
+        &:last-child{
+            border-bottom: none;
+        }
+        a{
+            display: block;
+            border-radius: 16px;
+            padding: 14px 22px 16px;
+            transition: 0.75s;
+            @include mediaquery(null, 767px){
+                padding: 6px 0 16px;
+            }
+            &:hover{
+                @include mediaquery(768px, null){
+                    background-color: #fff2ee;
+                }
+            }
+        }
+    }
+    .title{
+        font-size: 26px;
+        color: $primary-color;
+        font-family: $font-tw;
+        margin-bottom: 7px;
+        @include mediaquery(null, 767px){
+            font-size: 25px;
+            letter-spacing: 0;
+        }
+    }
+    .link{
+        font-size: 14px;
+        color: #a1a1a1;
+        font-weight: 300;
+        font-family: 'Outfit', sans-serif;
+    }
+    .intro{
+        span{
+            font-size: 16px;
+            font-weight: 500;
+            color: $primary-color;
+            font-family: $font-tw;
+            @include clamp(1.875, 1);
+            @include mediaquery(null, 767px){
+                @include clamp(1.6, 3);
+                font-size: 15px;
+            }
+        }
+    }
+}
+mark{
+    color: #9e8470;
+    background-color: transparent;
+}

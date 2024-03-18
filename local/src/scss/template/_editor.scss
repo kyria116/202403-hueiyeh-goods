@@ -1,0 +1,116 @@
+.editor_content {
+    ol {
+        list-style-type: decimal;
+        padding-left: 10px;
+    }
+    ul {
+        list-style-type: initial;
+        padding-left: 20px;
+    }
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+    b,
+    strong {
+        font-weight: bold;
+        font-size: inherit;
+    }
+    em {
+        font-style: italic;
+    }
+    a {
+        text-decoration: underline;
+    }
+    iframe {
+        max-width: 100%;
+    }
+		table{
+			border-color:rgba(0,0,0,0);
+			border-collapse: collapse;  //陰影
+		}
+		p{
+        margin-bottom: 1em;
+		}
+		table p{
+        margin-bottom: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: inherit;
+    }
+    blockquote {
+        font-style: italic;
+        padding: 2px 20px 0 8px;
+        margin-left: 40px;
+        border-left: 5px solid #ccc;
+    }
+    td,
+    th,
+    tr {
+        margin: initial;
+    }
+}
+
+//依照專案客製
+.editor_box{
+    margin: auto;
+    line-height: 1.875;
+    font-size: pxToEm(16);
+    color: $primary-color;
+    @media (max-width: 767px) {
+        line-height: 1.6;
+        font-size: pxToEm(15);
+    }
+    ul,
+    ol {
+        padding-left: 40px;
+    }
+    ul{
+        padding-left: 0px;
+        li{
+            position: relative;
+            padding-left: 18px;
+            @media (max-width: 767px) {
+                padding-left: 14px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 7px;
+                height: 7px;
+                border-radius: 50%;
+                background-color: #cdb0a7;
+                @media (max-width: 767px) {
+                    top: 8px;
+                }
+            }
+        }
+    }
+    img {
+        max-width: 100%;
+        height: auto !important;
+    }
+    //有需要再加
+    .tbcolor{
+        border-collapse: collapse;
+    }
+}
+
+.mo_use {
+    display: none;
+    @media (max-width: 767px) {
+        display: block;
+    }
+}
+.pc_use {
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

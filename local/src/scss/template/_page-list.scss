@@ -1,0 +1,133 @@
+
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include font-size(pxToRem(17),pxToRem(16));
+    font-weight: 500;
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    dt,
+    dd {
+        vertical-align: baseline;
+        display: inline-block;
+        text-align: center;
+        a {
+            display: flex;
+            align-items: center;   
+            justify-content: center;
+            text-decoration: none;
+            color: #000;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            transition: 0.75s;
+            margin: 0 3.5px;
+            font-family: $font-tw;
+            @include mediaquery(null, 767px) {
+                margin: 0 4px;
+            }
+        }
+    }
+
+    dd {
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.75s;
+        @media (min-width: 768px) {
+            &:hover {
+                a{
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    dd.active {
+        a{
+            position: relative;
+            line-height: 1;
+            &::after{
+                content: "";
+                position: absolute; 
+                z-index: -1;
+                top: 55%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                border: 1px solid $secondary-color;
+                background-color: #fff;
+            }
+        }
+    }
+    dt.ltbn a, dt.rtbn a{
+        position: relative;
+        z-index: 2;
+    }
+    dt.ltbn{
+        position: relative;
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        @include mediaquery(null, 767px){
+            width: 30px;
+            height: 30px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            background: url('../images/page_left.png') center / contain no-repeat;
+            transition: opacity 0.75s;
+            width: 5px;
+            height: 8px;
+            @include mediaquery(null, 767px) {
+                width: 7px;
+                height: 11px;
+                left: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    dt.rtbn{
+        position: relative;
+        cursor: pointer;
+        width: 46px;
+        height: 46px;
+        @include mediaquery(null, 767px){
+            width: 30px;
+            height: 30px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            width: 5px;
+            height: 8px;
+            background: url('../images/page_right.png') center / contain no-repeat;
+            transition: opacity 0.75s;
+            @include mediaquery(null, 767px) {
+                width: 7px;
+                height: 11px;
+                left: auto;
+                right: 0;
+                transform: translate(0, -50%);
+            }
+        }
+    }
+    
+    .nopage {
+        opacity: 0.2;
+        pointer-events: none;
+    }
+}
+
+

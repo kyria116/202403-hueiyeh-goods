@@ -1,0 +1,256 @@
+html, body, *{
+    font-family: $font;
+    font-weight: 400;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    &.loading {
+        opacity: 1;
+        visibility: visible;
+    }
+    .asj{
+        opacity: 0;
+    }
+}
+.wrap{
+    overflow: hidden;
+}
+html, body {
+    position: relative;
+    overflow: hidden auto;
+}
+.porel{
+    position: relative;
+}
+.center{
+    text-align: center;
+}
+//---------通用設定--------
+::selection {
+    background-color: $secondary-color;
+    color: #fff;
+}
+img {
+    max-width: 100%;
+    //針對圖片不讓使用者反白
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+.mo {
+    display: none;
+    @include mediaquery(null, 767px) {
+        display: block;
+    }
+}
+.pc {
+    display: none;
+    @include mediaquery(768px, null) {
+        display: block;
+    }
+}
+.mo_991 {
+    display: none;
+    @include mediaquery(null, 991px) {
+        display: block;
+    }
+}
+.pc_991 {
+    display: none;
+    @include mediaquery(992px, null) {
+        display: block;
+    }
+}
+a,
+a:hover {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+}
+*:focus {
+    outline: none;
+}
+
+// ---------- 內頁通吃 ------------
+
+// 容器寬
+.container{
+    margin: 0 auto;
+    max-width: 88%;
+    width: 1168px;
+    @include mediaquery(null, 991px) {
+        max-width: 100%;
+        padding: 0 48px;
+    }
+    @include mediaquery(null, 767px) {
+        padding: 0 24px;
+    }
+}
+
+// 文字標題
+.txtBox{
+    .title_en{
+        font-family: $font-en;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: $hover-color;
+        text-transform: uppercase;
+        margin-bottom: 3px;
+        @include mediaquery(null, 767px) {
+            font-size: 16px;
+            margin-bottom: 1px;
+        }
+    }
+    .title_tw{
+        font-family: $font-en;
+        font-size: 40px;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+        color: $hover-color;
+        margin-bottom: 30px;
+        @include mediaquery(null, 767px) {
+            font-size: 27px;
+            margin-bottom: 22px;
+        }
+    }
+    .intro{
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        color: $primary-color;
+        line-height: 1.875;
+        margin-bottom: 36px;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 29px;
+        }
+        span{
+            @include clamp(1.875, 10);
+            @include mediaquery(null, 767px) {
+                @include clamp(1.6, 10);
+            }
+        }
+    }
+}
+
+// 按鈕
+.btnBox{
+    .btn_blue{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 24px;
+        background-color: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: #fff;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        transition: all 0.75s;
+        @include mediaquery(null, 767px) {
+            width: 120px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 20px;
+            font-size: 15px;
+        }
+        &:hover{
+            @include mediaquery(768px, null) {
+                background-color: #fff;
+                color: $secondary-color;
+                .arrow::after{
+                    opacity: 1;
+                }
+            }
+        }
+        .arrow{
+            position: relative;
+            width: 5px;
+            height: 8px;
+            margin-left: 12px;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/arrow_w.png') center / contain no-repeat;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/arrow_bt.png') center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+    }
+}
+.kv_banner{
+    position: relative;
+    font-family: $font-en;
+    width: 100%;
+    height: 420px;
+    @include mediaquery(768px, 991px) {
+        height: 360px;
+    }
+    @include mediaquery(null, 767px) {
+        height: auto;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: left center;
+    }
+    .txt{
+        position: absolute;
+        top: calc((100% + 87px) / 2);
+        left: 7.3%;
+        transform: translateY(-50%);
+        color: #fff;
+        @include mediaquery(null, 991px) {
+            top: calc((100% + 70px) / 2);
+            left: 48px;
+        }
+        @include mediaquery(null, 767px) {
+            top: 38%;
+            left: 24px;
+            transform: translateY(0%);
+        }
+    }
+    .subtitle{
+        font-size: 20px;
+        text-transform: uppercase;
+        @include mediaquery(null, 767px) {
+            font-size: 14px;
+        }
+    }
+    .title{
+        font-size: 50px;
+        letter-spacing: 0;
+        margin-top: -6px;
+        @include mediaquery(null, 767px) {
+            font-size: 33px;
+            margin-top: -4px;
+        }
+    }
+}
+
+.privacy{
+    padding: 144px 0 142px;
+    @include mediaquery(768px, 991px) {
+        padding: 90px 0 100px;
+    }
+    @include mediaquery(null, 767px) {
+        padding: 39px 0 74px;
+    }
+}

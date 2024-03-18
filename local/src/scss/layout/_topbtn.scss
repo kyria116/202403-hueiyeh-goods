@@ -1,0 +1,306 @@
+
+.fixBoxBtn{
+    position: fixed;
+    z-index: 101;
+    right: 17px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mediaquery(null, 1440px){
+        right: 22px;
+    }
+    @include mediaquery(null, 991px){
+        right: 24px;
+        bottom: 60px;
+    }
+    &.change{
+        position: absolute;
+    }
+    .iconPhone{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 143px;
+        height: 143px;
+        border-radius: 50%;
+        background-color: $hover-color;
+        border: 1px solid #fff;
+        transition: all 0.75s;
+        margin-bottom: 20px;
+        @include mediaquery(null, 991px){
+            display: none;
+        }
+        &:hover{
+            @include mediaquery(992px, null){
+                background-color: #fff;
+                border: 1px solid $hover-color;
+                .img::after{
+                    opacity: 1;
+                }
+                .txt{
+                    color: $hover-color;
+                }
+            }
+        }
+        .img{
+            position: relative;
+            width: 42px;
+            height: 42px;
+            margin-bottom: 8px;
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/iconPhone.png') center / contain no-repeat;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/common/iconPhone_hover.png') center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+        .txt{
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            transition: color 0.75s;
+        }
+    }
+    .fixBtn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 74px;
+        height: 74px;
+        border-radius: 50%;
+        background-color: $tag-color;
+        border: 1px solid #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.5s ease;
+        @include mediaquery(null, 991px){
+            width: 60px;
+            height: 60px;
+        }
+        &:hover{
+            @include mediaquery(992px, null){
+                .img{
+                    transform: translateY(-5px);
+                }
+            }
+        }
+        &.show {
+            opacity: 1;
+            pointer-events: all;
+        }
+        .img{
+            width: 23px;
+            margin-bottom: 4px;
+            transition: transform 0.75s;
+            @include mediaquery(null, 991px){
+                width: 18px;
+            }
+        }
+        .txt{
+            font-size: 16px;
+            font-weight: 700;
+            color: #fff;
+            @include mediaquery(null, 991px){
+                font-size: 15px;
+            }
+        }
+    }
+}
+.fixBoxBtn2{
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $hover-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    @include mediaquery(992px, null){
+        display: none;
+    }
+    &.show {
+        opacity: 1;
+        pointer-events: all;
+    }
+    >a{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 50%;
+        height: 50px;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        letter-spacing: 0.05em;
+        @include mediaquery(768px, 991px){
+            height: 68px;
+            font-size: 18px;
+        }
+    }
+    a+a{
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 100%;
+            background-color: #fff;
+        }
+    }
+    .f_line{
+        position: relative;
+        width: 29px;
+        height: 29px;
+        margin-right: 8px;
+        @include mediaquery(768px, 991px){
+            width: 34px;
+            height: 34px;
+            margin-right: 12px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/common/f_line.png') center / contain no-repeat;
+        }
+    }
+    .f_serve{
+        position: relative;
+        width: 29px;
+        height: 29px;
+        margin-right: 8px;
+        @include mediaquery(768px, 991px){
+            width: 34px;
+            height: 34px;
+            margin-right: 12px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../images/common/f_serve.png') center / contain no-repeat;
+        }
+    }
+}
+.shareBar{
+    display: none !important;
+    @include mediaquery(null, 991px){
+        position: absolute;
+        top: -62px;
+    }
+    li{
+        margin-bottom: 11px;
+        @include mediaquery(null, 991px){
+            margin: 0 10px;
+        }
+        @include mediaquery(null, 575px){
+            margin: 0 4px;
+        }
+        &:last-child{
+            margin-bottom: 22px;
+            @include mediaquery(null, 991px){
+                margin: 0 10px;
+            }
+            @include mediaquery(null, 575px){
+                margin: 0 4px;
+            }
+        }
+        a{
+            position: relative;
+            display: block;
+            width: 31px;
+            height: 31px;
+            @include mediaquery(null, 991px){
+                width: 44px;
+                height: 44px;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+            &:hover{
+                @include mediaquery(992px, null){
+                    &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+            &.link{
+                &::before{
+                    background: url('../images/health/link.png') center / contain no-repeat;
+                }
+                &::after{
+                    background: url('../images/health/link_h.png') center / contain no-repeat;
+                }
+            }
+            &.fb{
+                &::before{
+                    background: url('../images/health/fb.png') center / contain no-repeat;
+                }
+                &::after{
+                    background: url('../images/health/fb_h.png') center / contain no-repeat;
+                }
+            }
+            &.ig{
+                &::before{
+                    background: url('../images/health/ig.png') center / contain no-repeat;
+                }
+                &::after{
+                    background: url('../images/health/ig_h.png') center / contain no-repeat;
+                }
+            }
+            &.line{
+                &::before{
+                    background: url('../images/health/line.png') center / contain no-repeat;
+                }
+                &::after{
+                    background: url('../images/health/line_h.png') center / contain no-repeat;
+                }
+            }
+        }
+    }
+}

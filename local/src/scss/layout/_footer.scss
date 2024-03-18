@@ -1,0 +1,360 @@
+.bgcolorfooter{
+    width: 100%;
+    height: 38px;
+    background-color: $tag-color;
+    @include mediaquery(null, 991px){
+        display: none;
+    }
+}
+.footer{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $tag-color;
+    padding: 6px 20px 38px 40px;
+    @include mediaquery(null, 1200px){
+        padding: 0 20px 38px;
+    }
+    @include mediaquery(null, 991px){
+        z-index: 99;
+        flex-direction: column;
+        align-items: baseline;
+        padding: 33px 21px 78px;
+    }
+    .footerLogo{
+        max-width: 179px;
+        margin-right: 33px;
+        @include mediaquery(null, 1200px){
+            margin-bottom: 18px;
+        }
+        @include mediaquery(null, 767px){
+            max-width: 117px;
+            margin: 0 0 10px;
+        }
+    }
+}
+.f{
+    &_left{
+        display: flex;
+        align-items: center;
+        padding-bottom: 15px;
+        @include mediaquery(null, 1200px){
+            flex-direction: column;
+            align-items: baseline;
+            padding-bottom: 0;
+        }
+        @include mediaquery(null, 991px){
+            margin-bottom: 19px;
+        }
+        ul {
+            padding-top: 5px;
+            @include mediaquery(null, 1200px){
+                padding-top: 0;
+            }
+            li{
+                margin-bottom: 8px;
+                @include mediaquery(null, 767px){
+                    margin-bottom: 9px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    color: #fff;
+                    transition: opacity 0.75s;
+                    @include mediaquery(null, 767px){
+                        font-size: 15px;
+                    }
+                    &:hover{
+                        @include mediaquery(768px, null){
+                            opacity: 0.6;
+                        }
+                    }
+                    .img{
+                        width: 22px;
+                        margin-right: 6px;
+                        @include mediaquery(null, 767px){
+                            width: 17px;
+                            margin-right: 8px;
+                        }
+                        img{
+                            display: block;
+                        }
+                    }
+                    .txt{
+                        letter-spacing: 1px;
+                        @include mediaquery(null, 767px){
+                            letter-spacing: 0.7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_right{
+        align-self: flex-end;
+        @include mediaquery(null, 991px){
+            align-self: baseline;
+        }
+    }
+    &_top{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-bottom: 8px;
+        @include mediaquery(null, 991px){
+            flex-direction: column;
+            align-items: baseline;
+        }
+        > ul{
+            display: flex;
+            align-items: center;
+            @include mediaquery(null, 991px){
+                margin-bottom: 35px;
+            }
+            > li{
+                position: relative;
+                margin-right: 12px;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: -18px;
+                    right: 0;
+                    width: 100%;
+                    height: 20px;
+                }
+                &:hover{
+                    @include mediaquery(768px, null) {
+                        .icon::after{
+                            opacity: 1;
+                        }
+                        ul{
+                            display: block;
+                        }
+                    }
+                }
+                &.open ul{
+                    display: block;
+                }
+            }
+            .icon{
+                position: relative;
+                display: block;
+                width: 31px;
+                height: 31px;
+                @include mediaquery(null, 991px){
+                    width: 25px;
+                    height: 25px;
+                }
+                &::before, &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                &::after{
+                    opacity: 0;
+                    transition: opacity 0.75s;
+                }
+                &.iconFB{
+                    &::before{
+                        background: url('../images/common/unhoverFB.png') center / contain no-repeat;
+                    }
+                    &::after{
+                        background: url('../images/common/hoverFB.png') center / contain no-repeat;
+                    }
+                }
+                &.iconLine{
+                    &::before{
+                        background: url('../images/common/unhoverLine.png') center / contain no-repeat;
+                    }
+                    &::after{
+                        background: url('../images/common/hoverLine.png') center / contain no-repeat;
+                    }
+                }
+                &.iconYT{
+                    &::before{
+                        background: url('../images/common/unhoverYT.png') center / contain no-repeat;
+                    }
+                    &::after{
+                        background: url('../images/common/hoverYT.png') center / contain no-repeat;
+                    }
+                }
+                &.iconIG{
+                    &::before{
+                        background: url('../images/common/unhoverIG.png') center / contain no-repeat;
+                    }
+                    &::after{
+                        background: url('../images/common/hoverIG.png') center / contain no-repeat;
+                    }
+                }
+                &.iconPod{
+                    &::before{
+                        background: url('../images/common/unhoverPod.png') center / contain no-repeat;
+                    }
+                    &::after{
+                        background: url('../images/common/hoverPod.png') center / contain no-repeat;
+                    }
+                }
+            }
+            ul{
+                display: none;
+                position: absolute;
+                bottom: 44px;
+                right: 0;
+                width: max-content;
+                background-color: #fff;
+                padding: 12px 0;
+                @include mediaquery(null, 991px){
+                    right: auto;
+                    left: 0;
+                    bottom: 35px;
+                }
+                li {
+                    a{
+                        display: block;
+                        padding: 0 20px;
+                        line-height: 1.84;
+                        color: $primary-color;
+                        transition: color 0.75s;
+                        @include mediaquery(null, 991px){
+                            line-height: 1.7;
+                            padding: 0 16px;
+                        }
+                        &:hover{
+                            @include mediaquery(768px, null) {
+                                color: $hover-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >div{
+            display: flex;
+            align-items: center;
+        }
+        .mailBox{
+            margin-right: 14px;
+            @include mediaquery(null, 991px){
+                margin-right: 24px;
+            }
+            a{
+                display: inline-flex;
+                align-items: center;
+                padding: 0 14px;
+                border-radius: 15px;
+                height: 30px;
+                background-color: #fff;
+                transition: background-color 0.75s;
+                @include mediaquery(null, 991px){
+                    height: 36px;
+                    border-radius: 18px;
+                }
+                &:hover{
+                    @include mediaquery(768px, null) {
+                        background-color: $hover-color;
+                        .mailIcon::after{
+                            opacity: 1;
+                        }
+                        .txt{
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+            .txt{
+                font-size: 14px;
+                color: $tag-color;
+                transition: color 0.75s;
+                @include mediaquery(null, 991px){
+                    font-size: 15px;
+                }
+            }
+            .mailIcon{
+                position: relative;
+                width: 18px;
+                height: 12px;
+                margin-left: 8px;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('../images/common/email_icon.png') center / contain no-repeat;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url('../images/common/email_icon_hover.png') center / contain no-repeat;
+                    opacity: 0;
+                    transition: opacity 0.75s;
+                }
+            }
+        }
+        .f_privacy{
+            margin-right: 18px;
+            color: #fff;
+            font-size: 14px;
+            @include mediaquery(null, 991px){
+                font-size: 15px;
+            }
+            a{
+                position: relative;
+                padding: 2px 0;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    &_bottom{
+        display: flex;
+        align-items: center;
+        color: #fff;
+        font-size: 14px;
+        .f_privacy{
+            margin-right: 18px;
+            transition: opacity 0.75s;
+            &:hover{
+                @include mediaquery(768px, null){
+                    opacity: 0.6;
+                }
+            }
+            a{
+                position: relative;
+                padding: 2px 0;
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: -3px;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #fff;
+                }
+            }
+        }
+        .copyright{
+            letter-spacing: 0.062em;
+        }
+    }
+}
