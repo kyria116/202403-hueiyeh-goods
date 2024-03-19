@@ -19,30 +19,6 @@ header {
     @include mediaquery(null, 991px) {
         height: $headerH-mo;
     }
-    .menuBg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        height: 100%;
-        border-radius: 0 0 30px 0;
-        background-color: #fff;
-        @include mediaquery(1920px, null) {
-            width: calc(100vw - ((100vw - 1920px) / 2 + 180px));
-        }
-        @include mediaquery(1600px, 1919px) {
-            width: 90.54vw;
-        }
-        @include mediaquery(992px, 1599px) {
-            width: 96vw;
-        }
-        @include mediaquery(null, 991px) {
-            width: calc(100vw - 46px);
-        }
-        @include mediaquery(null, 575px) {
-            width: calc(100vw - 23px);
-        }
-    }
     .header {
         position: absolute;
         top: 0;
@@ -55,32 +31,30 @@ header {
         align-items: center;
         justify-content: space-between;
         padding: 0 40px 0 40px;
-    }
-    .menuContain {
-        display: block;
-        position: fixed;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #f6e9e5;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.75s;
+        @include mediaquery(null, 991px) {
+            padding: 0 50px 0 25px;
+        }
     }
 }
-.container-logo {
-    display: block;
-    flex: 0 0 139px;
-    margin-right: 20px;
-    @include mediaquery(null, 1600px) {
-        flex: 0 0 117px;
-        width: 117px;
-    }
-    img {
+.logo_with_btn {
+    display: flex;
+    align-items: center;
+    .container-logo {
         display: block;
-        max-width: 100%;
+        flex: 0 0 139px;
+        margin-right: 20px;
+        @include mediaquery(null, 1600px) {
+            flex: 0 0 117px;
+            width: 117px;
+        }
+        @include mediaquery(null, 991px) {
+            flex: 0 0 100px;
+            width: 100px;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+        }
     }
 }
 .menuBox {
@@ -96,72 +70,15 @@ header {
     @include mediaquery(null, 991px) {
         position: absolute;
         z-index: 2;
-        top: 88px;
+        top: 65px;
         left: 0;
         width: 100%;
-        height: calc(100vh - 88px);
+        height: calc(100vh - 65px);
         padding: 0;
         overflow: hidden;
         opacity: 0;
         pointer-events: none;
         transition: opacity 0.75s;
-    }
-}
-.searchBox {
-    position: relative;
-    order: 3;
-    margin:0;
-    flex: 1;
-    max-width: 25px;
-    transition: max-width 0.75s;
-    &.open {
-        @include mediaquery(1366px, null) {
-            max-width: 230px;
-        }
-        @include mediaquery(992px, 1365px) {
-            max-width: 150px;
-        }
-        input {
-            @include mediaquery(992px, null) {
-                opacity: 1;
-                pointer-events: all;
-            }
-        }
-    }
-    .img {
-        display: block;
-        position: absolute;
-        z-index: 2;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 25px;
-        @include mediaquery(null, 991px) {
-            width: 17px;
-            left: 14px;
-        }
-        img {
-            display: block;
-        }
-    }
-    input {
-        font-size: 16px;
-        letter-spacing: 1px;
-        width: 100%;
-        padding: 12px 0 12px 34px;
-        border: none;
-        border-bottom: 1px solid $line-color;
-        transition: opacity 0.75s;
-        opacity: 0;
-        @include mediaquery(null, 991px) {
-            opacity: 1;
-            border: none;
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 0 20px 0 40px;
-            height: 41px;
-            line-height: 41px;
-        }
     }
 }
 .menu {
@@ -173,9 +90,8 @@ header {
         height: 100%;
     }
     @include mediaquery(null, 991px) {
-        padding: 18px 0;
         overflow-y: auto;
-        height: calc(100% - 219px - 36px);
+        height: 100%;
     }
     > li {
         position: relative;
@@ -183,6 +99,10 @@ header {
         color: #000;
         letter-spacing: 0;
         margin-right: 49px;
+        @include mediaquery(null, 991px) {
+            margin: 0;
+            width: 100px;
+        }
         &:hover {
             @include mediaquery(992px, null) {
                 .menu-list {
@@ -204,6 +124,14 @@ header {
                     }
                 }
             }
+            @include mediaquery(null, 991px) {
+                .menu-list {
+                    background-color: #fff;
+                }
+                .menu-second {
+                    opacity: 1;
+                }
+            }
         }
     }
     &-list {
@@ -216,17 +144,21 @@ header {
             transition: color 0.75s;
         }
         @include mediaquery(null, 991px) {
-            padding: 13px 46px;
-            font-size: 15px;
-            letter-spacing: 1px;
-        }
-        @include mediaquery(null, 575px) {
-            padding: 13px 24px;
+            padding: 27px 10px;
+            font-size: 16px;
+            background: #f8f8f8;
+            display: inline-block;
+            width: 100px;
         }
         span {
             position: relative;
             overflow: visible;
             display: inline-block;
+            @include mediaquery(null, 991px) {
+                &::after {
+                    display: none;
+                }
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -246,34 +178,46 @@ header {
         align-items: start;
         position: fixed;
         top: 86px;
-        left: 50%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
         padding: 26px 0 35px;
         background: #fff;
         opacity: 0;
-        pointer-events: none;
         transition: opacity 0.75s;
+        z-index: 999;
+        pointer-events: none;
+        border-bottom: 1px solid #E4E4E4;
+        @include mediaquery(null, 991px) {
+            width: calc(100% - 100px);
+            right: 0;
+            top: 65px;
+            transform: translateX(0);
+            justify-content: start;
+            flex-wrap: wrap;
+            pointer-events: all;
+            border: none;
+        }
         &:hover {
             @include mediaquery(992px, null) {
                 opacity: 1;
                 pointer-events: all;
             }
         }
-        &.active {
-            @include mediaquery(null, 991px) {
-                display: block;
-            }
-        }
         > li {
             position: relative;
-            border-bottom: 1px solid #E4E4E4;
+            @include mediaquery(null, 991px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             &:hover {
                 @include mediaquery(992px, null) {
                     > a {
                         color: $hover-color;
                     }
-                    .item{
-                        >div{
+                    .item {
+                        > div {
                             opacity: 0.4;
                         }
                     }
@@ -307,70 +251,87 @@ header {
                     }
                 }
                 @include mediaquery(null, 991px) {
-                    text-align: left;
-                    padding: 13px 46px;
+                    padding: 31.5px 46px;
                     font-size: 15px;
                     letter-spacing: 1px;
                 }
-                @include mediaquery(null, 575px) {
-                    padding: 13px 24px;
+            }
+        }
+        .item {
+            @include mediaquery(null, 991px) {
+                width: 50%;
+                > a {
+                    padding: 0 0 30px 0;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    > div {
+                        width: 60px;
+                    }
                 }
             }
-            .item{
-                >div{
+            > div {
+                > a {
                     transition: 0.75s;
                 }
             }
         }
-        .brand{
+        .campaign {
+            @include mediaquery(null, 991px) {
+                width: 100%;
+                > a {
+                    padding: 0 24px 37.5px 24px;
+                }
+            }
+        }
+        .brand {
             display: flex;
             flex-direction: column;
             position: relative;
             padding: 0 50px;
-            &::after{
+            @include mediaquery(null, 991px) {
+                padding: 0 72.5px;
+            }
+            &::after {
                 content: "";
                 position: absolute;
-                top:0;
-                right:0;
+                top: 0;
+                right: 0;
                 width: 1px;
-                height:168px;
-               background-color: #F2F2F2;
+                height: 168px;
+                background-color: #f2f2f2;
             }
-            a{
+            a {
                 font-size: 16px;
                 padding: 0;
                 text-align: start;
             }
-            ul{
+            ul {
                 margin-top: 24px;
-                li{
+                li {
                     color: #797979;
                     margin-bottom: 8px;
                     position: relative;
-                    &:last-child{
-                    margin-bottom: 0;
+                    &:last-child {
+                        margin-bottom: 0;
                     }
-                    &:hover{
-                        color:$hover-color;
-                        &::after{
+                    &:hover {
+                        color: $hover-color;
+                        &::after {
                             content: "";
                             position: absolute;
-                            top:50%;
-                            transform: translate(0,-50%);
-                            left:-25px;
+                            top: 50%;
+                            transform: translate(0, -50%);
+                            left: -25px;
                             width: 14px;
-                            height:1px;
-                           background-color: $hover-color;
+                            height: 1px;
+                            background-color: $hover-color;
                         }
                     }
                 }
             }
-            &:first-child{
-                padding: 0 50px 0 0;
-            }
-            &:last-child{
-                padding: 0 0 0 50px;
-                &::after{
+            &:last-child {
+                &::after {
                     display: none;
                 }
             }
@@ -380,16 +341,6 @@ header {
 .menu_2 {
     display: flex;
     align-items: center;
-    @include mediaquery(null, 991px) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        align-items: baseline;
-        padding: 0 24px;
-        background-color: #d2e6e7;
-    }
     li {
         display: flex;
         align-items: center;
@@ -412,78 +363,80 @@ header {
             line-height: 73px;
             border-top: 1px solid #fff;
         }
+        &:last-child {
+            margin-right: 0;
+        }
         a {
             display: inline-block;
             @include mediaquery(null, 991px) {
                 width: 100%;
             }
-            .member_icon{
+            .member_icon {
                 width: 24px;
                 height: 25px;
                 background: url("../images/common/member_icon.png") center / contain no-repeat;
                 transition: 0.75s;
-                &:hover{
+                &:hover {
                     background: url("../images/common/member_icon_hover.png") center / contain no-repeat;
                 }
             }
-            .shop_icon{
+            .shop_icon {
                 width: 28px;
                 height: 26px;
                 background: url("../images/common/shop_icon.png") center / contain no-repeat;
                 transition: 0.75s;
-                &:hover{
+                &:hover {
                     background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
                 }
             }
-            .search_icon{
+            .search_icon {
                 width: 25px;
                 height: 25px;
                 background: url("../images/common/search_icon.png") center / contain no-repeat;
                 transition: 0.75s;
-                &:hover{
+                &:hover {
                     background: url("../images/common/search_icon_hover.png") center / contain no-repeat;
                 }
             }
         }
-        .txt {
-            position: relative;
-            font-size: 16px;
-            letter-spacing: 1px;
-            color: $secondary-color;
-            @include mediaquery(992px, 1365px) {
-                display: none;
-            }
-            @include mediaquery(null, 991px) {
-                font-size: 15px;
-                color: $primary-color;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -15px;
-                left: 50%;
-                transform: translateX(-50%);
+    }
+    .searchBox {
+        position: relative;
+        &.checked {
+            // @include mediaquery(1366px, null) {
+            //     max-width: 230px;
+            // }
+            // @include mediaquery(992px, 1365px) {
+            //     max-width: 150px;
+            // }
+            input {
+                font-size: 16px;
+                letter-spacing: 1px;
                 width: 100%;
-                height: 2px;
-                background-color: $secondary-color;
-                opacity: 0;
+                padding: 12px 0 12px 34px;
+                border: none;
+                border-bottom: 1px solid $line-color;
                 transition: opacity 0.75s;
-                @include mediaquery(null, 991px) {
-                    display: none;
-                }
-            }
-        }
-        &.active {
-            .txt::after {
-                opacity: 1;
-            }
-        }
-        &:hover {
-            @include mediaquery(768px, null) {
-                .txt::after {
+                opacity: 0;
+                // @include mediaquery(null, 991px) {
+                //     opacity: 1;
+                //     border: none;
+                //     background-color: #fff;
+                //     border-radius: 20px;
+                //     padding: 0 20px 0 40px;
+                //     height: 41px;
+                //     line-height: 41px;
+                // }
+                @include mediaquery(992px, null) {
                     opacity: 1;
+                    pointer-events: all;
                 }
             }
+        }
+        input {
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     }
 }

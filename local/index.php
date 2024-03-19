@@ -12,7 +12,7 @@
     </main>
     <?php
         // include "quote/template/footer.php";
-        include "quote/template/top_btn.php";
+        // include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>    
     <script src="dist/js/top_menu.js"></script>

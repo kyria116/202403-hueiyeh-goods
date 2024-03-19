@@ -1,21 +1,20 @@
 <header>
-    <span class="menuBg"></span>
-    <span class="menuContain"></span>
     <div class="header">
-        <div>
+    <div class="logo_with_btn">
+        <div class="hamMenu mo">
+            <div class="burger menu-ham" id="menu-ham">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="closeMenu">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
             <a href="./" class="container-logo">
                 <img src="dist/images/common/logo.svg" alt="logo">
             </a>
-            <div class="hamMenu mo">
-                <div class="burger menu-ham" id="menu-ham">
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="closeMenu">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
         </div>
         <div class="menuBox">
             <nav class="container-menu">
@@ -27,9 +26,10 @@
                         <ul class="menu-second">
                             <li class="brand">
                                 <a href="javascript:;">
-                                    <span>輝葉</span>
+                                    <span class="pc">輝葉</span>
+                                    <div class="mo"><img src="dist/images/common/logo_1_mb.png"></div>
                                 </a>
-                                <ul>
+                                <ul class="pc">
                                     <li>
                                         <a href="./">按摩椅</a>
                                     </li>
@@ -46,9 +46,10 @@
                             </li>
                             <li class="brand">
                                 <a href="javascript:;">
-                                    <span>輝葉良品</span>
+                                    <span class="pc">輝葉良品</span>
+                                    <div class="mo"><img src="dist/images/common/logo_2_mb.png"></div>
                                 </a>
-                                <ul>
+                                <ul class="pc">
                                     <li>
                                         <a href="./">生活傢俱</a>
                                     </li>
@@ -65,9 +66,10 @@
                             </li>
                             <li class="brand">
                                 <a href="javascript:;">
-                                    <span>HYD</span>
+                                    <span class="pc">HYD</span>
+                                    <div class="mo"><img src="dist/images/common/logo_3_mb.png"></div>
                                 </a>
-                                <ul>
+                                <ul class="pc">
                                     <li>
                                         <a href="./">生活家電</a>
                                     </li>
@@ -82,9 +84,10 @@
                             </li>
                             <li class="brand">
                                 <a href="javascript:;">
-                                    <span>decopop</span>
+                                    <span class="pc">decopop</span>
+                                    <div class="mo"><img src="dist/images/common/logo_4_mb.png"></div>
                                 </a>
-                                <ul>
+                                <ul class="pc">
                                     <li>
                                         <a href="./">居家選物</a>
                                     </li>
@@ -99,9 +102,10 @@
                             </li>
                             <li class="brand">
                                 <a href="javascript:;">
-                                    <span>KIDMORY</span>
+                                    <span class="pc">KIDMORY</span>
+                                    <div class="mo"><img src="dist/images/common/logo_5_mb.png"></div>
                                 </a>
-                                <ul>
+                                <ul class="pc">
                                     <li>
                                         <a href="./">外出用品</a>
                                     </li>
@@ -123,56 +127,56 @@
                             <span>舒壓按摩</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-1.png">
                                     </div>
                                     <span>按摩椅</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-2.png">
                                     </div>
                                     <span>按摩棒/枕</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-3.png">
                                     </div>
                                     <span>按摩墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-4.png">
                                     </div>
                                     <span>按摩槍</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-5.png">
                                     </div>
                                     <span>美腿/泡腳機</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-6.png">
                                     </div>
                                     <span>肩頸按摩</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-7.png">
                                     </div>
@@ -186,56 +190,56 @@
                             <span>運動戶外</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-1.png">
                                     </div>
                                     <span>按摩椅</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-2.png">
                                     </div>
                                     <span>按摩棒/枕</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-3.png">
                                     </div>
                                     <span>按摩墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-4.png">
                                     </div>
                                     <span>按摩槍</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-5.png">
                                     </div>
                                     <span>美腿/泡腳機</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-6.png">
                                     </div>
                                     <span>肩頸按摩</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-7.png">
                                     </div>
@@ -249,56 +253,56 @@
                             <span>家電</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-1.png">
                                     </div>
                                     <span>按摩椅</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-2.png">
                                     </div>
                                     <span>按摩棒/枕</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-3.png">
                                     </div>
                                     <span>按摩墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-4.png">
                                     </div>
                                     <span>按摩槍</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-5.png">
                                     </div>
                                     <span>美腿/泡腳機</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-6.png">
                                     </div>
                                     <span>肩頸按摩</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-7.png">
                                     </div>
@@ -312,56 +316,56 @@
                             <span>母嬰婦幼</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-1.png">
                                     </div>
                                     <span>按摩椅</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-2.png">
                                     </div>
                                     <span>按摩棒/枕</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-3.png">
                                     </div>
                                     <span>按摩墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-4.png">
                                     </div>
                                     <span>按摩槍</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-5.png">
                                     </div>
                                     <span>美腿/泡腳機</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-6.png">
                                     </div>
                                     <span>肩頸按摩</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-7.png">
                                     </div>
@@ -375,56 +379,56 @@
                             <span>生活傢俱</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-1.png">
                                     </div>
                                     <span>按摩椅</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-2.png">
                                     </div>
                                     <span>按摩棒/枕</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-3.png">
                                     </div>
                                     <span>按摩墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-4.png">
                                     </div>
                                     <span>按摩槍</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-5.png">
                                     </div>
                                     <span>美腿/泡腳機</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-6.png">
                                     </div>
                                     <span>肩頸按摩</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="item">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/item2-7.png">
                                     </div>
@@ -438,16 +442,16 @@
                             <span>最新活動</span>
                         </a>
                         <ul class="menu-second">
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="campaign">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/campaign_1.png">
                                     </div>
                                     <span>伸波眠按摩床墊</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="item" href="javascript:;">
+                            <li class="campaign">
+                                <a href="javascript:;">
                                     <div>
                                         <img src="dist/images/common/campaign_2.png">
                                     </div>
@@ -476,11 +480,11 @@
                         <div class="shop_icon"></div>
                     </a>
                 </li>
-                <li class="searchBox">
+                <li>
                     <a href="javascript:;">
                         <div class="search_icon"></div>
                     </a>
-                    <!-- <input type="text"> -->
+                    <input type="text">
                 </li>
             </ul>
         </div>

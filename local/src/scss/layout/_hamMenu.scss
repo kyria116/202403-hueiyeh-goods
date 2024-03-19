@@ -5,8 +5,9 @@
     overflow: hidden;
     @include mediaquery(null, 991px){
         display: block;
-        width: 24px;
-        height: 24px;
+        width: 25.5px;
+        height: 19px;
+        margin-right: 16px;
     }
 }
 
@@ -33,26 +34,32 @@
 
 .menu-ham span{
     position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: $hover-color;
+    width: 25.5px;
+    height: 1px;
+    background-color: #000;
     text-align: center;
     transition: transform 0.75s;
 }
 
 .menu-ham span:nth-of-type(1) {
-    top: 7px;
+    top: 0px;
 }
 .menu-ham span:nth-of-type(2) {
-    top: 15px;
+    top: 18px;
 }
-
+.menu-ham span:nth-of-type(3) {
+    top: 9px;
+}
 #menu-ham.hamActive span:nth-of-type(1) {
-    transform: translate(0px,5px) rotate(-45deg);
+    transform: translate(0px,10px) rotate(-45deg);
     width: 22px;
 }
 #menu-ham.hamActive span:nth-of-type(2) {
-    transform: translate(0px,-3px) rotate(45deg);
+    transform: translate(-100px,0px);
+    width: 25px;
+}
+#menu-ham.hamActive span:nth-of-type(3) {
+    transform: translate(0px,1px) rotate(45deg);
     width: 22px;
 }
 
@@ -76,14 +83,19 @@
         top: 0;
         left: 0;
         display: inline-block;
-        width: 18px;
-        height: 2px;
-        background-color: $hover-color;
+        width: 22px;
+        height: 1px;
+        background-color: #000;
         &:nth-child(1) {
-            transform: rotate(-28deg) translate(-1px,7px);
+                transform: translate(0px,10px) rotate(-45deg);
         }
         &:nth-child(2) {
-            transform: rotate(28deg) translate(10px,12px);
+            transform: translate(0px,10px) rotate(45deg);
+
+        }
+        &:nth-child(3) {
+            transform: translate(-100px,0);
+
         }
     }
 }
