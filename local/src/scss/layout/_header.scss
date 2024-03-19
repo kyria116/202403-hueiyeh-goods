@@ -1,25 +1,25 @@
 .openMenu {
     overflow: hidden;
-    .container-menu{
+    .container-menu {
         opacity: 1;
         pointer-events: all;
     }
-    .menuContain{
+    .menuContain {
         opacity: 1;
         pointer-events: all;
     }
 }
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
     width: 100%;
     height: $headerH-pc;
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         height: $headerH-mo;
     }
-    .menuBg{
+    .menuBg {
         position: absolute;
         top: 0;
         left: 0;
@@ -27,23 +27,23 @@ header{
         height: 100%;
         border-radius: 0 0 30px 0;
         background-color: #fff;
-        @include mediaquery(1920px, null){
+        @include mediaquery(1920px, null) {
             width: calc(100vw - ((100vw - 1920px) / 2 + 180px));
         }
-        @include mediaquery(1600px, 1919px){
+        @include mediaquery(1600px, 1919px) {
             width: 90.54vw;
         }
-        @include mediaquery(992px, 1599px){
+        @include mediaquery(992px, 1599px) {
             width: 96vw;
         }
-        @include mediaquery(null, 991px){
+        @include mediaquery(null, 991px) {
             width: calc(100vw - 46px);
         }
-        @include mediaquery(null, 575px){
+        @include mediaquery(null, 575px) {
             width: calc(100vw - 23px);
         }
     }
-    .header{
+    .header {
         position: absolute;
         top: 0;
         left: 50%;
@@ -54,23 +54,9 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include mediaquery(1920px, null){
-            padding: 0 180px 0 42px;
-        }
-        @include mediaquery(1600px, 1919px){
-            padding: 0 9.46% 0 42px;
-        }
-        @include mediaquery(992px, 1599px){
-            padding: 0 4% 0 24px;
-        }
-        @include mediaquery(null, 991px){
-            padding: 0 69px 0 46px;
-        }
-        @include mediaquery(null, 575px){
-            padding: 0 44px 0 23px;
-        }
+        padding: 0 40px 0 40px;
     }
-    .menuContain{
+    .menuContain {
         display: block;
         position: fixed;
         z-index: -1;
@@ -89,30 +75,30 @@ header{
     flex: 0 0 138px;
     margin-right: 20px;
     padding-bottom: 7px;
-    @include mediaquery(null, 1600px){
+    @include mediaquery(null, 1600px) {
         flex: 0 0 117px;
         width: 117px;
         padding-bottom: 3px;
     }
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         padding-bottom: 9px;
     }
-    img{
+    img {
         display: block;
         max-width: 100%;
     }
 }
-.menuBox{
+.menuBox {
     display: flex;
     align-items: center;
 }
-.container-menu{
-    @include mediaquery(992px, null){
+.container-menu {
+    @include mediaquery(992px, null) {
         height: 100%;
         display: flex;
         align-items: center;
     }
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         position: absolute;
         z-index: 2;
         top: 88px;
@@ -126,41 +112,41 @@ header{
         transition: opacity 0.75s;
     }
 }
-.searchBox{
+.searchBox {
     position: relative;
     order: 3;
     margin-left: 38px;
     flex: 1;
     max-width: 25px;
     transition: max-width 0.75s;
-    @include mediaquery(1366px, null){
+    @include mediaquery(1366px, null) {
         margin-left: 20px;
     }
-    @include mediaquery(992px, 1365px){
+    @include mediaquery(992px, 1365px) {
         margin-left: 10px;
     }
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         max-width: 100%;
         margin: 0 46px;
     }
-    @include mediaquery(null, 575px){
+    @include mediaquery(null, 575px) {
         margin: 0 24px;
     }
-    &.open{
-        @include mediaquery(1366px, null){
+    &.open {
+        @include mediaquery(1366px, null) {
             max-width: 230px;
         }
-        @include mediaquery(992px, 1365px){
+        @include mediaquery(992px, 1365px) {
             max-width: 150px;
         }
-        input{
-            @include mediaquery(992px, null){
+        input {
+            @include mediaquery(992px, null) {
                 opacity: 1;
                 pointer-events: all;
             }
         }
     }
-    .img{
+    .img {
         display: block;
         position: absolute;
         z-index: 2;
@@ -168,15 +154,15 @@ header{
         left: 0;
         transform: translateY(-50%);
         width: 25px;
-        @include mediaquery(null, 991px){
+        @include mediaquery(null, 991px) {
             width: 17px;
             left: 14px;
         }
-        img{
+        img {
             display: block;
         }
     }
-    input{
+    input {
         font-size: 16px;
         letter-spacing: 1px;
         width: 100%;
@@ -185,7 +171,7 @@ header{
         border-bottom: 1px solid $line-color;
         transition: opacity 0.75s;
         opacity: 0;
-        @include mediaquery(null, 991px){
+        @include mediaquery(null, 991px) {
             opacity: 1;
             border: none;
             background-color: #fff;
@@ -196,52 +182,41 @@ header{
         }
     }
 }
-.menu{
-    @include mediaquery(992px, null){
+.menu {
+    @include mediaquery(992px, null) {
         position: relative;
         z-index: 2;
         display: flex;
         align-items: center;
         height: 100%;
     }
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         padding: 18px 0;
         overflow-y: auto;
         height: calc(100% - 219px - 36px);
     }
-    >li{
+    > li {
         position: relative;
-        font-size: 16px;
-        color: $primary-color;
-        letter-spacing: 1px;
-        @include mediaquery(1501px, null){
-            margin: 0 14px;
-        }
-        @include mediaquery(1201px, 1500px){
-            margin: 0 12px;
-        }
-        @include mediaquery(992px, 1200px){
-            margin: 0 6px;
-        }
-        &:hover{
-            @include mediaquery(992px, null){
-                .menu-list{
+        font-size: 18px;
+        color: #000;
+        letter-spacing: 0;
+        margin-right: 36px;
+        &:hover {
+            @include mediaquery(992px, null) {
+                .menu-list {
                     color: $hover-color;
-                    &::before{
-                        opacity: 1;
-                    }
                 }
-                .menu-second{
+                .menu-second {
                     opacity: 1;
                     pointer-events: all;
                 }
             }
         }
         &.active {
-            @include mediaquery(992px, null){
-                .menu-list{
+            @include mediaquery(992px, null) {
+                .menu-list {
                     color: $hover-color;
-                    &::before{
+                    &::before {
                         opacity: 1;
                         transform: translate(0, 0);
                     }
@@ -249,114 +224,90 @@ header{
             }
         }
     }
-    &-list{
+    &-list {
         position: relative;
         display: block;
         transition: opacity 0.75s;
-        @include mediaquery(992px, null){
+        @include mediaquery(992px, null) {
             height: 100%;
             line-height: $headerH-pc;
             transition: color 0.75s;
         }
-        @include mediaquery(null, 991px){
+        @include mediaquery(null, 991px) {
             padding: 13px 46px;
             font-size: 15px;
             letter-spacing: 1px;
         }
-        @include mediaquery(null, 575px){
+        @include mediaquery(null, 575px) {
             padding: 13px 24px;
         }
-        &::before{
-            @include mediaquery(992px, null){
-                content: "";
-                position: absolute;
-                bottom: 24px;
-                left: -5%;
-                width: 110%;
-                height: 2px;
-                background: $hover-color;
-                opacity: 0;
-                transition: opacity 0.75s;
-            }
-        }
-        span{
+        span {
             position: relative;
             overflow: visible;
             display: inline-block;
-            &::after{
-                @include mediaquery(null, 991px){
-                    content: "";
-                    position: absolute;
-                    top: 50%;
-                    right: -22px;
-                    transform: translateY(-50%);
-                    width: 5px;
-                    height: 10px;
-                    background: url('../images/common/arrow.png') center / contain no-repeat;
-                }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: -12px;
+                transform: translateY(-50%);
+                width: 7px;
+                height: 3px;
+                background: url("../images/common/nav_arrow.png") center / contain no-repeat;
             }
         }
     }
-    &-second{
-        @include mediaquery(992px, null){
-            position: absolute;
-            top: 86px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: max-content;
-            padding: 14px 0 12px;
-            background: #fff;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.75s;
-        }
-        @include mediaquery(null, 991px){
-            position: fixed;
-            z-index: 1;
-            top: 147px;
-            left: 0;
-            width: 100%;
-            height: calc(100vh - 129px);
-            background-color: #f6e9e5;
-            display: none;
-        }
-        &:hover{
-            @include mediaquery(992px, null){
+    &-second {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: start;
+        position: fixed;
+        top: 86px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 14px 0 12px;
+        background: #fff;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.75s;
+        &:hover {
+            @include mediaquery(992px, null) {
                 opacity: 1;
                 pointer-events: all;
             }
         }
-        &.active{
-            @include mediaquery(null, 991px){
+        &.active {
+            @include mediaquery(null, 991px) {
                 display: block;
             }
         }
-        >li {
+        > li {
             position: relative;
             &:hover {
-                @include mediaquery(992px, null){
-                    >a{
+                @include mediaquery(992px, null) {
+                    > a {
                         color: $hover-color;
                     }
                 }
             }
-            &.active{
-                >a{
+            &.active {
+                > a {
                     color: $hover-color;
                 }
             }
-            >a{
+            > a {
                 position: relative;
                 text-align: center;
                 display: block;
                 transition: all 0.75s;
-                color: $primary-color;
-                @include mediaquery(992px, null){
+                color: #000;
+                @include mediaquery(992px, null) {
                     letter-spacing: -0.25px;
-                    padding: 6px 34px;
+                    padding: 27px 15px;
                     font-size: 16px;
                     letter-spacing: 1px;
-                    &::after{
+                    &::after {
                         content: "";
                         position: absolute;
                         z-index: -1;
@@ -367,23 +318,76 @@ header{
                         height: 100%;
                     }
                 }
-                @include mediaquery(null, 991px){
+                @include mediaquery(null, 991px) {
                     text-align: left;
-                padding: 13px 46px;
+                    padding: 13px 46px;
                     font-size: 15px;
                     letter-spacing: 1px;
                 }
-                @include mediaquery(null, 575px){
+                @include mediaquery(null, 575px) {
                     padding: 13px 24px;
+                }
+            }
+        }
+        .brand{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            padding: 0 50px;
+            &::after{
+                content: "";
+                position: absolute;
+                top:0;
+                right:0;
+                width: 1px;
+                height:168px;
+               background-color: #F2F2F2;
+            }
+            a{
+                font-size: 16px;
+                padding: 0;
+                text-align: start;
+            }
+            ul{
+                margin-top: 24px;
+                li{
+                    color: #797979;
+                    margin-bottom: 8px;
+                    position: relative;
+                    &:last-child{
+                    margin-bottom: 0;
+                    }
+                    &:hover{
+                        color:$hover-color;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            top:50%;
+                            transform: translate(0,-50%);
+                            left:-25px;
+                            width: 14px;
+                            height:1px;
+                           background-color: $hover-color;
+                        }
+                    }
+                }
+            }
+            &:first-child{
+                padding: 0 50px 0 0;
+            }
+            &:last-child{
+                padding: 0 0 0 50px;
+                &::after{
+                    display: none;
                 }
             }
         }
     }
 }
-.menu_2{
+.menu_2 {
     display: flex;
     align-items: center;
-    @include mediaquery(null, 991px){
+    @include mediaquery(null, 991px) {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -393,20 +397,20 @@ header{
         padding: 0 24px;
         background-color: #d2e6e7;
     }
-    li{
+    li {
         margin-left: 16px;
         padding-left: 16px;
         border-left: 1px solid $line-color;
-        @include mediaquery(1366px, 1500px){
+        @include mediaquery(1366px, 1500px) {
             margin-left: 10px;
             padding-left: 10px;
         }
-        @include mediaquery(992px, 1365px){
+        @include mediaquery(992px, 1365px) {
             margin-left: 0px;
             padding-left: 0px;
             border-left: none;
         }
-        @include mediaquery(null, 991px){
+        @include mediaquery(null, 991px) {
             width: 100%;
             margin-left: 0px;
             padding-left: 0px;
@@ -415,44 +419,44 @@ header{
             line-height: 73px;
             border-top: 1px solid #fff;
         }
-        &:first-child{
+        &:first-child {
             margin-left: 4px;
             border: none;
-            @include mediaquery(null, 991px){
+            @include mediaquery(null, 991px) {
                 margin-left: 0px;
             }
         }
-        a{
+        a {
             display: flex;
             align-items: center;
-            @include mediaquery(null, 991px){
+            @include mediaquery(null, 991px) {
                 width: 100%;
             }
         }
-        .img{
+        .img {
             width: 34px;
             margin-right: 10px;
-            @include mediaquery(null, 991px){
+            @include mediaquery(null, 991px) {
                 width: 32px;
                 margin-right: 16px;
             }
-            img{
+            img {
                 display: block;
             }
         }
-        .txt{
+        .txt {
             position: relative;
             font-size: 16px;
             letter-spacing: 1px;
             color: $secondary-color;
-            @include mediaquery(992px, 1365px){
+            @include mediaquery(992px, 1365px) {
                 display: none;
             }
-            @include mediaquery(null, 991px){
+            @include mediaquery(null, 991px) {
                 font-size: 15px;
                 color: $primary-color;
             }
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 bottom: -15px;
@@ -463,19 +467,19 @@ header{
                 background-color: $secondary-color;
                 opacity: 0;
                 transition: opacity 0.75s;
-                @include mediaquery(null, 991px){
+                @include mediaquery(null, 991px) {
                     display: none;
                 }
             }
         }
-        &.active{
-            .txt::after{
+        &.active {
+            .txt::after {
                 opacity: 1;
             }
         }
-        &:hover{
-            @include mediaquery(768px, null){
-                .txt::after{
+        &:hover {
+            @include mediaquery(768px, null) {
+                .txt::after {
                     opacity: 1;
                 }
             }
