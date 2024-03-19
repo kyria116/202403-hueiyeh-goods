@@ -2,25 +2,25 @@
     <link rel="stylesheet" href="dist/css/product.css">
 </head>
 
-<body class="lang_tw allBrandPage">
+<body class="lang_tw">
     <?php
         include "quote/template/added.php";
         // include "quote/template/nav.php";
     ?>
-    <main>
-        <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">所有商品</h1>
-        <div class="product_sort">
-            <div class="container">
-                <select name="" id="">
-                    <option value="0" selected>依時間排序</option>
-                    <option value="1">依人氣排序</option>
-                    <option value="2">價格低至高</option>
-                    <option value="3">價格高至低</option>
-                </select>
+    <main class="newEventPage">
+        <div class="editor_Content">
+            <div class="editor_box pc_use">
+                <img src="dist/images/productPage/page_kv.jpg" alt="">
+            </div>
+            <div class="editor_box mo_use">
+                <img src="dist/images/productPage/page_kv.jpg" alt="">
             </div>
         </div>
         <div class="productBox">
             <div class="container">
+                <h1 class="pageTitle">
+                    精選優惠商品
+                </h1>
                 <ul>
                     <li>
                         <a href="javascript:;">
@@ -783,10 +783,6 @@
                         </a>
                     </li>
                 </ul>
-                
-                <?php
-                    include "quote/template/page_list.php";
-                ?>
             </div>
         </div>
     </main>

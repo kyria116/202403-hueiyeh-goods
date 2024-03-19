@@ -2,15 +2,48 @@
     <link rel="stylesheet" href="dist/css/product.css">
 </head>
 
-<body class="lang_tw allBrandPage">
+<body class="lang_tw">
     <?php
         include "quote/template/added.php";
         // include "quote/template/nav.php";
     ?>
-    <main>
-        <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">所有商品</h1>
+    <main class="productPage">
         <div class="product_sort">
             <div class="container">
+                <h1 class="pageTitle">
+                    舒壓按摩
+                </h1>
+                <div id="top-menu-ul-2" class="top-menu-ul-2">
+                    <div class="item_Menu">
+                        <div class="item_menu_Box">
+                            <ul class="item_menu_list slides">
+                                <li>
+                                    <a href="javascript:;">生活家電</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">按摩墊</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">廚電家電</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">季節家電</a>
+                                </li>
+                                <li>
+                                    <a href="javascript:;">美容家電</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex-direction-nav">
+                        <a href="javascript:;" class="lbtn arrow flex-prev">
+                            <div></div>
+                        </a>
+                        <a href="javascript:;" class="rbtn arrow flex-next">
+                            <div></div>
+                        </a>
+                    </div>
+                </div>
                 <select name="" id="">
                     <option value="0" selected>依時間排序</option>
                     <option value="1">依人氣排序</option>
@@ -783,10 +816,6 @@
                         </a>
                     </li>
                 </ul>
-                
-                <?php
-                    include "quote/template/page_list.php";
-                ?>
             </div>
         </div>
     </main>

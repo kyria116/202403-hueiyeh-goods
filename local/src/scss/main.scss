@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+TC:wght@100..900&display=swap');
 
 @import "base/reset";
 @import "base/variable";
 @import "base/mixin";
 
-@import "layout/font";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/layout";
@@ -11,9 +11,7 @@
 @import "layout/topbtn";
 
 @import "template/page-list";
-@import "template/cookies";
 @import "template/topmenu";
 @import "template/editor";
 @import "template/animation";
-@import "template/language";
 @import "template/popup";

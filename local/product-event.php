@@ -2,25 +2,17 @@
     <link rel="stylesheet" href="dist/css/product.css">
 </head>
 
-<body class="lang_tw allBrandPage">
+<body class="lang_tw">
     <?php
         include "quote/template/added.php";
         // include "quote/template/nav.php";
     ?>
-    <main>
-        <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">所有商品</h1>
-        <div class="product_sort">
-            <div class="container">
-                <select name="" id="">
-                    <option value="0" selected>依時間排序</option>
-                    <option value="1">依人氣排序</option>
-                    <option value="2">價格低至高</option>
-                    <option value="3">價格高至低</option>
-                </select>
-            </div>
-        </div>
+    <main class="eventPage">
         <div class="productBox">
             <div class="container">
+                <h1 class="pageTitle">
+                    ｜年終慶｜全館滿額贈
+                </h1>
                 <ul>
                     <li>
                         <a href="javascript:;">

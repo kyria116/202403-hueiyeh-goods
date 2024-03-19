@@ -302,17 +302,12 @@
         }
     }
 }
-.topmenuBox{
-    @include mediaquery(null, 767px){
-        margin: 0 18px;
-    }
-}
-.page_brown{
+
+
+.top-menu-ul {
     position: relative;
     z-index: 5;
-    margin-bottom: 54px;
     @include mediaquery(null, 767px) {
-        margin-bottom: 34px;
     }
     .item_menu_Box {
         text-align: left;
@@ -321,10 +316,6 @@
         overflow-x: scroll;
         -ms-overflow-style: none;
         scrollbar-width: none;
-        border-radius: 8px;
-        @include mediaquery(null, 767px) {
-            border-radius: 4px;
-        }
         &::-webkit-scrollbar {
             display: none;
         }
@@ -332,93 +323,5 @@
     ul.slides {
         white-space: nowrap;
         display: inline-flex;
-        height: 56px;
-        line-height: 56px;
-        background-color: #f4e9e7;
-        overflow: hidden;
-        @include mediaquery(null, 767px) {
-            height: 45px;
-            line-height: 45px;
-        }
-    }
-    li{
-        &.active{
-            a{
-                color: #fff;
-                background-color: $hover-color;
-            }
-        }
-        a{
-            display: block;
-            padding: 0 38px;
-            font-size: 18px;
-            transition: 0.75s;
-            @include mediaquery(null, 767px){
-                padding: 0 26px;
-            }
-            &:hover{
-                @include mediaquery(768px, null){
-                    color: #fff;
-                    background-color: $hover-color;
-                }
-            }
-        }
-    }
-    .flex-direction-nav {
-        a.flex-prev {
-            left: -5px;
-            transition: opacity 0.75s;
-            div {
-                position: relative;
-                width: 8px;
-                height: 12px;
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: url('../images/common/index_left.png') center/contain no-repeat;
-                }
-            }
-            &:hover{
-                @include mediaquery(768px, null) {
-                    opacity: 0.7;
-                }
-            }
-            &.nopage{
-                pointer-events: none;
-                opacity: 0.2;
-            }
-        }
-        a.flex-next {
-            transition: opacity 0.75s;
-            right: -5px;
-            div {
-                position: relative;
-                width: 8px;
-                height: 12px;
-                &::before{
-                    content: "";
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background: url('../images/common/index_right.png') center/contain no-repeat;
-                }
-            }
-            &:hover{
-                @include mediaquery(768px, null) {
-                    opacity: 0.7;
-                }
-            }
-            &.nopage{
-                pointer-events: none;
-                opacity: 0.2;
-            }
-        }
     }
 }
-
