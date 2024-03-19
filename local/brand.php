@@ -7,12 +7,52 @@
         include "quote/template/added.php";
         // include "quote/template/nav.php";
     ?>
-    <main class="productPage">
+    <main class="brandPage">
+        <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">輝葉按摩椅</h1>
+        <div class="pageKv">
+            <!-- 
+                桌機 1920 * 520 
+                手機 768 * 631
+            -->
+            <img src="dist/images/productPage/page_kv.jpg" alt="" class="pc">
+            <img src="dist/images/productPage/page_kv_mo.jpg" alt="" class="mo">
+        </div>
+        <div class="brandBox container">
+            <!-- 230 * 206 -->
+            <div class="img pc">
+                <img src="dist/images/productPage/page_logo.jpg" alt="">
+            </div>
+            <div class="txt">
+                <div class="intro">
+                    <span>律動機市場領導品牌輝葉按摩椅推出「COZY FIT 律動奇機」及升級加熱款「COZY FIT 律動奇機 2.0」一年便創下銷售超過 7 萬台佳績，並拿下電商龍頭 MOMO 購物網律動機類別銷售冠軍，今宣布搭配母親節檔期再推優惠方案，至輝葉門市、百貨量販櫃位，購買律動奇機 2.0優惠孝親價：律動機市場領導品牌輝葉按摩椅推出「COZY FIT 律動奇機」及升級加熱款「COZY FIT 律動奇機 2.0」一年便創下銷售超過 7 萬台佳績，並拿下電商龍頭 MOMO 購物網律動機類別銷售冠軍，今宣布搭配母親節檔期再推優惠方案，至輝葉門市、百貨量販櫃位，購買律動奇機 2.0優惠孝親價：</span>
+                </div>
+                <div class="btn mo">
+                    <a href="javascript:;">View More</a>
+                </div>
+                <div class="iconBox">
+                    <!--
+                        32 * 32
+                        如果沒有連結則直接刪除li
+                    -->
+                    <ul>
+                        <li>
+                            <a href= "javascript:;" target="_blank" style="mask-image: url('dist/images/common/fb_icon.svg');"></a>
+                        </li>
+                        <li>
+                            <a href= "javascript:;" target="_blank" style="mask-image: url('dist/images/common/line_icon.svg');"></a>
+                        </li>
+                        <li>
+                            <a href= "javascript:;" target="_blank" style="mask-image: url('dist/images/common/ig_icon.svg');"></a>
+                        </li>
+                        <li>
+                            <a href= "javascript:;" target="_blank" style="mask-image: url('dist/images/common/yt_icon.svg');"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <div class="product_sort">
             <div class="container">
-                <h1 class="pageTitle">
-                    舒壓按摩
-                </h1>
                 <div id="top-menu-ul-2" class="top-menu-ul-2">
                     <div class="item_Menu">
                         <div class="item_menu_Box">
