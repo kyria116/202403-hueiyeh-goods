@@ -1,7 +1,8 @@
+    //@prepros-prepend plugin/jquery_min.js
+
 
 $(function () {
 
-    //@prepros-prepend plugin/jquery_min.js
     //@prepros-prepend template/header.js
     //@prepros-prepend template/topbtn.js
     //@prepros-prepend template/animation.js

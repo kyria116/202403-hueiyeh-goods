@@ -72,3 +72,34 @@ if (winW < 992) {
     });
 }
 
+//search
+$(document).ready(function() {
+    $(document).on('click', function(event) {
+        // 如果點擊的元素不是搜索圖標、搜索框或菜單框，則取消樣式
+        if (!$(event.target).closest('.search_icon, .searchBox, .menuBox').length) {
+            $('.searchBox').css({
+                'opacity': '0',
+                'pointer-events': 'none'
+            });
+        }
+    });
+
+    $('.search_icon').click(function() {
+        $('.searchBox').toggleClass('searchBox_open').css({
+            'opacity': function(_, value) {
+                return value === '1' ? '0' : '1'; // 如果當前 opacity 為 1，則點擊後設為 0；如果不是 1，則設為 1
+            },
+            'pointer-events': function(_, value) {
+                return value === 'all' ? 'none' : 'all'; // 如果當前 pointer-events 為 all，則點擊後設為 none；如果不是 all，則設為 all
+            }
+        });
+    });
+
+    $('.menu li').hover(function() {
+        // 當滑鼠懸停在菜單項上時，取消樣式
+        $('.searchBox').css({
+            'opacity': '0',
+            'pointer-events': 'none'
+        });
+    });
+});

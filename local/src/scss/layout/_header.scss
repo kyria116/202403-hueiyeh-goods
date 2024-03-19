@@ -4,10 +4,6 @@
         opacity: 1;
         pointer-events: all;
     }
-    .menuContain {
-        opacity: 1;
-        pointer-events: all;
-    }
 }
 header {
     position: fixed;
@@ -32,7 +28,7 @@ header {
         justify-content: space-between;
         padding: 0 40px 0 40px;
         @include mediaquery(null, 991px) {
-            padding: 0 50px 0 25px;
+            padding: 0 25px 0 14.5px;
         }
     }
 }
@@ -99,6 +95,15 @@ header {
         color: #000;
         letter-spacing: 0;
         margin-right: 49px;
+        @include mediaquery(null, 1290px) {
+            margin-right: 25px;
+        }
+        @include mediaquery(null, 1080px) {
+            font-size: 16px;
+        }
+        @include mediaquery(null, 1020px) {
+            margin-right: 20px;
+        }
         @include mediaquery(null, 991px) {
             margin: 0;
             width: 100px;
@@ -107,6 +112,11 @@ header {
             @include mediaquery(992px, null) {
                 .menu-list {
                     color: $hover-color;
+                    span {
+                        &::after {
+                            background: url("../images/common/nav_arrow_hover.png") center / contain no-repeat;
+                        }
+                    }
                 }
                 .menu-second {
                     opacity: 1;
@@ -117,7 +127,6 @@ header {
         &.active {
             @include mediaquery(992px, null) {
                 .menu-list {
-                    color: $hover-color;
                     &::before {
                         opacity: 1;
                         transform: translate(0, 0);
@@ -130,6 +139,9 @@ header {
                 }
                 .menu-second {
                     opacity: 1;
+                    > li {
+                        pointer-events: all;
+                    }
                 }
             }
         }
@@ -163,10 +175,10 @@ header {
                 content: "";
                 position: absolute;
                 top: 50%;
-                right: -12px;
+                right: -13px;
                 transform: translateY(-50%);
-                width: 7px;
-                height: 3px;
+                width: 9px;
+                height: 4px;
                 background: url("../images/common/nav_arrow.png") center / contain no-repeat;
             }
         }
@@ -186,7 +198,7 @@ header {
         transition: opacity 0.75s;
         z-index: 999;
         pointer-events: none;
-        border-bottom: 1px solid #E4E4E4;
+        border-bottom: 1px solid #e4e4e4;
         @include mediaquery(null, 991px) {
             width: calc(100% - 100px);
             right: 0;
@@ -194,7 +206,6 @@ header {
             transform: translateX(0);
             justify-content: start;
             flex-wrap: wrap;
-            pointer-events: all;
             border: none;
         }
         &:hover {
@@ -210,6 +221,7 @@ header {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                pointer-events: none;
             }
             &:hover {
                 @include mediaquery(992px, null) {
@@ -289,8 +301,10 @@ header {
             flex-direction: column;
             position: relative;
             padding: 0 50px;
+
             @include mediaquery(null, 991px) {
                 padding: 0 72.5px;
+                width: 100%;
             }
             &::after {
                 content: "";
@@ -346,22 +360,17 @@ header {
         align-items: center;
         margin-right: 22px;
         @include mediaquery(1366px, 1500px) {
-            margin-left: 10px;
-            padding-left: 10px;
+            margin-right: 10px;
+            padding-right: 10px;
         }
         @include mediaquery(992px, 1365px) {
-            margin-left: 0px;
-            padding-left: 0px;
-            border-left: none;
+            margin-right: 6px;
+            padding-right: 6px;
         }
         @include mediaquery(null, 991px) {
             width: 100%;
-            margin-left: 0px;
-            padding-left: 0px;
-            border-left: none;
-            height: 73px;
-            line-height: 73px;
-            border-top: 1px solid #fff;
+            margin-right: 8px;
+            padding-right: 8px;
         }
         &:last-child {
             margin-right: 0;
@@ -381,12 +390,29 @@ header {
                 }
             }
             .shop_icon {
+                position: relative;
                 width: 28px;
                 height: 26px;
                 background: url("../images/common/shop_icon.png") center / contain no-repeat;
                 transition: 0.75s;
                 &:hover {
                     background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
+                    .num {
+                        background: #FB7875;
+                    }
+                }
+                .num {
+                    position: absolute;
+                    top: -8px;
+                    right: -7px;
+                    font-size: 10px;
+                    color: #fff;
+                    padding: 3px 3px;
+                    width: 18px;
+                    height: 18px;
+                    background: #fa201c;
+                    border-radius: 10px;
+                    transition: 0.75s;
                 }
             }
             .search_icon {
@@ -402,41 +428,48 @@ header {
     }
     .searchBox {
         position: relative;
-        &.checked {
-            // @include mediaquery(1366px, null) {
-            //     max-width: 230px;
-            // }
-            // @include mediaquery(992px, 1365px) {
-            //     max-width: 150px;
-            // }
+        position: fixed;
+        top: 88px;
+        left: 0;
+        height: 88px;
+        border-bottom: 1px solid #e4e4e4;
+        width: 100vw;
+        opacity: 0;
+        pointer-events: none;
+        .search_input {
+            position: relative;
+            width: 60%;
+            padding: 30px 0;
+            margin: 0 auto;
             input {
                 font-size: 16px;
-                letter-spacing: 1px;
                 width: 100%;
-                padding: 12px 0 12px 34px;
                 border: none;
-                border-bottom: 1px solid $line-color;
                 transition: opacity 0.75s;
-                opacity: 0;
-                // @include mediaquery(null, 991px) {
-                //     opacity: 1;
-                //     border: none;
-                //     background-color: #fff;
-                //     border-radius: 20px;
-                //     padding: 0 20px 0 40px;
-                //     height: 41px;
-                //     line-height: 41px;
-                // }
-                @include mediaquery(992px, null) {
-                    opacity: 1;
-                    pointer-events: all;
+                opacity: 1;
+            }
+            > a {
+                position: absolute;
+                display: inline-block;
+                top: 50%;
+                transform: translate(0, -50%);
+                right: 0;
+                .search {
+                    display: inline-block;
+                    width: 25px;
+                    aspect-ratio: 1 / 1;
+                    background: url("../../dist/images/common/search_icon.png") center right no-repeat;
                 }
             }
         }
-        input {
+        .line {
             position: absolute;
-            top: 0;
-            left: 0;
+            width: 60%;
+            height: 1px;
+            background-color: #e4e4e4;
+            bottom: 22px;
+            left: 50%;
+            transform: translate(-50%, 0);
         }
     }
 }
