@@ -72,16 +72,11 @@ header {
 }
 .container-logo {
     display: block;
-    flex: 0 0 138px;
+    flex: 0 0 139px;
     margin-right: 20px;
-    padding-bottom: 7px;
     @include mediaquery(null, 1600px) {
         flex: 0 0 117px;
         width: 117px;
-        padding-bottom: 3px;
-    }
-    @include mediaquery(null, 991px) {
-        padding-bottom: 9px;
     }
     img {
         display: block;
@@ -115,23 +110,10 @@ header {
 .searchBox {
     position: relative;
     order: 3;
-    margin-left: 38px;
+    margin:0;
     flex: 1;
     max-width: 25px;
     transition: max-width 0.75s;
-    @include mediaquery(1366px, null) {
-        margin-left: 20px;
-    }
-    @include mediaquery(992px, 1365px) {
-        margin-left: 10px;
-    }
-    @include mediaquery(null, 991px) {
-        max-width: 100%;
-        margin: 0 46px;
-    }
-    @include mediaquery(null, 575px) {
-        margin: 0 24px;
-    }
     &.open {
         @include mediaquery(1366px, null) {
             max-width: 230px;
@@ -200,7 +182,7 @@ header {
         font-size: 18px;
         color: #000;
         letter-spacing: 0;
-        margin-right: 36px;
+        margin-right: 49px;
         &:hover {
             @include mediaquery(992px, null) {
                 .menu-list {
@@ -266,7 +248,7 @@ header {
         top: 86px;
         left: 50%;
         transform: translateX(-50%);
-        padding: 14px 0 12px;
+        padding: 26px 0 35px;
         background: #fff;
         opacity: 0;
         pointer-events: none;
@@ -284,10 +266,16 @@ header {
         }
         > li {
             position: relative;
+            border-bottom: 1px solid #E4E4E4;
             &:hover {
                 @include mediaquery(992px, null) {
                     > a {
                         color: $hover-color;
+                    }
+                    .item{
+                        >div{
+                            opacity: 0.4;
+                        }
                     }
                 }
             }
@@ -326,6 +314,11 @@ header {
                 }
                 @include mediaquery(null, 575px) {
                     padding: 13px 24px;
+                }
+            }
+            .item{
+                >div{
+                    transition: 0.75s;
                 }
             }
         }
@@ -398,9 +391,9 @@ header {
         background-color: #d2e6e7;
     }
     li {
-        margin-left: 16px;
-        padding-left: 16px;
-        border-left: 1px solid $line-color;
+        display: flex;
+        align-items: center;
+        margin-right: 22px;
         @include mediaquery(1366px, 1500px) {
             margin-left: 10px;
             padding-left: 10px;
@@ -419,29 +412,37 @@ header {
             line-height: 73px;
             border-top: 1px solid #fff;
         }
-        &:first-child {
-            margin-left: 4px;
-            border: none;
-            @include mediaquery(null, 991px) {
-                margin-left: 0px;
-            }
-        }
         a {
-            display: flex;
-            align-items: center;
+            display: inline-block;
             @include mediaquery(null, 991px) {
                 width: 100%;
             }
-        }
-        .img {
-            width: 34px;
-            margin-right: 10px;
-            @include mediaquery(null, 991px) {
-                width: 32px;
-                margin-right: 16px;
+            .member_icon{
+                width: 24px;
+                height: 25px;
+                background: url("../images/common/member_icon.png") center / contain no-repeat;
+                transition: 0.75s;
+                &:hover{
+                    background: url("../images/common/member_icon_hover.png") center / contain no-repeat;
+                }
             }
-            img {
-                display: block;
+            .shop_icon{
+                width: 28px;
+                height: 26px;
+                background: url("../images/common/shop_icon.png") center / contain no-repeat;
+                transition: 0.75s;
+                &:hover{
+                    background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
+                }
+            }
+            .search_icon{
+                width: 25px;
+                height: 25px;
+                background: url("../images/common/search_icon.png") center / contain no-repeat;
+                transition: 0.75s;
+                &:hover{
+                    background: url("../images/common/search_icon_hover.png") center / contain no-repeat;
+                }
             }
         }
         .txt {

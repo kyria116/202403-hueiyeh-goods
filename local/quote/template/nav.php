@@ -3,19 +3,19 @@
     <span class="menuContain"></span>
     <div class="header">
         <div>
-        <a href="./" class="container-logo">
-            <img src="dist/images/common/logo.svg" alt="logo">
-        </a>
-        <div class="hamMenu mo">
-            <div class="burger menu-ham" id="menu-ham">
-                <span></span>
-                <span></span>
+            <a href="./" class="container-logo">
+                <img src="dist/images/common/logo.svg" alt="logo">
+            </a>
+            <div class="hamMenu mo">
+                <div class="burger menu-ham" id="menu-ham">
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="closeMenu">
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div class="closeMenu">
-                <span></span>
-                <span></span>
-            </div>
-        </div>
         </div>
         <div class="menuBox">
             <nav class="container-menu">
@@ -441,17 +441,17 @@
                             <li>
                                 <a class="item" href="javascript:;">
                                     <div>
-                                        <img src="dist/images/common/item2-1.png">
+                                        <img src="dist/images/common/campaign_1.png">
                                     </div>
-                                    <span>按摩椅</span>
+                                    <span>伸波眠按摩床墊</span>
                                 </a>
                             </li>
                             <li>
                                 <a class="item" href="javascript:;">
                                     <div>
-                                        <img src="dist/images/common/item2-2.png">
+                                        <img src="dist/images/common/campaign_2.png">
                                     </div>
-                                    <span>按摩棒/枕</span>
+                                    <span>居家用品</span>
                                 </a>
                             </li>
                         </ul>
@@ -467,18 +467,20 @@
         <div>
             <ul class="menu_2">
                 <li>
-                    <a href="javascript:;" target="_blank">
-                        <div class="img"><img src="dist/images/common/icon3.png"></div>
+                    <a href="javascript:;">
+                        <div class="member_icon"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" target="_blank">
-                        <div class="img"><img src="dist/images/common/icon3.png"></div>
+                    <a href="javascript:;">
+                        <div class="shop_icon"></div>
                     </a>
                 </li>
                 <li class="searchBox">
-                    <a href="javascript:;" class="img"><img src="dist/images/common/search_icon.png"></a>
-                    <input type="text">
+                    <a href="javascript:;">
+                        <div class="search_icon"></div>
+                    </a>
+                    <!-- <input type="text"> -->
                 </li>
             </ul>
         </div>
