@@ -1,0 +1,298 @@
+@import "base/mixin";
+@import "base/variable";
+@import "plugIn/swiper-bundle.min";
+
+$product_color_1: #F9EDE2;
+$product_color_2: #797979;
+$product_color_3: #94693C;
+$product_color_4: #E4E4E4;
+$product_color_5: #E30400;
+
+
+//頁面共用
+*{
+    color: #000;
+}
+main{
+    overflow: hidden;
+    margin-top: 88px;
+}
+
+//產品明細頁
+.productDetailPage{
+    .fixedBuy{
+        display: flex;
+        justify-content: space-between;
+        background-color: #F9EDE2;
+        padding-left: 8.333%;
+        @include mediaquery(992px, 1818px) {
+            padding-left: 6%;
+        }
+        @include mediaquery(null, 991px) {
+            padding-left: 0px;
+        }
+        .fixedLeft{
+            display: flex;
+        }
+        .img{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include mediaquery(992px, null) {
+                flex: 0 0 54px;
+                margin-right: 19px;
+            }
+            @include mediaquery(null, 991px) {
+                flex: 0 0 64px;
+                margin-right: 16px;
+                height: 100%;
+                background-color: #fff;
+            }
+            img{
+                display: block;
+                aspect-ratio: 1 / 1.011;
+                @include mediaquery(992px, null){
+                    border-radius: 6px;
+                    overflow: hidden;
+                }
+                @include mediaquery(null, 991px) {
+                    flex-direction: column;
+                }
+            }
+        }
+        .txt{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 16px 0;
+            @include mediaquery(null, 991px) {
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                padding: 8px 0;
+                margin-right: 16px;
+            }
+        }
+        .fixedTitle{
+            position: relative;
+            font-size: 26px;
+            margin-right: 20px;
+            padding-right: 18px;
+            line-height: 1.35;
+            @include mediaquery(null, 991px) {
+                margin: 0 0 8px;
+                padding-bottom: 7px;
+                padding-right: 0;
+            }
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: #949494;
+                @include mediaquery(992px, null) {
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    width: 1px;
+                    height: 100%;
+                }
+                @include mediaquery(null, 991px) {
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    
+                }
+            }
+            i{
+                margin-right: 14px;
+                @include mediaquery(null, 991px) {
+                    margin-right: 8px;
+                }
+            }
+            span{
+                display: inline-block;
+                font-size: 16px;
+                letter-spacing: 0.0625em;
+                @include mediaquery(null, 767px) {
+                    font-size: 10px;
+                }
+            }
+        }
+        .specialOffer{
+            font-size: 30px;
+            margin-right: 13px;
+            @include mediaquery(null, 991px){
+                margin-right: 9px;
+            }
+            @include mediaquery(null, 767px){
+                font-size: 17px;
+            }
+        }
+        .originalPrice{
+            font-size: 16px;
+            color: #797979;
+            text-decoration: line-through;
+            @include mediaquery(null, 767px) {
+                font-size: 10px;
+            }
+        }
+        .fixedRight{
+            min-height: 80px;
+            flex: 0 0 286px;
+            border: 1px solid #94693C;
+            @include mediaquery(null, 767px) {
+                flex: 0 0 117px;
+                min-height: 71px;
+            }
+            a{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #94693C;
+                transition: background-color 0.75s;
+                &:hover{
+                    background-color: #fff;
+                    span{
+                        color: #94693C;
+                    }
+                    .cartIcon::after{
+                        background-color: #94693C;
+                    }
+                }
+            }
+            .cartIcon{
+                position: relative;
+                width: 26px;
+                height: 24px;
+                margin-right: 10px;
+                @include mediaquery(null, 767px) {
+                    width: 18px;
+                    height: 17px;
+                    margin-right: 8px;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    mask: url('../images/productPage/cart.svg') center / contain no-repeat;
+                    transition: background-color 0.75s;
+                }
+            }
+            span{
+                color: #fff;
+                font-size: 18px;
+                transition: color 0.75s;
+                @include mediaquery(null, 767px) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .infoBox{
+        .proMenu{
+            display: flex;
+            border-bottom: 1px solid #E4E4E4;
+            margin-bottom: 48px;
+            li.active a{
+                color: #fff;
+                background-color: #94693C;
+            }
+            a{
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 144px;
+                height: 64px;
+                background-color: #F9EDE2;
+                transition: 0.75s;
+                &:hover{
+                    @include mediaquery(768px, null) {
+                        color: #fff;
+                        background-color: #94693C;
+                    }
+                }
+            }
+        }
+        .infoPage{
+            border-bottom: 1px solid #E4E4E4;
+            margin-bottom: 63px;
+            @include mediaquery(992px, null) {
+                padding-bottom: 48px;
+                margin-bottom: 100px;
+            }
+        }
+        .specificationList{
+            @include mediaquery(992px, null) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li{
+                display: flex;
+                font-size: 16px;
+                @include mediaquery(null, 767px) {
+                    font-size: 15px;
+                }
+                @include mediaquery(992px, null) {
+                    width: calc((100% - 32px) / 2);
+                    margin-right: 32px;
+                    &:nth-child(2n){
+                        margin-right: 0;
+                    }
+                    &:nth-child(4n-3), &:nth-child(4n-2){
+                        background-color: #F8F8F8;
+                    }
+                }
+                @include mediaquery(null, 991px) {
+                    width: 100%;
+                    &:nth-child(2n-1){
+                        background-color: #F8F8F8;
+                    }
+                }
+                .infoTitle{
+                    flex: 0 0 180px;
+                    border-right: 1px solid #E4E4E4;
+                    padding: 12px 20px;
+                    @include mediaquery(768px, 1440px) {
+                        flex: 0 0 140px;
+                        padding: 12px;
+                    }
+                    @include mediaquery(null, 767px) {
+                        flex: 0 0 128px;
+                        padding: 7px 10px 10px;
+                    }
+                }
+                .infoContent{
+                    flex: 1;
+                    padding: 12px 20px;
+                    @include mediaquery(768px, 1440px) {
+                        padding: 12px;
+                    }
+                    @include mediaquery(null, 767px) {
+                        padding: 7px 10px 10px;
+                    }
+                }
+            }
+        }
+    }
+    .likeBox{
+        h3{
+            font-size: 32px;
+            text-align: center;
+            @include mediaquery(null, 767px) {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+

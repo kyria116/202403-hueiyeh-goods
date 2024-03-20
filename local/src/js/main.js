@@ -6,7 +6,6 @@ $(function () {
     //@prepros-prepend template/header.js
     //@prepros-prepend template/topbtn.js
     //@prepros-prepend template/animation.js
-    //@prepros-prepend template/cookies.js
 
 
     // --------------------main min-height---------------------
@@ -23,22 +22,6 @@ $(function () {
         $('main').css({
             "min-height": miniHeight + "px"
         });
-    });
-
-    
-    //footer
-    $('footer .mailBox a').on('click', function(){
-        if($('body').hasClass('popupOpen2')){
-            $('body').removeClass('popupOpen2')
-            $('body, html').css('overflow-y', 'auto')
-        }else{
-            $('body').addClass('popupOpen2')
-            $('body, html').css('overflow-y', 'hidden')
-        }
-    })
-    $('.popup_mailbox2 .closeIcon2').on('click', function () {
-        $('body').removeClass('popupOpen2')
-        $('body, html').css('overflow-y', 'auto')
     });
 
 });

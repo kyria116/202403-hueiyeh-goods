@@ -5,7 +5,7 @@
 <body class="lang_tw">
     <?php
         include "quote/template/added.php";
-        // include "quote/template/nav.php";
+        include "quote/template/nav.php";
     ?>
     <main class="brandPage">
         <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">輝葉按摩椅</h1>
@@ -115,6 +115,72 @@
                         <a href="javascript:;" class="rbtn arrow flex-next">
                             <div></div>
                         </a>
+                    </div>
+                </div>
+                <div class="subcategory">
+                    <div id="top-menu-ul-3" class="top-menu-ul-3">
+                        <div class="item_Menu">
+                            <div class="item_menu_Box">
+                                <ul class="item_menu_list slides">
+                                    <li class="active">
+                                        <a href="javascript:;">全部</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">按摩墊</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">廚電家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">季節家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">美容家電last</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-direction-nav">
+                            <a href="javascript:;" class="lbtn arrow flex-prev">
+                                <div></div>
+                            </a>
+                            <a href="javascript:;" class="rbtn arrow flex-next">
+                                <div></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <select name="" id="">
@@ -897,10 +963,17 @@
         </div>
     </main>
     <?php
-        // include "quote/template/footer.php";
+        include "quote/template/footer.php";
         // include "quote/template/top_btn.php";
     ?>
-    <script src="dist/js/product.js"></script>   
+    <script src="dist/js/product.js"></script>
+    <script>
+        $(function(){
+            window.setTimeout(function () {
+                slider_ul_list("top-menu-ul-3");
+            }, 1);
+        })
+    </script>
 </body>
 
 </html>
