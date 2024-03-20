@@ -5,7 +5,7 @@
 <body class="lang_tw allBrandPage">
     <?php
         include "quote/template/added.php";
-        // include "quote/template/nav.php";
+        include "quote/template/nav.php";
     ?>
     <main>
         <h1 style="position: absolute;top: 0;left: 0;z-index: -1;">所有商品</h1>
@@ -23,7 +23,7 @@
             <div class="container">
                 <ul>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -61,7 +61,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -99,7 +99,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -137,7 +137,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -175,7 +175,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -213,7 +213,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -251,7 +251,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -289,7 +289,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -327,7 +327,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -365,7 +365,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -403,7 +403,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -441,7 +441,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -479,7 +479,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -517,7 +517,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -555,7 +555,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -593,7 +593,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -631,7 +631,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -669,7 +669,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -707,7 +707,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -745,7 +745,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -791,8 +791,8 @@
         </div>
     </main>
     <?php
-        // include "quote/template/footer.php";
-        // include "quote/template/top_btn.php";
+        include "quote/template/footer.php";
+        include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>    
 </body>

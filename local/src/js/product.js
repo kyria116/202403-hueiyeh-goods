@@ -1,4 +1,3 @@
-//@prepros-prepend plugin/jquery_min.js
 $(function () {
 	window.setTimeout(function () {
 		slider_ul_list("top-menu-ul-2");
@@ -6,7 +5,6 @@ $(function () {
 })
 
 var $window = $(window);
-var winW = $window.width();
 
 function slider_ul_list(id) {
 	let obj = $('#' + id);
