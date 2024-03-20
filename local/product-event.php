@@ -5,7 +5,7 @@
 <body class="lang_tw">
     <?php
         include "quote/template/added.php";
-        // include "quote/template/nav.php";
+        include "quote/template/nav.php";
     ?>
     <main class="eventPage">
         <div class="productBox">
@@ -15,7 +15,7 @@
                 </h1>
                 <ul>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -53,7 +53,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -91,7 +91,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -129,7 +129,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -167,7 +167,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -205,7 +205,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -243,7 +243,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -281,7 +281,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -319,7 +319,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -357,7 +357,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -395,7 +395,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -433,7 +433,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -471,7 +471,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -509,7 +509,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -547,7 +547,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -585,7 +585,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -623,7 +623,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -661,7 +661,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -699,7 +699,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -737,7 +737,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="javascript:;">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -783,8 +783,8 @@
         </div>
     </main>
     <?php
-        // include "quote/template/footer.php";
-        // include "quote/template/top_btn.php";
+        include "quote/template/footer.php";
+        include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>    
 </body>

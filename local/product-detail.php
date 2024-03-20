@@ -28,11 +28,103 @@
         </div>
         <div class="productBox">
             <div class="container">
+                <div class="productBoxSwiper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        <div class="swiper-slide"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="buyBox"></div>
         <div class="addBox">
-            <p>加購商品</p>
+            <div class="container">
+                <p>加購商品</p>
+                <div class="addBoxSwiper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <input type="checkbox" name="" id="product1">
+                                <label for="product1">
+                                    <div class="img">
+                                        <img src="dist/images/productPage/product_1.jpg" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="priceTxt">加購價</span>
+                                            <span class="specialOffer">$36,922</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="checkbox" name="" id="product2">
+                                <label for="product2">
+                                    <div class="img">
+                                        <img src="dist/images/productPage/product_1.jpg" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="priceTxt">加購價</span>
+                                            <span class="specialOffer">$36,922</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="checkbox" name="" id="product3">
+                                <label for="product3">
+                                    <div class="img">
+                                        <img src="dist/images/productPage/product_1.jpg" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="priceTxt">加購價</span>
+                                            <span class="specialOffer">$36,922</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="swiper-slide">
+                                <input type="checkbox" name="" id="product4">
+                                <label for="product4">
+                                    <div class="img">
+                                        <img src="dist/images/productPage/product_1.jpg" alt="">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="priceTxt">加購價</span>
+                                            <span class="specialOffer">$36,922</span>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperBtn">
+                        <div class="addBoxSwiper-prev"></div>
+                        <div class="addBoxSwiper-next"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="infoBox">
             <div class="container">
@@ -247,21 +339,284 @@
             </div>
         </div>
         <div class="likeBox">
-            <h3>你可能會喜歡</h3>
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+            <div class="container">
+                <h3>你可能會喜歡</h3>
+                <div class="likeSwiper mask">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="javascript:;">
+                                    <div class="icon">
+                                        <!-- 
+                                            icon共有4張 
+                                            icon_1  NEW
+                                            icon_2  HOT
+                                            icon_3  SALE
+                                            icon_4  預購
+                                        -->
+                                        <img src="dist/images/common/icon_1.png" alt="">
+                                    </div>
+                                    <div class="img">
+                                        <div class="svg">
+                                            <svg viewBox="0 0 376 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6 0.5H370C373.038 0.5 375.5 2.96244 375.5 6V408C375.5 411.038 373.038 413.5 370 413.5H6.00001C2.96244 413.5 0.5 411.038 0.5 408V6C0.5 2.96243 2.96243 0.5 6 0.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <!-- 376 * 414 -->
+
+                                        <!-- 預設顯示第一張圖 -->
+                                        <img src="dist/images/productPage/product_max_1.jpg" alt="" class="defaultImg">
+                                        <!-- hover後顯示的照片 -->
+                                        <img src="dist/images/productPage/product_1.jpg" alt="" class="hoverImg">
+                                    </div>
+                                    <div class="txt">
+                                        <div class="proId">HY-950-GY</div>
+                                        <div class="proName">
+                                            <span>伸波眠按摩床墊</span>
+                                        </div>
+                                        <div class="price">
+                                            <span class="originalPrice">$6,600</span>
+                                            <i>｜</i>
+                                            <span class="specialOffer">$6,922</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiperBtn">
+                        <div class="likeSwiper-prev"></div>
+                        <div class="likeSwiper-next"></div>
+                    </div>
                 </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
             </div>
         </div>
         <div class="backBtn">
@@ -270,7 +625,7 @@
     </main>
     <?php
         include "quote/template/footer.php";
-        // include "quote/template/top_btn.php";
+        include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>
     <script src="dist/js/product-detail.js"></script>
