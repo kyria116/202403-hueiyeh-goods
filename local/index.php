@@ -120,7 +120,7 @@
     include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>
-    <script src="dist/js/top_menu.js"></script>
+    <!-- <script src="dist/js/top_menu.js"></script> -->
     <script src="dist/js/index.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper1", {

@@ -11,24 +11,24 @@ function gotop(){
     
     //show info icon
     
-    if (winscroll > 0) {
-        $('.fixBtn').addClass('show');
-    } else {
-        $('.fixBtn').removeClass('show');
-    }
-    if ($(window).width() > 991 && winscroll >= topBtnStopPc) {
-        $('.fixBtn').addClass('change');
-        $('.change').css('bottom', 'auto');
-        $('.change').css('top', topPc);
+    // if (winscroll > 0) {
+    //     $('.fixBtn').addClass('show');
+    // } else {
+    //     $('.fixBtn').removeClass('show');
+    // }
+    // if ($(window).width() > 991 && winscroll >= topBtnStopPc) {
+    //     $('.fixBtn').addClass('change');
+    //     $('.change').css('bottom', 'auto');
+    //     $('.change').css('top', topPc);
 
-    } else if ($(window).width() <= 991 && winscroll >= topBtnStopMo) {
-        $('.fixBtn').addClass('change');
-        $('.change').css('bottom', 'auto');
-        $('.change').css('top', topMo);
-    } else {
-        $('.fixBtn').removeClass('change');
-        $('.fixBtn').removeAttr('style');
-    }
+    // } else if ($(window).width() <= 991 && winscroll >= topBtnStopMo) {
+    //     $('.fixBtn').addClass('change');
+    //     $('.change').css('bottom', 'auto');
+    //     $('.change').css('top', topMo);
+    // } else {
+    //     $('.fixBtn').removeClass('change');
+    //     $('.fixBtn').removeAttr('style');
+    // }
 
     //向上scroll
     $('.fixBtn').on('click',function(){
