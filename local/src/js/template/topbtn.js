@@ -1,7 +1,4 @@
 
-
-
-
 $(window).on('scroll', gotop);
 $(window).on('resize', gotop);
 function gotop(){
@@ -14,25 +11,24 @@ function gotop(){
     
     //show info icon
     
-    if(winscroll > 0){
+    if (winscroll > 0) {
         $('.fixBtn').addClass('show');
-        $('.fixBoxBtn2').addClass('show');
-    }else{
+    } else {
         $('.fixBtn').removeClass('show');
-        $('.fixBoxBtn2').removeClass('show');
     }
-    if(winscroll >= topBtnStop){
-        $('.fixBoxBtn').addClass('change');
+    if ($(window).width() > 991 && winscroll >= topBtnStopPc) {
+        $('.fixBtn').addClass('change');
         $('.change').css('bottom', 'auto');
-        if($(window).width() > 991){
-            $('.change').css('top', topPc);
-        }else{
-            $('.change').css('top', topMo);
-        }
-    }else{
-        $('.fixBoxBtn').removeClass('change');
-        $('.fixBoxBtn').removeAttr('style');
-    } 
+        $('.change').css('top', topPc);
+
+    } else if ($(window).width() <= 991 && winscroll >= topBtnStopMo) {
+        $('.fixBtn').addClass('change');
+        $('.change').css('bottom', 'auto');
+        $('.change').css('top', topMo);
+    } else {
+        $('.fixBtn').removeClass('change');
+        $('.fixBtn').removeAttr('style');
+    }
 
     //向上scroll
     $('.fixBtn').on('click',function(){
@@ -41,3 +37,13 @@ function gotop(){
         }, 1000);
     })
 }
+
+$(window).on('scroll', function () {
+    var scrollTop = $(this).scrollTop();
+    var top = $('.fixBoxBtn');
+    if (scrollTop > 99) {
+        top.addClass('show_fixBoxBtn');
+    } else {
+        top.removeClass('show_fixBoxBtn');
+    }
+});

@@ -17,6 +17,12 @@ html, body {
     position: relative;
     overflow: hidden auto;
 }
+main{
+    margin-top: $headerH-pc;
+    @include mediaquery(null, 991px) {
+    margin-top: $headerH-mo;
+    }
+}
 .porel{
     position: relative;
 }

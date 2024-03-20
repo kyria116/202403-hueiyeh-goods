@@ -19,7 +19,7 @@
         <div class="menuBox">
             <nav class="container-menu">
                 <ul class="menu">
-                    <li class="active">
+                    <li>
                         <a class="menu-list" href="javascript:;">
                             <span>品牌旗艦館</span>
                         </a>

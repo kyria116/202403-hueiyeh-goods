@@ -49,7 +49,8 @@
                     </div>
                     <ul>
                         <li>
-                        <a href="javascript:;">大宗採購</a></li>
+                            <a href="javascript:;">大宗採購</a>
+                        </li>
                         <li><a href="javascript:;">異業合作</a></li>
                     </ul>
                 </li>
@@ -57,10 +58,26 @@
         </div>
         <div class="f_right">
             <div class="icon">
-                <div><img src="dist/images/common/fb_icon.svg" alt="facebook"></div>
-                <div><img src="dist/images/common/line_icon.svg" alt="facebook"></div>
-                <div><img src="dist/images/common/ig_icon.svg" alt="facebook"></div>
-                <div><img src="dist/images/common/yt_icon.svg" alt="facebook"></div>
+                <div>
+                    <a href="./">
+                        <img src="dist/images/common/fb_icon.svg" alt="facebook">
+                    </a>
+                </div>
+                <div>
+                    <a href="./">
+                        <img src="dist/images/common/line_icon.svg" alt="facebook">
+                    </a>
+                </div>
+                <div>
+                    <a href="./">
+                        <img src="dist/images/common/ig_icon.svg" alt="facebook">
+                    </a>
+                </div>
+                <div>
+                    <a href="./">
+                        <img src="dist/images/common/yt_icon.svg" alt="facebook">
+                    </a>
+                </div>
             </div>
             <div class="phone_num">
                 <div><a href="tel:0800001176"><span>客服電話</span>0800-001-176</a></div>
@@ -70,7 +87,9 @@
                 服務時間：週一至週五 10:00-12:00；13:00-18:00
             </div>
             <div class="copyright">
+                <a href="./">
                 本站條款 © 2024 輝葉良品 All Rights Reserved
+                </a>
             </div>
         </div>
     </div>
