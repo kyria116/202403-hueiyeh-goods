@@ -8,10 +8,60 @@ $(function () {
 		$('.infoPage li').eq($(this).index()).siblings().css('display', 'none');
 	})
 
-	var productBoxSwiper = new Swiper(".productBoxSwiper .mySwiper", {
-		direction: 'vertical',
-		slidesPerView: 3,
-		spaceBetween: 32,
+	if(winW > 991){
+		$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
+	}
+	$(window).on('resize', function () {
+		if(winW > 991){
+			$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
+		}
+	});
+	let num = 1
+	$('.plus').on('click', function () {
+		$('.minus').removeClass('hidden')
+		num++
+		if(num > 10){
+			$(this).addClass('hidden')
+			return
+		}if(num == 10){
+			$(this).addClass('hidden')
+		}else{
+			$(this).removeClass('hidden')
+		}
+		$('.number').text(num)
+	});
+	$('.minus').on('click', function () {
+		$('.plus').removeClass('hidden')
+		num--
+		if(num < 1){
+			$(this).addClass('hidden')
+			return
+		}else if(num == 1){
+			$(this).addClass('hidden')
+		}else{
+			$(this).removeClass('hidden')
+		}
+		$('.number').text(num)
+	});
+
+	var s_imgBox = new Swiper(".s_imgBox .mySwiper", {
+		spaceBetween: 9,
+		slidesPerView: 4.5,
+		freeMode: true,
+		watchSlidesProgress: true,
+		breakpoints: { 
+			768: {
+				direction: 'vertical',
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+			},
+		}
+    });
+    var b_imgBox = new Swiper(".b_imgBox .mySwiper", {
+		spaceBetween: 0,
+		thumbs: {
+			swiper: s_imgBox,
+		},
     });
 
     var addBoxSwiper = new Swiper(".addBoxSwiper .mySwiper", {
@@ -59,7 +109,6 @@ $(function () {
 			}
 		}
     });
-
 	$('.likeSwiper-next').on('click', function(){
 		if($(this).hasClass('swiper-button-disabled')){
 			$('.likeSwiper').removeClass('mask')
