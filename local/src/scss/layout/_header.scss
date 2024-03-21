@@ -353,6 +353,20 @@ header {
             }
         }
     }
+    .store{
+        position: absolute;
+        flex-direction: column;
+        white-space: nowrap;
+        align-items: center;
+        padding: 20px;
+        width: 216px;
+        >li>a{
+            padding: 8px;
+        }
+        @include mediaquery(null, 991px) {
+           display: none;
+        }
+    }
 }
 .menu_2 {
     display: flex;

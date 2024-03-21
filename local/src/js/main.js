@@ -6,7 +6,8 @@ $(function () {
     //@prepros-prepend template/header.js
     //@prepros-prepend template/topbtn.js
     //@prepros-prepend template/animation.js
-
+    //@prepros-prepend template/modal.js
+    //@prepros-prepend plugin/swiper-bundle.min.js
 
     // --------------------main min-height---------------------
     var windowHeight = $(window).height();

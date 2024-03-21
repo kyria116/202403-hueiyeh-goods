@@ -464,6 +464,18 @@
                         <a class="menu-list" href="javascript:;">
                             <span>門市查詢</span>
                         </a>
+                        <ul class="menu-second store">
+                            <li>
+                                <a href="flagship-store.php">
+                                    <span>輝葉良品旗艦店</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="flagship-store.php">
+                                    <span>實體門市</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </nav>

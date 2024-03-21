@@ -8,6 +8,78 @@ $product_color_3: #94693c;
 $product_color_4: #e4e4e4;
 $product_color_5: #e30400;
 
+.text_ticker {
+    position: relative;
+    width: 100%;
+    .swiper {
+        width: 100%;
+        height: 40px;
+        @include mediaquery(null, 767px) {
+        height: 37px;
+        }
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 14px;
+        background: #f9ede2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #94693c;
+        @include mediaquery(null, 767px) {
+            text-align: start;
+        justify-content: start;
+        padding-left: 5%;
+        font-size: 13.5px;
+        i{
+        max-width: 357px;
+        overflow: hidden;
+        white-space: nowrap;
+        }
+        }
+    }
+    .closebtn {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        position: absolute;
+        width: 40px;
+        height: 100%;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        z-index: 10;
+        @include mediaquery(null, 767px) {
+            right: -5px;
+        width: 37px;
+        }
+        .close {
+            display: inline-block;
+            width: 16px;
+            height: 1px;
+            transform: rotate(45deg);
+            transform-origin: center;
+            background: #000;
+            @include mediaquery(null, 767px) {
+                width: 21px;
+            }
+            &::after {
+                content: "";
+                height: 16px;
+                width: 1px;
+                margin: -8px 0 0 -1px;
+                left: 50%;
+                top: 50%;
+                background: #000;
+                position: absolute;
+                @include mediaquery(null, 767px) {
+                    height: 21px;
+                margin: -11px 0 0 -1px;
+                }
+            }
+        }
+    }
+}
 .section_1 {
     position: relative;
     .swiper {
@@ -37,7 +109,7 @@ $product_color_5: #e30400;
         border: 1px solid #fff;
         opacity: 1;
         margin: 0 12px !important;
-        @include mediaquery(null, 768px) {
+        @include mediaquery(null, 991px) {
             width: 8px;
             height: 8px;
             margin: 0 7.2px !important;
@@ -48,7 +120,7 @@ $product_color_5: #e30400;
     }
     .swiper-pagination-horizontal {
         bottom: 35px;
-        @include mediaquery(null, 768px) {
+        @include mediaquery(null, 991px) {
             bottom: 19px;
         }
     }
@@ -257,7 +329,7 @@ $product_color_5: #e30400;
         border: 1px solid #c0c0c0;
         opacity: 1;
         margin: 0 14.4px !important;
-        @include mediaquery(null, 768px) {
+        @include mediaquery(null, 991px) {
             width: 8px;
             height: 8px;
             margin: 0 7.2px !important;
@@ -268,7 +340,7 @@ $product_color_5: #e30400;
     }
     .swiper-pagination-horizontal {
         bottom: -45px;
-        @include mediaquery(null, 768px) {
+        @include mediaquery(null, 991px) {
             bottom: -35px;
         }
     }
@@ -807,7 +879,7 @@ $product_color_5: #e30400;
                 bottom: 39px;
                 padding: 32px 40px 8px;
                 background: #94693c;
-                @include mediaquery(null,1400px) {
+                @include mediaquery(null, 1400px) {
                     padding: 32px 40px;
                 }
                 @include mediaquery(null, 991px) {
@@ -821,8 +893,8 @@ $product_color_5: #e30400;
                 .title {
                     font-size: 24px;
                     color: #fff;
-                @include clamp(1, 2);
-                    @include mediaquery(null,1325px) {
+                    @include clamp(1, 2);
+                    @include mediaquery(null, 1325px) {
                         font-size: 20px;
                     }
                     @include mediaquery(null, 991px) {
@@ -835,19 +907,19 @@ $product_color_5: #e30400;
                 .subtitle {
                     font-size: 16px;
                     color: #fff;
-                @include clamp(1.5, 2);
-                @include mediaquery(null,1400px) {
-                    max-width: 600px;
-                }
-                    @include mediaquery(null,1325px) {
+                    @include clamp(1.5, 2);
+                    @include mediaquery(null, 1400px) {
+                        max-width: 600px;
+                    }
+                    @include mediaquery(null, 1325px) {
                         font-size: 15px;
-                    max-width: 400px;
+                        max-width: 400px;
                     }
                     @include mediaquery(null, 991px) {
                         font-size: 15.5px;
 
-                @include clamp(1.5, 3);
-                max-width: 100%;
+                        @include clamp(1.5, 3);
+                        max-width: 100%;
                     }
                     @include mediaquery(null, 768px) {
                         font-size: 15px;
@@ -879,11 +951,11 @@ $product_color_5: #e30400;
                 .txt {
                     font-size: 24px;
                     color: #000;
-                @include clamp(1.5, 2);
-                    @include mediaquery(null,1530px) {
+                    @include clamp(1.5, 2);
+                    @include mediaquery(null, 1530px) {
                         font-size: 16px;
                     }
-                    @include mediaquery(null,1155px) {
+                    @include mediaquery(null, 1155px) {
                         font-size: 14px;
                     }
                     @include mediaquery(null, 991px) {
@@ -895,8 +967,8 @@ $product_color_5: #e30400;
                 }
                 &:first-child {
                     margin-bottom: 30px;
-                    @include mediaquery(null,1130px) {
-                        margin-bottom:10px;
+                    @include mediaquery(null, 1130px) {
+                        margin-bottom: 10px;
                     }
                     @include mediaquery(null, 991px) {
                         margin-bottom: 92px;

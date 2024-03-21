@@ -1,70 +1,119 @@
-body.popupOpen2{
-    .bgcolor, .popup_mailbox2{
-        display: block;
+//----------- media queries ----------//
+
+@mixin mediaquery($min, $max) {
+    @if $min !=null and $max !=null {
+        @media all and (min-width: $min) and (max-width: $max) {
+            @content;
+        }
+    } @else if $max==null {
+        @media all and (min-width: $min) {
+            @content;
+        }
+    } @else if $min==null {
+        @media all and (max-width: $max) {
+            @content;
+        }
     }
 }
-.bgcolor{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background: rgba(0,0,0,0.5);
-    width: 100vw;
-    height: 100vh;
-    display: none;
+
+body.modal-open {
+    // height: 100vh;
+    // overflow-y: hidden;
 }
-.popup_mailbox2{
-    position: fixed;
-    z-index: 1001;
-    top: 50%;
+#modalBg {
+    // display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    // height: 100%;
+    // overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.closebtn {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: -3em;
+    right: -2em;
+    transition: all 0.5s;
+    z-index: 10;
+    @include mediaquery(null, 767px) {
+        top: -3em;
+        right: -0.5em;
+    }
+    .close {
+        display: inline-block;
+        width: 32px;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0 0 0 -16px;
+        transform: rotate(45deg);
+        transform-origin: center;
+        background: #fff;
+        &::after {
+            content: "";
+            height: 32px;
+            width: 1px;
+            margin: -16px 0 0 -1px;
+            left: 50%;
+            top: 50%;
+            background: #fff;
+            position: absolute;
+        }
+    }
+    &:hover {
+        @include mediaquery(768px,null) {
+            opacity: 0.6;
+        }
+    }
+}
+.modal {
+    position: absolute;
+    width: 62.5%;
+    max-width: 1200px;
+    top: 4.2%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 88%;
-    max-width: 872px;
-    height: 60vh;
-    background-color: #fff;
-    border-radius: 30px;
-    padding: 76px 54px 76px 64px;
-    display: none;
-    @include mediaquery(768px, 991px) {
-        max-width: 100%;
-        padding: 0 40px;
-        padding: 60px 36px 50px 46px;
+    transform: translate(-50%, 0);
+    background-color: transparent;
+    position: relative;
+    @include mediaquery(768px, 1600px) {
+        width: 85%;
     }
     @include mediaquery(null, 767px) {
-        border-radius: 15px;
-        width: calc(100% - 48px);
-        padding: 54px 26px 38px 36px;
+        width: 88%;
     }
-    .editor_Content{
+    .modal-content {
+        position: relative;
         width: 100%;
         height: 100%;
-        overflow: hidden auto;
-        padding-right: 10px;
-        &::-webkit-scrollbar{
-            width: 5px;
-            border-radius: 20px;
+        display: inline-block;
+        #player {
+            width: 100%;
+            height: 100%;
         }
-        &::-webkit-scrollbar-track{
-            background: #eeeeee;
-            opacity: 0.5;
-            border-radius: 20px;
+        iframe {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
         }
-        &::-webkit-scrollbar-thumb{
-            background-color: #b68a7c;
-            border-radius: 20px;
-        }
-    }
-    .closeIcon2{
-        position: absolute;
-        top: 25px;
-        right: 25px;
-        width: 24px;
-        cursor: pointer;
-        @include mediaquery(null, 767px) {
-            top: 15px;
-            right: 15px;
-            width: 20px;
+        .img {
+            width: 100%;
+                display: inline-block;
+            img {
+                width: 100%;
+                display: block;
+            }
         }
     }
 }

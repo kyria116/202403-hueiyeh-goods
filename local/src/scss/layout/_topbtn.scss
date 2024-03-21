@@ -13,6 +13,7 @@
     justify-content: center;
     width: 46px;
     opacity: 0;
+    transition: opacity 0.5s;
     @include mediaquery(null, 1440px) {
         right: 22px;
     }
@@ -53,7 +54,12 @@
             }
         }
     }
-    // &.change{
-    //     position: absolute;
-    // }
+    &.change {
+        position: absolute;
+        bottom: 323px;
+    }
+    &.change_mo {
+        position: absolute;
+        bottom: 590px;
+    }
 }

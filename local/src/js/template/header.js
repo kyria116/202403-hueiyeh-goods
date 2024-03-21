@@ -16,9 +16,6 @@ $('li.active .menu-second > li').eq(numSec).addClass('active')
 $('.menu-list').on('click',function(){
     if(winW < 992){
         $(this).parent().addClass('active')
-        $(this).siblings().addClass('active')
-        $('.closeMenu').addClass('open')
-        $('.menu-ham').addClass('close')
     }
     $(this).parent().siblings().removeClass('active')
 })
@@ -27,14 +24,13 @@ $('.closeMenu').on('click', function () {
     $('.closeMenu').removeClass('open')
     $('.menu-ham').removeClass('close')
     $('.menu li').removeClass('active')
-    $('.menu-second').removeClass('active')
 });
 
 //-------------------HAMBUR 開合--------------------
 $('.menu-ham').on('click', function () {
     $(this).toggleClass('hamActive');
     $('body').toggleClass('openMenu');
-
+$('.menu >li:first').addClass('active')
     if ($(this).hasClass('hamActive')) {
         $('html').css('overflow-y', 'hidden');
         $('header').removeClass('scroll');
