@@ -279,6 +279,10 @@ $product_color_5: #e30400;
     padding-bottom: 96px;
     @include mediaquery(null, 991px) {
         background-color: #fff;
+        padding-bottom: 103px;
+    }
+    @include mediaquery(null, 767px) {
+        padding-bottom: 53px;
     }
     .product_sort {
         background: #94693c;
@@ -288,26 +292,27 @@ $product_color_5: #e30400;
         @include mediaquery(null, 767px) {
             margin-bottom: 32px;
         }
-        >.container{
+        > .container {
             @include mediaquery(null, 991px) {
                 padding: 0;
             }
         }
     }
     .productBox {
-        .swiper{
+        .swiper {
             @include mediaquery(null, 991px) {
-            position: relative;
-            &::after{
-                content: "";
-                position: absolute;
-                z-index: 2;
-                top: 0;
-                right: 0;
-                width: 40px;
-                height: 100%;
-                background: linear-gradient(to left, #fff, rgba(255,255,255,0));
-            }}
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    right: 0;
+                    width: 40px;
+                    height: 100%;
+                    background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+                }
+            }
         }
         .swiper-wrapper {
             display: flex;
@@ -315,9 +320,10 @@ $product_color_5: #e30400;
             justify-content: center;
             margin-bottom: 6px;
             @include mediaquery(null, 991px) {
+                display: -webkit-box;
                 flex-wrap: nowrap;
                 height: auto;
-                margin-bottom: 80px;                
+                margin-bottom: 80px;
             }
             @include mediaquery(null, 767px) {
                 margin-bottom: 40px;
@@ -545,8 +551,8 @@ $product_color_5: #e30400;
                 z-index: 2;
                 color: #fff;
                 @include mediaquery(null, 991px) {
-                    border-bottom: 4px solid #D9D9D9;
-                    color: #6F6D6D;
+                    border-bottom: 4px solid #d9d9d9;
+                    color: #6f6d6d;
                 }
                 &::after {
                     content: "";
@@ -563,7 +569,8 @@ $product_color_5: #e30400;
                 &.active {
                     color: $product_color_3;
                     @include mediaquery(null, 991px) {
-                    border-bottom: 4px solid #94693C;}
+                        border-bottom: 4px solid #94693c;
+                    }
                     &::after {
                         opacity: 1;
                         @include mediaquery(null, 991px) {
@@ -719,6 +726,185 @@ $product_color_5: #e30400;
             @include mediaquery(null, 767px) {
                 font-size: 16px;
                 padding: 18px 83px;
+            }
+        }
+    }
+}
+.section_4 {
+    position: relative;
+    padding: 160px 0;
+    @include mediaquery(null, 991px) {
+        padding: 0 0 103px 0;
+    }
+    @include mediaquery(null, 768px) {
+        padding: 0 0 51.5px 0;
+    }
+    > .container {
+        @include mediaquery(null, 991px) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    iframe {
+        pointer-events: none;
+    }
+    .video_flex {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        aspect-ratio: 1 / 0.5625;
+        img {
+            width: 100%;
+        }
+    }
+    #YouTubeVideoPlayerAPI {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+}
+.section_5 {
+    position: relative;
+    padding-bottom: 158px;
+    @include mediaquery(null, 991px) {
+        padding-bottom: 172px;
+    }
+    .img_flex {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        @include mediaquery(null, 991px) {
+            flex-direction: column;
+        }
+        .first_img {
+            position: relative;
+            padding-left: 20px;
+            width: 69%;
+            margin-right: 31px;
+            @include mediaquery(null, 991px) {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                padding-left: 0;
+                margin-right: 0;
+                margin-bottom: 64px;
+            }
+            @include mediaquery(null, 768px) {
+                margin-bottom: 32px;
+            }
+            .img {
+                width: 100%;
+                img {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            .txt {
+                position: absolute;
+                left: 0;
+                bottom: 39px;
+                padding: 32px 40px 8px;
+                background: #94693c;
+                @include mediaquery(null,1400px) {
+                    padding: 32px 40px;
+                }
+                @include mediaquery(null, 991px) {
+                    position: relative;
+                    bottom: 0;
+                    padding: 40px 32px 20px;
+                }
+                @include mediaquery(null, 580px) {
+                    padding: 20px 16px;
+                }
+                .title {
+                    font-size: 24px;
+                    color: #fff;
+                @include clamp(1, 2);
+                    @include mediaquery(null,1325px) {
+                        font-size: 20px;
+                    }
+                    @include mediaquery(null, 991px) {
+                        font-size: 21px;
+                    }
+                    @include mediaquery(null, 768px) {
+                        font-size: 18px;
+                    }
+                }
+                .subtitle {
+                    font-size: 16px;
+                    color: #fff;
+                @include clamp(1.5, 2);
+                @include mediaquery(null,1400px) {
+                    max-width: 600px;
+                }
+                    @include mediaquery(null,1325px) {
+                        font-size: 15px;
+                    max-width: 400px;
+                    }
+                    @include mediaquery(null, 991px) {
+                        font-size: 15.5px;
+
+                @include clamp(1.5, 3);
+                max-width: 100%;
+                    }
+                    @include mediaquery(null, 768px) {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+        .sec_img {
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @include mediaquery(null, 991px) {
+                width: 100%;
+            }
+            .block {
+                display: flex;
+                flex-direction: column;
+                .img {
+                    width: 100%;
+                    @include mediaquery(null, 991px) {
+                        margin-bottom: 10px;
+                    }
+                    img {
+                        width: 100%;
+                        display: block;
+                    }
+                }
+                .txt {
+                    font-size: 24px;
+                    color: #000;
+                @include clamp(1.5, 2);
+                    @include mediaquery(null,1530px) {
+                        font-size: 16px;
+                    }
+                    @include mediaquery(null,1155px) {
+                        font-size: 14px;
+                    }
+                    @include mediaquery(null, 991px) {
+                        font-size: 21px;
+                    }
+                    @include mediaquery(null, 768px) {
+                        font-size: 18px;
+                    }
+                }
+                &:first-child {
+                    margin-bottom: 30px;
+                    @include mediaquery(null,1130px) {
+                        margin-bottom:10px;
+                    }
+                    @include mediaquery(null, 991px) {
+                        margin-bottom: 92px;
+                    }
+                    @include mediaquery(null, 768px) {
+                        margin-bottom: 46px;
+                    }
+                }
             }
         }
     }

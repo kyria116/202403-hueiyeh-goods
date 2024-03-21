@@ -461,12 +461,44 @@
                         </div>
                     </div>
                     <div class="btn_flex">
-                                <a href="javascript:;" class="store_btn">
-                                    <div>全部商品</div>
-                                </a>
-                            </div>
+                        <a href="javascript:;" class="store_btn">
+                            <div>全部商品</div>
+                        </a>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section class="section_4">
+            <div class="container">
+                <div class="video_flex">
+                    <div id="YouTubeVideoPlayerAPI"></div>
+                    <img src="dist/images/index/youtube.webp" alt="youtube">
+                </div>
+            </div>
+        </section>
+        <section class="section_5">
+            <div class="container">
+                <div class="img_flex">
+                    <div class="first_img">
+                        <div class="img"><img src="dist/images/index/img_1.png" alt=""></div>
+                        <div class="txt">
+                            <div class="title">伸波眠按摩床墊</div>
+                            <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
+                        </div>
+                    </div>
+                    <ul class="sec_img">
+                        <li class="block">
+                            <div class="img"><img src="dist/images/index/img_2.png" alt=""></div>
+                            <div class="txt">AnyMasaG 按你馬殺機－從肩頸 鬆到你心底</div>
+                        <li;>
+                        <li class="block">
+                            <div class="img"><img src="dist/images/index/img_3.png" alt=""></div>
+                            <div class="txt">COZY FIT 律動奇機 2.0 _相信奇機，引力白新登場！</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
     </main>
     <?php
@@ -475,6 +507,7 @@
     ?>
     <script src="dist/js/main.js"></script>
     <!-- <script src="dist/js/top_menu.js"></script> -->
+    <script async src="//www.youtube.com/iframe_api"></script>
     <script src="dist/js/index.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper1", {
@@ -520,51 +553,75 @@
         (function() {
             'use strict';
 
-            // 斷點，當 swiper 將被銷毀並切換到雙列佈局時
-            const breakpoint = window.matchMedia('(min-width:991px)');
+            let breakpoint = window.matchMedia('(min-width:991px)');
+            let mySwiper2 = null;
+            let swiperOptions = {
+                loop: true,
+                slidesPerView: '2.2',
+                spaceBetween: 12,
 
-            // 跟踪 swiper 實例以便稍後銷毀
-            let mySwiper2;
-
-            // 斷點檢測器
-            const breakpointChecker = function() {
-
-                // 如果較大的視口並且需要多行佈局
-                if (breakpoint.matches === true) {
-
-                    // 清理舊的實例和內聯樣式（如果有的話）
-                    if (mySwiper2 !== undefined) mySwiper2.destroy(true, true);
-
-                    // 或者/和什麼都不做
-                    return;
-
-                    // 如果是較小的視口並且需要單列佈局
-                } else if (breakpoint.matches === false) {
-
-                    // 觸發 swiper 的小視口版本
-                    return enableSwiper();
-
-                }
-
+                centeredSlides: false,
             };
 
-        //啟用 swiper
-        const enableSwiper = function() {
+            const breakpointChecker = function() {
+                if (breakpoint.matches === true) {
+                    // 如果寬度大於 991px，銷毀 Swiper 實例（如果存在）
+                    if (mySwiper2 !== null) {
+                        mySwiper2.destroy(true, true);
+                        mySwiper2 = null;
+                    }
+                } else {
+                    // 如果寬度小於 991px，啟用 Swiper 實例
+                    enableSwiper();
+                }
+            };
 
-        var swiper = new Swiper(".mySwiper2", {
-            loop:true,
-            slidesPerView: 2.2,
-            spaceBetween: 12,
-        });
+            const enableSwiper = function() {
+                // 如果 Swiper 實例不存在，則建立它
+                if (mySwiper2 === null) {
+                    mySwiper2 = new Swiper(".mySwiper2", swiperOptions);
+                }
+            };
 
-        };
+            // 監聽視窗大小變化
+            window.addEventListener('resize', function() {
+                // 更新 breakpoint 的狀態
+                breakpoint = window.matchMedia('(min-width:991px)');
+                // 檢查斷點狀態
+                breakpointChecker();
+            });
 
-            // 監視視口大小的變化
-            breakpoint.addListener(breakpointChecker);
-
-            // 開始檢測斷點
+            // 初始檢查斷點狀態
             breakpointChecker();
         })();
+    </script>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            var player;
+            player = new YT.Player('YouTubeVideoPlayerAPI', {
+                videoId: '9DPRtYDHTks', // YouTube 影片ID
+                width: '100%', // 播放器寬度 (px)
+                height: '100%', // 播放器高度 (px)
+                playerVars: {
+                    autoplay: 1, // 自動播放影片
+                    controls: 0, // 顯示播放器
+                    showinfo: 0, // 隱藏影片標題
+                    modestbranding: 0, // 隱藏YouTube Logo
+                    loop: 1, // 重覆播放
+                    playlist: '9DPRtYDHTks', // 當使用影片要重覆播放時，需再輸入YouTube 影片ID
+                    fs: 0, // 隱藏全螢幕按鈕
+                    cc_load_policty: 0, // 隱藏字幕
+                    iv_load_policy: 3, // 隱藏影片註解
+                    autohide: 0 // 影片播放時，隱藏影片控制列
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.mute(); //播放時靜音
+                        e.target.playVideo(); //強制播放(手機才會自動播放，但僅限於Android)
+                    }
+                }
+            });
+        }
     </script>
 </body>
 

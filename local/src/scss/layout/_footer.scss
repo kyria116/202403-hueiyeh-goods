@@ -84,8 +84,10 @@
                 > ul {
                     > li {
                         color: #6f6d6d;
+                    font-size: 16px;
                         margin-bottom: 11px;
                         @include mediaquery(null, 991px) {
+                            font-size: 15px;
                             margin-bottom: 10px;
                         }
                     }
