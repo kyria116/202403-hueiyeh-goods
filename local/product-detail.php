@@ -3,23 +3,43 @@
     </head>
 
     <body class="lang_tw">
-        <div class="bgcolor" id="modalBg">
-            <div class="popup" id="popup">
+        <!-- 加購商品的查看贈品 start -->
+        <div class="modalBgProduct" id="modalBgProduct" style="display: none">
+            <div class="popupProduct" id="popupProduct">
                 <div class="modal-content">
-                    <div class="editor_Content">
-                        <div class="editor_box pc_use">
-                            <p>臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助</p>
+                    <div class="popupTitle">
+                        輝葉良品品牌月1/1-2/18龍光煥發好運龍來
+                    </div>
+                    <div class="imgTxt">
+                        <div class="img">
+                            <img src="dist/images/productPage/product_1.jpg" alt="">
                         </div>
-                        <div class="editor_box mo_use">
-                            <p>臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助-無風管空氣調節機、接風管空氣調節機照明燈具及室內停車場智慧照明申請臺北市服務業汰換節能設備補助</p>
+                        <div class="txt">
+                            <div class="proTitle">
+                                <i>商務艙PLUS零重力按摩椅</i>
+                                <span class="price">
+                                    市價  $1,680
+                                </span>
+                            </div>
+                            <div class="intro">
+                                <span>
+                                    行銷活動限同一筆訂單且同一種配送方式。<br>
+                                    第二件折扣之行銷活動，則依較低價商品為折扣商品。<br>
+                                    折價券不可與其他優惠方案合併使用。<br>
+                                    參與行銷活動之商品如欲退貨需全數一併退回，恕不接受單一商品辦理退貨。<br>
+                                    參與行銷活動之商品如欲退貨需全數一併退回，恕不接受單一商品辦理退貨。<br>
+                                    參與行銷活動之商品如欲退貨需全數一併退回，恕不接受單一商品辦理退貨。end
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="closeIcon">
-                    <img src="dist/images/common/close_bt.png">
+                    <img src="dist/images/productPage/close-bt.png">
                 </div>
             </div>
         </div>
+        <!-- 加購商品的查看贈品 end -->
         <?php
             include "quote/template/added.php";
             include "quote/template/nav.php";
@@ -80,6 +100,16 @@
                             </div>
                         </div>
                         <div class="b_imgBox">
+                            <div class="icon">
+                                <!-- 
+                                    icon共有4張 
+                                    icon_1  NEW
+                                    icon_2  HOT
+                                    icon_3  SALE
+                                    icon_4  預購
+                                -->
+                                <img src="dist/images/common/icon_1.png" alt="">
+                            </div>
                             <div thumbsSlider="" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -134,15 +164,17 @@
                             <div class="activity">
                                 <ul class="box">
                                     <li>
-                                        <div class="name">｜年終慶｜全館滿額贈</div>
+                                        <div class="name">
+                                            <a href="product-event.php">｜年終慶｜全館滿額贈</a>
+                                        </div>
                                         <div class="date">活動至2024.02.20截止</div>
                                     </li>
                                     <li>
-                                        <div class="name">新年促銷優惠開跑囉！滿額送點</div>
+                                        <div class="name"><a href="product-event.php">新年促銷優惠開跑囉！滿額送點</a></div>
                                         <div class="date">活動至2024.02.28截止</div>
                                     </li>
                                     <li>
-                                        <div class="name">新年促銷優惠開跑囉！滿額送點</div>
+                                        <div class="name"><a href="product-event.php">新年促銷優惠開跑囉！滿額送點</a></div>
                                         <div class="date">活動至2024.02.28截止</div>
                                     </li>
                                 </ul>
@@ -169,25 +201,38 @@
             </div>
             <div class="buyBox">
                 <div class="container">
+                    <!-- 如果是單選樣式 buyLeft 增加 class="hasRadio" -->
                     <div class="buyLeft">
                         <div class="buyTitle">
                             贈品<span>期間 2023.12.01至2023.12.31</span>
                         </div>
                         <ul>
                             <li>
-                                <div class="s_title">輝葉良品品牌月01.01-02.18龍光煥發好運龍來</div>
+                                <input type="radio" name="hasRadio" id="hasRadio1">
+                                <label for="hasRadio1" class="s_title">
+                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
+                                </label>
                                 <a href="javascript:;">查看贈品</a>
                             </li>
                             <li>
-                                <div class="s_title">贈【輝葉】隔音避震專用地墊HY-B02</div>
+                                <input type="radio" name="hasRadio" id="hasRadio2">
+                                <label for="hasRadio2" class="s_title">
+                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
+                                </label>
                                 <a href="javascript:;">查看贈品</a>
                             </li>
                             <li>
-                                <div class="s_title">輝葉良品品牌月01.01-02.18龍光煥發好運龍來</div>
+                                <input type="radio" name="hasRadio" id="hasRadio3">
+                                <label for="hasRadio3" class="s_title">
+                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
+                                </label>
                                 <a href="javascript:;">查看贈品</a>
                             </li>
                             <li>
-                                <div class="s_title">贈【輝葉】隔音避震專用地墊HY-B02</div>
+                                <input type="radio" name="hasRadio" id="hasRadio4">
+                                <label for="hasRadio4" class="s_title">
+                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
+                                </label>
                                 <a href="javascript:;">查看贈品</a>
                             </li>
                         </ul>
@@ -835,29 +880,6 @@
         ?>
         <script src="dist/js/main.js"></script>
         <script src="dist/js/product-detail.js"></script>
-        <script>
-            $('.buyLeft a').on('click', function () {
-                $('#modalBg').css('display', 'block');
-                $('body').addClass('modal-open')
-                $('html, body').css('overflow', 'hidden')
-            })
-            $('.closeIcon').on('click', function () {
-                $('#modalBg').css('display', 'none')
-                $('body').removeClass('modal-open')
-                $('html, body').css('overflow', 'hidden auto')
-            })
-            const outer = document.getElementById('modalBg')
-            const inner = document.getElementById('popup')
-            outer.addEventListener("click", function (e) {
-                $('#modalBg').css('display', 'none')
-                $('body').removeClass('modal-open')
-                $('html, body').css('overflow', 'hidden auto')
-                e.stopPropagation();
-            }, false);
-            inner.addEventListener('click', function (e) {
-                e.stopPropagation();
-            }, false);
-        </script>
     </body>
 
     </html>
