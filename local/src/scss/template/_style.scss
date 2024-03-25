@@ -178,6 +178,80 @@ main{
         }
     }
 }
+.subcategory{
+    @include mediaquery(null, 767px){
+        max-width: calc(100% - 32px);
+        margin: 0 auto;
+    }
+}
+.top-menu-ul-3 {
+    position: relative;
+    z-index: 5;
+    margin-bottom: 67px;
+    @include mediaquery(768px, 991px) {
+        margin-bottom: 46px;
+    }
+    @include mediaquery(null, 767px) {
+        margin-bottom: 26px;
+    }
+    .item_menu_Box {
+        position: relative;
+        text-align: left;
+        margin: 0 auto;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    ul.slides {
+        white-space: nowrap;
+        display: inline-flex;
+        padding-right: 20px;
+        li{
+            position: relative;
+            z-index: 2;
+            &:hover a{
+                @include mediaquery(768px, null) {
+                    color: $product_color_3;
+                }
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 1px;
+                height: 18px;
+                background-color: #E4E4E4;
+            }
+            &:last-child::after{
+                content: none;
+            }
+            &.active a{
+                color: $product_color_3;
+            }
+            a{
+                position: relative;
+                z-index: 5;
+                display: block;
+                padding: 4px 17px;
+                font-size: 16px;
+                color: #797979;
+                transition: color 0.75s;
+                @include mediaquery(null, 767px) {
+                    font-size: 15px;
+                    padding: 4px 14px;
+                }
+            }
+        }
+    }
+    &.open_flexslider .flex-direction-nav {
+        display: block;
+    }
+}
 .open_flexslider .flex-direction-nav {
     display: block;
     @include mediaquery(null, 767px) {

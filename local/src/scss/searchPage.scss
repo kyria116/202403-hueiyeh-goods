@@ -3,12 +3,21 @@
 @import "template/style";
 @import "product";
 @import "news";
+@import "service";
 
 
 .searchPageBox{
     background: #F8F3ED;
     padding: 64px 60px 58px;
     margin-bottom: 44px;
+    @include mediaquery(768px, 991px) {
+        padding: 45px 35px;
+        margin-bottom: 40px;
+    }
+    @include mediaquery(null, 767px) {
+        padding: 36px 24px;
+        margin-bottom: 34px;
+    }
     .inputBox{
         position: relative;
     }
@@ -21,17 +30,66 @@
         padding-bottom: 12px;
         font-size: 16px;
         width: 100%;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            padding-bottom: 10px;
+        }
         &::placeholder{
             font-size: 16px;
+            font-family: $font;
             color: #949494;
+            @include mediaquery(null, 767px) {
+                font-size: 14px;
+            }
         }
     }
     a{
         position: absolute;
-        top: 0;
+        z-index: 5;
+        top: 50%;
         right: 0;
-        width: 25px;
-        height: 25px;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        @include mediaquery(null, 767px) {
+            width: 30px;
+            height: 30px;
+        }
+        &:hover{
+            @include mediaquery(768px, null) {
+                &::after{
+                    opacity: 1;
+                }
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25px;
+            height: 25px;
+            background: url('../images/common/search_icon.png') center / contain no-repeat;
+            @include mediaquery(null, 767px) {
+                width: 22px;
+                height: 22px;
+            }
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 25px;
+            height: 25px;
+            background: url('../images/common/search_icon_hover.png') center / contain no-repeat;
+            opacity: 0;
+            transition: opacity 0.75s;
+            @include mediaquery(null, 767px) {
+                width: 22px;
+                height: 22px;
+            }
+        }
     }
 }
 .searchAllBox{
