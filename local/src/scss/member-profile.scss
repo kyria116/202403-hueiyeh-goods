@@ -37,6 +37,9 @@ $product_color_5: #e30400;
         .form {
             position: relative;
             width: 65%;
+            @include mediaquery(null, 1600px) {
+                width: 45%;
+            }
             @include mediaquery(null, 991px) {
                 width: 100%;
             }
@@ -44,7 +47,7 @@ $product_color_5: #e30400;
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
-                @include mediaquery(null, 991px) {
+                @include mediaquery(null, 1400px) {
                     flex-direction: column;
                 }
                 .personal_data {
@@ -57,7 +60,7 @@ $product_color_5: #e30400;
                     color: #000;
                     width: 50%;
                     padding: 0 40px 24px 0;
-                    @include mediaquery(null, 991px) {
+                    @include mediaquery(null, 1400px) {
                         flex-direction: column;
                         width: 100%;
                         padding: 0 0 24px 0;
@@ -225,13 +228,13 @@ $product_color_5: #e30400;
 
                 .address {
                     width: 57.6%;
-                    @include mediaquery(null, 991px) {
+                    @include mediaquery(null, 1400px) {
                         width: 100%;
                     }
                 }
                 .city-selector {
                     display: flex;
-                    @include mediaquery(null, 991px) {
+                    @include mediaquery(null, 1400px) {
                         flex-direction: column;
                     }
                 }
@@ -242,7 +245,7 @@ $product_color_5: #e30400;
                     @include mediaquery(991px, 1200px) {
                         width: 48%;
                     }
-                    @include mediaquery(null, 991px) {
+                    @include mediaquery(null, 1400px) {
                         width: 100%;
                         margin-bottom: 12.5px;
                     }
@@ -451,6 +454,13 @@ $product_color_5: #e30400;
                 border-radius: 6px;
                 display: flex;
                 flex-direction: column;
+                @include mediaquery(null, 1600px) {
+                    width: 55%;
+                }
+                @include mediaquery(null, 991px) {
+                    width: 100%;
+                    margin-bottom: 35px;
+                }
                 @include mediaquery(null, 991px) {
                     width: 100%;
                     margin-bottom: 35px;
@@ -468,7 +478,7 @@ $product_color_5: #e30400;
                     .profile_img {
                         width: 160px;
                         margin-right: 35px;
-                        // min-width: 160px;
+                        min-width: 160px;
                         @include mediaquery(null, 768px) {
                             min-width: 105px;
                         }
@@ -480,6 +490,8 @@ $product_color_5: #e30400;
                         display: flex;
                         flex-direction: column;
                         font-size: 16px;
+                        width: 200px;
+                        padding: 1px;
                         @include mediaquery(null, 991px) {
                             font-size: 13.5px;
                         }
@@ -495,6 +507,9 @@ $product_color_5: #e30400;
                             @include mediaquery(null, 768px) {
                                 font-size: 20px;
                             }
+                        }
+                        .mail{
+                            word-break: break-all;
                         }
                         .change_p {
                             color: #94693c;
@@ -561,6 +576,8 @@ $product_color_5: #e30400;
                     }
                     .txt {
                         font-size: 22px;
+                        margin-right: 80px;
+                        white-space: nowrap;
                         @include mediaquery(null, 991px) {
                             font-size: 18.5px;
                         }

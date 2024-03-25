@@ -62,7 +62,7 @@
                                 <ul class="info">
                                     <li class="name">Evora</li>
                                     <li>1993.10.30</li>
-                                    <li>evora@mak66design.com</li>
+                                    <li class="mail">evora@mak66design.com</li>
                                     <li class="change_p">
                                         <a href="javascript:;">
                                             修改密碼
