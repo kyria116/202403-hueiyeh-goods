@@ -21,7 +21,8 @@
                     <div class="form">
                         <form>
                             <ul class="personal">
-                                <li class="personal_data">
+                                <!-- 送出必填未填寫會加上 class:required -->
+                                <li class="personal_data required">
                                     <label for="name">
                                         <div>姓名<span>必填</span></div>
                                     </label>
@@ -86,8 +87,9 @@
                                     </div>
                                 </li>
                                 <li class="personal_data">
+                                    <!-- 非必填會加上 class:optional -->
                                     <label for="tel" class="optional">
-                                        <div>室內電話</div>
+                                        <div>室內電話<span>必填</span></div>
                                     </label>
                                     <div class="telephone">
                                         <div class="input area_code">
@@ -104,16 +106,30 @@
                                         <div>地址<span>必填</span></div>
                                     </label>
                                     <div class="city-selector">
-                                        <select class="county">
-                                        </select>
-                                        <select class="district2">
-                                        </select>
-                                        <div class="input" style="width:57.6%;">
+                                        <span class="selector">
+                                            <select class="county">
+                                            </select>
+                                            <select class="district2">
+                                            </select>
+                                        </span>
+                                        <div class="input address">
                                             <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
                                         </div>
                                     </div>
                                 </li>
                             </ul>
+                            <fieldset>
+                                <div class="checkbox">
+                                    <input type="checkbox" id="agree" name="agree" checked />
+                                    <label for="agree">我同意<a href="./"><span>輝葉良品相關條款</span></a>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="btn_flex">
+                        <a href="javascript:;" class="store_btn">
+                            <div>註冊</div>
+                        </a>
+                    </div>
                         </form>
                     </div>
                 </div>
@@ -127,20 +143,6 @@
     <script src="dist/js/tw-city-selector.js"></script>
     <script src="dist/js/main.js"></script>
     <script src="dist/js/registration.js"></script>
-    <script>
-        //區域選擇
-        new TwCitySelector({
-            el: '.city-selector',
-            elCounty: '.county',
-            elDistrict: '.district2',
-        });
-
-
-        //select 顏色改變
-        $("select").change(function() {
-            $(this).css("color", "black");
-        });
-    </script>
 </body>
 
 </html>

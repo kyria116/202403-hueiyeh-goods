@@ -4,19 +4,28 @@
 .registration {
     position: relative;
     padding: 121px 0 150px;
+    @include mediaquery(null, 991px) {
+        padding: 34px 0 175px;
+    }
     .registration_flex {
         .title_flex {
             display: flex;
             flex-direction: column;
             color: #94693c;
             font-weight: 500;
-            .subtitle{
+            .subtitle {
                 font-size: 20px;
                 letter-spacing: 4%;
+                @include mediaquery(null, 991px) {
+                    font-size: 12px;
+                }
             }
-            .title{
+            .title {
                 font-size: 40px;
                 letter-spacing: 6%;
+                @include mediaquery(null, 991px) {
+                    font-size: 22.5px;
+                }
             }
         }
         .form {
@@ -48,7 +57,21 @@
                         width: 100%;
                     }
                     @include mediaquery(null, 767px) {
-                        padding: 0 22px 38px 22px;
+                        padding: 0 0 30px 0;
+                    }
+                    &:nth-child(even) {
+                        padding: 0 0 24px 0;
+                    }
+                }
+                .required{
+                    select{
+                    border: 1px solid #D31E1B;
+                    }
+                    input{
+                    border: 1px solid #D31E1B;
+                    }
+                    label>div>span{
+                        display: inline-block;
                     }
                 }
                 .input {
@@ -61,31 +84,53 @@
                         width: 100%;
                         min-width: 0;
                     }
-                    
                 }
-                .telephone{
+                .telephone {
                     display: flex;
                 }
-                .area_code{
+                .area_code {
                     width: 13.6%;
                     margin-right: 16px;
+                    @include mediaquery(1650px, 18000px) {
+                        width: 15%;
+                    }
+                    @include mediaquery(1200px, 1650px) {
+                        width: 24%;
+                    }
+                    @include mediaquery(991px, 1200px) {
+                        width: 34%;
+                    }
+                    @include mediaquery(null, 991px) {
+                        width: 28%;
+                        margin-right: 12.5px;
+                    }
                 }
-                .tel{
+                .tel {
                     width: 84.3%;
+                    @include mediaquery(null, 991px) {
+                        width: 72.4%;
+                    }
                 }
                 input[type="date"]::-webkit-calendar-picker-indicator {
                     color: transparent;
                     background: none;
                     z-index: 1;
                 }
-                input[type="date"]{
+                input[type="date"] {
                     width: 65.3%;
                     margin: 0;
-                    background: url("../../dist/images/common/form_arrow.png") center right 10px / 19px 7px no-repeat; 
+                    background: url("../../dist/images/common/form_arrow.png") center right 10px / 19px 7px no-repeat;
+                    color: #a3a3a3;
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                    }
                 }
-                .optional{
+                .optional {
                     padding-left: 0;
                     &::before {
+                        display: none;
+                    }
+                    >div>span{
                         display: none;
                     }
                 }
@@ -96,10 +141,10 @@
                     padding-left: 12px;
                     margin-bottom: 10px;
                     @include mediaquery(null, 991px) {
-                        margin-bottom: 12.5px;
+                        margin-bottom: 9px;
                     }
                     @include mediaquery(null, 767px) {
-                        padding-left: 27px;
+                        padding-left: 9px;
                         font-size: 15px;
                     }
                     &::before {
@@ -110,32 +155,32 @@
                         transform: translate(0, -50%);
                         width: 18px;
                         aspect-ratio: 1 / 1;
-                        color: #D31E1B;
+                        color: #d31e1b;
                         @include mediaquery(null, 767px) {
                             top: 13px;
                             left: -1px;
                             font-size: 12px;
                         }
                     }
-                    >div{
+                    > div {
                         position: relative;
                         display: flex;
                         align-items: center;
                         justify-content: start;
                         span {
+                            display: none;
                             padding-left: 6px;
                             font-size: 16px;
-                            color: #D31E1B;
+                            color: #d31e1b;
                             @include mediaquery(null, 767px) {
-                                padding-top: 5px;
+                                padding: 0 0 0 5px;
                                 font-size: 14px;
                             }
                         }
                     }
-                    
                 }
                 input {
-                    border: 1px solid #E4E4E4;
+                    border: 1px solid #e4e4e4;
                     width: 100%;
                     font-size: 16px;
                     color: #000;
@@ -147,6 +192,9 @@
                     }
                     @include mediaquery(null, 767px) {
                         font-size: 15px;
+                        padding: 0 9px;
+                        height: 41px;
+                        line-height: 41px;
                     }
                     &::placeholder {
                         transform: translateY(2%);
@@ -159,32 +207,63 @@
                         }
                     }
                 }
-                .city-selector{
-                    display: flex;
+            
+                .address {
+                    width: 57.6%;
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                    }
                 }
-                select{
-                    border: 1px solid #E4E4E4;
-                    width: 19.1%;
+                .city-selector {
+                    display: flex;
+                    @include mediaquery(null, 991px) {
+                        flex-direction: column;
+                    }
+                }
+                .selector {
+                    width: 42.3%;
+                    display: flex;
+                    justify-content: center;
+                    @include mediaquery(991px, 1200px) {
+                        width: 48%;
+                    }
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                        margin-bottom: 12.5px;
+                    }
+                }
+                select {
+                    border: 1px solid #e4e4e4;
+                    width: calc((100% - 32px) / 2);
                     font-size: 16px;
-                    color:#A3A3A3;
+                    color: #a3a3a3;
                     padding: 0 18px;
                     height: 48px;
                     line-height: 48px;
                     margin: 0 16px 0 0;
-                    background: url("../../dist/images/common/form_arrow.png") center right 10px / 19px 7px no-repeat; 
+                    background: url("../../dist/images/common/form_arrow.png") center right 10px / 19px 7px no-repeat;
                     appearance: none;
+                    option {
+                        color: #000;
+                    }
+                    @include mediaquery(991px, 1200px) {
+                        margin: 0 6px 0 0;
+                        width: calc((100% - 12px) / 2);
+                    }
+                    @include mediaquery(null, 991px) {
+                        width: calc((100% - 21px) / 2);
+                    }
+                    @include mediaquery(null, 767px) {
+                        font-size: 15px;
+                        padding: 0 9px;
+                        height: 41px;
+                        line-height: 41px;
+                    }
                 }
                 fieldset {
                     display: flex;
                     width: 100%;
-                    max-width: 340px;
                     position: relative;
-                    @include mediaquery(null, 1400px) {
-                        flex-direction: column;
-                    }
-                    @include mediaquery(null, 991px) {
-                        flex-direction: row;
-                    }
                 }
                 .ckbutton {
                     display: flex;
@@ -217,7 +296,7 @@
                             width: 24px;
                             height: 24px;
                             border-radius: 50%;
-                            background: #E4E4E4;
+                            background: #e4e4e4;
                             @include mediaquery(null, 767px) {
                                 width: 22px;
                                 height: 22px;
@@ -232,7 +311,7 @@
                             width: 16px;
                             height: 16px;
                             border-radius: 50%;
-                            background: #94693C;
+                            background: #94693c;
                             opacity: 0;
                             transition: opacity 0.5s;
                             transition: 0.3s;
@@ -249,59 +328,90 @@
                         }
                     }
                 }
-                .note {
-                    position: relative;
-                    width: 100%;
+            }
+            .checkbox {
+                label {
+                    cursor: pointer;
+                    font-size: 16px;
                     display: flex;
-                    flex-direction: column;
-                    align-items: start;
-                    @include mediaquery(null, 991px) {
-                        min-width: 0;
+                    align-items: center;
+                    @include mediaquery(null, 767px) {
+                        font-size: 15px;
                     }
-                    textarea {
-                        width: 100%;
-                        height: 160px;
-                        padding: 15px 18px;
-                        font-size: 16px;
-                        border: none;
-                        border-radius: 10px;
-                        font-family: $font-tw;
-                        font-weight: 400;
-                        background-color: #eeeeee;
-                        color: #000;
-                        resize: none;
-                        overflow: auto;
-                        &::-webkit-scrollbar {
-                            width: 5px;
-                            border-radius: 20px;
-                        }
-                        &::placeholder {
-                            transform: translateY(-10%);
-                            font-family: $font-tw;
-                            font-size: 16px;
-                            color: #aaaaaa;
-                            font-weight: 400;
-                            @include mediaquery(null, 767px) {
-                                font-size: 15px;
+                    > a {
+                        font-weight: 500;
+                        border-bottom: 1px solid #000;
+                        transition: 0.5s;
+                        &:hover {
+                            @include mediaquery(767px, null) {
+                                border-bottom: 1px solid #94693c;
+                                color: #94693c;
                             }
                         }
                     }
-                    span {
-                        position: absolute;
-                        font-family: "Noto Sans TC", sans-serif;
-                        font-weight: 500;
-                        top: 200px;
-                        left: 0;
-                        font-size: 14px;
-                        padding-top: 4px;
-                        color: $primary-color;
-                        @include mediaquery(null, 767px) {
-                            padding-top: 5px;
-                            font-size: 14px;
-                        }
-                    }
+                }
+                [type="checkbox"] {
+                    display: none;
                 }
 
+                [type="checkbox"] + label::before {
+                    content: "";
+                    display: inline-block;
+                    width: 26px;
+                    height: 26px;
+
+                    background-color: #e4e4e4;
+                    background-size: contain;
+
+                    margin-right: 14px;
+                    position: relative;
+                    top: 2px;
+                    @include mediaquery(null, 767px) {
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 12px;
+                    }
+                }
+                [type="checkbox"]:checked + label::before {
+                    background-image: url("../../dist/images/common/agree.svg");
+                }
+            }
+            .btn_flex {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 94px;
+                @include mediaquery(null, 991px) {
+                    margin-top: 125px;
+                }
+                @include mediaquery(null, 768px) {
+                    margin-top: 62.5px;
+                }
+                .store_btn {
+                    font-size: 18px;
+                    text-align: center;
+                    color: #fff;
+                    padding: 27px 192px;
+                    background: #94693c;
+                    border-radius: 6px;
+                    border: 1px solid #94693c;
+                    transition: 0.5s;
+                    @include mediaquery(767px, null) {
+                        &:hover {
+                            color: #94693c;
+                            background: #fff;
+                        }
+                    }
+                    @include mediaquery(null, 991px) {
+                        font-size: 17px;
+                        padding: 22.5px 128.5px;
+                    }
+                    @include mediaquery(null, 767px) {
+                        font-size: 16px;
+                        padding: 18px 99px;
+                    }
+                }
             }
         }
     }

@@ -26,9 +26,11 @@
         align-items: end;
         margin-bottom: 21px;
         &:hover {
-            .arrow {
-                .line {
-                    height: 20px;
+            @include mediaquery(768px, null) {
+                .arrow {
+                    .line {
+                        height: 20px;
+                    }
                 }
             }
         }

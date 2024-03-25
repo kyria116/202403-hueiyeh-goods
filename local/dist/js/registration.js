@@ -1,0 +1,1 @@
+new TwCitySelector({el:".city-selector",elCounty:".county",elDistrict:".district2",standardWords:!0}),$("select").change((function(){$(this).css("color","black")})),$("input[type='date']").change((function(){$(this).css("color","black")}));
