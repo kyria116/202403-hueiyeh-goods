@@ -1,0 +1,179 @@
+@import "base/mixin";
+@import "base/variable";
+@import "template/style";
+
+
+.newsBox{
+    padding-bottom: 142px;
+    @include mediaquery(null, 767px) {
+        padding-bottom: 169px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 74px;
+        @include mediaquery(null, 767px) {
+            padding-bottom: 46px;
+        }
+        li{
+            width: calc((100% - 64px) / 3);
+            margin: 0 32px 48px 0;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #F8F8F8;
+            @include mediaquery(992px, 1440px) {
+                width: calc((100% - 40px) / 3);
+                margin: 0 20px 36px 0;
+            }
+            @include mediaquery(768px, 991px) {
+                width: calc((100% - 30px) / 2);
+                margin: 0 30px 30px 0;
+            }
+            @include mediaquery(null, 767px) {
+                width: 100%;
+                margin: 0 0 26px;
+                border-radius: 3px;
+            }
+            &:nth-child(3n){
+                @include mediaquery(992px, null) {
+                    margin-right: 0;
+                }
+            }
+            &:nth-child(2n){
+                @include mediaquery(768px, 991px) {
+                    margin-right: 0;
+                }
+            }
+            &:hover{
+                @include mediaquery(768px, null) {
+                    .img{
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+        .img{
+            transition: opacity 0.75s;
+            img{
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 0.5898;
+            }
+        }
+        .txt{
+            padding: 30px 36px 36px 33px;
+            @include mediaquery(null, 1440px) {
+                padding: 20px 24px;
+            }
+            @include mediaquery(null, 767px) {
+                padding: 16px 20px 32px;
+            }
+        }
+        .tagDate{
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+            @include mediaquery(null, 767px) {
+                margin-bottom: 11px;
+            }
+        }
+        .date{
+            font-size: 16px;
+            font-weight: 500;
+            color: #797979;
+            margin-right: 25px;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+                margin-right: 13px;
+            }
+        }
+        .tags{
+            font-size: 16px;
+            color: #94693C;
+            padding: 0 16px;
+            height: 32px;
+            line-height: 32px;
+            border: 1px solid #94693C;
+            border-radius: 4px;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+                height: 29px;
+                line-height: 29px;
+                padding: 0 8px;
+            }
+        }
+        .newsTitle span{
+            font-size: 22px;
+            font-weight: 500;
+            @include clamp(1.45, 2);
+            @include mediaquery(null, 767px) {
+                font-size: 20px;
+                height: auto;
+            }
+        }
+    }
+}
+
+
+//詳細頁
+.detailContent{
+    padding-bottom: 150px;
+    @include mediaquery(null, 767px) {
+        padding-bottom: 172px;
+    }
+    .tagDate{
+        display: flex;
+        align-items: center;
+        margin-bottom: 17px;
+        @include mediaquery(null, 767px) {
+            margin-bottom: 28px;
+        }
+    }
+    .date{
+        font-size: 16px;
+        font-weight: 500;
+        color: #797979;
+        margin-right: 25px;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            margin-right: 13px;
+        }
+    }
+    .tags{
+        font-size: 16px;
+        color: #94693C;
+        padding: 0 16px;
+        height: 32px;
+        line-height: 32px;
+        border: 1px solid #94693C;
+        border-radius: 4px;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            height: 29px;
+            line-height: 29px;
+            padding: 0 8px;
+        }
+    }
+    .newsTitle{
+        font-size: 32px;
+        font-weight: 500;
+        border-bottom: 1px solid #E4E4E4;
+        margin-bottom: 48px;
+        padding-bottom: 12px;
+        line-height: 1.45;
+        @include mediaquery(null, 767px) {
+            font-size: 20px;
+            margin-bottom: 23px;
+            padding-bottom: 14px;
+        }
+    }
+    .editor_Content{
+        margin-bottom: 90px;
+        @include mediaquery(null, 767px) {
+            margin-bottom: 62px;
+        }
+    }
+    .backBtn{
+        margin-bottom: 0;
+    }
+}

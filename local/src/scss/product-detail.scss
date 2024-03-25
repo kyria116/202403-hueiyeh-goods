@@ -1,24 +1,14 @@
 @import "base/mixin";
 @import "base/variable";
+@import "template/style";
 @import "plugIn/swiper-bundle.min";
 
-$product_color_1: #F9EDE2;
-$product_color_2: #797979;
-$product_color_3: #94693C;
-$product_color_4: #E4E4E4;
-$product_color_5: #E30400;
-
-
-//頁面共用
-*{
-    color: #000;
-}
-main{
-    overflow: hidden;
-}
 
 //產品明細頁
 .fixedBuy{
+    position: fixed;
+    z-index: 5;
+    top: 88px;
     display: flex;
     justify-content: space-between;
     background-color: #F9EDE2;
@@ -28,6 +18,7 @@ main{
     }
     @include mediaquery(null, 991px) {
         padding-left: 0px;
+        top: 64px;
     }
     .fixedLeft{
         display: flex;
@@ -233,6 +224,7 @@ main{
             margin-bottom: 28px;
         }
         .s_imgBox{
+            position: relative;
             @include mediaquery(768px, null){
                 flex: 0 0 104px;
                 width: 104px;
@@ -247,6 +239,25 @@ main{
                 flex: 0 0 90px;
                 width: 90px;
                 margin-right: 10px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                z-index: 2;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to top, #fff, rgba(255,255,255,0));
+                pointer-events: none;
+                @include mediaquery(null, 767px) {
+                    width: 20%;
+                    height: 100%;
+                    right: 0;
+                    left: auto;
+                    top: 0;
+                    background: linear-gradient(to left, #fff, rgba(255,255,255,0));
+                }
             }
             .swiper {
                 height: 100%;
@@ -275,10 +286,13 @@ main{
             }
         }
         .b_imgBox{
-            position: sticky;
+            position: relative;
             flex: 1;
             width: 100%;
             max-width: 544px;
+            border: 1px solid #E4E4E4;
+            border-radius: 6px;
+            overflow: hidden;
             @include mediaquery(1201px, 1440px) {
                 max-width: 435px;
             }
@@ -292,10 +306,19 @@ main{
                 margin-bottom: 14px;
                 max-width: 100%;
             }
+            .icon{
+                position: absolute;
+                z-index: 3;
+                top: 10px;
+                left: 10px;
+                max-width: 60px;
+                @include mediaquery(null, 767px){
+                    top: 5px;
+                    left: 5px;
+                    max-width: 44px;
+                }
+            }
             .swiper-slide{
-                border: 1px solid #E4E4E4;
-                border-radius: 6px;
-                overflow: hidden;
                 img{
                     display: block;
                     width: 100%;
@@ -488,22 +511,34 @@ main{
         }
         .name{
             margin-right: 12px;
-            border: 1px solid #94693C;
-            border-radius: 4px;
-            padding: 5px 12px 7px;
-            color: #94693C;
-            font-size: 20px;
-            @include mediaquery(992px, 1200px) {
-                font-size: 18px;
-            }
-            @include mediaquery(768px, 991px) {
-                font-size: 17px;
-            }
             @include mediaquery(null, 767px) {
-                font-size: 15px;
-                padding: 3px 5px;
-                border-radius: 2px;
                 margin: 0 0 6px;
+            }
+            a{
+                display: block;
+                padding: 5px 12px 7px;
+                border: 1px solid #94693C;
+                border-radius: 4px;
+                color: #94693C;
+                font-size: 20px;
+                transition: 0.75s;
+                @include mediaquery(992px, 1200px) {
+                    font-size: 18px;
+                }
+                @include mediaquery(768px, 991px) {
+                    font-size: 17px;
+                }
+                @include mediaquery(null, 767px) {
+                    font-size: 15px;
+                    padding: 3px 5px;
+                    border-radius: 2px;
+                }
+                &:hover{
+                    @include mediaquery(768px, null) {
+                        background-color: #94693C;
+                        color: #fff;
+                    }
+                }
             }
         }
         .date{
@@ -668,11 +703,15 @@ main{
                 box-shadow: transparent;
             }
             li{
+                position: relative;
                 display: flex;
                 margin-bottom: 20px;
                 @include mediaquery(null, 767px) {
                     margin-bottom: 12px;
                 }
+            }
+            input{
+                display: none;
             }
             .s_title{
                 flex: 1;
@@ -723,6 +762,67 @@ main{
                     }
                 }
             }
+        }
+        &.hasRadio ul{
+            input{
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                display: block;
+                &:checked + label span::after{
+                    opacity: 1;
+                }
+            }
+            .s_title{
+                cursor: pointer;
+                padding-left: 34px;
+                @include mediaquery(null, 767px) {
+                    padding-left: 26px;
+                }
+                &::before{
+                    content: none;
+                }
+                span{
+                    position: relative;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        top: -2px;
+                        left: -34px;
+                        width: 24px;
+                        height: 24px;
+                        border-radius: 50%;
+                        border: 1px solid #E4E4E4;
+                        background-color: #fff;
+                        @include mediaquery(null, 767px) {
+                            top: 1px;
+                            left: -26px;
+                            width: 18px;
+                            height: 18px;
+                        }
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        top: 2px;
+                        left: -30px;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 50%;
+                        background-color: #94693C;
+                        opacity: 0;
+                        transition: opacity 0.75s;
+                        @include mediaquery(null, 767px) {
+                            top: 4px;
+                            left: -23px;
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                }
+            }
+            
         }
     }
     .buyRight{
@@ -1532,39 +1632,9 @@ main{
         }
     }
 }
-.backBtn{
-    text-align: center;
-    margin-bottom: 150px;
-    @include mediaquery(null, 767px) {
-        margin-bottom: 224px;
-    }
-    a{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 420px;
-        height: 80px;
-        border-radius: 6px;
-        color: #fff;
-        background-color: #94693C;
-        border: 1px solid #94693C;
-        transition: color 0.75s, background-color 0.75s;
-        @include mediaquery(null, 767px) {
-            width: 230px;
-            height: 60px;
-        }
-        &:hover{
-            @include mediaquery(768px, null) {
-                color: #94693C;
-                background-color: #fff;
-            }
-        }
-    }
-}
 
-.modal-open{
-    #modalBg{
-        display: block;
+.modal-open-product{
+    #modalBgProduct{
         position: fixed;
         z-index: 101;
         top: 0;
@@ -1573,14 +1643,14 @@ main{
         height: 100vh;
         background-color: rgba(0,0,0,0.5);
     }
-    .popup{
+    .popupProduct{
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #fff;
         max-width: 954px;
-        width: 100%;
+        width: 88%;
         min-height: fit-content;
         max-height: 70vh;
         padding: 60px 52px;
@@ -1588,135 +1658,133 @@ main{
             width: calc(100% - 96px);
             left: 48px;
             transform: translateY(-50%);
+            padding: 45px;
         }
         @include mediaquery(null, 767px){
             width: calc(100% - 48px);
             left: 24px;
             transform: translateY(-50%);
+            padding: 28px 36px;
+            max-height: 85.5vh;
         }
-        .modal-content{
+    }
+    .modal-content{
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 4px;
+            @include mediaquery(null, 991px) {
+                width: 2px;
+            }
+        }
+        &::-webkit-scrollbar-button {
+            background: transparent;
+            border-radius: 4px;
+        }
+        &::-webkit-scrollbar-track-piece {
+            background: #F8F8F8;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #94693C;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: transparent;
+        }
+    }
+    .popupTitle{
+        font-size: 24px;
+        font-weight: 500;
+        color: #94693C;
+        margin-bottom: 25px;
+        @include mediaquery(null, 767px){
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+    }
+    .imgTxt{
+        @include mediaquery(768px, null){
+            display: flex;
+            align-items: center;
+        }
+    }
+    .img{
+        flex: 0 0 160px;
+        margin-right: 38px;
+        background-color: #fff;
+        border-radius: 6px;
+        border: 1px solid #E4E4E4;
+        overflow: hidden;
+        @include mediaquery(null, 767px){
+            max-width: 195px;
+            margin: 0 auto 18px;
+        }
+        img{
+            display: block;
             width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            &::-webkit-scrollbar {
-                width: 4px;
-                @include mediaquery(null, 991px) {
-                    width: 2px;
-                }
+            aspect-ratio: 1 / 1.1011;
+        }
+    }
+    .proTitle{
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        margin-bottom: 19px;
+        @include mediaquery(null, 767px){
+            justify-content: center;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #94693C;
+        }
+        i{
+            font-size: 22px;
+            @include clamp(1.5,2);
+            height: auto;
+            margin-right: 14px;
+            @include mediaquery(null, 767px){
+                font-size: 16px;
             }
-            &::-webkit-scrollbar-button {
-                background: transparent;
-                border-radius: 4px;
+        }
+        .price{
+            font-size: 18px;
+            color: #6F6D6D;
+            @include mediaquery(null, 767px){
+                font-size: 15px;
             }
-            &::-webkit-scrollbar-track-piece {
-                background: #F8F8F8;
-            }
-            &::-webkit-scrollbar-thumb {
-                border-radius: 4px;
-                background-color: #94693C;
-            }
-            &::-webkit-scrollbar-track {
-                box-shadow: transparent;
+        }
+    }
+    .intro span{
+        @include clamp(1.85,4);
+        height: auto;
+        font-size: 16px;
+        @include mediaquery(null, 767px){
+            font-size: 15px;
+            @include clamp(1.5,6);
+        }
+    }
+    .closeIcon{
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        transition: transform 0.75s;
+        @include mediaquery(576px, 991px){
+            top: -36px;
+            right: 0;
+        }
+        @include mediaquery(null, 575px){
+            top: -24px;
+            right: 0;
+            width: 16px;
+            height: 16px;
+        }
+        &:hover{
+            @include mediaquery(768px, null) {
+                transform: rotate(90deg);
             }
         }
     }
 }
-#modalBg{
-    display: none;
-}
-    
-.testPage{
-    .mySwiper{
-        text-align: center;
-        margin: 40px 0;
-        position: relative;
-        &::before{
-            content: "";
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            left: 0%;
-            transform: translateY(-50%);
-            width: 7.9%;
-            height: 2px;
-            background-color: #fff;
-        }
-        &::after{
-            content: "";
-            position: absolute;
-            z-index: 2;
-            top: 50%;
-            right: 0%;
-            transform: translateY(-50%);
-            width: 7.9%;
-            height: 2px;
-            background-color: #fff;
-        }
-        .swiper-slide{
-            position: relative;
-            padding: 40px 0;
-            &::before{
-                content: "";
-                position: absolute;
-                top: 50%;
-                right: 0;
-                transform: translateY(-50%);
-                width: 120%;
-                height: 1px;
-                background-color: #000;
-            }
-            &.activeThis a{
-                font-size: 30px;
-                &::after{
-                    width: 150%;
-                    height: 150%;
-                }
-            }
-            a{
-                position: relative;
-                z-index: 5;
-                display: inline-block;
-                width: 40px;
-                height: 40px;
-                line-height: 40px;
-                font-size: 20px;
-                transition: 0.75s;
-                &::after{
-                    content: "";
-                    z-index: -1;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 100%;
-                    height: 100%;
-                    border: 1px solid #000;
-                    border-radius: 50%;
-                    background-color: #fff;
-                }
-            }
-            &.repeat{
-                a{
-                    font-size: 0;
-                    &::after{
-                        content: "";
-                        position: absolute;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
-                        border: 1px solid #000;
-                        width: 20px;
-                        height: 20px;
-                        background-color: #000;
-                        transition: background-color 0.75s;
-                    }
-                }
-                &.activeThis a::after{
-                    background-color: #fff;
-                }
-            }
-        }
-    }
-}
-
-

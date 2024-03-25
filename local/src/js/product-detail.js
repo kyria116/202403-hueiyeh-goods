@@ -1,6 +1,26 @@
 //@prepros-prepend plugin/swiper-bundle.min.js
 
 $(function () {
+	let marTop = 0
+	function init(){
+		if(winW > 767){
+			marTop = 128
+		}else{
+			marTop = 24
+		}
+		$('.productBox').css('margin-top', `${Number(marTop) + Number($('.fixedBuy').outerHeight())}px`)
+	
+		if(winW > 991){
+			$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
+		}
+	}
+
+	init()
+
+	$(window).on('resize', function () {
+		init()
+	});
+
 	$('.proMenu li').on('click', function(){
 		$(this).addClass('active')
 		$(this).siblings().removeClass('active')
@@ -8,14 +28,6 @@ $(function () {
 		$('.infoPage li').eq($(this).index()).siblings().css('display', 'none');
 	})
 
-	if(winW > 991){
-		$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
-	}
-	$(window).on('resize', function () {
-		if(winW > 991){
-			$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
-		}
-	});
 	let num = 1
 	$('.plus').on('click', function () {
 		$('.minus').removeClass('hidden')
@@ -49,6 +61,7 @@ $(function () {
 		slidesPerView: 4.5,
 		freeMode: true,
 		watchSlidesProgress: true,
+		loop: true,
 		breakpoints: { 
 			768: {
 				direction: 'vertical',
@@ -59,6 +72,7 @@ $(function () {
     });
     var b_imgBox = new Swiper(".b_imgBox .mySwiper", {
 		spaceBetween: 0,
+		loop: true,
 		thumbs: {
 			swiper: s_imgBox,
 		},
@@ -117,4 +131,26 @@ $(function () {
 	$('.likeSwiper-prev').on('click', function(){
 		$('.likeSwiper').addClass('mask')
 	})
+
+	$('.buyLeft a').on('click', function () {
+		$('#modalBgProduct').css('display', 'block');
+		$('body').addClass('modal-open-product')
+		$('html, body').css('overflow', 'hidden')
+	})
+	$('.closeIcon').on('click', function () {
+		$('#modalBgProduct').css('display', 'none')
+		$('body').removeClass('modal-open-product')
+		$('html, body').css('overflow', 'hidden auto')
+	})
+	const outerProduct = document.getElementById('modalBgProduct')
+	const innerProduct = document.getElementById('popupProduct')
+	outerProduct.addEventListener("click", function (e) {
+		$('#modalBgProduct').css('display', 'none')
+		$('body').removeClass('modal-open-product')
+		$('html, body').css('overflow', 'hidden auto')
+		e.stopPropagation();
+	}, false);
+	innerProduct.addEventListener('click', function (e) {
+		e.stopPropagation();
+	}, false);
 })

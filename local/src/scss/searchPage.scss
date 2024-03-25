@@ -1,0 +1,52 @@
+@import "base/mixin";
+@import "base/variable";
+@import "template/style";
+@import "product";
+@import "news";
+
+
+.searchPageBox{
+    background: #F8F3ED;
+    padding: 64px 60px 58px;
+    margin-bottom: 44px;
+    .inputBox{
+        position: relative;
+    }
+    input{
+        appearance: none;
+        border-radius: 0;
+        border: none;
+        background: transparent;
+        border-bottom: 1px solid #B4B4B4;
+        padding-bottom: 12px;
+        font-size: 16px;
+        width: 100%;
+        &::placeholder{
+            font-size: 16px;
+            color: #949494;
+        }
+    }
+    a{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+    }
+}
+.searchAllBox{
+    padding-bottom: 144px;
+    @include mediaquery(null, 767px) {
+        padding-bottom: 168px;
+    }
+}
+.noResult{
+    text-align: center;
+    font-size: 30px;
+    color: #6F6D6D;
+    padding-top: 37px;
+    @include mediaquery(null, 767px) {
+        font-size: 18px;
+        padding-top: 18px;
+    }
+}
