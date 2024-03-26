@@ -1,0 +1,262 @@
+@import "base/mixin";
+@import "base/variable";
+@import "template/style";
+
+// 訂購完成
+.paysuccessfulPage{
+    .kvTitle{
+        @include mediaquery(null, 767px) {
+            padding-bottom: 6px;
+        }
+    }
+    .content{
+        display: flex;
+        align-items: center;
+        @include mediaquery(null, 767px) {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+    .leftBox{
+        padding: 0 60px;
+        flex: 0 0 51%;
+        @include mediaquery(768px, 991px) {
+            padding: 0 30px 0 0;
+            flex: 0 0 48%;
+        }
+        @include mediaquery(null, 767px) {        
+            flex: 0 0 auto;
+            padding: 0 6.5476% 0 0;
+            text-align: right;
+            width: 100%;
+            margin-bottom: 32px;
+        }
+        img{
+            width: 615px;
+            max-width: 100%;
+            @include mediaquery(null, 767px) { 
+                width: 65%;
+            }
+        }
+    }
+    .rightBox{
+        padding-right: 110px;
+        flex: 0 0 49%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mediaquery(768px, 1200px) {
+            flex: 0 0 52%;
+            padding-right: 0px;
+        }
+        @include mediaquery(null, 767px) {        
+            flex: 0 0 auto;
+            width: 100%;
+            padding-right: 0;
+        }
+        img{
+            max-width: 125px;
+            @include mediaquery(768px, 991px) {
+                max-width: 100px;
+            }
+            @include mediaquery(null, 767px) { 
+                max-width: 94px;
+            }
+        }
+    }
+    .txt{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 29px;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            margin-top: 35px;
+        }
+        .red{
+            color: #D31E1B;
+        }
+    }
+    .backBtn{
+        margin: 88px 0 150px;
+        @include mediaquery(null, 767px) {
+            margin: 57px 0 166px;
+        }
+    }
+}
+
+// 404
+.noPage{
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img{
+        max-width: 611px;
+        width: 70%;
+        @include mediaquery(null, 767px) {
+            max-width: 247px;
+            margin-top: 23px;
+        }
+    }
+    .txt{
+        font-size: 16px;
+        text-align: center;
+        margin-top: 32px;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            margin-top: 56px;
+            max-width: 94%;
+        }
+    }
+    .backBtn{
+        margin: 94px 0 150px;
+        @include mediaquery(null, 767px) {
+            margin: 61px 0 168px;
+        }
+    }
+}
+
+// 折扣碼 
+.ticketsDetailPage{
+    .content{
+        padding-top: 121px;
+        display: flex;
+        align-items: center;
+        @include mediaquery(null, 991px) {
+            flex-direction: column;
+            align-items: baseline;
+            padding-top: 71px;
+        }
+    }
+    .leftBox{
+        padding: 0 60px;
+        flex: 0 0 47.25%;
+        @include mediaquery(992px, 1600px) {
+            padding: 0 30px 0 0;
+        }
+        @include mediaquery(null, 991px) {        
+            flex: 0 0 auto;
+            padding: 0;
+            text-align: center;
+            width: 100%;
+            margin-bottom: 21px;
+        }
+        img{
+            @include mediaquery(null, 991px) {  
+                width: 65.5%;
+            }
+        }
+    }
+    .rightBox{
+        flex: 0 0 52.75%;
+        border-radius: 20px;
+        padding: 34px 144px 63px 54px;
+        background-color: #FFF6EE;
+        @include mediaquery(992px, 1600px) {
+            padding: 34px 30px;
+        }
+        @include mediaquery(768px, 991px) {
+            flex: 0 0 52%;
+            padding: 34px 30px;
+        }
+        @include mediaquery(null, 767px) {      
+            border-radius: 10px;  
+            flex: 0 0 auto;
+            width: 100%;
+            padding: 28px 32px;
+        }
+    }
+    .backBtn{
+        margin: 94px 0 150px;
+        @include mediaquery(null, 767px) {
+            margin: 61px 0 168px;
+        }
+    }
+    .titleBox{
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+        @include mediaquery(null, 767px) {
+            flex-direction: column;
+            text-align: center;
+            margin-bottom: 22px;
+        }
+        .icon{
+            max-width: 92px;
+            margin-right: 20px;
+            @include mediaquery(992px, 1400px) {
+                max-width: 80px;
+                margin-right: 10px;
+            }
+            @include mediaquery(null, 767px) {
+                max-width: 83px;
+                margin: 0 0 7px;
+            }
+        }
+        .enTxt{
+            font-size: 20px;
+            font-weight: 500;
+            color: #94693C;
+            @include mediaquery(null, 767px) {
+                font-size: 17px;
+            }
+        }
+        .twTxt{
+            font-size: 40px;
+            font-weight: 500;
+            color: #94693C;
+            @include mediaquery(null, 767px) {
+                font-size: 30px;
+            }
+        }
+    }
+    .ticketBox{
+        margin-bottom: 28px;
+        @include mediaquery(null, 767px) {
+            margin-bottom: 20px;
+        }
+        li{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            margin-bottom: 2px;
+            @include mediaquery(null, 767px) {
+                font-size: 16px;
+                margin-bottom: 0;
+            }
+            .m_title{
+                flex: 0 0 87px;
+                @include mediaquery(null, 767px) {
+                    flex: 0 0 68px;
+                }
+            }
+            &:nth-child(1){
+                font-size: 24px;
+                font-weight: 500;
+                margin-bottom: 8px;
+                @include mediaquery(null, 767px) {
+                    font-size: 19px;
+                    margin-bottom: 11px;
+                }
+                .m_info{
+                    color: #94693C;
+                }
+            }
+        }
+    }
+    .introTitle{
+        font-size: 18px;
+        font-weight: 500;
+        color: #C98B54;
+        margin-bottom: 3px;
+        @include mediaquery(null, 767px) {
+            font-size: 16px;
+        }
+    }
+    .editor_Content .editor_box{
+        color: #797979;
+        line-height: 1.6;
+    }
+}

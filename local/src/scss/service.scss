@@ -1,6 +1,7 @@
 @import "base/mixin";
 @import "base/variable";
 @import "template/style";
+@import "plugIn/chosen";
 
 .faqPage{
     position: relative;
@@ -725,5 +726,471 @@
     margin-bottom: 150px;
     @include mediaquery(null, 767px) {
         margin-bottom: 170px;
+    }
+}
+
+//產品保固
+.warrantyPage{
+    .top-menu-ul-2{
+        margin-bottom: 66px;
+        @include mediaquery(null, 767px) {
+            margin-bottom: 36px;
+        }
+    }
+    .topBox, .bottomBox{
+        display: flex;
+        @include mediaquery(null, 767px) {
+            flex-direction: column;
+        }
+    }
+    .bottomBox .leftBox {
+        > div:last-child input{
+            @include mediaquery(768px, null) {
+                margin-bottom: 0;
+            }
+        }
+        input,select{
+            margin-bottom: 28px;
+            @include mediaquery(null, 767px) {
+                margin-bottom: 36px;
+            }
+        }
+    }
+    .leftBox{
+        flex: 0 0 calc((100% - 64px) / 3);
+        margin-right: 32px;
+        @include mediaquery(768px, 1400px) {
+            flex: 0 0 calc((100% - 32px) / 3);
+            margin-right: 16px;
+        }
+        @include mediaquery(null, 767px) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+    .rightBox{
+        flex: 0 0 calc((100% - 64px) / 3 * 2 + 32px);
+        @include mediaquery(768px, 1400px) {
+            flex: 0 0 calc((100% - 32px) / 3 * 2 + 16px);
+        }
+        @include mediaquery(null, 767px) {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    }
+    .m_title{
+        font-size: 18px;
+        margin-bottom: 13px;
+        @include mediaquery(null, 767px) {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        span{
+            display: inline-block;
+            color: #D31E1B;
+            font-weight: 500;
+            transform: translateY(-5px);
+            margin-right: 2px;
+            font-size: 16px;
+            @include mediaquery(null, 767px) {
+                font-size: 14px;
+            }
+        }
+        b{
+            display: none;
+            margin-left: 6px;
+            font-size: 16px;
+            color: #D31E1B;
+            @include mediaquery(null, 767px) {
+                font-size: 14px;
+            }
+        }
+        a{
+            display: inline-flex;
+            align-items: center;
+            margin-left: 9px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #6F6D6D;
+            transition: opacity 0.75s;
+            @include mediaquery(null, 767px) {
+                font-size: 12px;
+                margin-left: 7px;
+            }
+            &:hover{
+                @include mediaquery(768px, null) {
+                    opacity: 0.6;
+                }
+            }
+            i{
+                margin-left: 7px;
+                width: 20px;
+                height: 20px;
+                background: url('../images/page/questionMark.png') center / contain no-repeat;
+                @include mediaquery(null, 767px) {
+                    margin-left: 5px;
+                    width: 12px;
+                    height: 12px;
+                }
+            }
+        }
+    }
+    .req{
+        .m_title{
+            b{
+                display: inline-block;
+            }
+        }
+        input:not([type="radio"]), select{
+            border: 1px solid #D31E1B;
+        }
+    }
+    input:not([type="radio"]), select{
+        appearance: none;
+        width: 100%;
+        height: 48px;
+        border-radius: 0;
+        border: 1px solid #E4E4E4;
+        margin-bottom: 24px;
+        font-size: 16px;
+        padding: 0 40px 0 18px;
+        color: #000;
+        font-family: $font;
+        @include mediaquery(768px, 1200px) {
+            padding-left: 12px;
+        }
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            padding: 0 30px 0 9px;
+            height: 41px; 
+            margin-bottom: 36px;
+        }
+        &::placeholder{
+            font-size: 16px;
+            color: #A3A3A3;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+            }
+        }
+    }
+    input[type="text"]{
+        padding-right: 18px;
+        @include mediaquery(768px, 1200px) {
+            padding-right: 12px;
+        }
+        @include mediaquery(null, 767px) {
+            padding-right: 9px;
+        }
+    }
+    select{
+        background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
+        @include mediaquery(null, 767px) {
+            background: #fff url('../images/common/form_arrow.png') center right 15px / 15px 6px no-repeat;
+        }
+    }
+    textarea{
+        resize: none;
+        width: 100%;
+        height: calc(100% - 39px);
+        border-radius: 0;
+        border: 1px solid #E4E4E4;
+        padding: 10px 18px;
+        font-size: 16px;
+        color: #000;
+        font-family: $font;
+        @include mediaquery(768px, 1200px) {
+            padding-left: 12px;
+        }
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            height: 424px;
+            padding: 6px 9px;
+        }
+        &::placeholder{
+            font-size: 16px;
+            font-family: $font;
+            color: #A3A3A3;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+            }
+        }
+    }
+    .radio{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+        li{
+            position: relative;
+            margin-bottom: 6px;
+            @include mediaquery(null, 767px){
+                margin-bottom: 15px;
+            }
+            input{
+                position: absolute;
+                opacity: 0;
+                &:checked + label::after{
+                    opacity: 1;
+                }
+            }
+            label{
+                position: relative;
+                cursor: pointer;
+                padding: 0 24px 0 32px;
+                @include mediaquery(null, 767px){
+                    padding: 0 24px 0 28px; 
+                    font-size: 15px;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    background-color: #E4E4E4;
+                    @include mediaquery(null, 767px){
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 4px;
+                    transform: translateY(-50%);
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    background-color: #94693C;
+                    opacity: 0;
+                    transition: opacity 0.75s;
+                    @include mediaquery(null, 767px){
+                        width: 12px;
+                        height: 12px;
+                        left: 3px;
+                    }
+                }
+            }
+        }
+    }
+    input[type="date"]{
+        position: relative;
+        &::-webkit-calendar-picker-indicator{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0px;
+            background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
+            width: calc(100% - 150px);
+        }
+    }
+    .box >div:nth-child(1) .inputDel a{
+        display: none;
+    }
+    .flex{
+        display: flex;
+        @include mediaquery(null, 767px) {
+            flex-direction: column;
+        }
+        .select_1{
+            @include mediaquery(null, 767px) {
+                margin-bottom: 12px;
+            }
+        }
+        .chosen-container{
+            flex: 0 0 calc((100% - 32px) / 2);
+            margin-right: 32px;
+            height: 48px;
+            @include mediaquery(768px, 1400px) {
+                flex: 0 0 calc((100% - 16px) / 2);
+                margin-right: 16px;
+            }
+            @include mediaquery(null, 767px) {
+                flex: 0 0 auto;
+                width: 100%;
+                max-width: 100%;
+                margin: 0 0 12px;
+                height: 41px; 
+            }
+        }
+        .chosen-single{
+            appearance: none;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 0;
+            border: 1px solid #E4E4E4;
+            font-size: 16px;
+            padding: 0 40px 0 18px;
+            color: #000;
+            font-family: $font;
+            background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
+            box-shadow: none;
+            @include mediaquery(768px, 1200px) {
+                padding-left: 12px;
+            }
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+                padding: 0 30px 0 9px;
+                height: 41px; 
+                line-height: 41px;
+                background: #fff url('../images/common/form_arrow.png') center right 15px / 15px 6px no-repeat;
+            }
+            >span{
+                margin-right: 0;
+            }
+        }
+        .chosen-results{
+            font-size: 16px;
+            @include mediaquery(null, 767px){
+                font-size: 15px;
+            }
+            li{
+                padding: 8px;
+            }
+        }
+        .chosen-container-single .chosen-search input[type=text]{
+            font-size: 16px;
+            padding: 8px;
+            background: url('../images/common/search_icon.png') center right 10px / 20px 20px no-repeat;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+            }
+        }
+        .inputDel{
+            display: flex;
+            align-items: center;
+            flex: 0 0 calc((100% - 32px) / 2);
+            @include mediaquery(768px, 1400px) {
+                flex: 0 0 calc((100% - 16px) / 2);
+            }
+            @include mediaquery(null, 767px) {
+                flex: 0 0 auto;
+                width: 100%;
+            }
+            a{
+                width: 32px;
+                height: 48px;
+                background-color: #94693C;
+                margin: 0 0 24px;
+                mask: url('../images/page/del.svg') center right / 18px 18px no-repeat;
+                transition: opacity 0.75s;
+                @include mediaquery(null, 767px) {
+                    margin: 0 0 12px;
+                    height: 32px;
+                    width: 32px;
+                    mask: url('../images/page/del.svg') center right / 16px 16px no-repeat;
+                }
+                &:hover{
+                    @include mediaquery(768px, null) {
+                        opacity: 0.6;
+                    }
+                }
+            }
+            input{
+                @include mediaquery(null, 767px) {
+                    margin: 0 0 12px;
+                }
+            }
+        }
+    }
+    .addProduct{
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 69px;
+        transition: opacity 0.75s;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+            margin: 8px 0 35px;
+        }
+        &:hover span::after{
+            @include mediaquery(768px, null) {
+                opacity: 1;
+            }
+        }
+        span{
+            position: relative;
+            width: 32px;
+            height: 32px;
+            margin-right: 11px;
+            @include mediaquery(null, 767px) {
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/page/add.jpg') center / contain no-repeat;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('../images/page/addH.jpg') center / contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+    }
+    .backBtn{
+        margin: 90px 0 150px;
+        @include mediaquery(null, 767px) {
+            margin: 57px 0 166px;
+        }
+    }
+}
+.modal-open-product {
+    .modalBgProduct{
+        overflow: auto;
+    }
+    .popupProduct{
+        padding: 0 0 10%; 
+        max-width: 1056px;
+        max-height: fit-content;
+        top: 15%;
+        transform: translateX(-50%);
+        background: none;
+        @include mediaquery(null, 991px) {
+            transform: none;
+        }
+        .modal-content{
+            background: #fff;
+            padding: 40px 44px;
+            @include mediaquery(null, 767px) {
+                padding: 10px 14px;
+            }
+        }
+        .popupTitleWarranty{
+            font-size: 22px;
+            font-weight: 500;
+            color: #94693C;
+            margin-bottom: 15px;
+            @include mediaquery(null, 767px) {
+                font-size: 15px;
+            }
+            span{
+                display: inline-block;
+                margin-left: 30px;
+                font-size: 16px;
+                font-weight: 400;
+                color: #A3A3A3;
+                @include mediaquery(null, 767px) {
+                    display: block;
+                    font-size: 12px;
+                    margin-left: 0;
+                }
+            }
+        }
     }
 }
