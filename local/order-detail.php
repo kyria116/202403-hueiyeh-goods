@@ -74,6 +74,7 @@
                     </ul>
                     <ul class="form_title">
                         <li>購買產品</li>
+                        <li></li>
                         <li>規格</li>
                         <li>數量</li>
                         <li>單價</li>
@@ -81,82 +82,159 @@
                     </ul>
                     <div class="form_block_flex">
                         <div class="form_block">
-                            <ul class="form_item">
-                                <li>
-                                    <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
-                                    <ul class="product_info">
+                            <div class="form_item">
+                                <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
+                                <div class="product_info_txt">
+                                    <ul class="txt_1">
                                         <li class="product_num">HY-5013</li>
                                         <li class="product_title">商務艙PLUS零重力按摩椅</li>
                                         <li class="product_event_discounts">父親節活動優惠88折</li>
                                     </ul>
-                                </li>
-                                <li>橘白配色</li>
-                                <li>1</li>
-                                <li>$37,222</li>
-                                <li>$37,222</li>
-                            </ul>
-                            <ul class="form_item">
-                                <li>
-                                    <div class="giveaway_txt">加購產品</div>
-                                    <div class="product_giveaway_img"><img src="dist/images/member/product_img.jpg"></div>
-                                    <ul class="product_info">
-                                        <li class="product_title">商務艙PLUS零重力按摩椅</li>
+                                    <ul class="txt_2">
+                                        <li class="color">
+                                            <div class="mo_title">規格</div>
+                                            <div>橘白配色</div>
+                                        </li>
+                                        <li class="quantity">
+                                            <div class="mo_title">數量
+                                            </div>
+                                            1
+                                        </li>
+                                        <li class="price_1">
+                                            <div class="mo_title">單價</div>
+                                            $37,222
+                                        </li>
+                                        <li class="price_2">
+                                            <div class="mo_title">小計</div>
+                                            $37,222
+                                        </li>
                                     </ul>
-                                </li>
-                                <li></li>
-                                <li></li>
-                                <li>$1,680</li>
-                                <li>$1,680</li>
-                            </ul>
-                            <ul class="form_item">
-                                <li>
-                                    <div class="giveaway_txt">贈品</div>
-                                    <div class="product_giveaway_img"><img src="dist/images/member/product_img.jpg"></div>
-                                    <ul class="product_info">
-                                        <li class="product_title">商務艙PLUS零重力按摩椅</li>
-                                        <li class="product_market_price">市價$1,680</li>
+                                </div>
+                            </div>
+                            <div class="form_item">
+                                <div class="giveaway_img">
+                                    <div class="add">
+                                            <div class="title">加購商品</div>
+                                            <div class="img">
+                                                <img src="dist/images/member/product_img.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="giveaway_info_txt">
+                                    <ul class="giveaway_txt_1">
+                                    <div class="giveaway_title">商務艙PLUS零重力按摩椅</div>
                                     </ul>
-                                </li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                                <li></li>
-                            </ul>
+                                    <ul class="giveaway_txt_2">
+                                        <li class="giveaway_color">
+                                        </li>
+                                        <li class="giveaway_quantity">
+                                        </li>
+                                        <li class="giveaway_price_1">
+                                            <div class="mo_title">單價</div>
+                                            $1,680
+                                        </li>
+                                        <li class="giveaway_price_2">
+                                            <div class="mo_title">小計</div>
+                                            $1,680
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="form_item">
+                                <div class="giveaway_img">
+                                    <div class="add">
+                                            <div class="title">贈品</div>
+                                            <div class="img">
+                                                <img src="dist/images/member/product_img.jpg">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="giveaway_info_txt">
+                                    <ul class="giveaway_txt_1">
+                                    <div class="giveaway_title">
+                                        <div class="title">商務艙PLUS零重力按摩椅</div>
+                                    <div class="market_price"><span>市價</span>$1,680</div>
+                                    </div>
+                                    </ul>
+                                    <ul class="giveaway_txt_2">
+                                        <li class="giveaway_color">
+                                        </li>
+                                        <li class="giveaway_quantity">
+                                        </li>
+                                        <li class="giveaway_price_1">
+                                        </li>
+                                        <li class="giveaway_price_2">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="form_block">
-                            <ul class="form_item">
-                                <li>
-                                    <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
-                                    <ul class="product_info">
+                            <div class="form_item">
+                                <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
+                                <div class="product_info_txt">
+                                    <ul class="txt_1">
                                         <li class="product_num">HY-5013</li>
                                         <li class="product_title">商務艙PLUS零重力按摩椅</li>
+                                        <li class="product_event_discounts">父親節活動優惠88折</li>
                                     </ul>
-                                </li>
-                                <li>橘白配色</li>
-                                <li>1</li>
-                                <li>$37,222</li>
-                                <li>$37,222</li>
-                            </ul>
+                                    <ul class="txt_2">
+                                        <li class="color">
+                                            <div class="mo_title">規格</div>
+                                            <div>橘白配色</div>
+                                        </li>
+                                        <li class="quantity">
+                                            <div class="mo_title">數量
+                                            </div>
+                                            1
+                                        </li>
+                                        <li class="price_1">
+                                            <div class="mo_title">單價</div>
+                                            $37,222
+                                        </li>
+                                        <li class="price_2">
+                                            <div class="mo_title">小計</div>
+                                            $37,222
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                         <div class="form_block">
-                            <ul class="form_item">
-                                <li>
-                                    <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
-                                    <ul class="product_info">
+                            <div class="form_item">
+                                <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
+                                <div class="product_info_txt">
+                                    <ul class="txt_1">
                                         <li class="product_num">HY-5013</li>
                                         <li class="product_title">商務艙PLUS零重力按摩椅</li>
-                                        <li class="product_event_discounts">88HAPPY折價券</li>
+                                        <li class="product_event_discounts">父親節活動優惠88折</li>
                                     </ul>
-                                </li>
-                                <li>橘白配色</li>
-                                <li>1</li>
-                                <li>$37,222</li>
-                                <li>$37,222</li>
-                            </ul>
+                                    <ul class="txt_2">
+                                        <li class="color">
+                                            <div class="mo_title">規格</div>
+                                            <div>橘白配色</div>
+                                        </li>
+                                        <li class="quantity">
+                                            <div class="mo_title">數量
+                                            </div>
+                                            1
+                                        </li>
+                                        <li class="price_1">
+                                            <div class="mo_title">單價</div>
+                                            $37,222
+                                        </li>
+                                        <li class="price_2">
+                                            <div class="mo_title">小計</div>
+                                            $37,222
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row_flex">
                         <ul class="discount">
+                            <li class="mo_title">享用之優惠</li>
                             <li>
                                 <div class="discount_item">使用積點</div>
                                 <div>200</div>
@@ -207,7 +285,7 @@
                                 <div>$0</div>
                             </li>
                             <li>
-                                <div>應付金額</div>
+                                <div class="total_price_title">應付金額</div>
                                 <div class="total_price">$1,480</div>
                             </li>
                         </ul>
