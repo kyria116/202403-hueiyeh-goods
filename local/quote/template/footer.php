@@ -12,7 +12,7 @@
                         </a>
                     </div>
                     <ul>
-                        <li><a href="javascript:;">人才招募</a></li>
+                        <li><a href="javascript:;" target="_blank">人才招募</a></li>
                     </ul>
                 </li>
                 <li class="item">
@@ -29,9 +29,7 @@
                 </li>
                 <li class="item">
                     <div class="item_title">
-                        <a href="javascript:;">
                             會員服務
-                        </a>
                     </div>
                     <ul>
                         <li><a href="javascript:;">聯繫我們</a></li>
@@ -43,9 +41,7 @@
                 </li>
                 <li class="item">
                     <div class="item_title">
-                        <a href="javascript:;">
                             商務洽詢
-                        </a>
                     </div>
                     <ul>
                         <li>
@@ -59,22 +55,22 @@
         <div class="f_right">
             <div class="icon">
                 <div>
-                    <a href="./">
+                    <a href="https://www.facebook.com/hueiyeh.goods/" target="_blank">
                         <img src="dist/images/common/fb_icon.svg" alt="facebook">
                     </a>
                 </div>
                 <div>
-                    <a href="./">
+                    <a href="./" target="_blank">
                         <img src="dist/images/common/line_icon.svg" alt="facebook">
                     </a>
                 </div>
                 <div>
-                    <a href="./">
+                    <a href="./" target="_blank">
                         <img src="dist/images/common/ig_icon.svg" alt="facebook">
                     </a>
                 </div>
                 <div>
-                    <a href="./">
+                    <a href="https://www.youtube.com/channel/UCWeqSt0loBEvTrLnfKADfcg" target="_blank">
                         <img src="dist/images/common/yt_icon.svg" alt="facebook">
                     </a>
                 </div>
@@ -88,8 +84,8 @@
             </div>
             <div class="copyright">
                 <a href="./">
-                本站條款 © 2024 輝葉良品 All Rights Reserved
-                </a>
+                本站條款 
+                </a>© 2024 輝葉良品 All Rights Reserved
             </div>
         </div>
     </div>

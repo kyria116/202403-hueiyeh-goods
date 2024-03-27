@@ -10,11 +10,15 @@ function gotop(){
     if ($(window).width() > 991 && winscroll >= topBtnStop) {
         $('.fixBoxBtn').addClass('change');
         $('.fixBoxBtn').removeClass('change_mo');
-    } else if ($(window).width() < 991 && winscroll >= topBtnStop) {
+    } else if ($(window).width() < 991 && $(window).width() > 768 &&  winscroll >= topBtnStop) {
+        $('.fixBoxBtn').removeClass('change');
+        $('.fixBoxBtn').addClass('change_mo_991');
+    } else if ($(window).width() < 768 && winscroll >= topBtnStop) {
         $('.fixBoxBtn').removeClass('change');
         $('.fixBoxBtn').addClass('change_mo');
-    } else {
+    }else {
         $('.fixBoxBtn').removeClass('change');
+        $('.fixBoxBtn').removeClass('change_mo_991');
         $('.fixBoxBtn').removeClass('change_mo');
         $('.fixBoxBtn').removeAttr('style');
     }
