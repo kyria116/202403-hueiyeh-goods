@@ -1,0 +1,474 @@
+@import "base/mixin";
+@import "base/variable";
+
+$product_color_1: #f9ede2;
+$product_color_2: #797979;
+$product_color_3: #94693c;
+$product_color_4: #e4e4e4;
+$product_color_5: #e30400;
+
+.registration {
+    position: relative;
+    padding: 121px 0 150px;
+    @include mediaquery(null, 991px) {
+        padding: 34px 0 175px;
+    }
+    .registration_flex {
+        .title_flex {
+            display: flex;
+            flex-direction: column;
+            color: #94693c;
+            font-weight: 500;
+            .subtitle {
+                font-size: 20px;
+                letter-spacing: 4%;
+                @include mediaquery(null, 991px) {
+                    font-size: 12px;
+                }
+            }
+            .title {
+                font-size: 40px;
+                letter-spacing: 6%;
+                @include mediaquery(null, 991px) {
+                    font-size: 22.5px;
+                }
+            }
+        }
+
+        .profile_flex {
+            position: relative;
+            @include mediaquery(null, 991px) {
+                display: flex;
+                flex-direction: column;
+            }
+            .member_img {
+                position: absolute;
+                top: -228px;
+                right: 105px;
+                z-index: 15;
+                @include mediaquery(null, 991px) {
+                    position: relative;
+                    top: 0;
+                    right: 0;
+                    margin: 0 31px 0 109px;
+                    min-width: 195px;
+                    max-width: 311px;
+                    aspect-ratio: 1 / 0.9228;
+                    align-self: self-end;
+                }
+            }
+        }
+        .page_subtitle {
+            font-size: 32px;
+            color: #94693c;
+            font-weight: 500;
+            margin-top: 58.5px;
+            @include mediaquery(null, 991px) {
+                font-weight: 400;
+            font-size: 18px;
+            margin-top: 34px;
+            }
+        }
+        .warranty_list {
+            padding-bottom: 34.5px;
+            @include mediaquery(null, 991px) {
+            padding-bottom: 0;
+            }
+        }
+        .warranty_block {
+            display: flex;
+            width: 100%;
+            background: #fff6ee;
+            border-radius: 10px;
+            padding: 35px 40px;
+            margin-top: 25px;
+            @include mediaquery(null, 991px) {
+                flex-direction: column;
+            padding: 20px 19px;
+            margin-top: 30px;
+            }
+        }
+        .commodity_flex {
+            display: flex;
+            align-items: center;
+            width: 40%;
+            border-right: 1px solid #e4e4e4;
+            padding-right: 10px;
+            @include mediaquery(null, 991px) {
+                border: none;
+                width: 100%;
+            }
+            .commodity_img {
+                width: 195px;
+                overflow: hidden;
+                border-radius: 6px;
+                margin-right: 30px;
+                img {
+                    width: 100%;
+                }
+                @include mediaquery(null, 991px) {
+                    margin-right: 20px;
+                min-width: 131px;
+                }
+            }
+            .commodity_info {
+                display: flex;
+                flex-direction: column;
+                .commodity_num {
+                    font-size: 16px;
+                    color: #797979;
+                }
+                .commodity_title {
+                    font-size: 20px;
+                    color: #000;
+                    @include mediaquery(null, 768px) {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+        .warranty_info_flex {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            padding: 0 0 0 104px;
+            margin-bottom: 30px;
+            @include mediaquery(null, 991px) {
+                width: 100%;
+            padding: 30px 0 0 0;
+            }
+            .info_title {
+                margin-right: 20px;
+                color: #94693c;
+                font-size: 18px;
+                @include mediaquery(null, 768px) {
+                    font-size: 16px;
+                margin-right: 15px;
+                }
+            }
+            .warranty_info {
+                display: flex;
+                width: 100%;
+                font-size: 16px;
+                color: #000;
+                @include mediaquery(null, 991px) {
+                    flex-direction: column;
+                }
+                @include mediaquery(null, 768px) {
+                    font-size: 15px;
+                }
+                .date {
+                    width: 35%;
+                    padding-right: 10px;
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                        margin-bottom: 17px;
+                    }
+                }
+                .num {
+                    width: 34.9%;
+                    padding-right: 10px;
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                        margin-bottom: 17px;
+                    }
+                }
+                .location{
+                    width: 30%;
+                    padding-right: 10px;
+                    @include mediaquery(null, 991px) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .warranty_info_flex:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+.open_flexslider .flex-direction-nav {
+    display: block;
+    @include mediaquery(null, 767px) {
+        display: none;
+    }
+}
+.edit {
+    width: 100%;
+    margin-top: 24px;
+}
+.btn_flex {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+    @include mediaquery(null, 991px) {
+        margin-top: 125px;
+    }
+    @include mediaquery(null, 768px) {
+        margin-top: 62.5px;
+    }
+    .store_btn {
+        font-size: 18px;
+        text-align: center;
+        color: #fff;
+        padding: 27px 192px;
+        background: #94693c;
+        border-radius: 6px;
+        border: 1px solid #94693c;
+        transition: 0.5s;
+        @include mediaquery(767px, null) {
+            &:hover {
+                color: #94693c;
+                background: #fff;
+            }
+        }
+        @include mediaquery(null, 991px) {
+            font-size: 17px;
+            padding: 22.5px 128.5px;
+        }
+        @include mediaquery(null, 767px) {
+            font-size: 16px;
+            padding: 18px 99px;
+        }
+    }
+}
+.flex-direction-nav {
+    a.flex-prev {
+        left: -10px;
+        @include mediaquery(768px, 991px) {
+            left: 0;
+        }
+        @include mediaquery(null, 767px) {
+            left: -20px;
+            padding-right: 0px;
+        }
+        div {
+            position: relative;
+            width: 12px;
+            height: 20px;
+            @include mediaquery(768px, 991px) {
+                width: 10px;
+                height: 17px;
+            }
+            @include mediaquery(null, 767px) {
+                width: 10px;
+                height: 14px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../images/productPage/page_left.svg") center/contain no-repeat;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../images/productPage/page_left.svg") center/contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+        &.nopage {
+            pointer-events: none;
+            opacity: 0.2;
+        }
+    }
+    a.flex-next {
+        right: -10px;
+        top: 0px;
+        transition: all 0.75s;
+        @include mediaquery(768px, 991px) {
+            right: 0px;
+        }
+        @include mediaquery(null, 767px) {
+            right: -20px;
+            padding-left: 0px;
+        }
+        &:hover {
+            @include mediaquery(768px, null) {
+                div:after {
+                    opacity: 1;
+                }
+            }
+        }
+        div {
+            position: relative;
+            width: 12px;
+            height: 20px;
+            @include mediaquery(768px, 991px) {
+                width: 10px;
+                height: 17px;
+            }
+            @include mediaquery(null, 767px) {
+                width: 10px;
+                height: 14px;
+            }
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../images/productPage/page_right.svg") center/contain no-repeat;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url("../images/productPage/page_right.svg") center/contain no-repeat;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+        }
+        &.nopage {
+            pointer-events: none;
+            opacity: 0.2;
+        }
+    }
+}
+.product_sort {
+    margin-top: 45px;
+    @include mediaquery(null, 991px) {
+        margin-top: 35px;
+    }
+    select {
+        appearance: none;
+        width: 300px;
+        height: 48px;
+        font-size: 16px;
+        border-radius: 6px;
+        border: 1px solid $product_color_4;
+        padding: 13px 20px 15px;
+        line-height: 1;
+        background: #fff url("../images/common/select.jpg") center right 16px / 16px 7px no-repeat;
+        @include mediaquery(null, 767px) {
+            width: 166px;
+            height: 54px;
+            font-size: 15px;
+            border-radius: 3px;
+            padding: 15px 22px 15px;
+            background: #fff url("../images/common/select.jpg") center right 20px / 15px 7px no-repeat;
+        }
+    }
+}
+.top-menu-ul-2 {
+    position: relative;
+    z-index: 5;
+    .item_Menu {
+        @include mediaquery(null, 767px) {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 100%;
+                background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+            }
+        }
+    }
+    .item_menu_Box {
+        position: relative;
+        text-align: left;
+        margin: 0 auto;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+    ul.slides {
+        position: relative;
+        white-space: nowrap;
+        display: inline-flex;
+        min-width: 100%;
+        padding-right: 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #dfcbb9;
+        }
+        li {
+            position: relative;
+            z-index: 2;
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border-left: 1px solid #dfcbb9;
+                border-right: 1px solid #dfcbb9;
+                border-top: 1px solid #dfcbb9;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #f9ede2;
+                opacity: 0;
+                transition: opacity 0.75s;
+            }
+            &:hover {
+                @include mediaquery(768px, null) {
+                    color: $product_color_3;
+                    &::before {
+                        opacity: 1;
+                    }
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+            }
+            &.active {
+                color: $product_color_3;
+                &::before {
+                    opacity: 1;
+                }
+                &::after {
+                    opacity: 1;
+                }
+            }
+            a {
+                position: relative;
+                z-index: 5;
+                display: block;
+                padding: 10px 17px 14px;
+                font-size: 16px;
+                @include mediaquery(null, 767px) {
+                    font-size: 15px;
+                    padding: 7px 8px 8px;
+                }
+            }
+        }
+    }
+}

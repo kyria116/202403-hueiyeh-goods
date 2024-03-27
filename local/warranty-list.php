@@ -366,9 +366,7 @@
     include "quote/template/footer.php";
     include "quote/template/top_btn.php";
     ?>
-    <script src="dist/js/tw-city-selector.js"></script>
     <script src="dist/js/main.js"></script>
-    <script src="dist/js/registration.js"></script>
 </body>
 
 </html>

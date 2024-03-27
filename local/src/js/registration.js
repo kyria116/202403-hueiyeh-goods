@@ -15,3 +15,29 @@
         $("input[type='date']").change(function() {
             $(this).css("color", "black");
         });
+
+        //刪除購物車商品
+        var delCartElements = document.getElementsByClassName('del_cart');
+
+        for (var i = 0; i < delCartElements.length; i++) {
+            delCartElements[i].addEventListener('click', function() {
+                var formBlock = this.closest('.form_block');
+                if (formBlock) {
+                    formBlock.remove();
+                }
+            });
+        }
+        
+        //刪除加購商品
+        var delGiveawayElements = document.getElementsByClassName('del_giveaway');
+
+        for (var i = 0; i < delGiveawayElements.length; i++) {
+            delGiveawayElements[i].addEventListener('click', function() {
+                var formItem = this.closest('.form_item');
+                if (formItem) {
+                    formItem.remove();
+                }
+            });
+        }
+
+       

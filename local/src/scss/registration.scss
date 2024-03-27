@@ -140,12 +140,14 @@
                     color: #000;
                     padding-left: 12px;
                     margin-bottom: 10px;
+                    height: 26px;
                     @include mediaquery(null, 991px) {
                         margin-bottom: 9px;
                     }
                     @include mediaquery(null, 767px) {
                         padding-left: 9px;
                         font-size: 15px;
+                        height: 21px;
                     }
                     &::before {
                         content: "*";
