@@ -1,11 +1,10 @@
-    //@prepros-prepend plugin/jquery_min.js
+//@prepros-prepend plugin/jquery_min.js
 
 
 $(function () {
 
     //@prepros-prepend template/header.js
     //@prepros-prepend template/topbtn.js
-    //@prepros-prepend template/animation.js
     //@prepros-prepend template/modal.js
     //@prepros-prepend plugin/swiper-bundle.min.js
 
@@ -25,4 +24,9 @@ $(function () {
         });
     });
 
+    //回上一頁
+    document.querySelector('.back-btn').onclick = function () {
+        window.history.back();
+    }
 });
+

@@ -53,8 +53,8 @@
                         </form>
                     </div>
                     <ul class="remark">
-                        <li><a href="javascript:;">立即註冊</a></li>
-                        <li><a href="javascript:;">忘記密碼</a></li>
+                        <li><a href="registration.php">立即註冊</a></li>
+                        <li><a href="forgot-pw.php">忘記密碼</a></li>
                     </ul>
                     <ul class="community">
                         <li>

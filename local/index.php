@@ -21,6 +21,8 @@
             </div>
         </section>
         <section class="section_1">
+            <!-- 桌機:1920 x 970 -->
+            <!-- 手機:768 x 820 -->
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
@@ -99,7 +101,8 @@
             </ul>
         </section>
         <section class="section_2">
-            <!-- 桌機 800 x 404 -->
+            <!-- 桌機: 800 x 404 -->
+            <!-- 手機:634 x 322 -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
@@ -115,6 +118,24 @@
                         </div>
                     </div>
                     <div data-hash="slide3" class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
+                        <div class="txt" style="color: #fff;">
+                            <div class="title">伸波眠按摩床墊</div>
+                            <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
+                        </div>
+                    </div>
+                    <div data-hash="slide4" class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
+                        <div class="txt" style="color: #fff;">
+                            <div class="title">伸波眠按摩床墊</div>
+                            <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
+                        </div>
+                    </div>
+                    <div data-hash="slide5" class="swiper-slide"><img src="dist/images/index/sw_1.jpg">
+                        <div class="txt" style="color: #3A58A3;">
+                            <div class="title">伸波眠按摩床墊</div>
+                            <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
+                        </div>
+                    </div>
+                    <div data-hash="slide6" class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
                         <div class="txt" style="color: #fff;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
@@ -473,7 +494,7 @@
                         </div>
                     </div>
                     <div class="btn_flex">
-                        <a href="javascript:;" class="store_btn">
+                        <a href="all-brand.php" class="store_btn">
                             <div>全部商品</div>
                         </a>
                     </div>
@@ -492,6 +513,8 @@
             <div class="container">
                 <div class="img_flex">
                     <div class="first_img">
+                        <!-- 桌機:1096 x 740 -->
+                        <!-- 手機:671 x 454 -->
                         <div class="img"><img src="dist/images/index/img_1.png" alt=""></div>
                         <div class="txt">
                             <div class="title">伸波眠按摩床墊</div>
@@ -499,6 +522,8 @@
                         </div>
                     </div>
                     <ul class="sec_img">
+                        <!-- 桌機:452 x 268 -->
+                        <!-- 手機:672 x 398 -->
                         <li class="block">
                             <div class="img"><img src="dist/images/index/img_2.png" alt=""></div>
                             <div class="txt">AnyMasaG 按你馬殺機－從肩頸 鬆到你心底</div>
@@ -520,6 +545,7 @@
     <script src="dist/js/main.js"></script>
     <script async src="//www.youtube.com/iframe_api"></script>
     <script src="dist/js/index.js"></script>
+
 </body>
 
 </html>

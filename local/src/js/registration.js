@@ -40,4 +40,12 @@
             });
         }
 
+        //分期期數顯示
+        $('input').on('change', function() {
+            if ($('.ckbutton input:checked').attr('id') != 'card') {
+                $('#installment').hide();
+            } else {
+                $('#installment').css('display', 'flex');
+            }
+        });
        

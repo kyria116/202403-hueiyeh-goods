@@ -97,6 +97,7 @@ header {
         color: #000;
         letter-spacing: 0;
         margin-right: 49px;
+        cursor: pointer;
         @include mediaquery(null, 1290px) {
             margin-right: 25px;
         }
@@ -286,7 +287,7 @@ header {
             }
             > div {
                 > a {
-                    transition:opacity 0.75s;
+                    transition: opacity 0.75s;
                 }
             }
         }
@@ -353,18 +354,24 @@ header {
             }
         }
     }
-    .store{
+    .mo_link{
+        pointer-events: none;
+        @include mediaquery(null, 991px) {
+            pointer-events: all;
+        }
+    }
+    .store {
         position: absolute;
         flex-direction: column;
         white-space: nowrap;
         align-items: center;
         padding: 20px;
         width: 216px;
-        >li>a{
+        > li > a {
             padding: 8px;
         }
         @include mediaquery(null, 991px) {
-           display: none;
+            display: none;
         }
     }
 }
@@ -399,10 +406,35 @@ header {
             .member_icon {
                 width: 24px;
                 height: 25px;
-                background: url("../images/common/member_icon.png") center / contain no-repeat;
-                transition:opacity 0.75s;
-                &:hover {
+                position: relative;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 25px;
+                    background: url("../images/common/member_icon.png") center / contain no-repeat;
+                    transition: opacity 0.75s;
+                }
+                &:hover:before {
                     background: url("../images/common/member_icon_hover.png") center / contain no-repeat;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 24px;
+                    height: 25px;
+                    opacity: 0;
+                    background: url("../images/common/member_icon_login.png") center / contain no-repeat;
+                    transition: opacity 0.75s;
+                }
+            }
+            .login{
+                &:after {
+                    opacity: 1;
                 }
             }
             .shop_icon {
@@ -410,11 +442,11 @@ header {
                 width: 28px;
                 height: 26px;
                 background: url("../images/common/shop_icon.png") center / contain no-repeat;
-                transition:opacity 0.75s;
+                transition: opacity 0.75s;
                 &:hover {
                     background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
                     .num {
-                        background: #FB7875;
+                        background: #fb7875;
                     }
                 }
                 .num {
@@ -428,14 +460,14 @@ header {
                     height: 18px;
                     background: #fa201c;
                     border-radius: 10px;
-                    transition:opacity 0.75s;
+                    transition: opacity 0.75s;
                 }
             }
             .search_icon {
                 width: 25px;
                 height: 25px;
                 background: url("../images/common/search_icon.png") center / contain no-repeat;
-                transition:opacity 0.75s;
+                transition: opacity 0.75s;
                 &:hover {
                     background: url("../images/common/search_icon_hover.png") center / contain no-repeat;
                 }
@@ -452,6 +484,7 @@ header {
         width: 100vw;
         opacity: 0;
         pointer-events: none;
+        background-color: #fff;
         .search_input {
             position: relative;
             width: 60%;

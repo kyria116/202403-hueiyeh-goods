@@ -27,10 +27,10 @@
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
                                         <ul class="item_menu_list slides">
-                                            <li class="active">
+                                            <li>
                                                 <a href="javascript:;">會員資料</a>
                                             </li>
-                                            <li>
+                                            <li class="active">
                                                 <a href="javascript:;">訂單紀錄</a>
                                             </li>
                                             <li>
@@ -83,6 +83,8 @@
                     <div class="form_block_flex">
                         <div class="form_block">
                             <div class="form_item">
+                                <!-- 桌機:194 x 214 -->
+                                <!-- 手機:233 x 257 -->
                                 <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
                                 <div class="product_info_txt">
                                     <ul class="txt_1">
@@ -114,15 +116,17 @@
                             <div class="form_item">
                                 <div class="giveaway_img">
                                     <div class="add">
-                                            <div class="title">加購商品</div>
-                                            <div class="img">
-                                                <img src="dist/images/member/product_img.jpg">
+                                        <div class="title">加購商品</div>
+                                        <!-- 桌機:100 x 111 -->
+                                        <!-- 手機:170 x 187 -->
+                                        <div class="img">
+                                            <img src="dist/images/member/product_img.jpg">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="giveaway_info_txt">
                                     <ul class="giveaway_txt_1">
-                                    <div class="giveaway_title">商務艙PLUS零重力按摩椅</div>
+                                        <div class="giveaway_title">商務艙PLUS零重力按摩椅</div>
                                     </ul>
                                     <ul class="giveaway_txt_2">
                                         <li class="giveaway_color">
@@ -143,18 +147,20 @@
                             <div class="form_item">
                                 <div class="giveaway_img">
                                     <div class="add">
-                                            <div class="title">贈品</div>
-                                            <div class="img">
-                                                <img src="dist/images/member/product_img.jpg">
+                                        <div class="title">贈品</div>
+                                        <div class="img">
+                                            <!-- 桌機:100 x 111 -->
+                                            <!-- 手機:170 x 187 -->
+                                            <img src="dist/images/member/product_img.jpg">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="giveaway_info_txt">
                                     <ul class="giveaway_txt_1">
-                                    <div class="giveaway_title">
-                                        <div class="title">商務艙PLUS零重力按摩椅</div>
-                                    <div class="market_price"><span>市價</span>$1,680</div>
-                                    </div>
+                                        <div class="giveaway_title">
+                                            <div class="title">商務艙PLUS零重力按摩椅</div>
+                                            <div class="market_price"><span>市價</span>$1,680</div>
+                                        </div>
                                     </ul>
                                     <ul class="giveaway_txt_2">
                                         <li class="giveaway_color">
@@ -171,6 +177,8 @@
                         </div>
                         <div class="form_block">
                             <div class="form_item">
+                                <!-- 桌機:194 x 214 -->
+                                <!-- 手機:233 x 257 -->
                                 <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
                                 <div class="product_info_txt">
                                     <ul class="txt_1">
@@ -202,6 +210,8 @@
                         </div>
                         <div class="form_block">
                             <div class="form_item">
+                                <!-- 桌機:194 x 214 -->
+                                <!-- 手機:233 x 257 -->
                                 <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
                                 <div class="product_info_txt">
                                     <ul class="txt_1">
@@ -335,7 +345,7 @@
                         </div>
                     </div>
                     <div class="btn_flex">
-                        <a href="javascript:;" class="store_btn">
+                        <a href="order.php" class="store_btn">
                             <div>返回</div>
                         </a>
                     </div>

@@ -57,7 +57,10 @@
                         <div class="member_block">
                             <div class="info_flex">
                                 <div class="profile_img">
+                                    <!-- 女生使用female.png -->
                                     <img src="dist/images/member/female.png" alt="profile_img_female">
+                                    <!-- 男生使用male.png -->
+                                    <!-- <img src="dist/images/member/male.png" alt="profile_img_male"> -->
                                 </div>
                                 <ul class="info">
                                     <li class="name">Evora</li>

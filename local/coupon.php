@@ -27,7 +27,7 @@
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
                                         <ul class="item_menu_list slides">
-                                            <li class="active">
+                                            <li>
                                                 <a href="javascript:;">會員資料</a>
                                             </li>
                                             <li>
@@ -36,7 +36,7 @@
                                             <li>
                                                 <a href="javascript:;">產品保固</a>
                                             </li>
-                                            <li>
+                                            <li class="active">
                                                 <a href="javascript:;">我的折價券</a>
                                             </li>
                                         </ul>

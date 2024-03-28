@@ -44,6 +44,8 @@
                                     <span></span>
                                 </div>
                                 <div class="item_mo">
+                                    <!-- 桌機:194 x 214 -->
+                                    <!-- 手機:233 x 257 -->
                                     <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
                                     <div class="product_info_txt">
                                         <ul class="txt_1">
@@ -101,6 +103,8 @@
                                         <div class="add">
                                             <div class="title">加購商品</div>
                                             <div class="img">
+                                                <!-- 桌機:100 x 111 -->
+                                                <!-- 手機:170 x 187 -->
                                                 <img src="dist/images/member/product_img.jpg">
                                             </div>
                                         </div>
@@ -294,7 +298,7 @@
                         <div class="form">
                             <fieldset>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="same_member" name="same_member" checked />
+                                    <input type="checkbox" id="same_member" name="same_member" />
                                     <label for="same_member">同會員資料</a>
                                     </label>
                                 </div>
@@ -378,7 +382,7 @@
                                         </label>
                                         <fieldset>
                                             <div class="ckbutton">
-                                                <input type="radio" id="card" name="pay" />
+                                                <input type="radio" id="card" name="pay" checked />
                                                 <label for="card">信用卡付款</label>
                                             </div>
                                             <div class="ckbutton">
@@ -399,7 +403,8 @@
                                             </div>
                                         </fieldset>
                                     </div>
-                                    <div class="personal_data row">
+                                    <!-- 只有信用卡付款才會顯示 -->
+                                    <div class="personal_data row" id="installment">
                                         <label for="check">
                                             <div>分期期數<span>必填</span></div>
                                         </label>
@@ -455,7 +460,7 @@
                             </div>
                             <fieldset>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="agree" name="agree" checked />
+                                    <input type="checkbox" id="agree" name="agree" />
                                     <label for="agree">
                                         <span>我已詳細閱讀&ensp;
                                             <a href="./"><span> 基本保固條款</span></a>
@@ -466,7 +471,7 @@
                             </fieldset>
                         </div>
                         <div class="btn_flex">
-                            <a href="javascript:;" class="store_btn">
+                            <a href="javascript:;" class="store_btn back-btn">
                                 <div>返回</div>
                             </a>
                         </div>
@@ -481,7 +486,11 @@
     <script src="dist/js/tw-city-selector.js"></script>
     <script src="dist/js/main.js"></script>
     <script src="dist/js/registration.js"></script>
-
+    <script>
+        document.querySelector('.back-btn').onclick = function() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

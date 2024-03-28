@@ -2,25 +2,24 @@
 @import "base/variable";
 @import "template/style";
 
-
-.newsBox{
+.newsBox {
     padding-bottom: 142px;
     @include mediaquery(null, 767px) {
         padding-bottom: 169px;
     }
-    ul{
+    ul {
         display: flex;
         flex-wrap: wrap;
         padding-bottom: 74px;
         @include mediaquery(null, 767px) {
             padding-bottom: 46px;
         }
-        li{
+        li {
             width: calc((100% - 64px) / 3);
             margin: 0 32px 48px 0;
             border-radius: 6px;
             overflow: hidden;
-            background-color: #F8F8F8;
+            background-color: #f8f8f8;
             @include mediaquery(992px, 1440px) {
                 width: calc((100% - 40px) / 3);
                 margin: 0 20px 36px 0;
@@ -34,33 +33,33 @@
                 margin: 0 0 26px;
                 border-radius: 3px;
             }
-            &:nth-child(3n){
+            &:nth-child(3n) {
                 @include mediaquery(992px, null) {
                     margin-right: 0;
                 }
             }
-            &:nth-child(2n){
+            &:nth-child(2n) {
                 @include mediaquery(768px, 991px) {
                     margin-right: 0;
                 }
             }
-            &:hover{
+            &:hover {
                 @include mediaquery(768px, null) {
-                    .img{
+                    .img {
                         opacity: 0.4;
                     }
                 }
             }
         }
-        .img{
+        .img {
             transition: opacity 0.75s;
-            img{
+            img {
                 display: block;
                 width: 100%;
                 aspect-ratio: 1 / 0.5898;
             }
         }
-        .txt{
+        .txt {
             padding: 30px 36px 36px 33px;
             @include mediaquery(null, 1440px) {
                 padding: 20px 24px;
@@ -69,7 +68,7 @@
                 padding: 16px 20px 32px;
             }
         }
-        .tagDate{
+        .tagDate {
             display: flex;
             align-items: center;
             margin-bottom: 18px;
@@ -77,7 +76,7 @@
                 margin-bottom: 11px;
             }
         }
-        .date{
+        .date {
             font-size: 16px;
             font-weight: 500;
             color: #797979;
@@ -87,13 +86,13 @@
                 margin-right: 13px;
             }
         }
-        .tags{
+        .tags {
             font-size: 16px;
-            color: #94693C;
+            color: #94693c;
             padding: 0 16px;
             height: 32px;
             line-height: 32px;
-            border: 1px solid #94693C;
+            border: 1px solid #94693c;
             border-radius: 4px;
             @include mediaquery(null, 767px) {
                 font-size: 15px;
@@ -102,7 +101,7 @@
                 padding: 0 8px;
             }
         }
-        .newsTitle span{
+        .newsTitle span {
             font-size: 22px;
             font-weight: 500;
             @include clamp(1.45, 2);
@@ -114,14 +113,13 @@
     }
 }
 
-
 //詳細頁
-.detailContent{
+.detailContent {
     padding-bottom: 150px;
     @include mediaquery(null, 767px) {
         padding-bottom: 172px;
     }
-    .tagDate{
+    .tagDate {
         display: flex;
         align-items: center;
         margin-bottom: 17px;
@@ -129,7 +127,7 @@
             margin-bottom: 28px;
         }
     }
-    .date{
+    .date {
         font-size: 16px;
         font-weight: 500;
         color: #797979;
@@ -139,13 +137,13 @@
             margin-right: 13px;
         }
     }
-    .tags{
+    .tags {
         font-size: 16px;
-        color: #94693C;
+        color: #94693c;
         padding: 0 16px;
         height: 32px;
         line-height: 32px;
-        border: 1px solid #94693C;
+        border: 1px solid #94693c;
         border-radius: 4px;
         @include mediaquery(null, 767px) {
             font-size: 15px;
@@ -154,10 +152,10 @@
             padding: 0 8px;
         }
     }
-    .newsTitle{
+    .newsTitle {
         font-size: 32px;
         font-weight: 500;
-        border-bottom: 1px solid #E4E4E4;
+        border-bottom: 1px solid #e4e4e4;
         margin-bottom: 48px;
         padding-bottom: 12px;
         line-height: 1.45;
@@ -167,31 +165,30 @@
             padding-bottom: 14px;
         }
     }
-    .editor_Content{
+    .editor_Content {
         margin-bottom: 90px;
         @include mediaquery(null, 767px) {
             margin-bottom: 62px;
         }
     }
-    .backBtn{
+    .backBtn {
         margin-bottom: 0;
     }
 }
 
-
 //商務洽談
-.cooperationPage{
+.cooperationPage {
     padding-bottom: 30px;
     @include mediaquery(null, 767px) {
         padding-bottom: 185px;
     }
-    .kvTitle{
+    .kvTitle {
         padding-bottom: 63px;
         @include mediaquery(null, 767px) {
             padding-bottom: 0;
         }
     }
-    .pageImg{
+    .pageImg {
         @include mediaquery(767px, null) {
             position: absolute;
             z-index: 6;
@@ -205,26 +202,26 @@
             margin: 0 17.3177% 31px 0;
             text-align: right;
         }
-        img{
+        img {
             @include mediaquery(null, 767px) {
                 width: 53.7%;
             }
         }
     }
-    .cooperationBox{
+    .cooperationBox {
         position: relative;
         margin-bottom: 81px;
         @include mediaquery(null, 767px) {
             margin-bottom: 35px;
         }
-        &:not(.bulk) ul{
+        &:not(.bulk) ul {
             display: flex;
             align-items: center;
             flex-wrap: wrap;
         }
-        li{
+        li {
             width: calc((100% - 30px) / 2);
-            background-color: #F8F3ED;
+            background-color: #f8f3ed;
             padding: 30px 37px 29px;
             margin-bottom: 28px;
             min-height: 90px;
@@ -241,7 +238,7 @@
                 padding: 16px 17px;
                 min-height: 80px;
             }
-            &:nth-child(2n-1){
+            &:nth-child(2n-1) {
                 margin-right: 30px;
                 @include mediaquery(768px, 991px) {
                     margin-right: 15px;
@@ -250,47 +247,47 @@
                     margin-right: 0;
                 }
             }
-            .title{
+            .title {
                 font-size: 22px;
                 font-weight: 500;
-                color: #94693C;
+                color: #94693c;
                 margin-bottom: 9px;
                 @include mediaquery(null, 767px) {
                     font-size: 16px;
                     margin-bottom: 5px;
                 }
             }
-            .icon{
+            .icon {
                 max-width: 27px;
                 margin-right: 10px;
                 @include mediaquery(null, 767px) {
                     max-width: 22px;
                 }
-                img{
+                img {
                     display: block;
                 }
             }
-            .mail{
+            .mail {
                 display: flex;
                 align-items: center;
-                a{
+                a {
                     transition: color 0.75s;
                     @include mediaquery(null, 767px) {
                         font-size: 15px;
                     }
-                    &:hover{
+                    &:hover {
                         @include mediaquery(768px, null) {
-                            color: #94693C;
+                            color: #94693c;
                         }
                     }
                 }
             }
         }
     }
-    .b_title{
+    .b_title {
         font-size: 32px;
         font-weight: 500;
-        color: #94693C;
+        color: #94693c;
         margin-bottom: 29px;
         @include mediaquery(null, 767px) {
             font-size: 18px;
@@ -298,59 +295,65 @@
         }
     }
 }
-
+#cooperation:target {
+    padding-top: 150px;
+    margin-top: -150px;
+    @include mediaquery(null, 767px) {
+        padding-top: 90px;
+        margin-top: -90px;
+    }
+}
 
 //隱私權
-.termsPage{
+.termsPage {
     padding-bottom: 150px;
     @include mediaquery(null, 767px) {
         padding-bottom: 174px;
     }
 }
 
-
 //聯絡我們
-.contactPage{
-    .kvTitle{
+.contactPage {
+    .kvTitle {
         @include mediaquery(null, 767px) {
             padding-bottom: 4px;
         }
     }
-    .content{
+    .content {
         display: flex;
         @include mediaquery(null, 767px) {
             flex-direction: column;
         }
     }
-    .leftBox{
+    .leftBox {
         padding: 0 60px;
         flex: 0 0 51%;
         @include mediaquery(768px, 991px) {
             padding: 0 30px 0 0;
             flex: 0 0 48%;
         }
-        @include mediaquery(null, 767px) {        
+        @include mediaquery(null, 767px) {
             flex: 0 0 auto;
             padding: 0 6.5476% 0 0;
             text-align: right;
             width: 100%;
             margin-bottom: 32px;
-            img{
+            img {
                 width: 62%;
             }
         }
     }
-    .rightBox{
+    .rightBox {
         flex: 0 0 49%;
         @include mediaquery(768px, 991px) {
             flex: 0 0 52%;
         }
-        @include mediaquery(null, 767px) {        
+        @include mediaquery(null, 767px) {
             flex: 0 0 auto;
             width: 100%;
         }
     }
-    .intro{
+    .intro {
         font-size: 16px;
         margin-bottom: 25px;
         @include mediaquery(null, 767px) {
@@ -358,16 +361,16 @@
             margin-bottom: 27px;
         }
     }
-    .m_title{
+    .m_title {
         font-size: 18px;
         margin-bottom: 13px;
         @include mediaquery(null, 767px) {
             font-size: 16px;
             margin-bottom: 8px;
         }
-        span{
+        span {
             display: inline-block;
-            color: #D31E1B;
+            color: #d31e1b;
             font-weight: 500;
             transform: translateY(-5px);
             margin-right: 2px;
@@ -375,32 +378,35 @@
                 font-size: 14px;
             }
         }
-        b{
+        b {
             display: none;
             margin-left: 6px;
             font-size: 16px;
-            color: #D31E1B;
+            color: #d31e1b;
             @include mediaquery(null, 767px) {
                 font-size: 14px;
             }
         }
     }
-    .req{
-        .m_title{
-            b{
+    .req {
+        .m_title {
+            b {
                 display: inline-block;
             }
         }
-        input:not([type="radio"]), select, textarea{
-            border: 1px solid #D31E1B;
+        input:not([type="radio"]),
+        select,
+        textarea {
+            border: 1px solid #d31e1b;
         }
     }
-    input, select{
+    input,
+    select {
         appearance: none;
         width: 100%;
         height: 48px;
         border-radius: 0;
-        border: 1px solid #E4E4E4;
+        border: 1px solid #e4e4e4;
         margin-bottom: 29px;
         font-size: 16px;
         padding: 0 18px;
@@ -412,31 +418,31 @@
         @include mediaquery(null, 767px) {
             font-size: 15px;
             padding: 0 9px;
-            height: 41px; 
+            height: 41px;
             margin-bottom: 30px;
         }
-        &::placeholder{
+        &::placeholder {
             font-size: 16px;
-            color: #A3A3A3;
+            color: #a3a3a3;
             @include mediaquery(null, 767px) {
                 font-size: 15px;
             }
         }
     }
-    select{
-        color: #A3A3A3;
+    select {
+        color: #a3a3a3;
         max-width: 512px;
-        background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
+        background: #fff url("../images/common/form_arrow.png") center right 15px / 21px 8px no-repeat;
         @include mediaquery(null, 767px) {
-            background: #fff url('../images/common/form_arrow.png') center right 15px / 15px 6px no-repeat;
+            background: #fff url("../images/common/form_arrow.png") center right 15px / 15px 6px no-repeat;
         }
     }
-    textarea{
+    textarea {
         resize: none;
         width: 100%;
         height: 150px;
         border-radius: 0;
-        border: 1px solid #E4E4E4;
+        border: 1px solid #e4e4e4;
         padding: 10px 18px;
         font-size: 16px;
         color: #000;
@@ -449,16 +455,16 @@
             height: 150px;
             padding: 6px 9px;
         }
-        &::placeholder{
+        &::placeholder {
             font-size: 16px;
             font-family: $font;
-            color: #A3A3A3;
+            color: #a3a3a3;
             @include mediaquery(null, 767px) {
                 font-size: 15px;
             }
         }
     }
-    .backBtn{
+    .backBtn {
         margin: 88px 0 150px;
         @include mediaquery(null, 767px) {
             margin: 57px 0 166px;

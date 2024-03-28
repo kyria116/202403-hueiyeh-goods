@@ -120,8 +120,8 @@
                             </ul>
                             <fieldset>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="agree" name="agree" checked />
-                                    <label for="agree">我同意<a href="./"><span>輝葉良品相關條款</span></a>
+                                    <input type="checkbox" id="agree" name="agree"/>
+                                    <label for="agree">我同意<a href="terms.php"><span>輝葉良品相關條款</span></a>
                                     </label>
                                 </div>
                             </fieldset>

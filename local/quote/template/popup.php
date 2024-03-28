@@ -1,10 +1,10 @@
 <div id="modalBg">
     <div id="myModal" class="modal">
-        <div class="closebtn" id="close">
+        <a href="javascript:setPopup('web_view', 'on');" class="closebtn" id="close">
             <div class="close"></div>
-        </div>
+        </a>
         <div class="modal-content">
-            <!-- 最大寬度120px
+            <!-- 最大寬度1200px
             高度不限 -->
             <div class="img">
                 <img src="dist/images/index/poup_img.png" alt="按你馬殺雞">

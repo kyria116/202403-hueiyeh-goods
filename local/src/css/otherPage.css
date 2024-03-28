@@ -1866,8 +1866,12 @@ button.swiper-pagination-bullet {
   line-height: 1.6;
 }
 
+.historyBody {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 .history {
-  position: relative;
   margin-top: 160px;
 }
 .history::before {
@@ -1896,11 +1900,16 @@ button.swiper-pagination-bullet {
     width: calc(6% + 136px);
   }
 }
+@media all and (max-width: 991px) {
+  .history::after {
+    content: none;
+  }
+}
 .history .swiperContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-left: calc((100vw - 1600px) / 2);
+  padding-left: calc((100% - 1600px) / 2);
   padding-bottom: 155px;
 }
 @media all and (min-width: 992px) and (max-width: 1818px) {
@@ -1908,21 +1917,25 @@ button.swiper-pagination-bullet {
     padding-left: 6%;
   }
 }
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (max-width: 991px) {
   .history .swiperContainer {
-    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 0 48px 100px;
   }
 }
 @media all and (max-width: 767px) {
   .history .swiperContainer {
-    display: none;
     padding: 0 24px 50px;
   }
 }
-.history .yearsBox {
-  padding: 79px 72px 57px;
-  margin-right: 108px;
+@media all and (min-width: 1819px) {
+  .history .yearsBox {
+    padding: 79px 72px 57px;
+    margin-right: 108px;
+  }
 }
 @media all and (min-width: 992px) and (max-width: 1818px) {
   .history .yearsBox {
@@ -1936,9 +1949,29 @@ button.swiper-pagination-bullet {
     margin-right: 60px;
   }
 }
-.history .yearsBox .itemsY {
-  height: 540px;
-  overflow-y: auto;
+@media all and (max-width: 991px) {
+  .history .yearsBox {
+    position: fixed;
+    z-index: 10;
+    top: 65px;
+    left: 0;
+    background-color: red;
+    width: 100%;
+    height: 50px;
+  }
+}
+@media all and (min-width: 992px) {
+  .history .yearsBox .itemsY {
+    height: 520px;
+    overflow-y: auto;
+  }
+}
+@media all and (max-width: 991px) {
+  .history .yearsBox .itemsY {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .history .yearsBox .itemsY::-webkit-scrollbar {
   width: 1px;
@@ -1961,12 +1994,15 @@ button.swiper-pagination-bullet {
 }
 .history .yearsBox li {
   position: relative;
-  height: auto !important;
-  width: 100px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
-  margin-bottom: 13px;
+}
+@media all and (min-width: 992px) {
+  .history .yearsBox li {
+    height: auto !important;
+    width: 100px;
+    line-height: 70px;
+    text-align: center;
+    margin-bottom: 13px;
+  }
 }
 .history .yearsBox li a {
   font-size: 22px;
@@ -1996,16 +2032,39 @@ button.swiper-pagination-bullet {
 }
 .history .rightBox {
   position: relative;
+  width: calc(100% - 352px);
+}
+@media all and (min-width: 1441px) and (max-width: 1818px) {
+  .history .rightBox {
+    width: calc(100vw - 324px);
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1440px) {
+  .history .rightBox {
+    width: calc(100vw - (196px + 6%));
+  }
+}
+@media all and (max-width: 991px) {
+  .history .rightBox {
+    width: 100%;
+  }
 }
 .history .rightBox::after {
   content: "";
   position: absolute;
   z-index: -1;
   top: 55px;
-  right: -150px;
-  width: 100%;
+  right: 0px;
+  width: calc(100% - 146px);
   height: 1px;
   background-color: #94693C;
+  background: -webkit-gradient(linear, right top, left top, from(transparent), color-stop(20%, #94693C));
+  background: linear-gradient(to left, transparent, #94693C 20%);
+}
+@media all and (max-width: 991px) {
+  .history .rightBox::after {
+    content: none;
+  }
 }
 .history .topMenu {
   display: -webkit-box;
@@ -2016,8 +2075,21 @@ button.swiper-pagination-bullet {
           align-items: center;
   margin-bottom: 67px;
 }
+@media all and (max-width: 991px) {
+  .history .topMenu {
+    position: fixed;
+    z-index: 10;
+    top: 115px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+  }
+}
 .history .topMenu .showMonth {
   width: 110px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 110px;
+          flex: 0 0 110px;
   height: 110px;
   border-radius: 50%;
   border: 1px solid #94693C;
@@ -2028,14 +2100,38 @@ button.swiper-pagination-bullet {
   line-height: 110px;
   text-align: center;
   margin-right: 36px;
+  margin-bottom: 17px;
 }
 .history .topMenu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%;
-  width: 1092px;
   overflow-x: auto;
+}
+@media all and (min-width: 1920px) {
+  .history .topMenu ul {
+    width: 1092px;
+  }
+}
+@media all and (min-width: 1819px) and (max-width: 1919px) {
+  .history .topMenu ul {
+    width: calc(100vw - (680px + (100vw - 1600px) / 2) + 12px);
+  }
+}
+@media all and (min-width: 1441px) and (max-width: 1818px) {
+  .history .topMenu ul {
+    width: calc(100vw - (470px + 6% + 182px));
+  }
+}
+@media all and (min-width: 1201px) and (max-width: 1440px) {
+  .history .topMenu ul {
+    width: calc(100vw - (342px + 6% + 184px));
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .history .topMenu ul {
+    width: calc(100vw - (342px + 6% + 140px));
+  }
 }
 .history .topMenu ul::-webkit-scrollbar {
   width: 1px;
@@ -2060,10 +2156,18 @@ button.swiper-pagination-bullet {
   position: relative;
   text-align: center;
   width: 182px;
-  height: 110px;
   -webkit-box-flex: 0;
       -ms-flex: 0 0 182px;
           flex: 0 0 182px;
+  height: 110px;
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .history .topMenu ul li {
+    width: 142px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 142px;
+            flex: 0 0 142px;
+  }
 }
 .history .topMenu ul li a {
   display: inline-block;
@@ -2104,7 +2208,6 @@ button.swiper-pagination-bullet {
 }
 .history .content {
   position: relative;
-  width: 92%;
 }
 .history .content li {
   position: absolute;
@@ -2112,6 +2215,7 @@ button.swiper-pagination-bullet {
   pointer-events: none;
   top: 0;
   left: 0;
+  width: 94%;
 }
 @media all and (min-width: 1366px) {
   .history .content li {
@@ -2128,6 +2232,11 @@ button.swiper-pagination-bullet {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+  }
+}
+@media all and (max-width: 991px) {
+  .history .content li {
+    width: 100%;
   }
 }
 .history .content li .txt {
@@ -2150,6 +2259,9 @@ button.swiper-pagination-bullet {
     margin-bottom: 30px;
     max-width: 840px;
   }
+}
+.history .content li .img {
+  max-width: 840px;
 }
 @media all and (min-width: 1366px) {
   .history .content li .img {
@@ -2182,4 +2294,100 @@ button.swiper-pagination-bullet {
   position: relative;
   opacity: 1;
   pointer-events: all;
+}
+.history .monthBox {
+  position: relative;
+}
+@media all and (min-width: 1920px) {
+  .history .monthBox {
+    width: 1080px;
+  }
+}
+@media all and (min-width: 1819px) and (max-width: 1919px) {
+  .history .monthBox {
+    width: calc(100vw - (680px + (100vw - 1600px) / 2));
+  }
+}
+@media all and (min-width: 1441px) and (max-width: 1818px) {
+  .history .monthBox {
+    width: calc(100vw - (470px + 6% + 182px));
+  }
+}
+@media all and (min-width: 1201px) and (max-width: 1440px) {
+  .history .monthBox {
+    width: calc(100vw - (342px + 6% + 184px));
+  }
+}
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .history .monthBox {
+    width: calc(100vw - (342px + 6% + 140px));
+  }
+}
+.history .monthBox .monthBtn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 26px;
+}
+.history .monthBox .monthBtn > a {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 26px;
+  margin: 0 24px;
+}
+.history .monthBox .monthBtn > a.leftBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.75s;
+  transition: -webkit-transform 0.75s;
+  transition: transform 0.75s;
+  transition: transform 0.75s, -webkit-transform 0.75s;
+  background: url("../images/page/leftBtn.png") center/contain no-repeat;
+}
+@media all and (min-width: 768px) {
+  .history .monthBox .monthBtn > a.leftBtn:hover::before {
+    -webkit-transform: translateX(-16px);
+            transform: translateX(-16px);
+  }
+}
+.history .monthBox .monthBtn > a.rightBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 0.75s;
+  transition: -webkit-transform 0.75s;
+  transition: transform 0.75s;
+  transition: transform 0.75s, -webkit-transform 0.75s;
+  background: url("../images/page/rightBtn.png") center/contain no-repeat;
+}
+@media all and (min-width: 768px) {
+  .history .monthBox .monthBtn > a.rightBtn:hover::before {
+    -webkit-transform: translateX(16px);
+            transform: translateX(16px);
+  }
+}
+.history .monthBox .monthBtn > a img {
+  display: block;
+  height: 100%;
+}
+.history .monthBox .monthBtn > a.noPage {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.history .monthBox .monthBtn span {
+  display: inline-block;
+  width: 1px;
+  height: 26px;
+  background-color: #A3A3A3;
 }

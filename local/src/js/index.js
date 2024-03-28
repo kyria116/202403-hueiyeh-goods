@@ -5,7 +5,7 @@ var swiper = new Swiper(".strip-ads", {
     loop:true,
 });
 $('#close_ad').on('click', function () {
-    $('.text_ticker').css('display', 'none')
+    $('.text_ticker').remove();
     })
 var swiper = new Swiper(".mySwiper1", {
     pagination: {
@@ -116,3 +116,43 @@ function onYouTubeIframeAPIReady() {
         }
     });
 }
+
+
+//彈跳視窗一天出現一次
+function setPopup(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+    if (exdays != null && exdays > 0) {
+        var expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires ;
+    } else {
+        document.cookie = cname + "=" + cvalue + ";" + "path=/";
+    }
+}
+//取得cookie
+function getPopup(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1);
+        if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
+    }
+    return "";
+} 
+
+let popupId=document.querySelector("#modalBg");
+let popupClose=document.querySelector(".closebtn");
+
+popupClose.addEventListener("click", function(){
+    document.body.classList.remove('modal-open');
+    popupId.remove();
+});
+
+let popup_value = getPopup("web_view");
+if(popup_value != ""){
+    document.body.classList.remove('modal-open');
+    popupId.remove();
+}
+
+setPopup("web_view", "true", 1);

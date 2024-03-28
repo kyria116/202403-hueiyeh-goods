@@ -461,7 +461,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="menu-list" href="javascript:;">
+                        <a class="menu-list mo_link" href="flagship-store.php">
                             <span>門市查詢</span>
                         </a>
                         <ul class="menu-second store">
@@ -471,7 +471,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="flagship-store.php">
+                                <a href="location.php">
                                     <span>實體門市</span>
                                 </a>
                             </li>
@@ -483,12 +483,13 @@
         <div>
             <ul class="menu_2">
                 <li>
-                    <a href="javascript:;">
-                        <div class="member_icon"></div>
+                    <a href="login.php">
+                        <!-- 已登入狀態加上class: login -->
+                        <div class="member_icon login"></div>
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;">
+                    <a href="cart.php">
                         <div class="shop_icon">
                             <span class="num">99</span>
                         </div>

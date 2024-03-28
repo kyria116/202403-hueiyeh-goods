@@ -27,10 +27,10 @@
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
                                         <ul class="item_menu_list slides">
-                                            <li class="active">
+                                            <li>
                                                 <a href="javascript:;">會員資料</a>
                                             </li>
-                                            <li>
+                                            <li class="active">
                                                 <a href="javascript:;">訂單紀錄</a>
                                             </li>
                                             <li>
@@ -101,7 +101,7 @@
                                 <div>待出貨</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -126,7 +126,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -151,7 +151,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -176,7 +176,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -201,7 +201,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -226,7 +226,7 @@
                                 <div>未入帳</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -251,7 +251,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -276,7 +276,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -301,7 +301,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -326,7 +326,7 @@
                                 <div>訂單取消</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="order-detail.php">查看</a>
                             </li>
                         </ul>
                     </div>

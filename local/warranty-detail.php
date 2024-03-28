@@ -88,7 +88,7 @@
                     </div>
                     <!-- 編輯器結尾 -->
                     <div class="btn_flex">
-                        <a href="javascript:;" class="store_btn">
+                        <a href="javascript:;" class="store_btn back-btn">
                             <div>返回</div>
                         </a>
                     </div>
@@ -101,6 +101,11 @@
     include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>
+    <script>
+        document.querySelector('.back-btn').onclick = function() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>
