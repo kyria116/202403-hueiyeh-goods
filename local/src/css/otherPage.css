@@ -1936,9 +1936,28 @@ button.swiper-pagination-bullet {
     margin-right: 60px;
   }
 }
-.history .yearsBox ul {
+.history .yearsBox .itemsY {
   height: 540px;
   overflow-y: auto;
+}
+.history .yearsBox .itemsY::-webkit-scrollbar {
+  width: 1px;
+}
+.history .yearsBox .itemsY::-webkit-scrollbar-button {
+  background: transparent;
+  border-radius: 0;
+}
+.history .yearsBox .itemsY::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+.history .yearsBox .itemsY::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: transparent;
+  border: none;
+}
+.history .yearsBox .itemsY::-webkit-scrollbar-track {
+  -webkit-box-shadow: transparent;
+          box-shadow: transparent;
 }
 .history .yearsBox li {
   position: relative;
