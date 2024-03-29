@@ -6,7 +6,7 @@
             </div>
         </a>
     <div class="line_icon">
-        <a href="./">
+        <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=627yxsje">
             <img src="dist/images/common/line_bt_for_go_top.png" alt="line">
         </a>
     </div>

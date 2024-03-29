@@ -64,12 +64,12 @@
                     </a>
                 </div>
                 <div>
-                    <a href="./" target="_blank">
+                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=627yxsje" target="_blank">
                         <img src="dist/images/common/line_icon.svg" alt="line">
                     </a>
                 </div>
                 <div>
-                    <a href="./" target="_blank">
+                    <a href="https://www.instagram.com/hueiyeh1983/" target="_blank">
                         <img src="dist/images/common/ig_icon.svg" alt="ig">
                     </a>
                 </div>

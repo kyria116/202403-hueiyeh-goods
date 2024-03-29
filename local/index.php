@@ -12,8 +12,10 @@
             <div class="swiper strip-ads">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><i>全新追夢椅PLUS石墨烯升級-想做最好，就坐最好</i></div>
-                    <div class="swiper-slide"><i>Slide 2</i></div>
-                    <div class="swiper-slide"><i>Slide 3</i></div>
+                    <div class="swiper-slide"><i>迎接新會員，加入輝葉官網即可領$200</i></div>
+                    <div class="swiper-slide"><i>一拉就有感 肩頸鬆軟軟 AnyMasaG按你馬殺機</i></div>
+                    <div class="swiper-slide"><i>肩頸背臀一體化揉捏按摩 雙核心四手深捏按摩墊</i></div>
+                    <div class="swiper-slide"><i>黃金角度全氣囊升級 ZeroBack 0脊限</i></div>
                 </div>
             </div>
             <div class="closebtn" id="close_ad">
@@ -26,44 +28,44 @@
             <div class="swiper mySwiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner2.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner3.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner4.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner5.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner6.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner7.jpg" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt="1111狂購物節"></a></div>
-                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt="1111狂購物節"></a></div>
+                        <div class="pc"><a href="./"><img src="dist/images/index/banner.png" alt=""></a></div>
+                        <div class="mo"><a href="./"><img src="dist/images/index/banner_mb.png" alt=""></a></div>
                     </div>
 
                 </div>

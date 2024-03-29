@@ -354,7 +354,7 @@ header {
             }
         }
     }
-    .mo_link{
+    .mo_link {
         pointer-events: none;
         @include mediaquery(null, 991px) {
             pointer-events: all;
@@ -418,7 +418,9 @@ header {
                     transition: opacity 0.75s;
                 }
                 &:hover:before {
-                    background: url("../images/common/member_icon_hover.png") center / contain no-repeat;
+                    @include mediaquery(768px, null) {
+                        background: url("../images/common/member_icon_hover.png") center / contain no-repeat;
+                    }
                 }
                 &:after {
                     content: "";
@@ -431,8 +433,13 @@ header {
                     background: url("../images/common/member_icon_login.png") center / contain no-repeat;
                     transition: opacity 0.75s;
                 }
+                &:hover:after {
+                    @include mediaquery(768px, null) {
+                        background: url("../images/common/member_icon_login_hover.png") center / contain no-repeat;
+                    }
+                }
             }
-            .login{
+            .login {
                 &:after {
                     opacity: 1;
                 }
@@ -444,9 +451,11 @@ header {
                 background: url("../images/common/shop_icon.png") center / contain no-repeat;
                 transition: opacity 0.75s;
                 &:hover {
-                    background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
-                    .num {
-                        background: #fb7875;
+                    @include mediaquery(768px, null) {
+                        background: url("../images/common/shop_icon_hover.png") center / contain no-repeat;
+                        .num {
+                            background: #fb7875;
+                        }
                     }
                 }
                 .num {
@@ -469,7 +478,9 @@ header {
                 background: url("../images/common/search_icon.png") center / contain no-repeat;
                 transition: opacity 0.75s;
                 &:hover {
-                    background: url("../images/common/search_icon_hover.png") center / contain no-repeat;
+                    @include mediaquery(768px, null) {
+                        background: url("../images/common/search_icon_hover.png") center / contain no-repeat;
+                    }
                 }
             }
         }

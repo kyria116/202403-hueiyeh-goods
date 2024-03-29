@@ -8,6 +8,7 @@ $('#close_ad').on('click', function () {
     $('.text_ticker').remove();
     })
 var swiper = new Swiper(".mySwiper1", {
+    autoplay:true,
     pagination: {
         el: ".swiper-pagination",
     },
@@ -124,11 +125,12 @@ function setPopup(cname, cvalue, exdays) {
     d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
     if (exdays != null && exdays > 0) {
         var expires = "expires=" + d.toUTCString();
-        document.cookie = cname + "=" + cvalue + ";" + expires ;
+        document.cookie = cname + "=" + cvalue + ";" + expires;
     } else {
         document.cookie = cname + "=" + cvalue + ";" + "path=/";
     }
 }
+
 //取得cookie
 function getPopup(cname) {
     var name = cname + "=";
@@ -139,20 +141,21 @@ function getPopup(cname) {
         if (c.indexOf(name) != -1) return c.substring(name.length, c.length);
     }
     return "";
-} 
+}
 
-let popupId=document.querySelector("#modalBg");
-let popupClose=document.querySelector(".closebtn");
+let popupId = document.querySelector("#modalBg");
+let popupClose = document.querySelector(".closebtn");
 
-popupClose.addEventListener("click", function(){
-    document.body.classList.remove('modal-open');
+popupClose.addEventListener("click", function () {
+    $('body').removeClass('modal-open')
+    $('html').removeClass('popup-open')
     popupId.remove();
+    setPopup("web_view", "on", 1);
 });
 
 let popup_value = getPopup("web_view");
-if(popup_value != ""){
-    document.body.classList.remove('modal-open');
+if (popup_value != "") {
+    $('body').removeClass('modal-open')
+    $('html').removeClass('popup-open')
     popupId.remove();
 }
-
-setPopup("web_view", "true", 1);
