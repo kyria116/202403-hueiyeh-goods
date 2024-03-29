@@ -18,6 +18,12 @@
     .footerLogo {
         max-width: 179px;
         margin-right: 33px;
+        transition: opacity 0.75s;
+        @include mediaquery(768px,null) {
+            &:hover{
+                opacity: 0.6;
+            }
+        }
         @include mediaquery(null, 1200px) {
             margin-bottom: 18px;
         }
@@ -26,7 +32,7 @@
         }
         @include mediaquery(null, 1045px) {
             width: 100px;
-        max-width: 100px;
+            max-width: 100px;
         }
         @include mediaquery(null, 991px) {
             margin-bottom: 28px;
@@ -76,19 +82,36 @@
                     font-size: 16px;
                     margin-bottom: 29px;
                     color: #000;
+              
                     @include mediaquery(null, 991px) {
                         font-size: 15px;
                         margin-bottom: 16px;
+                    }
+                    
+                    >a{
+                        border-bottom: 1px solid transparent;
+                        padding-bottom: 6px;
+                        @include mediaquery(768px, null) {
+                            &:hover {
+                                border-bottom: 1px solid #000;
+                            }
+                        }
                     }
                 }
                 > ul {
                     > li {
                         color: #6f6d6d;
-                    font-size: 16px;
+                        font-size: 16px;
                         margin-bottom: 11px;
+                        transition: color 0.5s;
                         @include mediaquery(null, 991px) {
                             font-size: 15px;
                             margin-bottom: 10px;
+                        }
+                        @include mediaquery(768px, null) {
+                            &:hover {
+                                color: #94693c;
+                            }
                         }
                     }
                 }
@@ -101,10 +124,16 @@
         .icon {
             display: flex;
             margin-bottom: 20px;
-            > div {
+            > li {
                 width: 28px;
                 aspect-ratio: 1 / 1;
                 margin-right: 24.75px;
+                transition: opacity 0.75s;
+                @include mediaquery(768px, null) {
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
             }
         }
         .phone_num {

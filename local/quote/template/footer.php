@@ -57,28 +57,28 @@
             </ul>
         </div>
         <div class="f_right">
-            <div class="icon">
-                <div>
+            <ul class="icon">
+                <li>
                     <a href="https://www.facebook.com/hueiyeh.goods/" target="_blank">
                         <img src="dist/images/common/fb_icon.svg" alt="facebook">
                     </a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=627yxsje" target="_blank">
                         <img src="dist/images/common/line_icon.svg" alt="line">
                     </a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="https://www.instagram.com/hueiyeh1983/" target="_blank">
                         <img src="dist/images/common/ig_icon.svg" alt="ig">
                     </a>
-                </div>
-                <div>
+                </li>
+                <li>
                     <a href="https://www.youtube.com/channel/UCWeqSt0loBEvTrLnfKADfcg" target="_blank">
                         <img src="dist/images/common/yt_icon.svg" alt="yt">
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
             <div class="phone_num">
                 <div><a href="tel:0800001176"><span>客服電話</span>0800-001-176</a></div>
                 <div><a href="tel:0277516166"><span>手機請撥</span>02-77516166</a></div>

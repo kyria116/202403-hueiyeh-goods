@@ -71,3 +71,11 @@
         bottom: 590px;
     }
 }
+.line_icon{
+    transition: opacity 0.75s;
+    @include mediaquery(768px,null) {
+        &:hover{
+            opacity: 0.6;
+        }
+    }
+}

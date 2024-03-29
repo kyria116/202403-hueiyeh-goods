@@ -4,6 +4,7 @@ var swiper = new Swiper(".strip-ads", {
     speed:1000,
     loop:true,
 });
+
 $('#close_ad').on('click', function () {
     $('.text_ticker').remove();
     })

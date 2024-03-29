@@ -12,7 +12,7 @@
                     <span></span>
                 </div>
             </div>
-            <a href="./" class="container-logo">
+            <a href="index.php" class="container-logo">
                 <img src="dist/images/common/logo.svg" alt="logo">
             </a>
         </div>
@@ -481,12 +481,16 @@
             </nav>
         </div>
         <div>
-            <ul class="menu_2">
-                <li>
+            <ul class="menu_icon">
+            <!-- 已登入狀態加上class: login -->
+                <li class="login">
                     <a href="login.php">
-                        <!-- 已登入狀態加上class: login -->
-                        <div class="member_icon login"></div>
+                        <div class="member_icon"></div>
                     </a>
+                    <div class="member_menu_list">
+                        <div><a href="member-profile.php">會員專區</a></div>
+                        <div><a href="javascript:;">登出</a></div>
+                    </div>
                 </li>
                 <li>
                     <a href="cart.php">
