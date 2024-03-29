@@ -40,7 +40,7 @@
                         <li><a href="warranty.php">產品保固</a></li>
                         <li><a href="repair.php">產品維修</a></li>
                         <li><a href="faq.php">常見問題</a></li>
-                        <li><a href="javascript:;">會員積點</a></li>
+                        <li><a href="points.php">會員積點</a></li>
                     </ul>
                 </li>
                 <li class="item">
