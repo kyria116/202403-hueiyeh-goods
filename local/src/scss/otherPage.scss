@@ -269,6 +269,9 @@
 .history{
     position: relative;
     margin-top: 160px;
+    @include mediaquery(null, 991px){
+        margin-top: 100px;
+    }
     &::before{
         content: "";
         position: absolute;
@@ -280,7 +283,7 @@
         background-color: #FAFAFA;
         @include mediaquery(null, 991px){
             width: 100%;
-            height: calc(100% + 50px);
+            height: calc(100% + 40px);
         }
     }
     &::after{
@@ -428,7 +431,7 @@
             @include mediaquery(null, 991px){
                 width: 100%;
                 height: 50px;
-                margin-bottom: 70px;
+                margin-bottom: 30px;
                 background-color: #FAFAFA;
             }
             &::after{
@@ -667,6 +670,9 @@
                 right: 0;
                 display: flex;
                 height: 26px;
+                @include mediaquery(null, 991px){
+                    display: none;
+                }
                 >a{
                     position: relative;
                     display: block;
