@@ -1,6 +1,4 @@
 
-    //@prepros-prepend plugin/jquery_min.js
-	//@prepros-prepend plugin/swiper-bundle.min.js
 
 
 $(function(){

@@ -2010,6 +2010,11 @@ button.swiper-pagination-bullet {
   color: #6F6D6D;
   position: relative;
 }
+@media all and (max-width: 991px) {
+  .history .yearsBox li a {
+    font-size: 16px;
+  }
+}
 .history .yearsBox li a::after {
   content: "";
   position: absolute;
@@ -2026,6 +2031,11 @@ button.swiper-pagination-bullet {
   font-size: 30px;
   font-weight: 700;
   color: #94693C;
+}
+@media all and (max-width: 991px) {
+  .history .yearsBox li.active a {
+    font-size: 18px;
+  }
 }
 .history .yearsBox li.active a::after {
   opacity: 1;

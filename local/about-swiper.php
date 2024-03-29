@@ -37,7 +37,7 @@
                 </ul> -->
             </div>
         </div>
-        <div class="history">
+        <div class="history2">
             <div class="swiperContainer">
                 <div class="yearsBox">
                     <div class="swiper-container gallery-thumbs">
@@ -1507,6 +1507,7 @@
         include "quote/template/footer.php";
         include "quote/template/top_btn.php";
     ?>
+    <script src="https://unpkg.com/swiper@6/swiper-bundle.min.js"></script>
     <script src="dist/js/about2.js"></script>
     
 </body>
