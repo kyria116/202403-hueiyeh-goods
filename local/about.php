@@ -113,7 +113,7 @@
                                             <div class="intro">榮獲TTQS企業機構版銅牌</div>
                                         </div>
                                         <div class="img" style="background: url('https://picsum.photos/id/1/840/475') center / contain no-repeat">
-                                            <div class="video" data-vbg=""></div>
+                                            <div class="video" data-vbg="https://www.youtube.com/watch?v=FYjhdWpx1qM"></div>
                                         </div>
                                     </li>
                                     <li>
@@ -1507,7 +1507,10 @@
         include "quote/template/footer.php";
         include "quote/template/top_btn.php";
     ?>
-    <script src="dist/js/about2.js"></script>
+    <script src="dist/js/main.js"></script>
+    <script src="dist/js/about.js"></script>
+    <script>
+    </script>
     
 </body>
 
