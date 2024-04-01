@@ -26,18 +26,18 @@
                             <div id="top-menu-ul-2" class="top-menu-ul-2">
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
-                                        <ul class="item_menu_list slides">
+                                    <ul class="item_menu_list slides">
                                             <li>
-                                                <a href="javascript:;">會員資料</a>
+                                                <a href="member-profile.php">會員資料</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">訂單紀錄</a>
+                                                <a href="order.php">訂單紀錄</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">產品保固</a>
+                                                <a href="warranty-list.php">產品保固</a>
                                             </li>
-                                            <li class="active">
-                                                <a href="javascript:;">我的折價券</a>
+                                            <li  class="active">
+                                                <a href="coupon.php">我的折價券</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -79,7 +79,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -105,7 +105,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -131,7 +131,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -157,7 +157,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -209,7 +209,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -235,7 +235,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>
@@ -261,7 +261,7 @@
                             <li>
                                 <div>使用條件</div>
                                 <div>
-                                    <a href="javascript:;"  >
+                                    <a href="coupon-event.php"  >
                                         購買指定商品
                                     </a>
                                 </div>

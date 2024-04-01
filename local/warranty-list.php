@@ -26,18 +26,18 @@
                             <div id="top-menu-ul-2" class="top-menu-ul-2">
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
-                                        <ul class="item_menu_list slides">
+                                    <ul class="item_menu_list slides">
                                             <li>
-                                                <a href="javascript:;">會員資料</a>
+                                                <a href="member-profile.php">會員資料</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">訂單紀錄</a>
+                                                <a href="order.php">訂單紀錄</a>
                                             </li>
                                             <li class="active">
-                                                <a href="javascript:;">產品保固</a>
+                                                <a href="warranty-list.php">產品保固</a>
                                             </li>
                                             <li>
-                                                <a href="javascript:;">我的折價券</a>
+                                                <a href="coupon.php">我的折價券</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -90,7 +90,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -119,7 +119,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -148,7 +148,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -177,7 +177,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -206,7 +206,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -235,7 +235,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -264,7 +264,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -293,7 +293,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -322,7 +322,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                         <ul class="form_block">
@@ -351,7 +351,7 @@
                                 <div>查看活動資訊</div>
                             </li>
                             <li>
-                                <a href="javascript:;">查看</a>
+                                <a href="warranty-detail.php">查看</a>
                             </li>
                         </ul>
                     </div>
