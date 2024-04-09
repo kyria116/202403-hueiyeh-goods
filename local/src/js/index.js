@@ -10,6 +10,8 @@ $('#close_ad').on('click', function () {
     })
 var swiper = new Swiper(".mySwiper1", {
     autoplay:true,
+    speed:1000,
+    loop:true,
     pagination: {
         el: ".swiper-pagination",
     },
@@ -20,6 +22,8 @@ var swiper = new Swiper(".mySwiper", {
     spaceBetween: 20,
     centeredSlides: true,
     loop: true,
+    autoplay:true,
+    speed:500,
     hashNavigation: {
         watchState: true,
     },

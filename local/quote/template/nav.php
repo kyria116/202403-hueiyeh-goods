@@ -482,14 +482,20 @@
         </div>
         <div>
             <ul class="menu_icon">
-            <!-- 已登入狀態加上class: login -->
+                <!-- 已登入狀態加上class: login -->
                 <li class="login">
                     <a href="login.php">
                         <div class="member_icon"></div>
                     </a>
                     <div class="member_menu_list">
-                        <div><a href="member-profile.php">會員專區</a></div>
-                        <div><a href="javascript:;">登出</a></div>
+                        <div class="member_row">
+                            <div><a href="member-profile.php">會員專區</a></div>
+                            <div class="mo_991 line"></div>
+                            <div><a href="javascript:;">登出</a></div>
+                        </div>
+                        <div class="close_member" id="close_member">
+                            <div class="close"></div>
+                        </div>
                     </div>
                 </li>
                 <li>

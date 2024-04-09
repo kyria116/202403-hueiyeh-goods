@@ -5,12 +5,12 @@ function gotop(){
     let topbtnH = $('.fixBoxBtn').outerHeight();
     let winH = $(window).height();
     let winscroll = $(window).scrollTop();
-    let topBtnStop = $(document).height() - winH - $('footer').outerHeight() + (topbtnH / 2) + 20;
+    let topBtnStop = $(document).height() - winH - $('footer').outerHeight() + (topbtnH / 2 + 20);
 
-    if ($(window).width() > 991 && winscroll >= topBtnStop) {
+    if ($(window).width() > 974 && winscroll >= topBtnStop) {
         $('.fixBoxBtn').addClass('change');
         $('.fixBoxBtn').removeClass('change_mo');
-    } else if ($(window).width() < 991 && $(window).width() > 768 &&  winscroll >= topBtnStop) {
+    } else if ($(window).width() <= 974 && $(window).width() > 768 &&  winscroll >= topBtnStop) {
         $('.fixBoxBtn').removeClass('change');
         $('.fixBoxBtn').addClass('change_mo_991');
     } else if ($(window).width() < 768 && winscroll >= topBtnStop) {

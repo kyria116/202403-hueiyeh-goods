@@ -22,11 +22,15 @@
     @include mediaquery(null, 991px) {
         right: 24px;
         bottom: 60px;
+        max-width: 30px;
     }
     .fixBtn {
         display: flex;
         align-items: end;
         margin-bottom: 21px;
+        @include mediaquery(null, 991px) {
+        margin-bottom: 13px;
+        }
         &:hover {
             @include mediaquery(768px, null) {
                 .arrow {
@@ -41,6 +45,9 @@
             transform: rotate(180deg);
             color: #94693c;
             font-size: 20px;
+            @include mediaquery(null, 991px) {
+            font-size: 17px;
+            }
         }
         .arrow {
             width: 6px;
@@ -64,11 +71,11 @@
     }
     &.change_mo_991 {
         position: absolute;
-        bottom: 650px;
+        bottom: 548px;
     }
     &.change_mo {
         position: absolute;
-        bottom: 590px;
+        bottom: 542px;
     }
 }
 .line_icon{
@@ -77,5 +84,8 @@
         &:hover{
             opacity: 0.6;
         }
+    }
+    >a{
+        display: inline-block;
     }
 }

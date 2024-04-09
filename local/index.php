@@ -190,7 +190,7 @@
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -228,7 +228,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -266,7 +266,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -304,7 +304,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -342,7 +342,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -380,7 +380,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -418,7 +418,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -456,7 +456,7 @@
                                 </a>
                             </div>
                             <div class="swiper-slide">
-                                <a href="javascript:;">
+                                <a href="product-detail.php">
                                     <div class="icon">
                                         <!-- 
                                     icon共有4張 
@@ -515,24 +515,31 @@
             <div class="container">
                 <div class="img_flex">
                     <div class="first_img">
-                        <!-- 桌機:1096 x 740 -->
-                        <!-- 手機:671 x 454 -->
-                        <div class="img"><img src="dist/images/index/img_1.png" alt=""></div>
-                        <div class="txt">
-                            <div class="title">伸波眠按摩床墊</div>
-                            <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
-                        </div>
+                        <a href="javascript">
+                            <!-- 桌機:1096 x 740 -->
+                            <!-- 手機:671 x 454 -->
+                            <div class="img"><img src="dist/images/index/img_1.png" alt=""></div>
+                            <div class="txt">
+                                <div class="title">伸波眠按摩床墊</div>
+                                <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
+                            </div>
+                        </a>
                     </div>
                     <ul class="sec_img">
                         <!-- 桌機:452 x 268 -->
                         <!-- 手機:672 x 398 -->
                         <li class="block">
-                            <div class="img"><img src="dist/images/index/img_2.png" alt=""></div>
-                            <div class="txt">AnyMasaG 按你馬殺機－從肩頸 鬆到你心底</div>
-                            <li;>
+                            <a href="javascript">
+                                <div class="img"><img src="dist/images/index/img_2.png" alt=""></div>
+                                <div class="txt">AnyMasaG 按你馬殺機－從肩頸 鬆到你心底</div>
+                            </a>
+                        </li>
+
                         <li class="block">
-                            <div class="img"><img src="dist/images/index/img_3.png" alt=""></div>
-                            <div class="txt">COZY FIT 律動奇機 2.0 _相信奇機，引力白新登場！</div>
+                            <a href="javascript">
+                                <div class="img"><img src="dist/images/index/img_3.png" alt=""></div>
+                                <div class="txt">COZY FIT 律動奇機 2.0 _相信奇機，引力白新登場！</div>
+                            </a>
                         </li>
                     </ul>
                 </div>

@@ -15,7 +15,7 @@ $product_color_5: #e30400;
         width: 100%;
         height: 40px;
         @include mediaquery(null, 767px) {
-        height: 37px;
+            height: 37px;
         }
     }
     .swiper-slide {
@@ -28,14 +28,14 @@ $product_color_5: #e30400;
         color: #94693c;
         @include mediaquery(null, 767px) {
             text-align: start;
-        justify-content: start;
-        padding-left: 5%;
-        font-size: 13.5px;
-        i{
-        max-width: 357px;
-        overflow: hidden;
-        white-space: nowrap;
-        }
+            justify-content: start;
+            padding-left: 5%;
+            font-size: 13.5px;
+            i {
+                max-width: 357px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
         }
     }
     .closebtn {
@@ -47,11 +47,11 @@ $product_color_5: #e30400;
         height: 100%;
         top: 50%;
         right: 0;
-        transform: translate(0,-50%);
+        transform: translate(0, -50%);
         z-index: 10;
         @include mediaquery(null, 767px) {
             right: -5px;
-        width: 37px;
+            width: 37px;
         }
         .close {
             display: inline-block;
@@ -74,7 +74,7 @@ $product_color_5: #e30400;
                 position: absolute;
                 @include mediaquery(null, 767px) {
                     height: 21px;
-                margin: -11px 0 0 -1px;
+                    margin: -11px 0 0 -1px;
                 }
             }
         }
@@ -854,6 +854,15 @@ $product_color_5: #e30400;
             padding-left: 20px;
             width: 69%;
             margin-right: 31px;
+            @include mediaquery(768px, null) {
+                > a {
+                    &:hover {
+                        .img {
+                            opacity: 0.4;
+                        }
+                    }
+                }
+            }
             @include mediaquery(null, 991px) {
                 width: 100%;
                 display: flex;
@@ -865,8 +874,12 @@ $product_color_5: #e30400;
             @include mediaquery(null, 768px) {
                 margin-bottom: 32px;
             }
+            > a {
+                display: inline-block;
+            }
             .img {
                 width: 100%;
+                transition: opacity 0.75s;
                 img {
                     width: 100%;
                     display: block;
@@ -877,15 +890,17 @@ $product_color_5: #e30400;
                 position: absolute;
                 left: 0;
                 bottom: 39px;
-                padding: 32px 40px 8px;
+                padding: 32px 40px;
                 background: #94693c;
+                max-width: 639px;
                 @include mediaquery(null, 1400px) {
                     padding: 32px 40px;
                 }
                 @include mediaquery(null, 991px) {
+                    max-width: 100%;
                     position: relative;
                     bottom: 0;
-                    padding: 40px 32px 20px;
+                    padding: 40px 32px 40px;
                 }
                 @include mediaquery(null, 580px) {
                     padding: 20px 16px;
@@ -908,6 +923,7 @@ $product_color_5: #e30400;
                     font-size: 16px;
                     color: #fff;
                     @include clamp(1.5, 2);
+                    height: auto;
                     @include mediaquery(null, 1400px) {
                         max-width: 600px;
                     }
@@ -917,8 +933,8 @@ $product_color_5: #e30400;
                     }
                     @include mediaquery(null, 991px) {
                         font-size: 15.5px;
-
                         @include clamp(1.5, 3);
+                        height: auto;
                         max-width: 100%;
                     }
                     @include mediaquery(null, 768px) {
@@ -932,14 +948,28 @@ $product_color_5: #e30400;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include mediaquery(768px, null) {
+                li > a {
+                    &:hover {
+                        .img {
+                            opacity: 0.4;
+                        }
+                    }
+                }
+            }
             @include mediaquery(null, 991px) {
                 width: 100%;
+            }
+            li > a {
+                display: inline-block;
+                transition: opacity 0.75s;
             }
             .block {
                 display: flex;
                 flex-direction: column;
                 .img {
                     width: 100%;
+                transition: opacity 0.75s;
                     @include mediaquery(null, 991px) {
                         margin-bottom: 10px;
                     }
