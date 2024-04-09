@@ -13,6 +13,7 @@
     justify-content: space-between;
     background-color: #F9EDE2;
     padding-left: 8.333%;
+    width: 100%;
     @include mediaquery(992px, 1818px) {
         padding-left: 6%;
     }
@@ -354,27 +355,20 @@
         }
         li{
             margin: 0 4px 4px 0;
+            font-size: 16px;
+            color: #94693C;
+            padding: 6px 16px 8px;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #F9EDE2;
             @include mediaquery(null, 767px) {
+                font-size: 14px;
+                padding: 3px 16px 5px;
                 margin: 0 3px 3px 0;
             }
-            a{
-                display: inline-block;
-                font-size: 16px;
-                color: #94693C;
-                padding: 6px 16px 8px;
-                text-align: center;
-                border-radius: 4px;
-                background-color: #F9EDE2;
-                @include mediaquery(null, 767px) {
-                    font-size: 14px;
-                    padding: 3px 16px 5px;
-                }
-                &:hover{
-                    @include mediaquery(768px, null) {
-                        color: #fff;
-                        background-color: #94693C;
-                    }
-                }
+            &.brandTxt{
+                color: #fff;
+                background-color: #94693C;
             }
         }
     }
@@ -473,7 +467,7 @@
                 max-height: 145px;
             }
             @include mediaquery(null, 767px) {
-                max-height: 125px;
+                max-height: 100%;
             }
             &::-webkit-scrollbar {
                 width: 4px;
@@ -562,6 +556,9 @@
         @include mediaquery(null, 991px) {
             margin: 23px 0 18px;
             max-height: 163px;
+        }
+        @include mediaquery(null, 767px) {
+            max-height: 100%;
         }
         &::-webkit-scrollbar {
             width: 4px;
@@ -681,6 +678,9 @@
             @include mediaquery(null, 991px) {
                 padding-right: 5px;
                 height: 80px;
+            }
+            @include mediaquery(null, 767px) {
+                height: 100%;
             }
             &::-webkit-scrollbar {
                 width: 4px;

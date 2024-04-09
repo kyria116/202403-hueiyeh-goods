@@ -62,43 +62,7 @@
                                         <a href="javascript:;">配送相關</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:;">退換貨訂單</a>
-                                    </li>
-                                    <li>
                                         <a href="javascript:;">售後服務</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">其他</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">美容家電last</a>
                                     </li>
                                 </ul>
                             </div>

@@ -48,7 +48,7 @@
         line-height: 1;
         background: #fff url('../images/common/select.jpg') center right 16px / 16px 7px no-repeat;
         @include mediaquery(null, 767px){
-            width: 166px;
+            width: calc((100% - 10px) / 2);
             height: 54px;
             font-size: 15px;
             border-radius: 3px;
@@ -278,15 +278,15 @@
 }
 
 //產品頁
-.productPage{
-    padding: 114px 0 143px;
-    @include mediaquery(768px, 991px){
-        padding: 82px 0 158px;
-    }
-    @include mediaquery(null, 767px){
-        padding: 45px 0 172px;
-    }
-}
+// .productPage{
+//     padding: 114px 0 143px;
+//     @include mediaquery(768px, 991px){
+//         padding: 82px 0 158px;
+//     }
+//     @include mediaquery(null, 767px){
+//         padding: 45px 0 172px;
+//     }
+// }
 
 //品牌頁
 .brandPage{
@@ -311,25 +311,32 @@
                 align-items: center;
                 justify-content: center;
                 border: 1px solid #E4E4E4;
-                padding: 25px;
+                padding: 24px 27px;
                 background-color: #fff;
+                @include mediaquery(768px, 991px){
+                    padding: 20px;
+                }
             }
             img{
                 display: block;
                 max-width: 230px;
                 aspect-ratio: 1 / 0.8957;
+                @include mediaquery(768px, 991px){
+                    max-width: 200px;
+                }
             }
         }
         .txt{
             display: flex;
             flex-direction: column-reverse;
-            padding: 60px 82px;
+            justify-content: center;
+            padding: 30px 82px;
             background-color: #F8F8F8;
             @include mediaquery(992px, 1400px){
-                padding: 50px 60px;
+                padding: 30px 60px;
             }
             @include mediaquery(768px, 991px){
-                padding: 40px 45px;
+                padding: 30px 35px;
             }
             @include mediaquery(null, 767px){
                 padding: 30px 36px 18px;
@@ -354,16 +361,19 @@
             span{
                 font-size: 16px;
                 line-height: 1.5;
+                @include clamp(1.5, 4);
+                height: auto;
                 @include mediaquery(null, 767px){
-                    @include clamp(1.5, 4);
-                    height: auto;
                     font-size: 15px;
                 }
             }
         }
         .iconBox{
-            @include mediaquery(768px, null){
+            @include mediaquery(992px, null){
                 margin-bottom: 25px;
+            }
+            @include mediaquery(768px, 991px){
+                margin-bottom: 15px;
             }
             ul{
                 display: flex;

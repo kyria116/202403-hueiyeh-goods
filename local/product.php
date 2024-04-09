@@ -10,9 +10,10 @@
     <main class="productPage">
         <div class="product_sort">
             <div class="container">
-                <h1 class="pageTitle">
-                    舒壓按摩
-                </h1>
+                <div class="kvTitle">
+                    <div class="enTitle">PRODUCT</div>
+                    <div class="twTitle">舒壓按摩</div>
+                </div>
                 <div id="top-menu-ul-2" class="top-menu-ul-2">
                     <div class="item_Menu">
                         <div class="item_menu_Box">
@@ -89,7 +90,7 @@
             <div class="container">
                 <ul>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -127,7 +128,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -165,7 +166,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -203,7 +204,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -241,7 +242,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -279,7 +280,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -317,7 +318,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -355,7 +356,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -393,7 +394,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -431,7 +432,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -469,7 +470,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -507,7 +508,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -545,7 +546,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -583,7 +584,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -621,7 +622,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -659,7 +660,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -697,7 +698,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -735,7 +736,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -773,7 +774,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 
@@ -811,7 +812,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="product-detail.php">
                             <div class="icon">
                                 <!-- 
                                     icon共有4張 

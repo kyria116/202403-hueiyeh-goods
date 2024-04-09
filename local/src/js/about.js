@@ -1,7 +1,7 @@
 
 	//@prepros-prepend plugin/jquery_min.js
 	//@prepros-prepend plugin/swiper-bundle.min6.js
-    //@prepros-prepend plugin/jquery.youtube-background.js
+	//@prepros-prepend plugin/jquery.youtube-background
 
 
 $(function(){
@@ -50,6 +50,8 @@ $(function(){
 	galleryTop.controller.control = galleryThumbs;
 	galleryThumbs.controller.control = galleryTop;
 	
+
+
 	function showMonth(items){
 		num = items
 		$('.swiper-slide-active .content li').removeClass('active')
@@ -81,6 +83,11 @@ $(function(){
 			frequency++
 		}
 		ary.push($(this).offset().left - firstAry)
+	})
+	$('.contentList .monthBox li').each(function(e){
+		if($(this).hasClass('active')){
+			$(this).parent().parent().siblings('.showMonth').text($(this).find('a').attr('data-month'))
+		}
 	})
 
 
@@ -128,6 +135,9 @@ $(function(){
 	});
 
 	
-	$('[data-vbg]').youtube_background()
-
 })
+
+$(document).ready(function() {
+	$('[data-vbg]').youtube_background();
+});
+

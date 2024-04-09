@@ -86,18 +86,18 @@
                             <div class="box">
                                 <div class="flex">
                                     <select name="" id="" class="select_1">
-                                        <option value="">請選擇品牌</option>
+                                        <option value="">請選擇購買產品</option>
                                         <option value="">品牌1</option>
                                         <option value="">品牌2</option>
                                     </select>
-                                    <!-- 刪除的程式碼在L182 -->
+                                    <!-- 刪除的程式碼在L170 -->
                                     <div class="inputDel">
                                         <input type="text" name="" id="" placeholder="請輸入產品序號">
                                         <a href="javascript:;"></a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- 新增的程式碼在L189 -->
+                            <!-- 新增的程式碼在L181 -->
                             <a href="javascript:;" class="addProduct">
                                 <span></span>
                                 新增產品
@@ -134,12 +134,14 @@
                                     <label for="other">其他</label>
                                 </li>
                             </ul>
-                            <!-- 只有實體門市才會顯示 -->
+                            <!-- 顯示內容程式碼，請見L191 -->
                             <select name="" id="storeSelect">
                                 <option value="">請選擇實體門市</option>
                                 <option value="">門市1</option>
                                 <option value="">門市2</option>
                             </select>
+                            <!-- 當選擇其他選項選項的時候才會顯示 -->
+                            <input type="text" name="" id="otherTxt" placeholder="請輸入其他" style="display: none">
                         </div>
 
                         <!-- 如果沒有填寫，則增加req -->
@@ -164,19 +166,9 @@
         include "quote/template/top_btn.php";
     ?>
     <script src="dist/js/main.js"></script>  
-    <script src="dist/js/product.js"></script>  
     <script src="dist/js/chosen.jquery.min.js"></script>  
     <script>
-        $('input').on('change', function () {
-            if($('.radio input:checked').attr('id') != 'store'){
-                $('#storeSelect').hide()
-                $('.radio').css('margin-bottom', '22px')
-            }else{
-                $('#storeSelect').show()
-                $('.radio').css('margin-bottom', '10px')
-            }
-        });
-
+        
         //刪除產品序號
         $('body').on('click', '.inputDel a', function () {
             $(this).parent().parent().remove()
@@ -185,7 +177,7 @@
         $(window).on('resize', function () {
             $('.select_1').chosen();
         });
-        
+
         $('.select_1').chosen();
 
         //增加產品序號
@@ -193,32 +185,43 @@
             $('.select_1').chosen('destroy')
             $('.topBox .rightBox .box >div:nth-child(1)').clone().appendTo('.box')
             $('.select_1').chosen();
+            $('.chosen-single').css('color', '#000')
         });
-        
 
-        // 彈跳視窗
-        $('.m_title a').on('click', function () {
-            $('#modalBgProduct').css('display', 'block');
-            $('body').addClass('modal-open-product')
-            $('html, body').css('overflow', 'hidden')
-        })
-        $('.closeIcon').on('click', function () {
-            $('#modalBgProduct').css('display', 'none')
-            $('body').removeClass('modal-open-product')
-            $('html, body').css('overflow', 'hidden auto')
-        })
-        const outerProduct = document.getElementById('modalBgProduct')
-        const innerProduct = document.getElementById('popupProduct')
-        outerProduct.addEventListener("click", function (e) {
-            $('#modalBgProduct').css('display', 'none')
-            $('body').removeClass('modal-open-product')
-            $('html, body').css('overflow', 'hidden auto')
-            e.stopPropagation();
-        }, false);
-        innerProduct.addEventListener('click', function (e) {
-            e.stopPropagation();
-        }, false);
+        let $idAry = [
+            ['請選擇實體門市','門市1','門市2'],
+            ['請選擇網路平台/官網','網路平台','官網'], 
+            ['請選擇電視購物','東森','寰宇']
+        ]
+
+        let $idNum
+        let $idStr = ``
+        function radioChange(){
+            $('input[name="radio"]').each(function(i){
+                if($(this).prop('checked')){
+                    $idNum = i
+                    if(i == 3){
+                        $('#otherTxt').css('display', 'block')
+                        $('#storeSelect').css('display', 'none')
+                    }else{
+                        $('#otherTxt').css('display', 'none')
+                        $('#storeSelect').css('display', 'block')
+                        $idStr = ``
+                        for(let i=0; i<$idAry[$idNum].length; i++){
+                            $idStr += `<option value="">${$idAry[$idNum][i]}</option>`
+                        }
+                        $('#storeSelect').html($idStr)
+                    }
+                }
+            })
+        }
+        radioChange()
+        $('input[name="radio"]').on('change', function () {
+            radioChange()
+        });
+
     </script>
+    <script src="dist/js/warranty.js"></script>  
 </body>
 
 </html>

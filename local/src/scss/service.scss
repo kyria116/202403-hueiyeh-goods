@@ -148,6 +148,12 @@
             margin-bottom: 12px;
         }
     }
+    .editor_box{
+        font-size: 16px;
+        @include mediaquery(null, 767px) {
+            font-size: 14px;
+        }
+    }
 }
 
 //產品維修
@@ -168,7 +174,7 @@
             padding: 0 25px;
         }
         @include mediaquery(null, 767px) {
-            padding: 0 20px;
+            padding: 0 12px;
             border-radius: 4px;
             margin-bottom: 33px;
         }
@@ -208,7 +214,7 @@
                 .leftBox img{
                     @include mediaquery(null, 991px) {
                         max-width: 432px;
-                        width: 83%;
+                        width: 80%;
                     }
                 }
                 .listBox{
@@ -256,7 +262,7 @@
                 }
                 @include mediaquery(null, 767px) {
                     font-size: 20px;
-                    max-width: 85%;
+                    max-width: 80%;
                     margin: 0 auto 18px;
                 }
                 span{
@@ -291,7 +297,7 @@
                     padding: 18px 24px;
                 }
                 @include mediaquery(null, 767px) {
-                    max-width: 82%;
+                    max-width: 78%;
                     margin: 0 auto;
                     font-size: 15px;
                 }
@@ -322,14 +328,19 @@
                     font-size: 12px;
                     line-height: 1.5;
                     letter-spacing: -0.03em;
-                    max-width: 84%;
+                    max-width: 92%;
                     margin: 0 auto !important;
+                }
+                &.bottom{
+                    @include mediaquery(null, 767px){
+                        max-width: 78%;
+                    }
                 }
             }
             .box {
                 margin-bottom: 6px;
                 @include mediaquery(null, 767px) {
-                    padding: 0 8px 0 22px;
+                    padding: 0 8px 0 30px;
                 }
                 > li{
                     display: flex;
@@ -346,7 +357,7 @@
                             margin: 9px 30px 0 0;
                             flex: 0 0 49px;
                             @include mediaquery(null, 767px) {
-                                margin: 0 16px 0 0;
+                                margin: 0 22px 0 0;
                                 flex: 0 0 55px;
                             }
                         }
@@ -359,7 +370,7 @@
                             margin: 9px 28px 0 0;
                             flex: 0 0 51px;
                             @include mediaquery(null, 767px) {
-                                margin: 0 17px 0 0;
+                                margin: 0 21px 0 0;
                                 flex: 0 0 57px;
                             }
                         }
@@ -458,6 +469,12 @@
                         }
                         @include mediaquery(null, 767px) {
                             font-size: 15px;
+                        }
+                    }
+                    &:nth-child(2){
+                        @include mediaquery(null, 991px) {
+                            text-align: left;
+                            padding: 8px 3px 9px;   
                         }
                     }
                     &:nth-child(3){
@@ -600,6 +617,7 @@
                         overflow: hidden;
                         @include mediaquery(null, 767px) {
                             border-bottom-right-radius: 3px;
+                            text-align: center;
                         }
                     }
                 }
@@ -723,6 +741,7 @@
 
 //會員積點
 .pointsPage{
+    position: relative;
     margin-bottom: 150px;
     @include mediaquery(null, 767px) {
         margin-bottom: 170px;
@@ -731,6 +750,7 @@
 
 //產品保固
 .warrantyPage{
+    position: relative;
     .top-menu-ul-2{
         margin-bottom: 66px;
         @include mediaquery(null, 767px) {
@@ -883,6 +903,7 @@
         }
     }
     select{
+        color: #A3A3A3;
         background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
         @include mediaquery(null, 767px) {
             background: #fff url('../images/common/form_arrow.png') center right 15px / 15px 6px no-repeat;
@@ -913,6 +934,26 @@
             @include mediaquery(null, 767px) {
                 font-size: 15px;
             }
+        }
+        &::-webkit-scrollbar {
+            width: 4px;
+            @include mediaquery(null, 991px) {
+                width: 2px;
+            }
+        }
+        &::-webkit-scrollbar-button {
+            background: transparent;
+            border-radius: 4px;
+        }
+        &::-webkit-scrollbar-track-piece {
+            background: #F8F8F8;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: #94693C;
+        }
+        &::-webkit-scrollbar-track {
+            box-shadow: transparent;
         }
     }
     .radio{
@@ -978,6 +1019,7 @@
     }
     input[type="date"]{
         position: relative;
+        color: #A3A3A3;
         &::-webkit-calendar-picker-indicator{
             position: absolute;
             top: 50%;
@@ -1025,7 +1067,7 @@
             border: 1px solid #E4E4E4;
             font-size: 16px;
             padding: 0 40px 0 18px;
-            color: #000;
+            color: #A3A3A3;
             font-family: $font;
             background: #fff url('../images/common/form_arrow.png') center right 15px / 21px 8px no-repeat;
             box-shadow: none;

@@ -109,7 +109,7 @@
                                     <li class="arrow">➜</li>
                                     <li><span>7-10個工作日</span> 專員將與您聯繫前往時間</li>
                                 </ul>
-                                <div class="s_intro">※宜蘭、花蓮、南投、屏東、台東地區，則為14-21個工作日。</div>
+                                <div class="s_intro bottom">※宜蘭、花蓮、南投、屏東、台東地區，則為14-21個工作日。</div>
                                 <div class="tableBox pc_991">
                                     <table>
                                         <tr>

@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="backBtn">
-            <a href="javascript:;">查看訂單紀錄</a>
+            <a href="order.php">查看訂單紀錄</a>
         </div>
     </main>
     <?php

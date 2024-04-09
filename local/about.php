@@ -54,6 +54,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 圖片 840 * 472 -->
                 <div class="monthContent">
                     <div class="swiper-container gallery-top swiper-no-swiping">
                         <div class="swiper-wrapper">

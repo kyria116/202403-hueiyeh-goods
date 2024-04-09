@@ -12,6 +12,7 @@
                     </div>
                     <div class="imgTxt">
                         <div class="img">
+                            <!-- 64 * 65 -->
                             <img src="dist/images/productPage/product_1.jpg" alt="">
                         </div>
                         <div class="txt">
@@ -67,6 +68,7 @@
                 <div class="container">
                     <div class="productBoxSwiper">
                         <div class="s_imgBox">
+                            <!-- 147 * 162 -->
                             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -110,6 +112,7 @@
                                 -->
                                 <img src="dist/images/common/icon_1.png" alt="">
                             </div>
+                            <!-- 700 * 770 -->
                             <div thumbsSlider="" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
@@ -146,10 +149,10 @@
                     <div class="txtBox">
                         <div class="boxTop">
                             <ul class="tag">
-                                <li><a href="javascript:;">輝葉</a></li>
-                                <li><a href="javascript:;">按摩器材</a></li>
-                                <li><a href="javascript:;">生活家電</a></li>
-                                <li><a href="javascript:;">按摩墊</a></li>
+                                <li class="brandTxt">輝葉</li>
+                                <li>按摩器材</li>
+                                <li>生活家電</li>
+                                <li>按摩墊</li>
                             </ul>
                             <div class="info">
                                 <div class="proId">HY-950-GY</div>
@@ -277,6 +280,7 @@
                 <div class="container">
                     <p>加購商品</p>
                     <div class="addBoxSwiper">
+                        <!-- 98 * 98 -->
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
