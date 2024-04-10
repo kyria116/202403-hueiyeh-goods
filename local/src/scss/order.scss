@@ -46,15 +46,19 @@ $product_color_5: #e30400;
                 top: -228px;
                 right: 105px;
                 z-index: 15;
-                @include mediaquery(null, 991px) {
+                @include mediaquery(null,991px) {
                     position: relative;
                     top: 0;
                     right: 0;
-                    margin: 0 31px 0 109px;
+                    margin: 0 101px 0 109px;
                     min-width: 195px;
-                    max-width: 311px;
+                    max-width: 250px;
                     aspect-ratio: 1 / 0.9228;
                     align-self: self-end;
+                }
+                @include mediaquery(null,500px) {
+                    margin: 0 31px 0 109px;
+                    max-width: 311px;
                 }
             }
         }
@@ -68,7 +72,10 @@ $product_color_5: #e30400;
             font-size: 16px;
             margin-top: 58.5px;
             li {
-                width: calc(100% / 6);
+                flex:0 0 18.7%;
+                @include mediaquery(null, 1280px) {
+                    flex:0 0 17.5%;
+                }
             }
             @include mediaquery(null, 991px) {
                 display: none;
@@ -111,7 +118,10 @@ $product_color_5: #e30400;
                 }
             }
             li {
-                width: calc(100% / 6);
+                flex:0 0 18.7%;
+                @include mediaquery(null, 1280px) {
+                    flex:0 0 17.5%;
+                }
                 @include mediaquery(null, 991px) {
                     display: flex;
                     width: 100%;
@@ -131,20 +141,25 @@ $product_color_5: #e30400;
             }
             li > div {
                 @include mediaquery(null, 991px) {
-                    padding: 15px 18px;
+                    padding: 11px 18px;
                 }
             }
             li:last-child {
                 display: flex;
                 justify-content: end;
                 border: none;
+                flex:0 0 6.5%;
+                white-space: nowrap;
+                @include mediaquery(null, 1280px) {
+                    flex:0 0 12.5%;
+                }
                 @include mediaquery(null, 991px) {
                     justify-content: center;
                 }
                 > a {
                     background: #e4e4e4;
                     border-radius: 4px;
-                    padding: 15px 31px;
+                    padding: 10px 31px;
                     color: #000;
                     transition: 0.5s;
                     text-align: center;
@@ -159,7 +174,8 @@ $product_color_5: #e30400;
                         background: #94693c;
                         border: 1px solid #94693c;
                         color: #fff;
-                        border-radius: 0 0 4px 4px;
+                        font-size: 14px;
+                        border-radius: 0 0 2px 2px;
                     }
                 }
             }

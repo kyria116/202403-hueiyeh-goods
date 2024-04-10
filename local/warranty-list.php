@@ -87,7 +87,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -116,7 +116,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -145,7 +145,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -174,7 +174,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -203,7 +203,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -232,7 +232,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -261,7 +261,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -290,7 +290,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -319,7 +319,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php#event_info">查看活動資訊</a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>
@@ -348,7 +348,7 @@
                             </li>
                             <li>
                                 <div>登錄活動</div>
-                                <div>查看活動資訊</div>
+                                <div><a href="warranty-detail.php"><a href="warranty-detail.php">查看活動資訊</a></a></div>
                             </li>
                             <li>
                                 <a href="warranty-detail.php">查看</a>

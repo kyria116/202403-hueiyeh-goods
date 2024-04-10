@@ -81,7 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="page_subtitle">活動資訊</div>
+                    <div class="page_subtitle" id="event_info">活動資訊</div>
                     <!-- 編輯器開始 -->
                     <div class="edit">
                         <img src="dist/images/member/cozyfitf.jpg">
@@ -102,10 +102,18 @@
     ?>
     <script src="dist/js/main.js"></script>
     <script>
+        window.onload = function() {
+            var eventInfoElement = document.getElementById('event_info');
+            var offsetTop = eventInfoElement.offsetTop;
+            window.scrollTo(0, offsetTop - 20);
+        };
+    </script>
+    <script>
         document.querySelector('.back-btn').onclick = function() {
             window.history.back();
         }
     </script>
+
 </body>
 
 </html>

@@ -50,7 +50,7 @@
                                     <div class="product_info_txt">
                                         <ul class="txt_1">
                                             <li class="product_num">HY-5013</li>
-                                            <li class="product_title">商務艙PLUS零重力按摩椅</li>
+                                            <li class="product_title">商務艙PLUS零重力按摩</li>
                                             <li class="product_event_discounts">父親節活動優惠88折</li>
                                         </ul>
                                         <ul class="txt_2">
@@ -93,7 +93,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form_item">
+                            <div class="form_item moreSth">
                                 <div class="del_mo del_giveaway">
                                     <span></span>
                                     <span></span>
@@ -134,7 +134,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form_item">
+                            <div class="form_item gift">
                                 <div class="item_mo">
                                     <div class="giveaway_img">
                                         <div class="add">
@@ -176,8 +176,8 @@
                                     <div class="product_info_txt">
                                         <ul class="txt_1">
                                             <li class="product_num">HY-5013</li>
-                                            <li class="product_title">商務艙PLUS零重力按摩椅</li>
-                                            <li class="product_event_discounts">父親節活動優惠88折</li>
+                                            <li class="product_title">商務艙PLUS零重力按摩</li>
+                                            <!-- <li class="product_event_discounts">父親節活動優惠88折</li> -->
                                         </ul>
                                         <ul class="txt_2">
                                             <li class="color">
@@ -238,7 +238,7 @@
                                         <option value="生日禮">生日禮</option>
                                         <option value="會員加入禮">會員加入禮</option>
                                     </select>
-                                    <div class="discount_coupon">88HAPPY折價券</div>
+                                   
                                 </div>
                             </li>
                             <li>
@@ -248,6 +248,7 @@
                                         <option value="2023HY1111">2023HY1111</option>
                                         <option value="2023HY1111">2023HY1221</option>
                                     </select>
+                                    <div class="discount_coupon">88HAPPY折價券</div>
                                 </div>
                             </li>
                             <li>
@@ -260,7 +261,7 @@
                         </ul>
                         <ul class="total">
                             <li>
-                                <div>總計</div>
+                                <div>商品金額總計</div>
                                 <div>$1,680</div>
                             </li>
                             <li>
@@ -269,7 +270,7 @@
                             </li>
                             <li>
                                 <div>積點折抵</div>
-                                <div>-$200</div>
+                                <div>-200</div>
                             </li>
                             <li>
                                 <div>折價券折抵</div>
@@ -401,6 +402,14 @@
                                                 <input type="radio" id="cash" name="pay" />
                                                 <label for="cash">貨到付款</label>
                                             </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="apple" name="pay" />
+                                                <label for="apple">Apple Pay</label>
+                                            </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="street" name="pay" />
+                                                <label for="street">街口支付</label>
+                                            </div>
                                         </fieldset>
                                     </div>
                                     <!-- 只有信用卡付款才會顯示 -->
@@ -455,6 +464,12 @@
                                         <div class="input cloud_num">
                                             <input type="text" id="cloud_num" name="cloud_num" placeholder="請輸入載具號碼" />
                                         </div>
+                                        <div class="input double_num">
+                                            <input type="text" id="double_num" name="double_num" placeholder="請輸入統一編號" />
+                                        </div>
+                                        <div class="input triple_num">
+                                            <input type="text" id="triple_num" name="triple_num" placeholder="請輸入公司行號" />
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -462,17 +477,14 @@
                                 <div class="checkbox">
                                     <input type="checkbox" id="agree" name="agree" />
                                     <label for="agree">
-                                        <span>我已詳細閱讀&ensp;
-                                            <a href="./"><span> 基本保固條款</span></a>
-                                            &ensp;及&ensp;
-                                            <a href="./"><span>退換貨原則</span></a>，並同意接受內容所有款項規定</span>
+                                        <span>我已詳細閱讀 <a href="terms.php"><span>基本保固條款</span></a> 及 <a href="terms.php"><span>退換貨原則</span></a> ，並同意接受內容所有款項規定</span>
                                     </label>
                                 </div>
                             </fieldset>
                         </div>
                         <div class="btn_flex">
                             <a href="javascript:;" class="store_btn back-btn">
-                                <div>返回</div>
+                                <div>進行付款</div>
                             </a>
                         </div>
                     </div>
@@ -491,6 +503,36 @@
             window.history.back();
         }
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var cloudRadio = document.getElementById('cloud');
+        var doubleRadio = document.getElementById('double');
+        var tripleRadio = document.getElementById('triple');
+
+        var cloudNumInput = document.querySelector('.cloud_num');
+        var doubleNumInput = document.querySelector('.double_num');
+        var tripleNumInput = document.querySelector('.triple_num');
+
+        cloudRadio.addEventListener('click', function () {
+            cloudNumInput.style.display = 'block';
+            doubleNumInput.style.display = 'none';
+            tripleNumInput.style.display = 'none';
+        });
+
+        doubleRadio.addEventListener('click', function () {
+            cloudNumInput.style.display = 'none';
+            doubleNumInput.style.display = 'block';
+            tripleNumInput.style.display = 'none';
+        });
+
+        tripleRadio.addEventListener('click', function () {
+            cloudNumInput.style.display = 'none';
+            doubleNumInput.style.display = 'none';
+            tripleNumInput.style.display = 'block';
+        });
+    });
+</script>
+
 </body>
 
 </html>

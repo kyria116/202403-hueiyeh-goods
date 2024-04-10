@@ -89,7 +89,7 @@
                                 <div class="product_info_txt">
                                     <ul class="txt_1">
                                         <li class="product_num">HY-5013</li>
-                                        <li class="product_title">商務艙PLUS零重力按摩椅</li>
+                                        <li class="product_title">商務艙PLUS零重力按摩</li>
                                         <li class="product_event_discounts">父親節活動優惠88折</li>
                                     </ul>
                                     <ul class="txt_2">
@@ -113,7 +113,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="form_item">
+                            <!-- 加購商品加class:moreSth -->
+                            <div class="form_item moreSth">
                                 <div class="giveaway_img">
                                     <div class="add">
                                         <div class="title">加購商品</div>
@@ -144,7 +145,8 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="form_item">
+                            <!-- 贈品加class:gift -->
+                            <div class="form_item gift">
                                 <div class="giveaway_img">
                                     <div class="add">
                                         <div class="title">贈品</div>
@@ -267,7 +269,7 @@
                         </ul>
                         <ul class="total">
                             <li>
-                                <div>總計</div>
+                                <div>商品金額總計</div>
                                 <div>$1,680</div>
                             </li>
                             <li>
@@ -276,7 +278,7 @@
                             </li>
                             <li>
                                 <div>積點折抵</div>
-                                <div>-$200</div>
+                                <div>-200</div>
                             </li>
                             <li>
                                 <div>折價券折抵</div>

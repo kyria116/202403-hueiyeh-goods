@@ -46,15 +46,19 @@ $product_color_5: #e30400;
                 top: -228px;
                 right: 105px;
                 z-index: 15;
-                @include mediaquery(null, 991px) {
+                @include mediaquery(null,991px) {
                     position: relative;
                     top: 0;
                     right: 0;
-                    margin: 0 31px 0 109px;
+                    margin: 0 101px 0 109px;
                     min-width: 195px;
-                    max-width: 311px;
+                    max-width: 250px;
                     aspect-ratio: 1 / 0.9228;
                     align-self: self-end;
+                }
+                @include mediaquery(null,500px) {
+                    margin: 0 31px 0 109px;
+                    max-width: 311px;
                 }
             }
         }
@@ -98,25 +102,22 @@ $product_color_5: #e30400;
                 border: 1px solid #c9b49d;
                 border-radius: 6px;
                 padding: 0;
-                margin: 70px 0;
+                margin: 35px 0;
                 &:after {
                     content: "";
                     position: absolute;
                     width: 100%;
                     height: 1px;
                     background-color: #e4e4e4;
-                    bottom: -70px;
+                    bottom: -35px;
                     left: 0;
                 }
             }
             @include mediaquery(null, 768px) {
-                margin: 35px 0;
                 font-size: 15px;
-                &:after {
-                    bottom: -35px;
-                }
+                border-radius: 3px;
             }
-            @include mediaquery(991px, null) {
+            @include mediaquery(992px, null) {
                 li {
                     width: 24.2%;
                     padding-right: 10px;
@@ -158,7 +159,7 @@ $product_color_5: #e30400;
             }
             li > div {
                 @include mediaquery(null, 991px) {
-                    padding: 15px 18px;
+                    padding: 11px 18px;
                 }
             }
             li:last-child {

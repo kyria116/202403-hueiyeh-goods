@@ -145,21 +145,21 @@
                         margin-bottom: 9px;
                     }
                     @include mediaquery(null, 767px) {
-                        padding-left: 9px;
+                        padding-left: 7px;
                         font-size: 15px;
                         height: 21px;
                     }
                     &::before {
                         content: "*";
                         position: absolute;
-                        top: 55%;
+                        top: 35%;
                         left: 0;
                         transform: translate(0, -50%);
                         width: 18px;
                         aspect-ratio: 1 / 1;
                         color: #d31e1b;
                         @include mediaquery(null, 767px) {
-                            top: 13px;
+                            top: 8px;
                             left: -1px;
                             font-size: 12px;
                         }

@@ -67,7 +67,7 @@
                                     <li>1993.10.30</li>
                                     <li class="mail">evora@mak66design.com</li>
                                     <li class="change_p">
-                                        <a href="javascript:;">
+                                        <a href="edit-password.php">
                                             修改密碼
                                         </a>
                                     </li>
@@ -75,7 +75,7 @@
                             </div>
                             <ul class="point">
                                 <li class="txt">可用積點</li>
-                                <li class="num">1,020</li>
+                                <li class="num">1020</li>
 
                             </ul>
                         </div>
@@ -91,7 +91,7 @@
                                             <input type="text" id="phone" name="phone" placeholder="請輸入手機號碼" value="0985811508" />
                                         </div>
                                     </li>
-                                    <li class="personal_data">
+                                    <li class="personal_data2">
                                         <!-- 非必填會加上 class:optional -->
                                         <label for="tel" class="optional">
                                             <div>室內電話<span>必填</span></div>
@@ -114,7 +114,7 @@
                                             <span class="selector">
                                                 <select class="county" data-value="臺北市">
                                                 </select>
-                                                <select class="district2" data-value="大同區">
+                                                <select class="district2" data-value="103 大同區">
                                                 </select>
                                             </span>
                                             <div class="input address">

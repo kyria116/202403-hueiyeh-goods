@@ -29,7 +29,7 @@
         align-items: end;
         margin-bottom: 21px;
         @include mediaquery(null, 991px) {
-        margin-bottom: 13px;
+        margin-bottom: 20px;
         }
         &:hover {
             @include mediaquery(768px, null) {
@@ -75,7 +75,7 @@
     }
     &.change_mo {
         position: absolute;
-        bottom: 542px;
+        bottom: 525px;
     }
 }
 .line_icon{

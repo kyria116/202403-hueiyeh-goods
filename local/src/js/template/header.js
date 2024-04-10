@@ -103,14 +103,18 @@ $(document).ready(function() {
 
 //member
 
-// 當class="login"被點擊時執行的函式
-document.querySelector('.login').addEventListener('click', function() {
-    // 在class="member_menu_list"中加入class="show_member_menu_list"
+document.querySelector('.member_icon').addEventListener('click', function() {
     document.querySelector('.member_menu_list').classList.add('show_member_menu_list');
 });
 
-// 當id="close_member"被點擊時執行的函式
-document.querySelector('#close_member').addEventListener('click', function() {
-    // 從class="member_menu_list"中移除class="show_member_menu_list"
+function removeMenuClass() {
     document.querySelector('.member_menu_list').classList.remove('show_member_menu_list');
+}
+
+document.querySelector('#close_member').addEventListener('click', function() {
+    removeMenuClass();
+});
+
+window.addEventListener('resize', function() {
+    removeMenuClass();
 });

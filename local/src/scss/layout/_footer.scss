@@ -46,7 +46,7 @@
         align-items: start;
         @include mediaquery(null, 991px) {
             flex-direction: column;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
         }
         .item_container {
             padding: 0 42px;

@@ -484,7 +484,7 @@
             <ul class="menu_icon">
                 <!-- 已登入狀態加上class: login -->
                 <li class="login">
-                    <a href="login.php">
+                    <a href="javascript:;">
                         <div class="member_icon"></div>
                     </a>
                     <div class="member_menu_list">
