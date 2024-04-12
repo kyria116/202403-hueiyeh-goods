@@ -6,7 +6,6 @@
             standardWords: true,
         });
 
-
         //select 顏色改變
         $("select").change(function() {
             $(this).css("color", "black");

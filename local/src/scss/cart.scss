@@ -733,7 +733,7 @@ $product_color_5: #e30400;
                             margin-top: 10px;
                         }
                     }
-                    
+
                     .more_discount {
                         display: flex;
                         flex-direction: column;
@@ -759,7 +759,7 @@ $product_color_5: #e30400;
                         align-items: start;
                     }
                 }
-                li:last-child{
+                li:last-child {
                     .discount_item {
                         @include mediaquery(null, 1100px) {
                             margin-top: 0px;
@@ -1367,6 +1367,9 @@ $product_color_5: #e30400;
                         flex-direction: column;
                         width: 50%;
                         margin-right: 40px;
+                        @include mediaquery(null, 991px) {
+                            width: 100%;
+                        }
                     }
 
                     .personal_data {
@@ -1428,11 +1431,99 @@ $product_color_5: #e30400;
                     .cloud_num,
                     .double_num,
                     .triple_num {
-                        width: 150px;
+                        display: flex;
+                        align-items: center;
+                        @include mediaquery(null, 991px) {
+                            flex-direction: column;
+                            align-items: start;
+                        }
+                        > label {
+                            margin-right: 12px;
+                            margin-bottom: 0;
+                            @include mediaquery(null, 991px) {
+                                margin-bottom: 18px;
+                            }
+                        }
+                        #cloud_num {
+                            width: 150px;
+                            margin: 0;
+                        }
                     }
                     .double_num,
                     .triple_num {
                         display: none;
+                        .city-flex {
+                            display: flex;
+                            width: 100%;
+                            @include mediaquery(null, 991px) {
+                                flex-direction: column;
+                            }
+                            .selector {
+                                width: 51.2%;
+                                @include mediaquery(null, 1300px) {
+                                    width: 60%;
+                                }
+                                @include mediaquery(null, 1150px) {
+                                    width: 70%;
+                                }
+                                @include mediaquery(null, 1070px) {
+                                    width: 80%;
+                                }
+                                @include mediaquery(null, 991px) {
+                                    width: 100%;
+                                }
+                                .county_width {
+                                    width: calc((100% - 16px) / 2);
+                                }
+                                .district_width {
+                                    width: calc((100% - 16px) / 2);
+                                }
+                            }
+                        }
+                    }
+                    .triple_num2 {
+                        display: none;
+                        width: 100%;
+                        margin-top: 21px;
+                        @include mediaquery(null, 991px) {
+                            flex-direction: column;
+                        }
+                        .company_name {
+                            display: flex;
+                            align-items: center;
+                            width: 52%;
+                            margin-right: 16px;
+                            @include mediaquery(null, 991px) {
+                                flex-direction: column;
+                                width: 100%;
+                                align-items: start;
+                                margin-bottom: 18px;
+                            }
+                            > label {
+                                margin-right: 12px;
+                                margin-bottom: 0;
+                                @include mediaquery(null, 991px) {
+                                    margin-bottom: 18px;
+                                }
+                            }
+                        }
+                        .company_num {
+                            display: flex;
+                            align-items: center;
+                            width: calc(48% - 16px);
+                            @include mediaquery(null, 991px) {
+                                flex-direction: column;
+                                width: 100%;
+                                align-items: start;
+                            }
+                            > label {
+                                margin-right: 12px;
+                                margin-bottom: 0;
+                                @include mediaquery(null, 991px) {
+                                    margin-bottom: 18px;
+                                }
+                            }
+                        }
                     }
 
                     .optional {
@@ -1517,6 +1608,59 @@ $product_color_5: #e30400;
                                 font-size: 15px;
                                 margin: 14.5px 0 12px 0;
                             }
+                        }
+                    }
+                    .address {
+                        width: 56.7%;
+                        @include mediaquery(null, 991px) {
+                            width: 100%;
+                        }
+                    }
+                    .selector {
+                        width: 41.7%;
+                        display: flex;
+                        justify-content: center;
+                        @include mediaquery(991px, 1200px) {
+                            width: 48%;
+                        }
+                        @include mediaquery(null, 991px) {
+                            width: 100%;
+                            margin-bottom: 12.5px;
+                        }
+                    }
+                    select {
+                        border: 1px solid #e4e4e4;
+                        width: calc((100% - 32px) / 2);
+                        font-size: 16px;
+                        color: #a3a3a3;
+                        padding: 0 18px;
+                        height: 48px;
+                        line-height: 48px;
+                        margin: 0 16px 0 0;
+                        background: url("../../dist/images/common/form_arrow.png") center right 10px / 19px 7px
+                            no-repeat;
+                        appearance: none;
+                        option {
+                            color: #000;
+                            font-family: "Noto Sans", sans-serif;
+                        }
+                        @include mediaquery(991px, 1200px) {
+                            margin: 0 6px 0 0;
+                            width: calc((100% - 12px) / 2);
+                        }
+                        @include mediaquery(null, 991px) {
+                            width: calc((100% - 8px) / 2);
+                        }
+                        @include mediaquery(null, 767px) {
+                            font-size: 15px;
+                            padding: 0 9px;
+                            height: 41px;
+                            line-height: 41px;
+                        }
+                    }
+                    .district {
+                        @include mediaquery(null, 991px) {
+                            margin: 0;
                         }
                     }
                     fieldset {

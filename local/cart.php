@@ -238,7 +238,7 @@
                                         <option value="生日禮">生日禮</option>
                                         <option value="會員加入禮">會員加入禮</option>
                                     </select>
-                                   
+
                                 </div>
                             </li>
                             <li>
@@ -345,12 +345,11 @@
                                             </div>
                                         </div>
                                     </li>
-
                                     <li class="personal_data">
                                         <label for="district">
                                             <div>地址<span>必填</span></div>
                                         </label>
-                                        <div class="city-selector">
+                                        <div class="city-selector ">
                                             <span class="selector">
                                                 <select class="county">
                                                 </select>
@@ -457,38 +456,87 @@
                                             </div>
                                         </fieldset>
                                     </div>
-                                    <div class="personal_data row">
-                                        <label for="check">
-                                            <div>發票資訊<span>必填</span></div>
-                                        </label>
-                                        <div class="input cloud_num">
-                                            <input type="text" id="cloud_num" name="cloud_num" placeholder="請輸入載具號碼" />
+                                    <div class="personal_data">
+                                        <div class="cloud_num">
+                                            <label for="check">
+                                                <div>載具號碼<span>必填</span></div>
+                                            </label>
+                                            <div class="input">
+                                                <input type="text" id="cloud_num" name="cloud_num" placeholder="請輸入載具號碼" />
+                                            </div>
                                         </div>
-                                        <div class="input double_num">
-                                            <input type="text" id="double_num" name="double_num" placeholder="請輸入統一編號" />
+                                        <div class="double_num">
+                                            <label for="check">
+                                                <div>發票地址<span>必填</span></div>
+                                            </label>
+                                            <div class="city-selector2 city-flex">
+                                                <span class="selector">
+                                                    <select class="county2 county_width">
+                                                    </select>
+                                                    <select class="district3 district_width">
+                                                    </select>
+                                                </span>
+                                                <div class="input address">
+                                                    <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="input triple_num">
-                                            <input type="text" id="triple_num" name="triple_num" placeholder="請輸入公司行號" />
+                                        <div class="triple_num">
+                                            <label for="check">
+                                                <div>發票地址<span>必填</span></div>
+                                            </label>
+                                            <div class="city-selector3 city-flex">
+                                                <span class="selector">
+                                                    <select class="county3 county_width">
+                                                    </select>
+                                                    <select class="district4 district_width">
+                                                    </select>
+                                                </span>
+                                                <div class="input address">
+                                                    <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="triple_num2">
+                                            <div class="company_name">
+                                                <label for="check">
+                                                    <div>公司抬頭<span>必填</span></div>
+                                                </label>
+                                                <div class="input">
+                                                    <input type="text" id="cloud_num" name="cloud_num" placeholder="公司抬頭" />
+                                                </div>
+                                            </div>
+                                            <!-- 非必填會加上 class:optional -->
+                                            <div class="company_num">
+                                                <label for="check" class="optional">
+                                                    <div>公司統編<span>必填</span></div>
+                                                </label>
+                                                <div class="input">
+                                                    <input type="text" id="cloud_num" name="cloud_num" placeholder="公司統編" />
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <fieldset>
-                                <div class="checkbox">
-                                    <input type="checkbox" id="agree" name="agree" />
-                                    <label for="agree">
-                                        <span>我已詳細閱讀 <a href="terms.php"><span>基本保固條款</span></a> 及 <a href="terms.php"><span>退換貨原則</span></a> ，並同意接受內容所有款項規定</span>
-                                    </label>
-                                </div>
-                            </fieldset>
                         </div>
-                        <div class="btn_flex">
-                            <a href="javascript:;" class="store_btn back-btn">
-                                <div>進行付款</div>
-                            </a>
-                        </div>
+                        <fieldset>
+                            <div class="checkbox">
+                                <input type="checkbox" id="agree" name="agree" />
+                                <label for="agree">
+                                    <span>我已詳細閱讀 <a href="terms.php"><span>基本保固條款</span></a> 及 <a href="terms.php"><span>退換貨原則</span></a> ，並同意接受內容所有款項規定</span>
+                                </label>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <div class="btn_flex">
+                        <a href="javascript:;" class="store_btn back-btn">
+                            <div>進行付款</div>
+                        </a>
                     </div>
                 </div>
+            </div>
         </section>
     </main>
     <?php
@@ -504,35 +552,64 @@
         }
     </script>
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var cloudRadio = document.getElementById('cloud');
-        var doubleRadio = document.getElementById('double');
-        var tripleRadio = document.getElementById('triple');
+        document.addEventListener('DOMContentLoaded', function() {
+            var cloudRadio = document.getElementById('cloud');
+            var doubleRadio = document.getElementById('double');
+            var tripleRadio = document.getElementById('triple');
 
-        var cloudNumInput = document.querySelector('.cloud_num');
-        var doubleNumInput = document.querySelector('.double_num');
-        var tripleNumInput = document.querySelector('.triple_num');
+            var cloudNumInput = document.querySelector('.cloud_num');
+            var doubleNumInput = document.querySelector('.double_num');
+            var tripleNumInput = document.querySelector('.triple_num');
+            var tripleNumInput2 = document.querySelector('.triple_num2');
 
-        cloudRadio.addEventListener('click', function () {
-            cloudNumInput.style.display = 'block';
-            doubleNumInput.style.display = 'none';
-            tripleNumInput.style.display = 'none';
+
+            cloudRadio.addEventListener('click', function() {
+                cloudNumInput.style.display = 'flex';
+                doubleNumInput.style.display = 'none';
+                tripleNumInput.style.display = 'none';
+                tripleNumInput2.style.display = 'none';
+
+            });
+
+            doubleRadio.addEventListener('click', function() {
+                cloudNumInput.style.display = 'none';
+                doubleNumInput.style.display = 'flex';
+                tripleNumInput.style.display = 'none';
+                tripleNumInput2.style.display = 'none';
+
+            });
+
+            tripleRadio.addEventListener('click', function() {
+                cloudNumInput.style.display = 'none';
+                doubleNumInput.style.display = 'none';
+                tripleNumInput.style.display = 'flex';
+                tripleNumInput2.style.display = 'flex';
+
+            });
+        });
+    </script>
+    <script>
+        const citySelector1 = new TwCitySelector({
+            el: '.city-selector',
+            elCounty: '.county',
+            elDistrict: '.district2',
+            standardWords: true,
         });
 
-        doubleRadio.addEventListener('click', function () {
-            cloudNumInput.style.display = 'none';
-            doubleNumInput.style.display = 'block';
-            tripleNumInput.style.display = 'none';
+        const citySelector2 = new TwCitySelector({
+            el: '.city-selector2',
+            elCounty: '.county2',
+            elDistrict: '.district3',
+            standardWords: true,
         });
 
-        tripleRadio.addEventListener('click', function () {
-            cloudNumInput.style.display = 'none';
-            doubleNumInput.style.display = 'none';
-            tripleNumInput.style.display = 'block';
+        const citySelector3 = new TwCitySelector({
+            el: '.city-selector3',
+            elCounty: '.county3',
+            elDistrict: '.district4',
+            standardWords: true,
         });
-    });
-</script>
-
+    </script>
 </body>
 
 </html>

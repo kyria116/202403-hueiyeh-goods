@@ -15,7 +15,7 @@ header {
     background-color: #fff;
     @include mediaquery(null, 991px) {
         height: $headerH-mo;
-        border-bottom: 1px solid #E4E4E4;
+        border-bottom: 1px solid #e4e4e4;
     }
     .header {
         position: absolute;
@@ -99,6 +99,7 @@ header {
         height: 100%;
         overflow-x: hidden;
         width: 100px;
+        background: #f8f8f8;
     }
     > li {
         position: relative;
@@ -119,6 +120,7 @@ header {
         @include mediaquery(null, 991px) {
             margin: 0;
             width: 100px;
+            height: 78px;
         }
         &:hover {
             @include mediaquery(992px, null) {
@@ -148,13 +150,24 @@ header {
             @include mediaquery(null, 991px) {
                 .menu-list {
                     background-color: #fff;
-                    color:#000;
+                    color: #000;
                 }
                 .menu-second {
                     opacity: 1;
                     > li {
                         pointer-events: all;
                     }
+                }
+            }
+        }
+        &:last-child {
+            display: none;
+            @include mediaquery(null, 991px) {
+                display: block;
+                pointer-events: none;
+                >a{
+                pointer-events: none;
+
                 }
             }
         }
@@ -169,14 +182,14 @@ header {
             transition: color 0.75s;
         }
         @include mediaquery(null, 991px) {
-            height:78px;
+            height: 78px;
             padding: 27px 10px;
             font-size: 16px;
             background: #f8f8f8;
             display: inline-flex;
             align-items: center;
             width: 100px;
-            color: #5C5B5B;
+            color: #5c5b5b;
         }
         span {
             position: relative;
