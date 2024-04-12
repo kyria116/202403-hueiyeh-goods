@@ -421,7 +421,19 @@
             }
         }
         .contentList{
+            display: none;
             background-color: #FAFAFA;
+            &.active {
+                display: block;
+                .content > li.active{
+                    @include mediaquery(1366px, null){
+                        display: flex;
+                    }
+                    @include mediaquery(null, 1365px){
+                        display: block;
+                    }
+                }
+            }
         }
         .topMenu{
             margin-bottom: 54px;
@@ -588,6 +600,7 @@
                 top: 0;
                 left: 0;
                 width: 94%;
+                display: none;
                 @include mediaquery(1366px, null) {
                     display: flex;
                     flex-direction: row-reverse;
@@ -653,7 +666,6 @@
                 &.active{
                     position: relative;
                     opacity: 1;
-                    pointer-events: all;
                 }
             }
         }
