@@ -120,16 +120,16 @@
                             </ul>
                             <fieldset>
                                 <div class="checkbox">
-                                    <input type="checkbox" id="agree" name="agree"/>
+                                    <input type="checkbox" id="agree" name="agree" />
                                     <label for="agree">我同意<a href="terms.php"><span>輝葉良品相關條款</span></a>
                                     </label>
                                 </div>
                             </fieldset>
                             <div class="btn_flex">
-                        <a href="javascript:;" class="store_btn">
-                            <div>註冊</div>
-                        </a>
-                    </div>
+                                <a href="javascript:;" class="store_btn">
+                                    <div>註冊</div>
+                                </a>
+                            </div>
                         </form>
                     </div>
                 </div>

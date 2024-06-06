@@ -165,9 +165,8 @@ header {
             @include mediaquery(null, 991px) {
                 display: block;
                 pointer-events: none;
-                >a{
-                pointer-events: none;
-
+                > a {
+                    pointer-events: none;
                 }
             }
         }
