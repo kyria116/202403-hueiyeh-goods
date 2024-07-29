@@ -46,6 +46,7 @@
         border: 1px solid $product_color_4;
         padding: 13px 20px 15px;
         line-height: 1;
+        color: #000;
         background: #fff url('../images/common/select.jpg') center right 16px / 16px 7px no-repeat;
         @include mediaquery(null, 767px){
             width: calc((100% - 10px) / 2);
@@ -58,6 +59,13 @@
     }
 }
 .productBox{
+    padding-bottom: 143px;
+    @include mediaquery(768px, 991px){
+        padding-bottom: 158px;
+    }
+    @include mediaquery(null, 767px){
+        padding-bottom: 172px;
+    }
     ul{
         display: flex;
         flex-wrap: wrap;
@@ -192,7 +200,13 @@
                 opacity: 0;
                 transition: opacity 0.75s;
             }
+            .space_block{
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 1.1011;
+            }
         }
+
         .proId{
             font-size: 16px;
             color: $product_color_2;

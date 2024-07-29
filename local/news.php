@@ -86,7 +86,7 @@
                 <li>
                     <a href="news-detail.php">
                         <div class="img">
-                            <img src="dist/images/page/news.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                         <div class="txt">
                             <div class="tagDate">

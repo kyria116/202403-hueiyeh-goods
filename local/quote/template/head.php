@@ -15,6 +15,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta property="og:image" content="dist/images/og_img.jpg">
     <meta name="format-detection" content="telephone=no">
-    <link rel="shortcut icon" href="dist/images/16x16.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="dist/images/hueiyeh-goods_ico.ico" type="image/x-icon" />
     <title></title>
     <link rel="stylesheet" href="dist/css/main.css">

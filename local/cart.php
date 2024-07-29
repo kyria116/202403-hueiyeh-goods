@@ -46,11 +46,23 @@
                                 <div class="item_mo">
                                     <!-- 桌機:194 x 214 -->
                                     <!-- 手機:233 x 257 -->
-                                    <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
+                                    <div class="product_img">
+                                        <a href="javascript:;">
+                                            <img src="dist/images/member/product_img.jpg">
+                                        </a>
+                                    </div>
                                     <div class="product_info_txt">
                                         <ul class="txt_1">
-                                            <li class="product_num">HY-5013</li>
-                                            <li class="product_title">商務艙PLUS零重力按摩</li>
+                                            <li class="product_num">
+                                                <a href="javascript:;">
+                                                    HY-5013
+                                                </a>
+                                            </li>
+                                            <li class="product_title">
+                                                <a href="javascript:;">
+                                                    商務艙PLUS零重力按摩
+                                                </a>
+                                            </li>
                                             <li class="product_event_discounts">父親節活動優惠88折</li>
                                         </ul>
                                         <ul class="txt_2">
@@ -105,13 +117,19 @@
                                             <div class="img">
                                                 <!-- 桌機:100 x 111 -->
                                                 <!-- 手機:170 x 187 -->
-                                                <img src="dist/images/member/product_img.jpg">
+                                                <a href="javascript:;">
+                                                    <img src="dist/images/member/product_img.jpg">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="giveaway_info_txt">
                                         <ul class="giveaway_txt_1">
-                                            <div class="giveaway_title">商務艙PLUS零重力按摩椅</div>
+                                            <div class="giveaway_title">
+                                                <a href="javascript:;">
+                                                    商務艙PLUS零重力按摩椅
+                                                </a>
+                                            </div>
                                         </ul>
                                         <ul class="giveaway_txt_2">
                                             <li class="giveaway_color">
@@ -140,14 +158,20 @@
                                         <div class="add">
                                             <div class="title">贈品</div>
                                             <div class="img">
-                                                <img src="dist/images/member/product_img.jpg">
+                                                <a href="javascript:;">
+                                                    <img src="dist/images/member/product_img.jpg">
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="giveaway_info_txt">
                                         <ul class="giveaway_txt_1">
                                             <div class="giveaway_title">
-                                                <div class="title">商務艙PLUS零重力按摩椅</div>
+                                                <div class="title">
+                                                    <a href="javascript:;">
+                                                        商務艙PLUS零重力按摩椅
+                                                    </a>
+                                                </div>
                                                 <div class="market_price"><span>市價</span>$1,680</div>
                                             </div>
                                         </ul>
@@ -172,11 +196,23 @@
                                     <span></span>
                                 </div>
                                 <div class="item_mo">
-                                    <div class="product_img"><img src="dist/images/member/product_img.jpg"></div>
+                                    <div class="product_img">
+                                        <a href="javascript:;">
+                                            <img src="dist/images/member/product_img.jpg">
+                                        </a>
+                                    </div>
                                     <div class="product_info_txt">
                                         <ul class="txt_1">
-                                            <li class="product_num">HY-5013</li>
-                                            <li class="product_title">商務艙PLUS零重力按摩</li>
+                                            <li class="product_num">
+                                                <a href="javascript:;">
+                                                    HY-5013
+                                                </a>
+                                            </li>
+                                            <li class="product_title">
+                                                <a href="javascript:;">
+                                                    商務艙PLUS零重力按摩
+                                                </a>
+                                            </li>
                                             <!-- <li class="product_event_discounts">父親節活動優惠88折</li> -->
                                         </ul>
                                         <ul class="txt_2">
@@ -255,7 +291,10 @@
                                 <div class="discount_item">優惠活動</div>
                                 <div class="more_discount">
                                     <div>｜年終慶｜全館滿額贈</div>
+                                    <!-- 達成優惠條件時，使用 class:full -->
+                                    <!-- 未達優惠條件時，使用class:not_full -->
                                     <div class="full">滿$10,000免運</div>
+                                    <div class="not_full">滿$20,000免運</div>
                                 </div>
                             </li>
                         </ul>

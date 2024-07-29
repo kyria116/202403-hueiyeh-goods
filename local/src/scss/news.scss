@@ -53,10 +53,28 @@
         }
         .img {
             transition: opacity 0.75s;
+            width: 100%;
+            max-width: 512px;
+            aspect-ratio: 1 / 0.5898;
+            overflow: hidden;
+            background-color: #d7d7d7;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 139px;
+                height:35px;
+                top:50%;
+                left:50%;
+                transform: translate(-50%,-50%);
+                background: url(../images/common/logo_w.svg) center/contain no-repeat;
+                background-size: 139px 35px;
+            }
             img {
                 display: block;
                 width: 100%;
-                aspect-ratio: 1 / 0.5898;
+                z-index: 5;
+                position: relative;
             }
         }
         .txt {

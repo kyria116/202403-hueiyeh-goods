@@ -206,6 +206,7 @@ $product_color_5: #e30400;
                         margin-right: 32px;
                         width: 16.2%;
                         max-width: 194px;
+                        aspect-ratio: 1 / 1.0974025;
                         @include mediaquery(null, 991px) {
                             width: 40%;
                             max-width: 200px;
@@ -403,9 +404,11 @@ $product_color_5: #e30400;
                             border-radius: 6px;
                             width: 100px;
                             overflow: hidden;
+                            aspect-ratio: 1 / 1.11;
                             @include mediaquery(null, 500px) {
                                 width: auto;
                                 max-width: 85px;
+                                aspect-ratio: 1 / 1.1;
                             }
                         }
                     }
@@ -752,6 +755,10 @@ $product_color_5: #e30400;
                             @include mediaquery(null, 991px) {
                                 font-size: 15px;
                             }
+                        }
+                        .not_full {
+                            font-size: 16px;
+                            color: #797979;
                         }
                     }
                     &:last-child {
@@ -1789,18 +1796,67 @@ $product_color_5: #e30400;
         }
     }
 }
+.checkbox {
+    margin-bottom: 24px;
+    label {
+        cursor: pointer;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        @include mediaquery(null, 767px) {
+            font-size: 15px;
+        }
+        span > a {
+            font-weight: 500;
+            border-bottom: 1px solid #000;
+            transition: 0.5s;
+            &:hover {
+                @include mediaquery(767px, null) {
+                    border-bottom: 1px solid #94693c;
+                    color: #94693c;
+                }
+            }
+        }
+    }
+    [type="checkbox"] {
+        display: none;
+    }
 
+    [type="checkbox"] + label::before {
+        content: "";
+        display: inline-block;
+        width: 26px;
+        height: 26px;
+
+        background-color: #e4e4e4;
+        background-size: contain;
+
+        margin-right: 14px;
+        position: relative;
+        top: 2px;
+        @include mediaquery(null, 767px) {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            min-height: 20px;
+            margin-right: 12px;
+        }
+    }
+    [type="checkbox"]:checked + label::before {
+        background-image: url("../../dist/images/common/agree.svg");
+    }
+}
 .btn_flex {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 66px;
     @include mediaquery(null, 991px) {
         margin-top: 125px;
     }
     @include mediaquery(null, 768px) {
-        margin-top: 5.5px;
+        margin-top: 62.5px;
     }
     .store_btn {
         font-size: 18px;
@@ -1952,6 +2008,7 @@ $product_color_5: #e30400;
         border: 1px solid $product_color_4;
         padding: 13px 20px 15px;
         line-height: 1;
+        color: #000;
         background: #fff url("../images/common/select.jpg") center right 16px / 16px 7px no-repeat;
         @include mediaquery(null, 767px) {
             width: 166px;

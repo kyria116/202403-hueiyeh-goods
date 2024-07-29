@@ -89,6 +89,7 @@
                     > a {
                         border-bottom: 1px solid transparent;
                         padding-bottom: 6px;
+                        transition: 0.5s;
                         @include mediaquery(768px, null) {
                             &:hover {
                                 border-bottom: 1px solid #000;

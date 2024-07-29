@@ -1,4 +1,6 @@
-html, body, *{
+html,
+body,
+* {
     font-family: $font;
     font-weight: 400;
     margin: 0 auto;
@@ -6,28 +8,39 @@ html, body, *{
         opacity: 1;
         visibility: visible;
     }
-    .asj{
+    .asj {
         opacity: 0;
     }
 }
-.wrap{
+.wrap {
     overflow: hidden;
 }
-html, body {
+html,
+body {
     position: relative;
     overflow: hidden auto;
 }
-main{
+main {
     margin-top: $headerH-pc;
     @include mediaquery(null, 991px) {
-    margin-top: $headerH-mo;
+        margin-top: $headerH-mo;
     }
 }
-.porel{
+.porel {
     position: relative;
 }
-.center{
+.center {
     text-align: center;
+}
+body {
+    overflow-x: hidden;
+    opacity: 0;
+    visibility: hidden;
+    &.fade-in {
+        opacity: 1;
+        transition: opacity 1.5s ease;
+        visibility: visible;
+    }
 }
 //---------通用設定--------
 ::selection {
@@ -37,10 +50,10 @@ main{
 img {
     max-width: 100%;
     //針對圖片不讓使用者反白
-    -webkit-user-select:none;
-    -moz-user-select:none;
-    -o-user-select:none;
-    user-select:none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
 }
 .mo {
     display: none;
@@ -79,7 +92,7 @@ a:hover {
 // ---------- 內頁通吃 ------------
 
 // 容器寬
-.container{
+.container {
     margin: 0 auto;
     width: 1600px;
     max-width: 88%;
@@ -91,4 +104,3 @@ a:hover {
         padding: 0 24px;
     }
 }
-

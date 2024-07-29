@@ -2,26 +2,33 @@
 
 $(function () {
 	let marTop = 0
-	function init(){
-		if(winW > 767){
+	function init() {
+		if (winW > 767) {
 			marTop = 128
-		}else{
+		} else {
 			marTop = 24
 		}
 		$('.productBox').css('margin-top', `${Number(marTop) + Number($('.fixedBuy').outerHeight())}px`)
-	
-		if(winW > 991){
+
+		if (winW > 991) {
 			$('.buyBox .buyLeft').css('height', $('.buyRight').outerHeight())
 		}
+		
+		if($('.buyLeft').children().length === 0) {
+			$('.buyLeft').addClass('buyLeft_none');
+		}
+
 	}
+
 
 	init()
 
 	$(window).on('resize', function () {
 		init()
+
 	});
 
-	$('.proMenu li').on('click', function(){
+	$('.proMenu li').on('click', function () {
 		$(this).addClass('active')
 		$(this).siblings().removeClass('active')
 		$('.infoPage li').removeAttr('style');
@@ -32,12 +39,12 @@ $(function () {
 	$('.plus').on('click', function () {
 		$('.minus').removeClass('hidden')
 		num++
-		if(num > 10){
+		if (num > 10) {
 			$(this).addClass('hidden')
 			return
-		}if(num == 10){
+		} if (num == 10) {
 			$(this).addClass('hidden')
-		}else{
+		} else {
 			$(this).removeClass('hidden')
 		}
 		$('.number').text(num)
@@ -45,12 +52,12 @@ $(function () {
 	$('.minus').on('click', function () {
 		$('.plus').removeClass('hidden')
 		num--
-		if(num < 1){
+		if (num < 1) {
 			$(this).addClass('hidden')
 			return
-		}else if(num == 1){
+		} else if (num == 1) {
 			$(this).addClass('hidden')
-		}else{
+		} else {
 			$(this).removeClass('hidden')
 		}
 		$('.number').text(num)
@@ -62,30 +69,30 @@ $(function () {
 		freeMode: true,
 		watchSlidesProgress: true,
 		loop: true,
-		breakpoints: { 
+		breakpoints: {
 			768: {
 				direction: 'vertical',
 				slidesPerView: 'auto',
 				spaceBetween: 12,
 			},
 		}
-    });
-    var b_imgBox = new Swiper(".b_imgBox .mySwiper", {
+	});
+	var b_imgBox = new Swiper(".b_imgBox .mySwiper", {
 		spaceBetween: 0,
 		loop: true,
 		thumbs: {
 			swiper: s_imgBox,
 		},
-    });
+	});
 
-    var addBoxSwiper = new Swiper(".addBoxSwiper .mySwiper", {
+	var addBoxSwiper = new Swiper(".addBoxSwiper .mySwiper", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		navigation: {
 			nextEl: ".addBoxSwiper-next",
 			prevEl: ".addBoxSwiper-prev",
 		},
-		breakpoints: { 
+		breakpoints: {
 			768: {
 				slidesPerView: 2,
 				spaceBetween: 20
@@ -99,21 +106,21 @@ $(function () {
 				spaceBetween: 32,
 			}
 		}
-    });
-	
-    var likeSwiper = new Swiper(".likeSwiper .mySwiper", {
+	});
+
+	var likeSwiper = new Swiper(".likeSwiper .mySwiper", {
 		slidesPerView: 1.65,
 		spaceBetween: 10,
 		navigation: {
 			nextEl: ".likeSwiper-next",
 			prevEl: ".likeSwiper-prev",
 		},
-		breakpoints: { 
+		breakpoints: {
 			768: {
 				slidesPerView: 2,
 				spaceBetween: 20
 			},
-			992: { 
+			992: {
 				slidesPerView: 3,
 				spaceBetween: 15
 			},
@@ -122,13 +129,13 @@ $(function () {
 				spaceBetween: 30,
 			}
 		}
-    });
-	$('.likeSwiper-next').on('click', function(){
-		if($(this).hasClass('swiper-button-disabled')){
+	});
+	$('.likeSwiper-next').on('click', function () {
+		if ($(this).hasClass('swiper-button-disabled')) {
 			$('.likeSwiper').removeClass('mask')
 		}
 	})
-	$('.likeSwiper-prev').on('click', function(){
+	$('.likeSwiper-prev').on('click', function () {
 		$('.likeSwiper').addClass('mask')
 	})
 

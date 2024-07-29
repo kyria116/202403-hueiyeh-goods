@@ -306,12 +306,17 @@ header {
                     align-items: center;
                     flex-direction: column;
                     > div {
-                        width: 60px;
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
                     }
                 }
             }
-            > div {
-                > a {
+            > a {
+                > div {
+                    width: 90px;
+                    max-width: 90px;
                     transition: opacity 0.75s;
                 }
             }
@@ -321,6 +326,18 @@ header {
                 width: 100%;
                 > a {
                     padding: 0 24px 37.5px 24px;
+                    > div {
+                        img {
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            > a {
+                > div {
+                    width: 266px;
+                    max-width: 266px;
                 }
             }
         }

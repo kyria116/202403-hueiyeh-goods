@@ -1,29 +1,37 @@
 var swiper = new Swiper(".strip-ads", {
     direction: "vertical",
-    autoplay:true,
-    speed:1000,
-    loop:true,
+    // autoplay: true,
+    speed: 1000,
+    loop: true,
 });
 
 $('#close_ad').on('click', function () {
     $('.text_ticker').remove();
-    })
+})
 var swiper = new Swiper(".mySwiper1", {
-    autoplay:true,
-    speed:1000,
-    loop:true,
+    autoplay: true,
+    speed: 1000,
+    loop: true,
     pagination: {
         el: ".swiper-pagination",
+        clickable: true,
     },
 });
+
 
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1.3,
     spaceBetween: 20,
     centeredSlides: true,
+    autoplay: true,
     loop: true,
-    autoplay:true,
-    speed:500,
+    speed: 500,
+    initialSlide: 0,
+    on: {
+        init: function () {
+            this.slideToLoop(0, 0, false);
+        }
+    },
     hashNavigation: {
         watchState: true,
     },

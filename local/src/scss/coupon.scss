@@ -321,6 +321,7 @@ $product_color_5: #e30400;
         border: 1px solid $product_color_4;
         padding: 13px 20px 15px;
         line-height: 1;
+        color: #000;
         background: #fff url("../images/common/select.jpg") center right 16px / 16px 7px no-repeat;
         @include mediaquery(null, 767px) {
             width: 166px;

@@ -72,7 +72,7 @@
                             <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="dist/images/productPage/b_img.jpg" />
+                                        <img src="dist/images/productPage/product_5.jpg" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="dist/images/productPage/product_1.jpg" />
@@ -116,7 +116,9 @@
                             <div thumbsSlider="" class="swiper mySwiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="dist/images/productPage/b_img.jpg" />
+                                        <!-- 第一個產品圖需要活動框的加上這個 div -->
+                                        <div class="filter_img"><img src="dist/images/productPage/filter_2.png" alt=""></div>
+                                        <img src="dist/images/productPage/product_5.jpg" />
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="dist/images/productPage/product_1.jpg" />
@@ -206,39 +208,7 @@
                 <div class="container">
                     <!-- 如果是單選樣式 buyLeft 增加 class="hasRadio" -->
                     <div class="buyLeft">
-                        <div class="buyTitle">
-                            贈品<span>期間 2023.12.01至2023.12.31</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <input type="radio" name="hasRadio" id="hasRadio1">
-                                <label for="hasRadio1" class="s_title">
-                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
-                                </label>
-                                <a href="javascript:;">查看贈品</a>
-                            </li>
-                            <li>
-                                <input type="radio" name="hasRadio" id="hasRadio2">
-                                <label for="hasRadio2" class="s_title">
-                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
-                                </label>
-                                <a href="javascript:;">查看贈品</a>
-                            </li>
-                            <li>
-                                <input type="radio" name="hasRadio" id="hasRadio3">
-                                <label for="hasRadio3" class="s_title">
-                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
-                                </label>
-                                <a href="javascript:;">查看贈品</a>
-                            </li>
-                            <li>
-                                <input type="radio" name="hasRadio" id="hasRadio4">
-                                <label for="hasRadio4" class="s_title">
-                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
-                                </label>
-                                <a href="javascript:;">查看贈品</a>
-                            </li>
-                        </ul>
+                 
                     </div>
                     <div class="buyRight">
                         <div class="specification">
@@ -363,8 +333,8 @@
             <div class="infoBox">
                 <div class="container">
                     <ul class="proMenu">
-                        <li><a href="javascript:;">產品介紹</a></li>
-                        <li class="active"><a href="javascript:;">產品規格</a></li>
+                        <li class="active"><a href="javascript:;">產品介紹</a></li>
+                        <li><a href="javascript:;">產品規格</a></li>
                     </ul>
                     <ul class="infoPage">
                         <!-- 產品介紹 內容 -->

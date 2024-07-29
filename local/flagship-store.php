@@ -35,8 +35,7 @@
                         672 * 490
                      -->
                     <div class="img">
-                        <img src="dist/images/page/store.jpg" alt="" class="pc">
-                        <img src="dist/images/page/store_mo.jpg" alt="" class="mo">
+                        <img src="dist/images/page/store.jpg" alt="">
                     </div>
                     <div class="txt">
                         <div class="storeName">輝葉良品</div>

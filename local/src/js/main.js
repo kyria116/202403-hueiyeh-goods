@@ -23,5 +23,9 @@ $(function () {
         });
     });
 
-});
+    //全站換頁淡入淡出
+    setTimeout(function () {
+        document.body.classList.add('fade-in');
+    }, 600);
 
+});

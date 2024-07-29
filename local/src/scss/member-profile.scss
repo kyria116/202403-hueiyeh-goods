@@ -158,8 +158,10 @@ $product_color_5: #e30400;
                 }
                 .area_code {
                     margin-right: 16px;
+                    width: 133px;
                     @include mediaquery(1650px, null) {
                         width: 25%;
+                        min-width: 101px;
                         max-width: 106px;
                     }
                     @include mediaquery(1200px, 1650px) {
@@ -814,6 +816,7 @@ $product_color_5: #e30400;
         border: 1px solid $product_color_4;
         padding: 13px 20px 15px;
         line-height: 1;
+        color: #000;
         background: #fff url("../images/common/select.jpg") center right 16px / 16px 7px no-repeat;
         @include mediaquery(null, 767px) {
             width: 166px;

@@ -29,7 +29,7 @@
                 <div class="m_title">門市區域</div>
                 <select name="" id="">
                     <option value="0">全部門市</option>
-                    <option value="1">基隆市</option>
+                    <option value="1">大台北(量販店櫃位皆在賣場內)</option>
                     <option value="2">台北市</option>
                     <option value="3">新北市</option>
                 </select>
