@@ -794,10 +794,31 @@
                     font-size: 14px;
                     border-radius: 2px;
                 }
+                .view {
+                    display: inline-block;
+                }
+                .finish {
+                    display: none;
+                }
                 &:hover {
                     @include mediaquery(768px, null) {
                         color: #fff;
                         background-color: #94693c;
+                    }
+                }
+                &.sellout {
+                    background-color: #e4e4e4;
+                    color: #000;
+                    pointer-events: none;
+                    flex: 0 0 104px;
+                    @include mediaquery(null, 767px) {
+                        flex: 0 0 92.5px;
+                    }
+                    .view {
+                        display: none;
+                    }
+                    .finish {
+                        display: inline-block;
                     }
                 }
             }
@@ -863,7 +884,7 @@
             }
         }
     }
-    .buyLeft_none{
+    .buyLeft_none {
         margin: 0;
         background-color: #fff;
     }

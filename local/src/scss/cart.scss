@@ -535,7 +535,17 @@ $product_color_5: #e30400;
                             font-weight: 500;
                             display: block;
                             @include mediaquery(null, 991px) {
-                                display: none;
+                                width: 100%;
+                                font-size: 15px;
+                                margin-bottom: 0;
+                            }
+                            .finish {
+                                font-size: 16px;
+                                font-weight: 400;
+                                padding: 5px 12px;
+                                border-radius: 4px;
+                                background-color: #e4e4e4;
+                                width: fit-content;
                             }
                         }
                         .giveaway_price_1 {
@@ -776,7 +786,8 @@ $product_color_5: #e30400;
                 .remaining_point {
                     position: absolute;
                     top: 50%;
-                    right: -112px;
+                    left: calc(100% + 20px);
+                    white-space: nowrap;
                     transform: translate(0, -50%);
                     color: #797979;
                     font-size: 16px;
@@ -792,6 +803,11 @@ $product_color_5: #e30400;
                         margin-top: 4px;
                         font-size: 14.5px;
                     }
+                    // span {
+                    //     color: #d31e1b;
+                    //     background-color: #f9ede2;
+                    //     padding: 5px 12px;
+                    // }
                 }
                 .discount_coupon {
                     position: absolute;
@@ -1435,104 +1451,99 @@ $product_color_5: #e30400;
                             min-width: 0;
                         }
                     }
-                    .cloud_num,
-                    .double_num,
-                    .triple_num {
-                        display: flex;
-                        align-items: center;
-                        @include mediaquery(null, 991px) {
-                            flex-direction: column;
-                            align-items: start;
-                        }
-                        > label {
-                            margin-right: 12px;
-                            margin-bottom: 0;
+                    .member_num,
+                    .mobile_num,
+                    .citizen_num,
+                    .company_num,
+                    .donate_num {
+                        display: none;
+                        flex-direction: column;
+                        .input {
+                            max-width: 362px;
                             @include mediaquery(null, 991px) {
-                                margin-bottom: 18px;
+                                max-width: 100%;
+                                font-size: 15px;
                             }
                         }
-                        #cloud_num {
-                            width: 150px;
+                        label {
+                            @include mediaquery(null, 991px) {
+                                font-size: 15px;
+                            }
+                            &:before {
+                                @include mediaquery(991px, null) {
+                                    top: 20%;
+                                }
+                            }
+                            i {
+                                margin-left: 7px;
+                                font-size: 16px;
+                                font-weight: 500;
+                                color: #797979;
+                            }
+                        }
+                    }
+                    .member_num {
+                        label {
+                            &:before {
+                                display: none;
+                            }
+                        }
+                    }
+                    .mobile_num,
+                    .donate_num {
+                        .input {
+                            max-width: 374px;
+                            position: relative;
+                            padding-left: 15px;
+                            @include mediaquery(null, 991px) {
+                                max-width: 100%;
+                            }
+                            &:before {
+                                content: "*";
+                                position: absolute;
+                                top: 25%;
+                                left: 0;
+                                transform: translate(0, -50%);
+                                width: 18px;
+                                aspect-ratio: 1 / 1;
+                                color: #d31e1b;
+                            }
+                        }
+                        select {
+                            margin-left: 15px;
+                            width: 100%;
+                            max-width: 359px;
+                            @include mediaquery(null, 991px) {
+                            max-width: calc(100% - 15px);
+                            }
+                        }
+                    }
+                    .company_num {
+                        gap: 12px;
+                        label {
                             margin: 0;
                         }
                     }
-                    .double_num,
-                    .triple_num {
-                        display: none;
-                        .city-flex {
-                            display: flex;
-                            width: 100%;
-                            @include mediaquery(null, 991px) {
-                                flex-direction: column;
+                    .donate_num {
+                        gap: 20px 0;
+                        .input {
+                            position: relative;
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                background: url(../../dist/images/common/search.svg) no-repeat;
+                                width: 25px;
+                                aspect-ratio: 1 / 1;
+                                background-size: contain;
+                                top: 50%;
+                                transform: translate(0, -50%);
+                                left: 30px;
                             }
-                            .selector {
-                                width: 51.2%;
-                                @include mediaquery(null, 1300px) {
-                                    width: 60%;
-                                }
-                                @include mediaquery(null, 1150px) {
-                                    width: 70%;
-                                }
-                                @include mediaquery(null, 1070px) {
-                                    width: 80%;
-                                }
-                                @include mediaquery(null, 991px) {
-                                    width: 100%;
-                                }
-                                .county_width {
-                                    width: calc((100% - 16px) / 2);
-                                }
-                                .district_width {
-                                    width: calc((100% - 16px) / 2);
-                                }
+                            input {
+                                padding-left: 53px;
                             }
                         }
                     }
-                    .triple_num2 {
-                        display: none;
-                        width: 100%;
-                        margin-top: 21px;
-                        @include mediaquery(null, 991px) {
-                            flex-direction: column;
-                        }
-                        .company_name {
-                            display: flex;
-                            align-items: center;
-                            width: 52%;
-                            margin-right: 16px;
-                            @include mediaquery(null, 991px) {
-                                flex-direction: column;
-                                width: 100%;
-                                align-items: start;
-                                margin-bottom: 18px;
-                            }
-                            > label {
-                                margin-right: 12px;
-                                margin-bottom: 0;
-                                @include mediaquery(null, 991px) {
-                                    margin-bottom: 18px;
-                                }
-                            }
-                        }
-                        .company_num {
-                            display: flex;
-                            align-items: center;
-                            width: calc(48% - 16px);
-                            @include mediaquery(null, 991px) {
-                                flex-direction: column;
-                                width: 100%;
-                                align-items: start;
-                            }
-                            > label {
-                                margin-right: 12px;
-                                margin-bottom: 0;
-                                @include mediaquery(null, 991px) {
-                                    margin-bottom: 18px;
-                                }
-                            }
-                        }
-                    }
-
                     .optional {
                         padding-left: 0;
                         &::before {

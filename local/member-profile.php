@@ -74,7 +74,7 @@
                                 </ul>
                             </div>
                             <ul class="point">
-                                <li class="txt">可用積點</li>
+                                <li class="txt">總積點</li>
                                 <li class="num">1020</li>
 
                             </ul>

@@ -135,7 +135,6 @@
                                             <li class="giveaway_color">
                                             </li>
                                             <li class="giveaway_quantity">
-                                            </li>
                                             <li class="giveaway_price_1">
                                                 <div class="mo_title">單價</div>
                                                 $1,680
@@ -166,19 +165,20 @@
                                     </div>
                                     <div class="giveaway_info_txt">
                                         <ul class="giveaway_txt_1">
-                                            <div class="giveaway_title">
+                                            <li class="giveaway_title">
                                                 <div class="title">
                                                     <a href="javascript:;">
                                                         商務艙PLUS零重力按摩椅
                                                     </a>
                                                 </div>
                                                 <div class="market_price"><span>市價</span>$1,680</div>
-                                            </div>
+                                            </li>
                                         </ul>
                                         <ul class="giveaway_txt_2">
                                             <li class="giveaway_color">
                                             </li>
                                             <li class="giveaway_quantity">
+                                                <div class="finish">已兌換完畢</div>
                                             </li>
                                             <li class="giveaway_price_1">
                                             </li>
@@ -264,7 +264,7 @@
                                 <div class="discount_item">使用積點</div>
                                 <div class="input">
                                     <input type="text" id="point" name="point" />
-                                    <div class="remaining_point">可用積點300</div>
+                                    <div class="remaining_point">總積點 <span>1020</span> ，本次消費可用 <span>300</span> 積點</div>
                                 </div>
                             </li>
                             <li>
@@ -425,6 +425,18 @@
                                                 <label for="card">信用卡付款</label>
                                             </div>
                                             <div class="ckbutton">
+                                                <input type="radio" id="street" name="pay" />
+                                                <label for="street">街口支付</label>
+                                            </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="line" name="pay" />
+                                                <label for="line">LINE Pay</label>
+                                            </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="apple" name="pay" />
+                                                <label for="apple">Apple Pay</label>
+                                            </div>
+                                            <div class="ckbutton">
                                                 <input type="radio" id="ATM" name="pay" />
                                                 <label for="ATM">ATM虛擬代碼繳費</label>
                                             </div>
@@ -436,18 +448,8 @@
                                                 <input type="radio" id="code" name="pay" />
                                                 <label for="code">超商代碼</label>
                                             </div>
-                                            <div class="ckbutton">
-                                                <input type="radio" id="cash" name="pay" />
-                                                <label for="cash">貨到付款</label>
-                                            </div>
-                                            <div class="ckbutton">
-                                                <input type="radio" id="apple" name="pay" />
-                                                <label for="apple">Apple Pay</label>
-                                            </div>
-                                            <div class="ckbutton">
-                                                <input type="radio" id="street" name="pay" />
-                                                <label for="street">街口支付</label>
-                                            </div>
+
+
                                         </fieldset>
                                     </div>
                                     <!-- 只有信用卡付款才會顯示 -->
@@ -482,80 +484,85 @@
                                         </label>
                                         <fieldset>
                                             <div class="ckbutton">
-                                                <input type="radio" id="cloud" name="bill" />
-                                                <label for="cloud">雲端發票</label>
+                                                <input type="radio" id="member" name="bill" />
+                                                <label for="member">會員載具</label>
                                             </div>
                                             <div class="ckbutton">
-                                                <input type="radio" id="double" name="bill" />
-                                                <label for="double">紙本 - 二聯式發票</label>
+                                                <input type="radio" id="mobile" name="bill" />
+                                                <label for="mobile">手機條碼</label>
                                             </div>
                                             <div class="ckbutton">
-                                                <input type="radio" id="triple" name="bill" />
-                                                <label for="triple">紙本 - 三聯式發票</label>
+                                                <input type="radio" id="citizen" name="bill" />
+                                                <label for="citizen">自然人憑證</label>
+                                            </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="company" name="bill" />
+                                                <label for="company">公司發票</label>
+                                            </div>
+                                            <div class="ckbutton">
+                                                <input type="radio" id="donate" name="bill" />
+                                                <label for="donate">捐贈發票</label>
                                             </div>
                                         </fieldset>
                                     </div>
                                     <div class="personal_data">
-                                        <div class="cloud_num">
+                                        <div class="member_num">
                                             <label for="check">
-                                                <div>載具號碼<span>必填</span></div>
+                                                <div>中獎發票將以電子信件通知</div>
+                                            </label>
+                                        </div>
+                                        <div class="mobile_num">
+                                            <div class="input">
+                                                <input type="text" id="mobile_num" name="mobile_num" placeholder='輸入"/"與後7碼' />
+                                            </div>
+                                        </div>
+                                        <div class="citizen_num">
+                                            <label for="check">
+                                                <div>自然人憑證卡號<i>(2個英文字母+14個數字)</i><span>必填</span></div>
                                             </label>
                                             <div class="input">
-                                                <input type="text" id="cloud_num" name="cloud_num" placeholder="請輸入載具號碼" />
+                                                <input type="text" id="citizen_num" name="citizen_num" placeholder="輸入16碼卡號" />
                                             </div>
                                         </div>
-                                        <div class="double_num">
+                                        <div class="company_num">
                                             <label for="check">
-                                                <div>發票地址<span>必填</span></div>
+                                                <div>統一編號<span>必填</span></div>
                                             </label>
-                                            <div class="city-selector2 city-flex">
-                                                <span class="selector">
-                                                    <select class="county2 county_width">
-                                                    </select>
-                                                    <select class="district3 district_width">
-                                                    </select>
-                                                </span>
-                                                <div class="input address">
-                                                    <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
-                                                </div>
+                                            <div class="input">
+                                                <input type="text" id="company_num" name="company_num" placeholder="請輸入統一編號" />
                                             </div>
-                                        </div>
-                                        <div class="triple_num">
                                             <label for="check">
-                                                <div>發票地址<span>必填</span></div>
+                                                <div>發票抬頭<span>必填</span></div>
                                             </label>
-                                            <div class="city-selector3 city-flex">
-                                                <span class="selector">
-                                                    <select class="county3 county_width">
-                                                    </select>
-                                                    <select class="district4 district_width">
-                                                    </select>
-                                                </span>
-                                                <div class="input address">
-                                                    <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
-                                                </div>
+                                            <div class="input">
+                                                <input type="text" id="company_num2" name="company_num2" placeholder="請輸入發票抬頭" />
+                                            </div>
+                                            <label for="check">
+                                                <div>發票收取E-mail<span>必填</span></div>
+                                            </label>
+                                            <div class="input">
+                                                <input type="text" id="company_num3" name="company_num3" placeholder="請輸入E-mail" />
                                             </div>
                                         </div>
-                                        <div class="triple_num2">
-                                            <div class="company_name">
-                                                <label for="check">
-                                                    <div>公司抬頭<span>必填</span></div>
-                                                </label>
-                                                <div class="input">
-                                                    <input type="text" id="cloud_num" name="cloud_num" placeholder="公司抬頭" />
-                                                </div>
+                                        <div class="donate_num">
+                                            <div class="input">
+                                                <input type="text" id="donate_num" name="donate_num" placeholder="請輸入社福代碼或關鍵字" />
                                             </div>
-                                            <!-- 非必填會加上 class:optional -->
-                                            <div class="company_num">
-                                                <label for="check" class="optional">
-                                                    <div>公司統編<span>必填</span></div>
-                                                </label>
-                                                <div class="input">
-                                                    <input type="text" id="cloud_num" name="cloud_num" placeholder="公司統編" />
-                                                </div>
-                                            </div>
+                                            <select name="quantity" id="quantity-select2">
+                                                <option value="0" selected disabled hidden>選項</option>
+                                                <option value="1">基金會1</option>
+                                                <option value="2">基金會2</option>
+                                                <option value="3">基金會3</option>
+                                                <option value="4">基金會4</option>
+                                                <option value="5">基金會5</option>
+                                                <option value="6">基金會6</option>
+                                                <option value="7">基金會7</option>
+                                                <option value="8">基金會8</option>
+                                                <option value="9">基金會9</option>
+                                                <option value="10">基金會10</option>
+                                            </select>
+                                        </div>
 
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -592,41 +599,70 @@
     </script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            var cloudRadio = document.getElementById('cloud');
-            var doubleRadio = document.getElementById('double');
-            var tripleRadio = document.getElementById('triple');
-
-            var cloudNumInput = document.querySelector('.cloud_num');
-            var doubleNumInput = document.querySelector('.double_num');
-            var tripleNumInput = document.querySelector('.triple_num');
-            var tripleNumInput2 = document.querySelector('.triple_num2');
+            var memberRadio = document.getElementById('member');
+            var mobileRadio = document.getElementById('mobile');
+            var citizenRadio = document.getElementById('citizen');
+            var companyRadio = document.getElementById('company');
+            var donateRadio = document.getElementById('donate');
 
 
-            cloudRadio.addEventListener('click', function() {
-                cloudNumInput.style.display = 'flex';
-                doubleNumInput.style.display = 'none';
-                tripleNumInput.style.display = 'none';
-                tripleNumInput2.style.display = 'none';
+            var memberNumInput = document.querySelector('.member_num');
+            var mobileNumInput = document.querySelector('.mobile_num');
+            var citizenNumInput = document.querySelector('.citizen_num');
+            var companyNumInput = document.querySelector('.company_num');
+            var donateNumInput = document.querySelector('.donate_num');
 
-            });
 
-            doubleRadio.addEventListener('click', function() {
-                cloudNumInput.style.display = 'none';
-                doubleNumInput.style.display = 'flex';
-                tripleNumInput.style.display = 'none';
-                tripleNumInput2.style.display = 'none';
+            memberRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'block';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
 
             });
 
-            tripleRadio.addEventListener('click', function() {
-                cloudNumInput.style.display = 'none';
-                doubleNumInput.style.display = 'none';
-                tripleNumInput.style.display = 'flex';
-                tripleNumInput2.style.display = 'flex';
+            mobileRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'none';
+                mobileNumInput.style.display = 'block';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
+            });
 
+            citizenRadio.addEventListener('click', function() {
+                memberRadio.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'flex';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
+            });
+            companyRadio.addEventListener('click', function() {
+                memberRadio.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'flex';
+                donateNumInput.style.display = 'none';
+            });
+            donateRadio.addEventListener('click', function() {
+                memberRadio.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'flex';
             });
         });
     </script>
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const quantitySelect = document.getElementById("quantity-select2");
+        const donateNumInput = document.getElementById("donate_num");
+
+        quantitySelect.addEventListener("change", function() {
+            donateNumInput.value = quantitySelect.options[quantitySelect.selectedIndex].text;
+        });
+    });
+</script>
     <script>
         const citySelector1 = new TwCitySelector({
             el: '.city-selector',

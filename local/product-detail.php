@@ -207,8 +207,44 @@
             <div class="buyBox">
                 <div class="container">
                     <!-- 如果是單選樣式 buyLeft 增加 class="hasRadio" -->
-                    <div class="buyLeft">
-                 
+                    <div class="buyLeft ">
+                    <div class="buyTitle">
+                            贈品<span>期間 2023.12.01至2023.12.31</span>
+                        </div>
+                        <ul>
+                            <li>
+                                <input type="radio" name="hasRadio" id="hasRadio1">
+                                <label for="hasRadio1" class="s_title">
+                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
+                                </label>
+                                <!-- 兌換完畢 a 加上 class="sellout" -->
+                                <a href="javascript:;" class="sellout">
+                                   <span class="view">查看贈品</span>
+                                   <span class="finish">已兌換完畢</span>
+                                </a>
+                            </li>
+                            <li>
+                                <input type="radio" name="hasRadio" id="hasRadio2">
+                                <label for="hasRadio2" class="s_title">
+                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
+                                </label>
+                                <a href="javascript:;">查看贈品</a>
+                            </li>
+                            <li>
+                                <input type="radio" name="hasRadio" id="hasRadio3">
+                                <label for="hasRadio3" class="s_title">
+                                    <span>輝葉良品品牌月01.01-02.18龍光煥發好運龍來</span>
+                                </label>
+                                <a href="javascript:;">查看贈品</a>
+                            </li>
+                            <li>
+                                <input type="radio" name="hasRadio" id="hasRadio4">
+                                <label for="hasRadio4" class="s_title">
+                                    <span>贈【輝葉】隔音避震專用地墊HY-B02</span>
+                                </label>
+                                <a href="javascript:;">查看贈品</a>
+                            </li>
+                        </ul>
                     </div>
                     <div class="buyRight">
                         <div class="specification">
