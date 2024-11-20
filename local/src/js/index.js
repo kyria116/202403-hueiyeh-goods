@@ -1,9 +1,20 @@
 var swiper = new Swiper(".strip-ads", {
     direction: "vertical",
-    // autoplay: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
     speed: 1000,
     loop: true,
+    hashNavigation: false, // 禁用 hash 功能
 });
+// 移除 URL 中的哈希
+function removeHash() {
+    history.replaceState(null, null, " ");
+}
+window.addEventListener("hashchange", removeHash);
+removeHash(); // 初始載入時執行一次
+console.log(1)
 
 $('#close_ad').on('click', function () {
     $('.text_ticker').remove();
