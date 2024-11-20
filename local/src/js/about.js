@@ -82,14 +82,14 @@ $(function () {
 					$('.contentList.active .rightBtn').addClass('noPage')
 				}
 			} else {
-				if (items == frequency) {
+				if (items == (liLength - 1)) {
 					$('.contentList.active .rightBtn').addClass('noPage')
 				} else if (items == 0) {
 					$('.contentList.active .leftBtn').addClass('noPage')
 				}
 			}
 		}
-		// console.log("showMonth2", items, frequency, liLength)
+		// console.log("showMonth1", items, frequency, liLength)
 		$('.contentList.active .monthBox ul').stop(true).animate({
 			scrollLeft: ary[items]
 		}, 400)
