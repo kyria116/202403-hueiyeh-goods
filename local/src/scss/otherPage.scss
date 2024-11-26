@@ -714,6 +714,7 @@
                 &.active{
                     position: relative;
                     opacity: 1;
+                    pointer-events: all;
                 }
             }
         }

@@ -150,56 +150,81 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var playerInfoList = []
 
 $('.video').each(function (num, item) {
-	if ($(this).attr('id') != undefined) {
-		let str = {
-			id: $(this).attr('id'),
-			videoId: $(this).attr('data-video')
-		}
-		playerInfoList.push(str)
-	}
+    if ($(this).attr('id') != undefined) {
+        let str = {
+            id: $(this).attr('id'),
+            videoId: $(this).attr('data-video')
+        }
+        playerInfoList.push(str)
+    }
 })
 
-
 function onYouTubeIframeAPIReady() {
-	if (typeof playerInfoList === 'undefined') return;
+    if (typeof playerInfoList === 'undefined') return;
 
-	for (var i = 0; i < playerInfoList.length; i++) {
-		var curplayer = createPlayer(playerInfoList[i]);
-		players[i] = curplayer;
-	}
+    for (var i = 0; i < playerInfoList.length; i++) {
+        var curplayer = createPlayer(playerInfoList[i]);
+        players[i] = curplayer;
+    }
 }
 
 var players = new Array();
 
 function createPlayer(playerInfo) {
-	return new YT.Player(playerInfo.id, {
-		videoId: playerInfo.videoId,
-		width: '100%', // 播放器寬度 (px)
-		height: '100%', // 播放器高度 (px)
-		playerVars: {
-			autoplay: 1, // 自動播放影片
-			controls: 0, // 顯示播放器
-			showinfo: 0, // 隱藏影片標題
-			modestbranding: 0, // 隱藏YouTube Logo
-			loop: 1, // 重覆播放
-			playlist: playerInfo.videoId, // 當使用影片要重覆播放時，需再輸入
-			fs: 0, // 隱藏全螢幕按鈕
-			cc_load_policty: 0, // 隱藏字幕
-			iv_load_policy: 3, // 隱藏影片註解
-			autohide: 0 // 影片播放時，隱藏影片控制列
-		},
-		events: {
-			onReady: function (e) {
-				e.target.mute(); //播放時靜音
-				e.target.playVideo(); //強制播放(手機才會自動播放，但僅限於Android)
-			}
-		}
-	});
+    return new YT.Player(playerInfo.id, {
+        videoId: playerInfo.videoId,
+        width: '100%', // 播放器寬度 (px)
+        height: '100%', // 播放器高度 (px)
+        playerVars: {
+            autoplay: 0, // 禁止自動播放影片
+            controls: 0, // 顯示播放器
+            showinfo: 0, // 隱藏影片標題
+            modestbranding: 0, // 隱藏YouTube Logo
+            loop: 1, // 重覆播放
+            playlist: playerInfo.videoId, // 當使用影片要重覆播放時，需再輸入
+            fs: 0, // 隱藏全螢幕按鈕
+            cc_load_policty: 0, // 隱藏字幕
+            iv_load_policy: 3, // 隱藏影片註解
+            autohide: 0 // 影片播放時，隱藏影片控制列
+        },
+        events: {
+            onReady: function (e) {
+                e.target.mute(); // 靜音
+                // e.target.playVideo(); // 強制播放 - 已註解以避免自動播放
+            }
+        }
+    });
 }
 
 $('#stop').click(function () {
-	players.forEach(function (el) {
-		el.stopVideo();
-	});
+    players.forEach(function (el) {
+        el.stopVideo();
+    });
 });
 
+
+// 存儲滾軸位置到 Cookie
+window.addEventListener("beforeunload", function () {
+    const scrollPosition = window.scrollY; // 垂直滾軸位置
+    document.cookie = `scrollPosition=${scrollPosition}; path=/;`;
+});
+
+// 加載時恢復滾動位置
+window.addEventListener("load", function () {
+    const scrollPosition = getCookie("scrollPosition");
+    if (scrollPosition) {
+        window.scrollTo(0, parseInt(scrollPosition, 10));
+    }
+});
+
+// 取得 Cookie 的函數
+function getCookie(name) {
+    const cookies = document.cookie.split("; ");
+    for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) {
+            return value;
+        }
+    }
+    return null;
+}
