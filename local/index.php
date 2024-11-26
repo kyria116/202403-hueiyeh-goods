@@ -107,37 +107,37 @@
             <!-- 手機:634 x 322 -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
                         <div class="txt" style="color: #fff;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
                         </div>
                     </div>
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_1.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_1.jpg">
                         <div class="txt" style="color: #3A58A3;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
                         </div>
                     </div>
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
                         <div class="txt" style="color: #fff;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
                         </div>
                     </div>
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_2.jpg">
                         <div class="txt" style="color: #fff;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
                         </div>
                     </div>
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_1.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_1.jpg">
                         <div class="txt" style="color: #3A58A3;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
                         </div>
                     </div>
-                    <div data-hash="slide1" class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
+                    <div class="swiper-slide"><img src="dist/images/index/sw_3.jpg">
                         <div class="txt" style="color: #fff;">
                             <div class="title">伸波眠按摩床墊</div>
                             <div class="subtitle">嘖嘖募資破五百萬Upgrade 舒眠X伸展石墨烯床包 調節體感適溫舒眠安靜氣泵盒一鍵啟動 多種模式</div>
@@ -569,6 +569,34 @@
     <script src="dist/js/main.js"></script>
     <script async src="//www.youtube.com/iframe_api"></script>
     <script src="dist/js/index.js"></script>
+    <script>
+        function onYouTubeIframeAPIReady() {
+            var player;
+            player = new YT.Player('YouTubeVideoPlayerAPI', {
+                videoId: 'wlhKHqjijfM', // YouTube 影片ID
+                width: '100%', // 播放器寬度 (px)
+                height: '100%', // 播放器高度 (px)
+                playerVars: {
+                    autoplay: 1, // 自動播放影片
+                    controls: 0, // 顯示播放器
+                    showinfo: 0, // 隱藏影片標題
+                    modestbranding: 0, // 隱藏YouTube Logo
+                    loop: 1, // 重覆播放
+                    playlist: 'wlhKHqjijfM', // 當使用影片要重覆播放時，需再輸入YouTube 影片ID
+                    fs: 0, // 隱藏全螢幕按鈕
+                    cc_load_policty: 0, // 隱藏字幕
+                    iv_load_policy: 3, // 隱藏影片註解
+                    autohide: 0 // 影片播放時，隱藏影片控制列
+                },
+                events: {
+                    onReady: function(e) {
+                        e.target.mute(); //播放時靜音
+                        e.target.playVideo(); //強制播放(手機才會自動播放，但僅限於Android)
+                    }
+                }
+            });
+        }
+    </script>
 
 </body>
 

@@ -4,6 +4,9 @@
 @import "plugIn/swiper-bundle.min";
 
 //產品明細頁
+main {
+    margin-top: 0;
+}
 .fixedBuy {
     position: fixed;
     z-index: 5;
@@ -349,7 +352,13 @@
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
-                    width: 80%;
+                    width: 100%;
+                    &.small_img {
+                        transform: translate(-50%, -50%) scale(0.8);
+                    }
+                    &.big_img {
+                        transform: translate(-50%, -50%) scale(1);
+                    }
                 }
                 .filter_img {
                     img {
@@ -387,6 +396,7 @@
     }
     .tag {
         display: flex;
+        flex-wrap: wrap;
         margin-bottom: 20px;
         @include mediaquery(null, 767px) {
             margin-bottom: 21px;
@@ -396,18 +406,25 @@
             margin: 0 4px 4px 0;
             font-size: 16px;
             color: #94693c;
-            padding: 6px 16px 8px;
+            padding: 8px 16px;
             text-align: center;
             border-radius: 4px;
             background-color: #f9ede2;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             @include mediaquery(null, 767px) {
                 font-size: 14px;
-                padding: 3px 16px 5px;
+                padding: 5px 16px;
                 margin: 0 3px 3px 0;
             }
             &.brandTxt {
                 color: #fff;
                 background-color: #94693c;
+            }
+            > a {
+                line-height: 1;
             }
         }
     }
@@ -666,22 +683,19 @@
         background-color: #f8f8f8;
         padding: 31px 37px 20px;
         @include mediaquery(992px, null) {
-            margin-right: 56px;
             flex: 0 0 668px;
             width: 668px;
         }
         @include mediaquery(1201px, 1440px) {
-            margin-right: 35px;
             flex: 0 0 550px;
             width: 550px;
         }
         @include mediaquery(992px, 1200px) {
-            margin-right: 25px;
             flex: 0 0 450px;
             width: 450px;
         }
         @include mediaquery(null, 991px) {
-            margin-bottom: 69px;
+            margin-top: 69px;
             width: 100%;
             padding: 23px 18px 20px;
         }
@@ -894,9 +908,17 @@
         display: flex;
         flex-direction: column;
         justify-content: end;
+        @include mediaquery(992px, null) {
+            margin-left: 56px;
+        }
+        @include mediaquery(1201px, 1440px) {
+            margin-left: 35px;
+        }
+        @include mediaquery(992px, 1200px) {
+            margin-left: 25px;
+        }
         @include mediaquery(null, 991px) {
-            width: 100%;
-            min-height: 0;
+            min-height: revert;
         }
     }
     .specification,
@@ -958,6 +980,7 @@
                 color: #000;
                 transition: 0.75s;
                 padding: 2px 6px 4px;
+                white-space: nowrap;
                 @include mediaquery(null, 767px) {
                     padding: 2px 8px 4px;
                     border-radius: 3px;

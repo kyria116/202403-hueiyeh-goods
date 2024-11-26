@@ -177,7 +177,7 @@ getall_data($tbl_name, $where_clause, $text_info);
                         //print $use_type;
                         $url = ($k10_info[$i]['text_field_5']) ? $k10_info[$i]['text_field_5'] : "javascript:void(0);";
                     ?>
-                        <div data-hash="slide<?php echo $i; ?>" class="swiper-slide">
+                        <div class="swiper-slide">
                             <a href="<?= $url ?>" <?= (($url != "javascript:void(0);") ? ' target="_blank"' : '') ?>>
                                 <img src="<?= (($use_type == "desktop") ? $pic : $pic_mo) ?>">
                                 <div class="txt" style="color: <?= (($k10_info[$i]['customer_field_4']) ? $k10_info[$i]['customer_field_4'] : "#fff") ?>;">
@@ -486,39 +486,43 @@ getall_data($tbl_name, $where_clause, $text_info);
     <script async src="//www.youtube.com/iframe_api"></script>
     <script src="dist/js/index.js"></script>
     <script>
-        <?
-        if ($youtube_id) {
-        ?>
-            $(function() {
-                function onYouTubeIframeAPIReady() {
-                    new YT.Player("YouTubeVideoPlayerAPI", {
-                        videoId: "<?= $youtube_id ?>",
-                        width: "100%",
-                        height: "100%",
-                        playerVars: {
-                            autoplay: 1,
-                            controls: 0,
-                            showinfo: 0,
-                            modestbranding: 0,
-                            loop: 1,
-                            playlist: "<?= $youtube_id ?>",
-                            fs: 0,
-                            cc_load_policty: 0,
-                            iv_load_policy: 3,
-                            autohide: 0
-                        },
-                        events: {
-                            onReady: function(e) {
-                                e.target.mute(), e.target.playVideo()
-                            }
+        <?php if ($youtube_id): ?>
+            // 載入 YouTube IFrame API
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            // 定義 onYouTubeIframeAPIReady 函式
+            function onYouTubeIframeAPIReady() {
+                var player;
+                player = new YT.Player('YouTubeVideoPlayerAPI', {
+                    videoId: "<?= $youtube_id ?>",
+                    width: '100%', // 播放器寬度 (px)
+                    height: '100%', // 播放器高度 (px)
+                    playerVars: {
+                        autoplay: 1, // 自動播放影片
+                        controls: 0, // 隱藏控制
+                        showinfo: 0, // 隱藏影片標題
+                        modestbranding: 0, // 隱藏YouTube Logo
+                        loop: 1, // 重覆播放
+                        playlist: "<?= $youtube_id ?>", // 當使用影片要重覆播放時，需再輸入影片ID
+                        fs: 0, // 隱藏全螢幕按鈕
+                        cc_load_policy: 0, // 隱藏字幕
+                        iv_load_policy: 3, // 隱藏影片註解
+                        autohide: 0 // 影片播放時，隱藏影片控制列
+                    },
+                    events: {
+                        onReady: function(e) {
+                            e.target.mute(); // 播放時靜音
+                            e.target.playVideo(); // 強制播放(手機才會自動播放，但僅限於 Android)
                         }
-                    })
-                }
-            });
-        <?
-        }
-        ?>
+                    }
+                });
+            }
+        <?php endif; ?>
     </script>
+
 </body>
 
 </html>

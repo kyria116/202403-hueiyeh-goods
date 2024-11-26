@@ -1312,10 +1312,7 @@ if (trim($FB_Pixel_Code) != "") {
                                         <div>滿件優惠折抵</div>
                                         <div>-$<i id="discount_amount"><?= number_format((($order_info['amount_sale_info_money']) ? $order_info['amount_sale_info_money'] : 0)) ?></i></div>
                                     </li>
-                                    <li>
-                                        <div>積點折抵</div>
-                                        <div>-<i id="discount_bonus"><?= number_format((($order_info['use_bonus']) ? $order_info['use_bonus'] : 0)) ?></i></div>
-                                    </li>
+                                    
                                     <li>
                                         <div>折價券折抵</div>
                                         <div>-$<i id="discount_coupon"><?= number_format((($order_info['coupon_money']) ? $order_info['coupon_money'] : 0)) ?></i></div>
@@ -1327,6 +1324,10 @@ if (trim($FB_Pixel_Code) != "") {
                                     <li>
                                         <div>滿額優惠折抵</div>
                                         <div>-$<i id="discount_sale"><?= number_format((($order_info['sale_info_money']) ? $order_info['sale_info_money'] : 0)) ?></i></div>
+                                    </li>
+                                    <li>
+                                        <div>積點折抵</div>
+                                        <div>-<i id="discount_bonus"><?= number_format((($order_info['use_bonus']) ? $order_info['use_bonus'] : 0)) ?></i></div>
                                     </li>
                                     <li>
                                         <div>運費</div>
@@ -1600,26 +1601,82 @@ if (trim($FB_Pixel_Code) != "") {
                                                 <label for="check">
                                                     <div>發票資訊<span>必填</span></div>
                                                 </label>
-                                                <fieldset>
+                                                <fieldset class="mo_block">
                                                     <div class="ckbutton">
                                                         <input type="radio" id="member" name="bill" />
                                                         <label for="member">會員載具</label>
+                                                    </div>
+                                                    <div class="member_num2">
+                                                        <label for="check">
+                                                            <div>中獎發票將以電子信件通知</div>
+                                                        </label>
                                                     </div>
                                                     <div class="ckbutton">
                                                         <input type="radio" id="mobile" name="bill" />
                                                         <label for="mobile">手機條碼</label>
                                                     </div>
+                                                    <div class="mobile_num2">
+                                                        <div class="input">
+                                                            <input type="text" id="mobile_num" name="mobile_num" placeholder='輸入"/"與後7碼' />
+                                                        </div>
+                                                    </div>
                                                     <div class="ckbutton">
                                                         <input type="radio" id="citizen" name="bill" />
                                                         <label for="citizen">自然人憑證</label>
+                                                    </div>
+                                                    <div class="citizen_num2">
+                                                        <label for="check">
+                                                            <div>自然人憑證卡號<i>(2個英文字母+14個數字)</i><span>必填</span></div>
+                                                        </label>
+                                                        <div class="input">
+                                                            <input type="text" id="citizen_num" name="citizen_num" placeholder="輸入16碼卡號" />
+                                                        </div>
                                                     </div>
                                                     <div class="ckbutton">
                                                         <input type="radio" id="company" name="bill" />
                                                         <label for="company">公司發票</label>
                                                     </div>
+                                                    <div class="company_num2">
+                                                        <label for="check">
+                                                            <div>統一編號<span>必填</span></div>
+                                                        </label>
+                                                        <div class="input">
+                                                            <input type="text" id="company_num" name="company_num" placeholder="請輸入統一編號" />
+                                                        </div>
+                                                        <label for="check">
+                                                            <div>發票抬頭<span>必填</span></div>
+                                                        </label>
+                                                        <div class="input">
+                                                            <input type="text" id="company_num2" name="company_num2" placeholder="請輸入發票抬頭" />
+                                                        </div>
+                                                        <label for="check">
+                                                            <div>發票收取E-mail<span>必填</span></div>
+                                                        </label>
+                                                        <div class="input">
+                                                            <input type="text" id="company_num3" name="company_num3" placeholder="請輸入E-mail" />
+                                                        </div>
+                                                    </div>
                                                     <div class="ckbutton">
                                                         <input type="radio" id="donate" name="bill" />
                                                         <label for="donate">捐贈發票</label>
+                                                    </div>
+                                                    <div class="donate_num2">
+                                                        <div class="input">
+                                                            <input type="text" id="donate_num" name="donate_num" placeholder="請輸入社福代碼或關鍵字" />
+                                                        </div>
+                                                        <select name="quantity" id="quantity-select2">
+                                                            <option value="0" selected disabled hidden>選項</option>
+                                                            <option value="1">基金會1</option>
+                                                            <option value="2">基金會2</option>
+                                                            <option value="3">基金會3</option>
+                                                            <option value="4">基金會4</option>
+                                                            <option value="5">基金會5</option>
+                                                            <option value="6">基金會6</option>
+                                                            <option value="7">基金會7</option>
+                                                            <option value="8">基金會8</option>
+                                                            <option value="9">基金會9</option>
+                                                            <option value="10">基金會10</option>
+                                                        </select>
                                                     </div>
                                                     <!-- <div class="ckbutton">
                                                         <input type="radio" id="cloud" name="FO_invoice_type" value="雲端發票" <?= (($order_info['invoice_type'] == "雲端發票" || !$order_info['invoice_type']) ? " checked" : "") ?> />
@@ -1801,54 +1858,113 @@ if (trim($FB_Pixel_Code) != "") {
             var companyRadio = document.getElementById('company');
             var donateRadio = document.getElementById('donate');
 
-
             var memberNumInput = document.querySelector('.member_num');
             var mobileNumInput = document.querySelector('.mobile_num');
             var citizenNumInput = document.querySelector('.citizen_num');
             var companyNumInput = document.querySelector('.company_num');
             var donateNumInput = document.querySelector('.donate_num');
 
+            var memberNumInput2 = document.querySelector('.member_num2');
+            var mobileNumInput2 = document.querySelector('.mobile_num2');
+            var citizenNumInput2 = document.querySelector('.citizen_num2');
+            var companyNumInput2 = document.querySelector('.company_num2');
+            var donateNumInput2 = document.querySelector('.donate_num2');
 
-            memberRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'block';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
+            function setUpEventListeners() {
+                // 移除舊的事件監聽器以避免重複綁定
+                memberRadio.onclick = mobileRadio.onclick = citizenRadio.onclick = companyRadio.onclick = donateRadio.onclick = null;
 
-            });
+                if (window.innerWidth > 991) {
+                    memberRadio.addEventListener('click', function() {
+                        memberNumInput.style.display = 'block';
+                        mobileNumInput.style.display = 'none';
+                        citizenNumInput.style.display = 'none';
+                        companyNumInput.style.display = 'none';
+                        donateNumInput.style.display = 'none';
+                    });
 
-            mobileRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'none';
-                mobileNumInput.style.display = 'block';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
-            });
+                    mobileRadio.addEventListener('click', function() {
+                        memberNumInput.style.display = 'none';
+                        mobileNumInput.style.display = 'block';
+                        citizenNumInput.style.display = 'none';
+                        companyNumInput.style.display = 'none';
+                        donateNumInput.style.display = 'none';
+                    });
 
-            citizenRadio.addEventListener('click', function() {
-                memberRadio.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'flex';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
-            });
-            companyRadio.addEventListener('click', function() {
-                memberRadio.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'flex';
-                donateNumInput.style.display = 'none';
-            });
-            donateRadio.addEventListener('click', function() {
-                memberRadio.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'flex';
-            });
+                    citizenRadio.addEventListener('click', function() {
+                        memberNumInput.style.display = 'none';
+                        mobileNumInput.style.display = 'none';
+                        citizenNumInput.style.display = 'flex';
+                        companyNumInput.style.display = 'none';
+                        donateNumInput.style.display = 'none';
+                    });
+
+                    companyRadio.addEventListener('click', function() {
+                        memberNumInput.style.display = 'none';
+                        mobileNumInput.style.display = 'none';
+                        citizenNumInput.style.display = 'none';
+                        companyNumInput.style.display = 'flex';
+                        donateNumInput.style.display = 'none';
+                    });
+
+                    donateRadio.addEventListener('click', function() {
+                        memberNumInput.style.display = 'none';
+                        mobileNumInput.style.display = 'none';
+                        citizenNumInput.style.display = 'none';
+                        companyNumInput.style.display = 'none';
+                        donateNumInput.style.display = 'flex';
+                    });
+                } else {
+                    memberRadio.addEventListener('click', function() {
+                        memberNumInput2.style.display = 'block';
+                        mobileNumInput2.style.display = 'none';
+                        citizenNumInput2.style.display = 'none';
+                        companyNumInput2.style.display = 'none';
+                        donateNumInput2.style.display = 'none';
+                    });
+
+                    mobileRadio.addEventListener('click', function() {
+                        memberNumInput2.style.display = 'none';
+                        mobileNumInput2.style.display = 'block';
+                        citizenNumInput2.style.display = 'none';
+                        companyNumInput2.style.display = 'none';
+                        donateNumInput2.style.display = 'none';
+                    });
+
+                    citizenRadio.addEventListener('click', function() {
+                        memberNumInput2.style.display = 'none';
+                        mobileNumInput2.style.display = 'none';
+                        citizenNumInput2.style.display = 'flex';
+                        companyNumInput2.style.display = 'none';
+                        donateNumInput2.style.display = 'none';
+                    });
+
+                    companyRadio.addEventListener('click', function() {
+                        memberNumInput2.style.display = 'none';
+                        mobileNumInput2.style.display = 'none';
+                        citizenNumInput2.style.display = 'none';
+                        companyNumInput2.style.display = 'flex';
+                        donateNumInput2.style.display = 'none';
+                    });
+
+                    donateRadio.addEventListener('click', function() {
+                        memberNumInput2.style.display = 'none';
+                        mobileNumInput2.style.display = 'none';
+                        citizenNumInput2.style.display = 'none';
+                        companyNumInput2.style.display = 'none';
+                        donateNumInput2.style.display = 'flex';
+                    });
+                }
+            }
+
+            // 初始呼叫
+            setUpEventListeners();
+
+            // 視窗大小改變時重新呼叫
+            window.addEventListener('resize', setUpEventListeners);
         });
     </script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const quantitySelect = document.getElementById("quantity-select2");

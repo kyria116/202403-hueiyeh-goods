@@ -2,15 +2,13 @@
 @import "base/variable";
 @import "template/style";
 
-
-
-.pageTitle{
-    font-size: 28px;    
+.pageTitle {
+    font-size: 28px;
     font-weight: 500;
     letter-spacing: 0.06em;
     color: $product_color_3;
     margin-bottom: 40px;
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         font-size: 18px;
         letter-spacing: 0;
         margin-bottom: 28px;
@@ -23,21 +21,21 @@
 }
 
 //所有產品
-.allBrandPage{
-    main{
+.allBrandPage {
+    main {
         padding: 106px 0 150px;
         background-color: $product_color_1;
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             padding: 42px 0 170px;
         }
     }
 }
-.product_sort{
+.product_sort {
     margin-bottom: 40px;
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         margin-bottom: 32px;
     }
-    select{
+    select {
         appearance: none;
         width: 300px;
         height: 48px;
@@ -47,80 +45,80 @@
         padding: 13px 20px 15px;
         line-height: 1;
         color: #000;
-        background: #fff url('../images/common/select.jpg') center right 16px / 16px 7px no-repeat;
-        @include mediaquery(null, 767px){
+        background: #fff url("../images/common/select.jpg") center right 16px / 16px 7px no-repeat;
+        @include mediaquery(null, 767px) {
             width: calc((100% - 10px) / 2);
             height: 54px;
             font-size: 15px;
             border-radius: 3px;
             padding: 15px 22px 15px;
-            background: #fff url('../images/common/select.jpg') center right 20px / 15px 7px no-repeat;
+            background: #fff url("../images/common/select.jpg") center right 20px / 15px 7px no-repeat;
         }
     }
 }
-.productBox{
+.productBox {
     padding-bottom: 143px;
-    @include mediaquery(768px, 991px){
+    @include mediaquery(768px, 991px) {
         padding-bottom: 158px;
     }
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         padding-bottom: 172px;
     }
-    ul{
+    ul {
         display: flex;
         flex-wrap: wrap;
         justify-content: start;
         margin-bottom: 31px;
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             margin-bottom: 9px;
         }
     }
-    li{
+    li {
         max-width: 376px;
-        @include mediaquery(992px, null){
+        @include mediaquery(992px, null) {
             width: calc((100% - 96px) / 4);
             margin: 0 32px 90px 0;
-            &:nth-child(4n){
+            &:nth-child(4n) {
                 margin-right: 0;
             }
         }
-        @include mediaquery(1201px, 1400px){
+        @include mediaquery(1201px, 1400px) {
             width: calc((100% - 42px) / 4);
             margin: 0 14px 90px 0;
         }
-        @include mediaquery(992px, 1200px){
+        @include mediaquery(992px, 1200px) {
             width: calc((100% - 24px) / 4);
             margin: 0 8px 90px 0;
         }
-        @include mediaquery(768px, 991px){
+        @include mediaquery(768px, 991px) {
             width: calc((100% - 30px) / 2);
             margin: 0 30px 50px 0;
-            &:nth-child(2n){
+            &:nth-child(2n) {
                 margin-right: 0;
             }
         }
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             width: calc((100% - 10px) / 2);
             margin: 0 10px 50px 0;
-            &:nth-child(2n){
+            &:nth-child(2n) {
                 margin-right: 0;
             }
         }
-        a{
+        a {
             position: relative;
             display: block;
-            &:hover{
-                @include mediaquery(768px, null){
+            &:hover {
+                @include mediaquery(768px, null) {
                     .img {
-                        .defaultImg{
+                        .defaultImg {
                             opacity: 0;
                         }
-                        .hoverImg{
+                        .hoverImg {
                             opacity: 1;
                         }
-                        .svg{
-                            path{
-                                stroke: #CF8E55;
+                        .svg {
+                            path {
+                                stroke: #cf8e55;
                                 stroke-width: 2px;
                                 animation: svgHover 2s forwards linear;
                             }
@@ -128,70 +126,70 @@
                     }
                 }
             }
-            .svg{
+            .svg {
                 position: absolute;
                 z-index: 4;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                path{
-                    stroke: #E4E4E4;
+                path {
+                    stroke: #e4e4e4;
                 }
             }
             @keyframes svgHover {
-                0%{
+                0% {
                     stroke-dasharray: 0 1567;
                 }
-                20%{
+                20% {
                     stroke-dasharray: 363 1204;
                 }
-                40%{
+                40% {
                     stroke-dashoffset: -780;
                     stroke-dasharray: 363 1204;
                 }
-                70%{
+                70% {
                     stroke-dashoffset: -1547;
                     stroke-dasharray: 363 1204;
                 }
-                100%{
+                100% {
                     stroke-dashoffset: -1547;
                     stroke-dasharray: 1567 0;
                 }
             }
         }
-        .icon{
+        .icon {
             position: absolute;
             z-index: 3;
             top: 10px;
             left: 10px;
             max-width: 60px;
-            @include mediaquery(null, 767px){
+            @include mediaquery(null, 767px) {
                 top: 5px;
                 left: 5px;
                 max-width: 44px;
             }
         }
-        .img{
+        .img {
             position: relative;
             border-radius: 6px;
             overflow: hidden;
             margin-bottom: 12px;
-            @include mediaquery(768px, 1600px){
+            @include mediaquery(768px, 1600px) {
                 border-radius: 0.375vw;
             }
-            @include mediaquery(null, 767px){
+            @include mediaquery(null, 767px) {
                 margin-bottom: 10px;
             }
-            img{
+            img {
                 display: block;
                 width: 100%;
                 aspect-ratio: 1 / 1.1011;
             }
-            .defaultImg{
+            .defaultImg {
                 transition: opacity 0.75s;
             }
-            .hoverImg{
+            .hoverImg {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -200,59 +198,60 @@
                 opacity: 0;
                 transition: opacity 0.75s;
             }
-            .space_block{
+            .space_block {
                 display: block;
                 width: 100%;
                 aspect-ratio: 1 / 1.1011;
             }
         }
 
-        .proId{
+        .proId {
             font-size: 16px;
             color: $product_color_2;
             margin-bottom: 6px;
-            @include mediaquery(null, 767px){
+            @include mediaquery(null, 767px) {
                 font-size: 15px;
                 margin-bottom: 2px;
             }
         }
-        .proName{
+        .proName {
             margin-bottom: 4px;
-            @include mediaquery(null, 767px){
+            @include mediaquery(null, 767px) {
                 margin-bottom: 2px;
             }
-            span{
+            span {
                 font-family: $font-tw;
                 font-size: 22px;
                 line-height: 1.45;
                 @include clamp(1.45, 2);
                 height: auto;
-                @include mediaquery(null, 767px){
+                @include mediaquery(null, 767px) {
                     font-size: 18px;
                 }
             }
         }
-        .price{
+        .price {
             display: flex;
             align-items: center;
-            .originalPrice{
+            .originalPrice {
                 font-size: 16px;
-                color: $product_color_2;text-decoration:line-through;
-                @include mediaquery(null, 767px){
+                color: $product_color_2;
+                text-decoration: line-through;
+                @include mediaquery(null, 767px) {
                     font-size: 15px;
                 }
             }
-            i{
+            i {
                 display: inline-block;
                 color: $product_color_2;
-                @include mediaquery(768px, null){
+                @include mediaquery(768px, null) {
                     margin: 0 8px;
                 }
             }
-            .specialOffer{
+            .specialOffer {
                 font-size: 20px;
                 color: $product_color_3;
-                @include mediaquery(null, 767px){
+                @include mediaquery(null, 767px) {
                     font-size: 17px;
                 }
             }
@@ -260,32 +259,32 @@
     }
 }
 
-//活動頁 
-.eventPage{
+//活動頁
+.eventPage {
     padding: 118px 0 143px;
-    @include mediaquery(768px, 991px){
+    @include mediaquery(768px, 991px) {
         padding: 82px 0 158px;
     }
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         padding: 45px 0 172px;
     }
 }
 
 //最新精選頁
-.newEventPage{
+.newEventPage {
     padding-bottom: 42px;
-    @include mediaquery(768px, 991px){
+    @include mediaquery(768px, 991px) {
         padding-bottom: 77px;
     }
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         padding-bottom: 112px;
     }
-    .editor_Content{
+    .editor_Content {
         margin-bottom: 154px;
-        @include mediaquery(768px, 991px){
+        @include mediaquery(768px, 991px) {
             margin-bottom: 95px;
         }
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             margin-bottom: 36px;
         }
     }
@@ -303,167 +302,179 @@
 // }
 
 //品牌頁
-.brandPage{
+.brandPage {
     padding-bottom: 143px;
-    @include mediaquery(768px, 991px){
+    @include mediaquery(768px, 991px) {
         padding-bottom: 158px;
     }
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         padding-bottom: 172px;
     }
-    .brandBox{
+    .brandBox {
         display: flex;
         transform: translateY(-40px);
         margin-top: -12px;
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             transform: translateY(-36px);
             margin-top: -42px;
         }
-        .img{
-            @include mediaquery(768px, null){
+        .img {
+            @include mediaquery(768px, null) {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px solid #E4E4E4;
+                border: 1px solid #e4e4e4;
                 padding: 24px 27px;
                 background-color: #fff;
-                @include mediaquery(768px, 991px){
+                aspect-ratio: 1 / 0.8957;
+                @include mediaquery(768px, 991px) {
                     padding: 20px;
+                    max-width: 230px;
                 }
             }
-            img{
+            img {
                 display: block;
                 max-width: 230px;
-                aspect-ratio: 1 / 0.8957;
-                @include mediaquery(768px, 991px){
+                aspect-ratio: 1 / 0.503597122;
+                @include mediaquery(768px, 991px) {
                     max-width: 200px;
                 }
             }
         }
-        .txt{
+        .txt {
             display: flex;
             flex-direction: column-reverse;
             justify-content: center;
             padding: 30px 82px;
-            background-color: #F8F8F8;
-            @include mediaquery(992px, 1400px){
+            background-color: #f8f8f8;
+            flex: 1;
+            @include mediaquery(992px, 1400px) {
                 padding: 30px 60px;
             }
-            @include mediaquery(768px, 991px){
+            @include mediaquery(768px, 991px) {
                 padding: 30px 35px;
             }
-            @include mediaquery(null, 767px){
+            @include mediaquery(null, 767px) {
                 padding: 30px 36px 18px;
                 flex-direction: column;
             }
-            .btn{
+            .btn {
                 text-align: right;
                 margin-bottom: 17px;
-                a{
-                    @include mediaquery(null, 767px){
+                a {
+                    @include mediaquery(null, 767px) {
                         font-size: 13px;
-                        color: #6F6D6D;
+                        color: #6f6d6d;
                         text-decoration: underline;
+                        pointer-events: none;
+                        opacity: 0;
                     }
                 }
             }
         }
-        .intro{
-            @include mediaquery(null, 767px){
+        .intro {
+            @include mediaquery(null, 767px) {
                 margin-bottom: 8px;
             }
-            span{
+            span {
                 font-size: 16px;
-                line-height: 1.5;
                 @include clamp(1.5, 4);
                 height: auto;
-                @include mediaquery(null, 767px){
+                @include mediaquery(null, 767px) {
                     font-size: 15px;
+                }
+                .txt_content {
+                    display: inline-block; /* 確保內容高度可計算 */
                 }
             }
         }
-        .iconBox{
-            @include mediaquery(992px, null){
+        .iconBox {
+            @include mediaquery(992px, null) {
                 margin-bottom: 25px;
             }
-            @include mediaquery(768px, 991px){
+            @include mediaquery(768px, 991px) {
                 margin-bottom: 15px;
             }
-            ul{
+            ul {
                 display: flex;
                 align-items: center;
-                @include mediaquery(null, 767px){
+                @include mediaquery(null, 767px) {
                     justify-content: flex-end;
                 }
             }
-            li{
+            li {
                 margin-right: 25px;
-                @include mediaquery(null, 767px){
+                @include mediaquery(null, 767px) {
                     margin-right: 18px;
                 }
-                &:last-child{
+                &:last-child {
                     margin-right: 0;
                 }
             }
-            a{
+            a {
                 display: inline-block;
                 width: 31px;
                 height: 31px;
-                background-color: #94693C;
+                background-color: #94693c;
                 mask-size: contain;
                 mask-position: center;
                 mask-repeat: no-repeat;
                 transition: opacity 0.75s;
-                @include mediaquery(null, 767px){
-                    width: 25px;    
+                @include mediaquery(null, 767px) {
+                    width: 25px;
                     height: 25px;
                 }
-                &:hover{
-                    @include mediaquery(768px, null){
+                &:hover {
+                    @include mediaquery(768px, null) {
                         opacity: 0.7;
                     }
                 }
             }
         }
     }
-    .top-menu-ul-2{
+    .top-menu-ul-2 {
         margin-bottom: 32px;
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             margin-bottom: 13px;
+        }
+    }
+    .show_btn {
+        @include mediaquery(null, 767px) {
+            opacity: 1 !important;
+            pointer-events: all  !important;
         }
     }
 }
 
 //折價優惠產品列表
-.couponPage{
+.couponPage {
     padding: 120px 0 143px;
-    @include mediaquery(768px, 991px){
+    @include mediaquery(768px, 991px) {
         padding: 60px 0 158px;
     }
-    @include mediaquery(null, 767px){
+    @include mediaquery(null, 767px) {
         padding: 30px 0 172px;
     }
-    .pageTitle{
+    .pageTitle {
         font-size: 40px;
         margin-bottom: 8px;
-        @include mediaquery(768px, 991px){
+        @include mediaquery(768px, 991px) {
             font-size: 28px;
         }
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             font-size: 18px;
             margin-bottom: 6px;
         }
     }
-    .intro{
+    .intro {
         font-size: 16px;
         margin-bottom: 62px;
-        @include mediaquery(768px, 991px){
+        @include mediaquery(768px, 991px) {
             margin-bottom: 40px;
         }
-        @include mediaquery(null, 767px){
+        @include mediaquery(null, 767px) {
             font-size: 15px;
             margin-bottom: 25px;
         }
     }
 }
-

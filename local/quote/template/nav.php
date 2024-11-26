@@ -458,6 +458,70 @@
                                     <span>居家用品</span>
                                 </a>
                             </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_1.png">
+                                    </div>
+                                    <span>伸波眠按摩床墊</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_2.png">
+                                    </div>
+                                    <span>居家用品</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_1.png">
+                                    </div>
+                                    <span>伸波眠按摩床墊</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_2.png">
+                                    </div>
+                                    <span>居家用品</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_1.png">
+                                    </div>
+                                    <span>伸波眠按摩床墊</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_2.png">
+                                    </div>
+                                    <span>居家用品</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_1.png">
+                                    </div>
+                                    <span>伸波眠按摩床墊</span>
+                                </a>
+                            </li>
+                            <li class="campaign">
+                                <a href="new-event.php">
+                                    <div>
+                                        <img src="dist/images/common/campaign_2.png">
+                                    </div>
+                                    <span>居家用品</span>
+                                </a>
+                            </li>
                         </ul>
                     </li>
                     <li>

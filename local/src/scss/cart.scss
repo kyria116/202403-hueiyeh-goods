@@ -359,6 +359,8 @@ $product_color_5: #e30400;
                         }
                         img {
                             width: 100%;
+                            display: block;
+                            object-fit: cover;
                         }
                         .add {
                             position: absolute;
@@ -404,7 +406,7 @@ $product_color_5: #e30400;
                             border-radius: 6px;
                             width: 100px;
                             overflow: hidden;
-                            aspect-ratio: 1 / 1.11;
+                            // aspect-ratio: 1 / 1.11;
                             @include mediaquery(null, 500px) {
                                 width: auto;
                                 max-width: 85px;
@@ -787,21 +789,36 @@ $product_color_5: #e30400;
                     position: absolute;
                     top: 50%;
                     left: calc(100% + 20px);
-                    white-space: nowrap;
                     transform: translate(0, -50%);
                     color: #797979;
                     font-size: 16px;
                     font-weight: 500;
+                    width: 100%;
+                    @include mediaquery(null, 1465px) {
+                        width: 70%;
+                    }
+                    @include mediaquery(null, 1370px) {
+                        width: 45%;
+                    }
+                    @include mediaquery(1100px, 1370px) {
+                        font-size: 14px;
+                    }
+                    @include mediaquery(null, 1170px) {
+                        width: 35%;
+                    }
                     @include mediaquery(null, 1100px) {
                         position: relative;
                         margin-top: 10px;
                         right: 0;
                         left: 11px;
                         transform: translate(0, 0);
+                        width: 100%;
+                        font-size: 16px;
                     }
                     @include mediaquery(null, 991px) {
                         margin-top: 4px;
                         font-size: 14.5px;
+                        left: 0;
                     }
                     // span {
                     //     color: #d31e1b;
@@ -1412,6 +1429,111 @@ $product_color_5: #e30400;
                         @include mediaquery(null, 767px) {
                             padding: 0 0 30px 0;
                         }
+                        .mo_block {
+                            @include mediaquery(991px, null) {
+                                .member_num2,
+                                .mobile_num2,
+                                .citizen_num2,
+                                .company_num2,
+                                .donate_num2 {
+                                    display: none !important;
+                                }
+                            }
+                            @include mediaquery(null, 991px) {
+                                .member_num2,
+                                .mobile_num2,
+                                .citizen_num2,
+                                .company_num2,
+                                .donate_num2 {
+                                    display: none;
+                                    flex-direction: column;
+                                    margin: 20px 0 20px;
+                                    .input {
+                                        max-width: 100%;
+                                        font-size: 15px;
+                                    }
+                                    label {
+                                        @include mediaquery(null, 991px) {
+                                            font-size: 15px;
+                                        }
+                                        &:before {
+                                            @include mediaquery(991px, null) {
+                                                top: 20%;
+                                            }
+                                        }
+                                        i {
+                                            margin-left: 7px;
+                                            font-size: 16px;
+                                            font-weight: 500;
+                                            color: #797979;
+                                        }
+                                    }
+                                }
+                                .member_num2 {
+                                    margin: -15px 0 5px;
+                                    label {
+                                        &:before {
+                                            display: none;
+                                        }
+                                    }
+                                }
+                                .mobile_num2,
+                                .donate_num2 {
+                                    .input {
+                                        max-width: 374px;
+                                        position: relative;
+                                        padding-left: 15px;
+                                        @include mediaquery(null, 991px) {
+                                            max-width: 100%;
+                                        }
+                                        &:before {
+                                            content: "*";
+                                            position: absolute;
+                                            top: 25%;
+                                            left: 0;
+                                            transform: translate(0, -50%);
+                                            width: 18px;
+                                            aspect-ratio: 1 / 1;
+                                            color: #d31e1b;
+                                        }
+                                    }
+                                    select {
+                                        margin-left: 15px;
+                                        width: 100%;
+                                        max-width: 359px;
+                                        @include mediaquery(null, 991px) {
+                                            max-width: calc(100% - 15px);
+                                        }
+                                    }
+                                }
+                                .company_num2 {
+                                    gap: 12px;
+                                    label {
+                                        margin: 0;
+                                    }
+                                }
+                                .donate_num2 {
+                                    gap: 20px 0;
+                                    .input {
+                                        position: relative;
+                                        &:after {
+                                            content: "";
+                                            position: absolute;
+                                            background: url(../../dist/images/common/search.svg) no-repeat;
+                                            width: 25px;
+                                            aspect-ratio: 1 / 1;
+                                            background-size: contain;
+                                            top: 50%;
+                                            transform: translate(0, -50%);
+                                            left: 30px;
+                                        }
+                                        input {
+                                            padding-left: 53px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                     .row {
                         flex-direction: row;
@@ -1451,6 +1573,15 @@ $product_color_5: #e30400;
                             min-width: 0;
                         }
                     }
+                    @include mediaquery(null, 991px) {
+                        .member_num,
+                        .mobile_num,
+                        .citizen_num,
+                        .company_num,
+                        .donate_num {
+                            display: none !important;
+                        }
+                    }
                     .member_num,
                     .mobile_num,
                     .citizen_num,
@@ -1466,6 +1597,8 @@ $product_color_5: #e30400;
                             }
                         }
                         label {
+                            font-size: 16px;
+
                             @include mediaquery(null, 991px) {
                                 font-size: 15px;
                             }
@@ -1514,7 +1647,7 @@ $product_color_5: #e30400;
                             width: 100%;
                             max-width: 359px;
                             @include mediaquery(null, 991px) {
-                            max-width: calc(100% - 15px);
+                                max-width: calc(100% - 15px);
                             }
                         }
                     }

@@ -86,7 +86,7 @@
                         <div class="b_title">購買相關</div>
                         <ul>
                             <li class="faqList">
-                                <a href="javascript:;">請問哪裡可以試用體驗?</a>
+                                <a href="javascript:;" class="faqContent">請問哪裡可以試用體驗?</a>
                                 <div class="txt">
                                     <div class="editor_Content">
                                         <div class="editor_box pc_use">
@@ -112,8 +112,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faqList">
-                                <a href="javascript:;">請問哪裡可以試用體驗?</a>
+                          <li class="faqList">
+                                <a href="javascript:;" class="faqContent">請問哪裡可以試用體驗?</a>
                                 <div class="txt">
                                     <div class="editor_Content">
                                         <div class="editor_box pc_use">
@@ -139,8 +139,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="faqList">
-                                <a href="javascript:;">請問哪裡可以試用體驗?</a>
+                          <li class="faqList">
+                                <a href="javascript:;" class="faqContent">請問哪裡可以試用體驗?</a>
                                 <div class="txt">
                                     <div class="editor_Content">
                                         <div class="editor_box pc_use">
@@ -173,8 +173,8 @@
                     <li class="faqLi">
                         <div class="b_title">配送相關</div>
                         <ul>
-                            <li class="faqList">
-                                <a href="javascript:;">請問哪裡可以試用體驗?</a>
+                          <li class="faqList">
+                                <a href="javascript:;" class="faqContent">請問哪裡可以試用體驗?</a>
                                 <div class="txt">
                                     <div class="editor_Content">
                                         <div class="editor_box pc_use">
@@ -207,8 +207,8 @@
                     <li class="faqLi">
                         <div class="b_title">售後服務</div>
                         <ul>
-                            <li class="faqList">
-                                <a href="javascript:;">請問哪裡可以試用體驗?</a>
+                          <li class="faqList">
+                                <a href="javascript:;" class="faqContent">請問哪裡可以試用體驗?</a>
                                 <div class="txt">
                                     <div class="editor_Content">
                                         <div class="editor_box pc_use">

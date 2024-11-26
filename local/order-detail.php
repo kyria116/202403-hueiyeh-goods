@@ -277,10 +277,6 @@
                                 <div>-$0</div>
                             </li>
                             <li>
-                                <div>積點折抵</div>
-                                <div>-200</div>
-                            </li>
-                            <li>
                                 <div>折價券折抵</div>
                                 <div>-$0</div>
                             </li>
@@ -291,6 +287,10 @@
                             <li>
                                 <div>滿額優惠折抵</div>
                                 <div>-$0</div>
+                            </li>
+                            <li>
+                                <div>積點折抵</div>
+                                <div>-200</div>
                             </li>
                             <li>
                                 <div>運費</div>

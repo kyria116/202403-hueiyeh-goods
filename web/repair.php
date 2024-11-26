@@ -1,4 +1,13 @@
-    <?php include "quote/template/head.php"; ?>
+    <?php 
+	    include "quote/template/head.php"; 
+	    require_once ("global_include_file.php");
+
+    $info=array();
+    $where_clause="1";
+    $tbl_name="sys_portal_g5";
+    get_data($tbl_name, $where_clause, $info);
+    // show_array($info);
+    ?>
     <link rel="stylesheet" href="dist/css/service.css">
 </head>
 
@@ -51,6 +60,8 @@
         </div>
         <div class="content">
             <div class="container">
+	            <?=$info['content']?>
+<!--
                 <div class="contentBox">
                     <ul>
                         <li>
@@ -114,8 +125,8 @@
                                     <table>
                                         <tr>
                                             <td colspan="2">服務項目</td>
-                                            <td>按摩椅、跑步機、健身車</td>
-                                            <td>麻將桌、大型傢俱</td>
+                                            <td>按摩椅、跑步機、健身車、大型傢俱</td>
+                                            <td>麻將桌</td>
                                         </tr>
                                         <tr>
                                             <td rowspan="2">
@@ -153,8 +164,8 @@
                     <table>
                         <tr>
                             <td colspan="2">服務項目</td>
-                            <td>按摩椅、跑步機、健身車</td>
-                            <td>麻將桌、大型傢俱</td>
+                            <td>按摩椅、跑步機、健身車、大型傢俱</td>
+                            <td>麻將桌</td>
                         </tr>
                         <tr>
                             <td rowspan="2">
@@ -199,12 +210,19 @@
                         </ul>
                     </div>
                 </div>
+-->
+                <?
+	                if($info['content_m']){
+                ?>
                 <div class="backBtn">
-                    <a href="javascript:;" target="_blank">
+                    <a href="<?=(($info['content_m'])?$info['content_m']:"javascript:void(0);")?>" <?=(($info['content_m'])?' target="_blank"':'')?>>
                         加入LINE好友，聯繫客服
                         <div class="line"></div>
                     </a>
                 </div>
+                <?
+	                }
+                ?>
             </div>
         </div>
     </main>
