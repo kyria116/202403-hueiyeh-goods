@@ -188,6 +188,33 @@ main {
             @include mediaquery(null, 767px) {
                 font-size: 13px;
             }
+            &.normal {
+                display: inline-block;
+            }
+            &.sold_out {
+                display: none;
+            }
+        }
+        &.soldout {
+            pointer-events: none;
+            border: 1px solid #e4e4e4;
+            a {
+                background-color: #e4e4e4;
+                border: 1px solid #e4e4e4;
+            }
+            .cartIcon {
+                &::after {
+                    background-color: #000;
+                    mask: url("../images/productPage/soldout_box.svg") center / contain no-repeat;
+                }
+            }
+            .normal {
+                display: none;
+            }
+            .sold_out {
+                display: inline-block;
+                color: #000;
+            }
         }
     }
 }
@@ -695,7 +722,7 @@ main {
             width: 450px;
         }
         @include mediaquery(null, 991px) {
-            margin-top: 69px;
+            margin: 25px 0 40px;
             width: 100%;
             padding: 23px 18px 20px;
         }
@@ -1099,7 +1126,7 @@ main {
     .btnCart {
         @include mediaquery(null, 991px) {
             position: absolute;
-            bottom: -25px;
+            bottom: -9%;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -1156,6 +1183,35 @@ main {
             transition: color 0.75s;
             @include mediaquery(null, 767px) {
                 font-size: 16px;
+            }
+            &.normal {
+                display: inline-block;
+            }
+            &.sold_out {
+                display: none;
+            }
+        }
+        &.soldout {
+            pointer-events: none;
+            a {
+                background-color: #e4e4e4;
+                border: 1px solid #e4e4e4;
+            }
+            .cartIcon {
+                &::after {
+                    background-color: #000;
+                    mask: url("../images/productPage/soldout_box.svg") center / contain no-repeat;
+                }
+            }
+            .normal {
+                display: none;
+            }
+            span {
+                color: #000;
+            }
+            .sold_out {
+                display: inline-block;
+                color: #000;
             }
         }
     }

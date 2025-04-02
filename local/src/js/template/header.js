@@ -102,8 +102,20 @@ $(document).ready(function() {
 
 
 //member
+const li = document.querySelector('.menu_icon li'); // 選取 .menu_icon 的第一個 li
+const link = document.querySelector('.mo_991.member_icon_btn'); // 選取目標 <a>
 
-document.querySelector('.member_icon').addEventListener('click', function() {
+if (li && link) { // 確保元素存在
+    if (li.classList.contains('login')) {
+        link.setAttribute('href', 'javascript:;');
+    } else {
+        link.setAttribute('href', 'login.php');
+    }
+}
+
+
+
+document.querySelector('.member_icon_btn').addEventListener('click', function() {
     document.querySelector('.member_menu_list').classList.add('show_member_menu_list');
 });
 

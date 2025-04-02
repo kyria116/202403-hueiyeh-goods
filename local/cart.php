@@ -482,12 +482,12 @@
                                         <label for="check">
                                             <div>發票資訊<span>必填</span></div>
                                         </label>
-                                        <fieldset class="mo_block">
+                                        <fieldset>
                                             <div class="ckbutton">
                                                 <input type="radio" id="member" name="bill" />
                                                 <label for="member">會員載具</label>
                                             </div>
-                                            <div class="member_num2">
+                                            <div class="member_num">
                                                 <label for="check">
                                                     <div>中獎發票將以電子信件通知</div>
                                                 </label>
@@ -496,7 +496,7 @@
                                                 <input type="radio" id="mobile" name="bill" />
                                                 <label for="mobile">手機條碼</label>
                                             </div>
-                                            <div class="mobile_num2">
+                                            <div class="mobile_num">
                                                 <div class="input">
                                                     <input type="text" id="mobile_num" name="mobile_num" placeholder='輸入"/"與後7碼' />
                                                 </div>
@@ -505,7 +505,7 @@
                                                 <input type="radio" id="citizen" name="bill" />
                                                 <label for="citizen">自然人憑證</label>
                                             </div>
-                                            <div class="citizen_num2">
+                                            <div class="citizen_num">
                                                 <label for="check">
                                                     <div>自然人憑證卡號<i>(2個英文字母+14個數字)</i><span>必填</span></div>
                                                 </label>
@@ -517,7 +517,7 @@
                                                 <input type="radio" id="company" name="bill" />
                                                 <label for="company">公司發票</label>
                                             </div>
-                                            <div class="company_num2">
+                                            <div class="company_num">
                                                 <label for="check">
                                                     <div>統一編號<span>必填</span></div>
                                                 </label>
@@ -528,20 +528,20 @@
                                                     <div>發票抬頭<span>必填</span></div>
                                                 </label>
                                                 <div class="input">
-                                                    <input type="text" id="company_num2" name="company_num2" placeholder="請輸入發票抬頭" />
+                                                    <input type="text" id="company_num" name="company_num" placeholder="請輸入發票抬頭" />
                                                 </div>
                                                 <label for="check">
                                                     <div>發票收取E-mail<span>必填</span></div>
                                                 </label>
                                                 <div class="input">
-                                                    <input type="text" id="company_num3" name="company_num3" placeholder="請輸入E-mail" />
+                                                    <input type="email" id="company_email" name="company_email" placeholder="請輸入E-mail" />
                                                 </div>
                                             </div>
                                             <div class="ckbutton">
                                                 <input type="radio" id="donate" name="bill" />
                                                 <label for="donate">捐贈發票</label>
                                             </div>
-                                            <div class="donate_num2">
+                                            <div class="donate_num">
                                                 <div class="input">
                                                     <input type="text" id="donate_num" name="donate_num" placeholder="請輸入社福代碼或關鍵字" />
                                                 </div>
@@ -561,7 +561,7 @@
                                             </div>
                                         </fieldset>
                                     </div>
-                                    <div class="personal_data">
+                                    <!-- <div class="personal_data">
                                         <div class="member_num">
                                             <label for="check">
                                                 <div>中獎發票將以電子信件通知</div>
@@ -591,7 +591,7 @@
                                                 <div>發票抬頭<span>必填</span></div>
                                             </label>
                                             <div class="input">
-                                                <input type="text" id="company_num2" name="company_num2" placeholder="請輸入發票抬頭" />
+                                                <input type="text" id="company_num" name="company_num" placeholder="請輸入發票抬頭" />
                                             </div>
                                             <label for="check">
                                                 <div>發票收取E-mail<span>必填</span></div>
@@ -619,7 +619,7 @@
                                             </select>
                                         </div>
 
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -653,120 +653,85 @@
             window.history.back();
         }
     </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var memberRadio = document.getElementById('member');
-            var mobileRadio = document.getElementById('mobile');
-            var citizenRadio = document.getElementById('citizen');
-            var companyRadio = document.getElementById('company');
-            var donateRadio = document.getElementById('donate');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var memberRadio = document.getElementById('member');
+        var mobileRadio = document.getElementById('mobile');
+        var citizenRadio = document.getElementById('citizen');
+        var companyRadio = document.getElementById('company');
+        var donateRadio = document.getElementById('donate');
 
-            var memberNumInput = document.querySelector('.member_num');
-            var mobileNumInput = document.querySelector('.mobile_num');
-            var citizenNumInput = document.querySelector('.citizen_num');
-            var companyNumInput = document.querySelector('.company_num');
-            var donateNumInput = document.querySelector('.donate_num');
+        var memberNumInput = document.querySelector('.member_num');
+        var mobileNumInput = document.querySelector('.mobile_num');
+        var citizenNumInput = document.querySelector('.citizen_num');
+        var companyNumInput = document.querySelector('.company_num');
+        var donateNumInput = document.querySelector('.donate_num');
 
-            var memberNumInput2 = document.querySelector('.member_num2');
-            var mobileNumInput2 = document.querySelector('.mobile_num2');
-            var citizenNumInput2 = document.querySelector('.citizen_num2');
-            var companyNumInput2 = document.querySelector('.company_num2');
-            var donateNumInput2 = document.querySelector('.donate_num2');
+        var btnFlex = document.querySelector('.btn_flex');
 
-            function setUpEventListeners() {
-                // 移除舊的事件監聽器以避免重複綁定
-                memberRadio.onclick = mobileRadio.onclick = citizenRadio.onclick = companyRadio.onclick = donateRadio.onclick = null;
-
-                if (window.innerWidth > 991) {
-                    memberRadio.addEventListener('click', function() {
-                        memberNumInput.style.display = 'block';
-                        mobileNumInput.style.display = 'none';
-                        citizenNumInput.style.display = 'none';
-                        companyNumInput.style.display = 'none';
-                        donateNumInput.style.display = 'none';
-                    });
-
-                    mobileRadio.addEventListener('click', function() {
-                        memberNumInput.style.display = 'none';
-                        mobileNumInput.style.display = 'block';
-                        citizenNumInput.style.display = 'none';
-                        companyNumInput.style.display = 'none';
-                        donateNumInput.style.display = 'none';
-                    });
-
-                    citizenRadio.addEventListener('click', function() {
-                        memberNumInput.style.display = 'none';
-                        mobileNumInput.style.display = 'none';
-                        citizenNumInput.style.display = 'flex';
-                        companyNumInput.style.display = 'none';
-                        donateNumInput.style.display = 'none';
-                    });
-
-                    companyRadio.addEventListener('click', function() {
-                        memberNumInput.style.display = 'none';
-                        mobileNumInput.style.display = 'none';
-                        citizenNumInput.style.display = 'none';
-                        companyNumInput.style.display = 'flex';
-                        donateNumInput.style.display = 'none';
-                    });
-
-                    donateRadio.addEventListener('click', function() {
-                        memberNumInput.style.display = 'none';
-                        mobileNumInput.style.display = 'none';
-                        citizenNumInput.style.display = 'none';
-                        companyNumInput.style.display = 'none';
-                        donateNumInput.style.display = 'flex';
-                    });
-                } else {
-                    memberRadio.addEventListener('click', function() {
-                        memberNumInput2.style.display = 'block';
-                        mobileNumInput2.style.display = 'none';
-                        citizenNumInput2.style.display = 'none';
-                        companyNumInput2.style.display = 'none';
-                        donateNumInput2.style.display = 'none';
-                    });
-
-                    mobileRadio.addEventListener('click', function() {
-                        memberNumInput2.style.display = 'none';
-                        mobileNumInput2.style.display = 'block';
-                        citizenNumInput2.style.display = 'none';
-                        companyNumInput2.style.display = 'none';
-                        donateNumInput2.style.display = 'none';
-                    });
-
-                    citizenRadio.addEventListener('click', function() {
-                        memberNumInput2.style.display = 'none';
-                        mobileNumInput2.style.display = 'none';
-                        citizenNumInput2.style.display = 'flex';
-                        companyNumInput2.style.display = 'none';
-                        donateNumInput2.style.display = 'none';
-                    });
-
-                    companyRadio.addEventListener('click', function() {
-                        memberNumInput2.style.display = 'none';
-                        mobileNumInput2.style.display = 'none';
-                        citizenNumInput2.style.display = 'none';
-                        companyNumInput2.style.display = 'flex';
-                        donateNumInput2.style.display = 'none';
-                    });
-
-                    donateRadio.addEventListener('click', function() {
-                        memberNumInput2.style.display = 'none';
-                        mobileNumInput2.style.display = 'none';
-                        citizenNumInput2.style.display = 'none';
-                        companyNumInput2.style.display = 'none';
-                        donateNumInput2.style.display = 'flex';
-                    });
-                }
+        function updateMarginTop() {
+            if (window.innerWidth >= 991 && companyRadio.checked) {
+                btnFlex.style.marginTop = '180px';
+            } else {
+                btnFlex.style.marginTop = '66px';
             }
+        }
 
-            // 初始呼叫
-            setUpEventListeners();
+        function setUpEventListeners() {
+            memberRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'block';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
+                updateMarginTop();
+            });
 
-            // 視窗大小改變時重新呼叫
-            window.addEventListener('resize', setUpEventListeners);
-        });
-    </script>
+            mobileRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'none';
+                mobileNumInput.style.display = 'block';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
+                updateMarginTop();
+            });
+
+            citizenRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'flex';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'none';
+                updateMarginTop();
+            });
+
+            companyRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'flex';
+                donateNumInput.style.display = 'none';
+                updateMarginTop();
+            });
+
+            donateRadio.addEventListener('click', function() {
+                memberNumInput.style.display = 'none';
+                mobileNumInput.style.display = 'none';
+                citizenNumInput.style.display = 'none';
+                companyNumInput.style.display = 'none';
+                donateNumInput.style.display = 'flex';
+                updateMarginTop();
+            });
+        }
+
+        // 初始化事件監聽
+        setUpEventListeners();
+
+        // 視窗大小改變時更新 marginTop
+        window.addEventListener('resize', updateMarginTop);
+    });
+</script>
+
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {

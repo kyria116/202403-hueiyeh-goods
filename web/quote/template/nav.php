@@ -167,12 +167,15 @@
             <ul class="menu_icon">
                 <!-- 已登入狀態加上class: login -->
                 <li<?=(($_COOKIE['member_userid'] != "")?' class="login"':'')?>>
-                    <a href="login.php">
+                    <a href="login.php" class="pc_991">
+                        <div class="member_icon"></div>
+                    </a>
+                    <a href="javascript:;" class="mo_991 member_icon_btn">
                         <div class="member_icon"></div>
                     </a>
                     <div class="member_menu_list">
                         <div class="member_row">
-                            <div><a href="member-profile.php">會員專區</a></div>
+                            <div><a href="member.php">會員專區</a></div>
                             <div class="mo_991 line"></div>
                             <div><a href="logout.php">登出</a></div>
                         </div>
@@ -213,12 +216,17 @@
                         <div class="search_icon"></div>
                     </a>
                     <div class="searchBox">
+	                    <form id='form_s' name='form_s' method='get' action='search.php' >
                         <div class="search_input">
-                            <input id="search_q" type="text" Placeholder="請輸入商品名稱、型號等關鍵字">
-                            <a href="javascript:send_search();">
+                                                       
+                            <input id="search_q" name="q" type="text" Placeholder="請輸入商品名稱、型號等關鍵字">
+                            <a href="javascript:$('#button').click();">
                                 <div class="search"></div>
                             </a>
+                            <input style="display: none;" type='submit' name='button' id='button' value=''>
+                            
                         </div>
+                        </form>
                         <div class="line"></div>
                     </div>
                 </li>

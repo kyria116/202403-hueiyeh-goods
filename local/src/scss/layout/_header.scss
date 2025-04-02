@@ -219,6 +219,7 @@ header {
         width: 100%;
         justify-content: center;
         align-items: start;
+        flex-wrap: wrap;
         position: fixed;
         top: 86px;
         right: 50%;
@@ -456,6 +457,18 @@ header {
             display: inline-block;
             @include mediaquery(null, 991px) {
                 width: 100%;
+            }
+        }
+        .pc_991{
+            display: inline-block;
+            @include mediaquery(null, 991px) {
+                display: none;
+            }
+        }
+        .mo_991{
+            display: none;
+            @include mediaquery(null, 991px) {
+                display: inline-block;
             }
         }
         .member_icon {

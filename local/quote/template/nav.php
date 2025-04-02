@@ -549,7 +549,10 @@
             <ul class="menu_icon">
                 <!-- 已登入狀態加上class: login -->
                 <li class="login">
-                    <a href="javascript:;">
+                    <a href="login.php" class="pc_991">
+                        <div class="member_icon"></div>
+                    </a>
+                    <a href="javascript:;" class="mo_991 member_icon_btn">
                         <div class="member_icon"></div>
                     </a>
                     <div class="member_menu_list">

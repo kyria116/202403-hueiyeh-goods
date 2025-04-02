@@ -57,10 +57,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="fixedRight">
+                    <!-- 售完加上class+"soldout" -->
+                <div class="fixedRight soldout">
                     <a href="javascript:;">
                         <div class="cartIcon"></div>
-                        <span>加入購物車</span>
+                        <span class="normal">加入購物車</span>
+                        <span class="sold_out">售完補貨中</span>
                     </a>
                 </div>
             </div>
@@ -273,10 +275,12 @@
                             </div>
                         </div>
                         <div class="s_txt">最快出貨時間 2024.02.28-2024.03.04</div>
-                        <div class="btnCart">
+                        <!-- 售完加上class+"soldout" -->
+                        <div class="btnCart soldout">
                             <a href="cart.php">
                                 <div class="cartIcon"></div>
-                                <span>加入購物車</span>
+                                <span class="normal">加入購物車</span>
+                                <span class="sold_out">售完補貨中</span>
                             </a>
                         </div>
                     </div>

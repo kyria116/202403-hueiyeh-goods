@@ -14,7 +14,11 @@
                     <ul>
                         <li>
                             <!-- 自訂連結外連 -->
-                            <a href="javascript:;" target="_blank">人才招募</a></li>
+                            <a href="javascript:;" target="_blank">人才招募</a>
+                        </li>
+                        <li>
+                            <a href="https://hueiyeh.com/" target="_blank">輝葉美國</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="item">

@@ -35,33 +35,33 @@ $(function () {
 		$('.infoPage li').eq($(this).index()).siblings().css('display', 'none');
 	})
 
-	let num = 1
-	$('.plus').on('click', function () {
-		$('.minus').removeClass('hidden')
-		num++
-		if (num > 10) {
-			$(this).addClass('hidden')
-			return
-		} if (num == 10) {
-			$(this).addClass('hidden')
-		} else {
-			$(this).removeClass('hidden')
-		}
-		$('.number').text(num)
-	});
-	$('.minus').on('click', function () {
-		$('.plus').removeClass('hidden')
-		num--
-		if (num < 1) {
-			$(this).addClass('hidden')
-			return
-		} else if (num == 1) {
-			$(this).addClass('hidden')
-		} else {
-			$(this).removeClass('hidden')
-		}
-		$('.number').text(num)
-	});
+	// let num = 1
+	// $('.plus').on('click', function () {
+	// 	$('.minus').removeClass('hidden')
+	// 	num++
+	// 	if (num > 10) {
+	// 		$(this).addClass('hidden')
+	// 		return
+	// 	} if (num == 10) {
+	// 		$(this).addClass('hidden')
+	// 	} else {
+	// 		$(this).removeClass('hidden')
+	// 	}
+	// 	$('.number').text(num)
+	// });
+	// $('.minus').on('click', function () {
+	// 	$('.plus').removeClass('hidden')
+	// 	num--
+	// 	if (num < 1) {
+	// 		$(this).addClass('hidden')
+	// 		return
+	// 	} else if (num == 1) {
+	// 		$(this).addClass('hidden')
+	// 	} else {
+	// 		$(this).removeClass('hidden')
+	// 	}
+	// 	$('.number').text(num)
+	// });
 
 	var s_imgBox = new Swiper(".s_imgBox .mySwiper", {
 		spaceBetween: 9,

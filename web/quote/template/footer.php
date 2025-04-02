@@ -43,7 +43,11 @@
                     <ul>
                         <li>
                             <!-- 自訂連結外連 -->
-                            <a href="<?=$phone_info[3]['text_field_1']?>" target="_blank">人才招募</a></li>
+                            <a href="<?=$phone_info[3]['text_field_1']?>" target="_blank">人才招募</a>
+                        </li>
+                        <li>
+                            <a href="https://hueiyeh.com/" target="_blank">輝葉美國</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="item">
@@ -137,3 +141,11 @@
         </div>
     </div>
 </footer>
+<?
+	$website_seo_info=array();
+	$where_clause="Fmain_id = '1'";
+	$tbl_name="sys_website_seo";
+	get_data($tbl_name, $where_clause, $website_seo_info);
+	//show_array($website_seo_info);
+?>
+<?=$website_seo_info['body_code']?>
