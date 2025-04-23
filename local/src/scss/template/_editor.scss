@@ -25,14 +25,14 @@
     iframe {
         max-width: 100%;
     }
-		table{
-			border-color:rgba(0,0,0,0);
-			border-collapse: collapse;  //陰影
-		}
-		p{
+    table {
+        border-color: rgba(0, 0, 0, 0);
+        border-collapse: collapse; //陰影
+    }
+    p {
         margin-bottom: 1em;
-		}
-		table p{
+    }
+    table p {
         margin-bottom: 0;
     }
     h1,
@@ -57,7 +57,7 @@
 }
 
 //依照專案客製
-.editor_box{
+.editor_box {
     margin: auto;
     line-height: 1.875;
     font-size: pxToEm(16);
@@ -69,18 +69,17 @@
     ul,
     ol {
         padding-left: 40px;
-        
     }
-    ul{
+    ul {
         padding-left: 0px;
         list-style: none;
-        li{
+        li {
             position: relative;
             padding-left: 18px;
             @media (max-width: 767px) {
                 padding-left: 14px;
             }
-            &::before{
+            &::before {
                 content: "";
                 position: absolute;
                 top: 10px;
@@ -99,8 +98,20 @@
         max-width: 100%;
         height: auto !important;
     }
+
+    //圖片無間距
+    img.imgblock {
+        display: block;
+    }
+
+    //圖片無間距且置中
+    img.imgblock_center {
+        display: block;
+        margin: 0 auto;
+    }
+
     //有需要再加
-    .tbcolor{
+    .tbcolor {
         border-collapse: collapse;
     }
 }
