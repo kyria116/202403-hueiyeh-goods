@@ -1,3 +1,10 @@
+<!-- 20250603 新增製作 start -->
+<div class="loader_popup">
+    <div class="loader_wrap">
+        <div class="hueiyeh_good_loader"></div>
+    </div>
+</div>
+<!-- 20250603 新增製作 end -->
 <header>
     <div class="header">
         <div class="logo_with_btn">

@@ -39,6 +39,11 @@
                                             <li>
                                                 <a href="coupon.php">我的折價券</a>
                                             </li>
+                                            <!-- 20250603 新增 start -->
+                                            <li>
+                                                <a href="points2.php">積點紀錄</a>
+                                            </li>
+                                            <!-- 20250603 新增 end -->
                                         </ul>
                                     </div>
                                 </div>

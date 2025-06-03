@@ -26,7 +26,7 @@
                             <div id="top-menu-ul-2" class="top-menu-ul-2">
                                 <div class="item_Menu">
                                     <div class="item_menu_Box">
-                                    <ul class="item_menu_list slides">
+                                        <ul class="item_menu_list slides">
                                             <li>
                                                 <a href="member-profile.php">會員資料</a>
                                             </li>
@@ -39,6 +39,11 @@
                                             <li>
                                                 <a href="coupon.php">我的折價券</a>
                                             </li>
+                                            <!-- 20250603 新增 start -->
+                                            <li>
+                                                <a href="points2.php">積點紀錄</a>
+                                            </li>
+                                            <!-- 20250603 新增 end -->
                                         </ul>
                                     </div>
                                 </div>
@@ -63,7 +68,7 @@
                             <li>登錄活動</li>
                             <li></li>
                         </ul>
-                      
+
                         <ul class="form_block">
                             <li>
                                 <div>登錄日期</div>

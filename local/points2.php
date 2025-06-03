@@ -7,7 +7,7 @@
     include "quote/template/nav.php";
     ?>
     <main>
-        <section class="registration">
+        <section class="registration points2">
             <div class="container">
                 <div class="registration_flex">
                     <div class="title_flex">
@@ -36,11 +36,11 @@
                                             <li>
                                                 <a href="warranty-list.php">產品保固</a>
                                             </li>
-                                            <li class="active">
+                                            <li >
                                                 <a href="coupon.php">我的折價券</a>
                                             </li>
                                             <!-- 20250603 新增 start -->
-                                            <li>
+                                            <li class="active">
                                                 <a href="points2.php">積點紀錄</a>
                                             </li>
                                             <!-- 20250603 新增 end -->
@@ -59,13 +59,14 @@
                             </div>
                         </div>
                     </div>
+                    <div class="points_remark_txt">提供最近一年內積點紀錄查詢</div>
                     <div class="form">
                         <ul class="form_title">
-                            <li>折價券項目</li>
-                            <li>折抵金額</li>
-                            <li>使用期限</li>
-                            <li>使用條件</li>
-                            <li>狀態</li>
+                            <li>訂單編號</li>
+                            <li>項目</li>
+                            <li>日期</li>
+                            <li>積點效期</li>
+                            <li>累點/扣點</li>
                         </ul>
                         <!-- 狀態已過期的在ul加上class:expired -->
                         <!-- 不限消費金額的在li加上unlimited_budget -->

@@ -39,6 +39,12 @@
                                             <li>
                                                 <a href="coupon.php">我的折價券</a>
                                             </li>
+                                            <!-- 20250603 新增 start -->
+                                            <li>
+                                                <a href="points2.php">積點紀錄</a>
+                                            </li>
+                                            <!-- 20250603 新增 end -->
+
                                         </ul>
                                     </div>
                                 </div>
@@ -63,7 +69,12 @@
                                     <!-- <img src="dist/images/member/male.png" alt="profile_img_male"> -->
                                 </div>
                                 <ul class="info">
-                                    <li class="name">Evora</li>
+                                    <!-- 20250603 調整 start -->
+                                    <li class="name">
+                                        <div>Evora</div>
+                                        <div class="member_level">一般會員</div>
+                                    </li>
+                                    <!-- 20250603 調整 start -->
                                     <li>1993.10.30</li>
                                     <li class="mail">evora@mak66design.com</li>
                                     <li class="change_p">
@@ -73,11 +84,15 @@
                                     </li>
                                 </ul>
                             </div>
-                            <ul class="point">
-                                <li class="txt">總積點</li>
-                                <li class="num">1020</li>
-
-                            </ul>
+                              <!-- 20250603 調整 start -->
+                            <div class="point_wrap">
+                                <ul class="point">
+                                    <li class="txt">總積點</li>
+                                    <li class="num">1020</li>
+                                </ul>
+                                <p>您有xxx點將於xxxx/xx/xx到期</p>
+                            </div>
+                              <!-- 20250603 調整 end -->
                         </div>
                         <div class="form">
                             <form>

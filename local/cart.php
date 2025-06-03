@@ -259,14 +259,8 @@
                     </div>
                     <div class="row_flex">
                         <ul class="discount">
+                            <!-- 20250603 調整順序 start -->
                             <li class="mo_title">享用之優惠</li>
-                            <li>
-                                <div class="discount_item">使用積點</div>
-                                <div class="input">
-                                    <input type="text" id="point" name="point" />
-                                    <div class="remaining_point">總積點 <span>1020</span> ，本次消費可用 <span>300</span> 積點</div>
-                                </div>
-                            </li>
                             <li>
                                 <div class="discount_item">使用折價券</div>
                                 <div class="input">
@@ -288,6 +282,13 @@
                                 </div>
                             </li>
                             <li>
+                                <div class="discount_item">使用積點</div>
+                                <div class="input">
+                                    <input type="text" id="point" name="point" />
+                                    <div class="remaining_point">總積點 <span>1020</span> ，本次消費可用 <span>300</span> 積點</div>
+                                </div>
+                            </li>
+                            <li>
                                 <div class="discount_item">優惠活動</div>
                                 <div class="more_discount">
                                     <div>｜年終慶｜全館滿額贈</div>
@@ -297,6 +298,7 @@
                                     <div class="not_full">滿$20,000免運</div>
                                 </div>
                             </li>
+                            <!-- 20250603 調整順序 end -->
                         </ul>
                         <ul class="total">
                             <li>
@@ -653,84 +655,84 @@
             window.history.back();
         }
     </script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var memberRadio = document.getElementById('member');
-        var mobileRadio = document.getElementById('mobile');
-        var citizenRadio = document.getElementById('citizen');
-        var companyRadio = document.getElementById('company');
-        var donateRadio = document.getElementById('donate');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var memberRadio = document.getElementById('member');
+            var mobileRadio = document.getElementById('mobile');
+            var citizenRadio = document.getElementById('citizen');
+            var companyRadio = document.getElementById('company');
+            var donateRadio = document.getElementById('donate');
 
-        var memberNumInput = document.querySelector('.member_num');
-        var mobileNumInput = document.querySelector('.mobile_num');
-        var citizenNumInput = document.querySelector('.citizen_num');
-        var companyNumInput = document.querySelector('.company_num');
-        var donateNumInput = document.querySelector('.donate_num');
+            var memberNumInput = document.querySelector('.member_num');
+            var mobileNumInput = document.querySelector('.mobile_num');
+            var citizenNumInput = document.querySelector('.citizen_num');
+            var companyNumInput = document.querySelector('.company_num');
+            var donateNumInput = document.querySelector('.donate_num');
 
-        var btnFlex = document.querySelector('.btn_flex');
+            var btnFlex = document.querySelector('.btn_flex');
 
-        function updateMarginTop() {
-            if (window.innerWidth >= 991 && companyRadio.checked) {
-                btnFlex.style.marginTop = '180px';
-            } else {
-                btnFlex.style.marginTop = '66px';
+            function updateMarginTop() {
+                if (window.innerWidth >= 991 && companyRadio.checked) {
+                    btnFlex.style.marginTop = '180px';
+                } else {
+                    btnFlex.style.marginTop = '66px';
+                }
             }
-        }
 
-        function setUpEventListeners() {
-            memberRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'block';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
-                updateMarginTop();
-            });
+            function setUpEventListeners() {
+                memberRadio.addEventListener('click', function() {
+                    memberNumInput.style.display = 'block';
+                    mobileNumInput.style.display = 'none';
+                    citizenNumInput.style.display = 'none';
+                    companyNumInput.style.display = 'none';
+                    donateNumInput.style.display = 'none';
+                    updateMarginTop();
+                });
 
-            mobileRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'none';
-                mobileNumInput.style.display = 'block';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
-                updateMarginTop();
-            });
+                mobileRadio.addEventListener('click', function() {
+                    memberNumInput.style.display = 'none';
+                    mobileNumInput.style.display = 'block';
+                    citizenNumInput.style.display = 'none';
+                    companyNumInput.style.display = 'none';
+                    donateNumInput.style.display = 'none';
+                    updateMarginTop();
+                });
 
-            citizenRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'flex';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'none';
-                updateMarginTop();
-            });
+                citizenRadio.addEventListener('click', function() {
+                    memberNumInput.style.display = 'none';
+                    mobileNumInput.style.display = 'none';
+                    citizenNumInput.style.display = 'flex';
+                    companyNumInput.style.display = 'none';
+                    donateNumInput.style.display = 'none';
+                    updateMarginTop();
+                });
 
-            companyRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'flex';
-                donateNumInput.style.display = 'none';
-                updateMarginTop();
-            });
+                companyRadio.addEventListener('click', function() {
+                    memberNumInput.style.display = 'none';
+                    mobileNumInput.style.display = 'none';
+                    citizenNumInput.style.display = 'none';
+                    companyNumInput.style.display = 'flex';
+                    donateNumInput.style.display = 'none';
+                    updateMarginTop();
+                });
 
-            donateRadio.addEventListener('click', function() {
-                memberNumInput.style.display = 'none';
-                mobileNumInput.style.display = 'none';
-                citizenNumInput.style.display = 'none';
-                companyNumInput.style.display = 'none';
-                donateNumInput.style.display = 'flex';
-                updateMarginTop();
-            });
-        }
+                donateRadio.addEventListener('click', function() {
+                    memberNumInput.style.display = 'none';
+                    mobileNumInput.style.display = 'none';
+                    citizenNumInput.style.display = 'none';
+                    companyNumInput.style.display = 'none';
+                    donateNumInput.style.display = 'flex';
+                    updateMarginTop();
+                });
+            }
 
-        // 初始化事件監聽
-        setUpEventListeners();
+            // 初始化事件監聽
+            setUpEventListeners();
 
-        // 視窗大小改變時更新 marginTop
-        window.addEventListener('resize', updateMarginTop);
-    });
-</script>
+            // 視窗大小改變時更新 marginTop
+            window.addEventListener('resize', updateMarginTop);
+        });
+    </script>
 
 
     <script>

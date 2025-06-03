@@ -566,11 +566,36 @@ $product_color_5: #e30400;
                         .name {
                             font-weight: 500;
                             font-size: 30px;
+                            display: flex;
+                            align-items: center;
+                            gap: 20px;
                             @include mediaquery(null, 768px) {
                                 font-size: 25px;
                             }
                             @include mediaquery(null, 768px) {
                                 font-size: 20px;
+                                gap: 10px;
+                            }
+                            .member_level {
+                                // position: absolute;
+                                // top: 50%;
+                                // left: 100%;
+                                white-space: nowrap;
+                                height: fit-content;
+                                // transform: translate(0, -50%);
+                                font-size: 14px;
+                                line-height: 1;
+                                letter-spacing: 0;
+                                color: #fff;
+                                background: #a78f79;
+                                padding: 7px 12px;
+                                border-radius: 4px;
+                                @include mediaquery(null, 768px) {
+                                    font-size: 12px;
+                                    padding: 5px 8px;
+                                    border-radius: 3px;
+                                    transform: scale(0.9);
+                                }
                             }
                         }
                         .mail {
@@ -629,16 +654,11 @@ $product_color_5: #e30400;
                     }
                 }
                 .point {
-                    padding: 33px 32px;
                     font-weight: 500;
                     color: #fff;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    background-color: #94693c;
-                    @include mediaquery(null, 991px) {
-                        padding: 21.5px 24px;
-                    }
                     .txt {
                         font-size: 22px;
                         margin-right: 80px;
@@ -660,6 +680,28 @@ $product_color_5: #e30400;
                         }
                     }
                 }
+                .point_wrap {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 33px 32px;
+                    background-color: #94693c;
+                    @include mediaquery(null, 991px) {
+                        padding: 21.5px 24px;
+                    }
+                    p {
+                        text-align: right;
+                        font-size: 16px;
+                        line-height: 1;
+                        letter-spacing: 0;
+                        text-align: right;
+                        color: #e1bb92;
+                        @include mediaquery(null, 768px) {
+                            font-size: 12px;
+                            transform: scale(0.9);
+                            transform-origin: right;
+                        }
+                    }
+                }
             }
         }
         .profile_flex {
@@ -673,7 +715,7 @@ $product_color_5: #e30400;
                 top: -228px;
                 right: 105px;
                 z-index: 15;
-                @include mediaquery(null,991px) {
+                @include mediaquery(null, 991px) {
                     position: relative;
                     top: 0;
                     right: 0;
@@ -683,7 +725,7 @@ $product_color_5: #e30400;
                     aspect-ratio: 1 / 0.9228;
                     align-self: self-end;
                 }
-                @include mediaquery(null,500px) {
+                @include mediaquery(null, 500px) {
                     margin: 0 31px 0 109px;
                     max-width: 311px;
                 }

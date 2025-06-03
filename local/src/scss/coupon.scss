@@ -46,7 +46,7 @@ $product_color_5: #e30400;
                 top: -228px;
                 right: 105px;
                 z-index: 15;
-                @include mediaquery(null,991px) {
+                @include mediaquery(null, 991px) {
                     position: relative;
                     top: 0;
                     right: 0;
@@ -56,7 +56,7 @@ $product_color_5: #e30400;
                     aspect-ratio: 1 / 0.9228;
                     align-self: self-end;
                 }
-                @include mediaquery(null,500px) {
+                @include mediaquery(null, 500px) {
                     margin: 0 31px 0 109px;
                     max-width: 311px;
                 }
@@ -177,7 +177,7 @@ $product_color_5: #e30400;
             li {
                 color: #797979;
                 > div > a {
-                color: #797979;
+                    color: #797979;
                     border-bottom: 1px solid #797979;
                 }
             }
@@ -437,5 +437,20 @@ $product_color_5: #e30400;
                 }
             }
         }
+    }
+}
+.points_remark_txt {
+    font-size: 16px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #94693c;
+    margin-top: 58.5px;
+    @include mediaquery(null, 767px) {
+        margin-top: 27px;
+    }
+}
+.points2 {
+    .registration_flex .form_title {
+        margin-top: 16px;
     }
 }

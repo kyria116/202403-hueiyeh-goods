@@ -1,5 +1,13 @@
-//@prepros-prepend plugin/jquery_min.js
 
+
+
+//@prepros-prepend plugin/jquery_min.js
+window.addEventListener("load", function () {
+    setTimeout(() => {
+        const loader = document.querySelector(".loader_popup");
+        if (loader) loader.classList.add("noshow");
+    }, 100);
+});
 
 $(function () {
 
