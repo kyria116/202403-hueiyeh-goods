@@ -36,7 +36,7 @@
                                             <li>
                                                 <a href="warranty-list.php">產品保固</a>
                                             </li>
-                                            <li >
+                                            <li>
                                                 <a href="coupon.php">我的折價券</a>
                                             </li>
                                             <!-- 20250603 新增 start -->
@@ -72,262 +72,244 @@
                         <!-- 不限消費金額的在li加上unlimited_budget -->
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
-                            <li class="unlimited_budget">
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="javascript:;">
-                                        不限消費金額
-                                    </a>
-                                </div>
-                            </li>
                             <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>可使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
-                        <ul class="form_block  expired">
+                        <ul class="form_block">
                             <li>
-                                <div>折價券項目</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
                                 <div>生日禮</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$1,000</div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
+                                <div>日期</div>
                                 <div>2022.10.26 - 2023.12.31</div>
                             </li>
                             <li>
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="coupon-event.php">
-                                        購買指定商品
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>已過期</div>
-                            </li>
-                        </ul>
-                        <ul class="form_block  expired">
-                            <li>
-                                <div>折價券項目</div>
-                                <div>生日禮</div>
-                            </li>
-                            <li>
-                                <div>折抵金額</div>
-                                <div>$200</div>
-                            </li>
-                            <li>
-                                <div>使用期限</div>
-                                <div>2022.11.04 - 2023.01.04</div>
-                            </li>
-                            <li class="unlimited_budget">
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="javascript:;">
-                                        不限消費金額
-                                    </a>
-                                </div>
-                            </li>
-                            <li>
-                                <div>狀態</div>
-                                <div>已使用</div>
+                                <div>累點/扣點</div>
+                                <div>+200</div>
                             </li>
                         </ul>
                         <ul class="form_block expired">
                             <li>
-                                <div>折價券項目</div>
-                                <div>會員加入禮</div>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
                             </li>
                             <li>
-                                <div>折抵金額</div>
-                                <div>$150</div>
+                                <div>項目</div>
+                                <div>點數失效</div>
                             </li>
                             <li>
-                                <div>使用期限</div>
-                                <div>2022.11.04 - 2023.01.04</div>
-                            </li>
-                            <li class="unlimited_budget">
-                                <div>使用條件</div>
-                                <div>
-                                    <a href="javascript:;">
-                                        不限消費金額
-                                    </a>
-                                </div>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
                             </li>
                             <li>
-                                <div>狀態</div>
-                                <div>已使用</div>
+                                <div>日期</div>
+                                <div>2022.10.26 - 2023.12.31</div>
+                            </li>
+                            <li>
+                                <div>累點/扣點</div>
+                                <div>-200</div>
+                            </li>
+                        </ul>
+                        <ul class="form_block expired">
+                            <li>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
+                                <div>點數失效</div>
+                            </li>
+                            <li>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
+                            </li>
+                            <li>
+                                <div>日期</div>
+                                <div>2022.10.26 - 2023.12.31</div>
+                            </li>
+                            <li>
+                                <div>累點/扣點</div>
+                                <div>-200</div>
+                            </li>
+                        </ul>
+                        <ul class="form_block expired">
+                            <li>
+                                <div>訂單編號</div>
+                                <div>HY220610034</div>
+                            </li>
+                            <li>
+                                <div>項目</div>
+                                <div>點數失效</div>
+                            </li>
+                            <li>
+                                <div>獲得日期</div>
+                                <div>2022.10.26</div>
+                            </li>
+                            <li>
+                                <div>日期</div>
+                                <div>2022.10.26 - 2023.12.31</div>
+                            </li>
+                            <li>
+                                <div>累點/扣點</div>
+                                <div>-200</div>
                             </li>
                         </ul>
                     </div>

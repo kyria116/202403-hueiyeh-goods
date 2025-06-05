@@ -167,7 +167,7 @@
 
                             <!-- 如果沒有填寫，則增加req -->
                             <div class="req">
-                                <div class="m_title"><span>*</span>購買通路訂單編號/發票號碼(以訂單編號優先)<b>必填</b></div>
+                                <div class="m_title"><span>*</span>購買通路訂單編號 / 發票號碼(以訂單編號優先)<b>必填</b></div>
                                 <input type="text" name="" id="" placeholder="請輸入訂單編號 / 發票號碼 二擇一">
                             </div>
                         </div>

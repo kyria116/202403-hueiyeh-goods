@@ -245,12 +245,9 @@
                         </div>
                     </div>
                     <div class="row_flex">
+                        <!-- 20250603 調整順序 start -->
                         <ul class="discount">
                             <li class="mo_title">享用之優惠</li>
-                            <li>
-                                <div class="discount_item">使用積點</div>
-                                <div>200</div>
-                            </li>
                             <li>
                                 <div class="discount_item">使用折價券</div>
                                 <div>生日禮</div>
@@ -260,6 +257,10 @@
                                 <div>2023HY1111</div>
                             </li>
                             <li>
+                                <div class="discount_item">使用積點</div>
+                                <div>200</div>
+                            </li>
+                            <li>
                                 <div class="discount_item">優惠活動</div>
                                 <div class="more_discount">
                                     <div>｜年終慶｜全館滿額贈</div>
@@ -267,6 +268,7 @@
                                 </div>
                             </li>
                         </ul>
+                        <!-- 20250603 調整順序 end -->
                         <ul class="total">
                             <li>
                                 <div>商品金額總計</div>

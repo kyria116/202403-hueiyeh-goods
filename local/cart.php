@@ -274,10 +274,7 @@
                             <li>
                                 <div class="discount_item">使用折扣碼</div>
                                 <div class="input">
-                                    <select name="coupon-code-select" id="coupon-code-select">
-                                        <option value="2023HY1111">2023HY1111</option>
-                                        <option value="2023HY1111">2023HY1221</option>
-                                    </select>
+                                    <input type="text" id="discount" name="discount"/>
                                     <div class="discount_coupon">88HAPPY折價券</div>
                                 </div>
                             </li>
@@ -421,6 +418,7 @@
                                         <label for="check">
                                             <div>付款方式<span>必填</span></div>
                                         </label>
+                                        <!-- 20250603 調整順序 start -->
                                         <fieldset>
                                             <div class="ckbutton">
                                                 <input type="radio" id="card" name="pay" checked />
@@ -450,9 +448,8 @@
                                                 <input type="radio" id="code" name="pay" />
                                                 <label for="code">超商代碼</label>
                                             </div>
-
-
                                         </fieldset>
+                                        <!-- 20250603 調整順序 end -->
                                     </div>
                                     <!-- 只有信用卡付款才會顯示 -->
                                     <div class="personal_data row" id="installment">

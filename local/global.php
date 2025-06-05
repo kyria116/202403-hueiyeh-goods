@@ -19,11 +19,11 @@
                     <li>
                         <a href="flagship-store.php">輝葉良品旗艦店</a>
                     </li>
-                    <li class="active">
+                    <li >
                         <a href="javascript:;">實體門市</a>
                     </li>
                     <!-- 20250603 新增 start -->
-                    <li >
+                    <li class="active">
                         <a href="global.php">輝葉餐飲集團</a>
                     </li>
                        <li >

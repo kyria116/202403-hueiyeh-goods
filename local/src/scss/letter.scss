@@ -5,7 +5,12 @@ body {
     visibility: revert;
     line-height: 1;
     letter-spacing: 0;
+    main {
+        opacity: 1;
+        visibility: revert;
+    }
 }
+
 .letterPage,
 .letterWarrantyPage {
     width: 100%;
