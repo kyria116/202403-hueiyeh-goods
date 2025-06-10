@@ -546,6 +546,18 @@
                                     <span>實體門市</span>
                                 </a>
                             </li>
+                            <!-- 20250603 新增 start -->
+                            <li>
+                                <a href="global.php">
+                                    <span>輝葉餐飲集團</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="massage-cafe.php">
+                                    <span>輝葉放空站</span>
+                                </a>
+                            </li>
+                            <!-- 20250603 新增 end -->
                         </ul>
                     </li>
                     <li><a class="menu-list mo_link" href="javascript:;"></a></li>

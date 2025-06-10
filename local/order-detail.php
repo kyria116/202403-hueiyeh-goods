@@ -268,12 +268,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <!-- 20250603 調整順序 end -->
                         <ul class="total">
-                            <li>
-                                <div>商品金額總計</div>
-                                <div>$1,680</div>
-                            </li>
                             <li>
                                 <div>滿件優惠折抵</div>
                                 <div>-$0</div>
@@ -299,10 +294,15 @@
                                 <div>$0</div>
                             </li>
                             <li>
+                                <div>商品金額總計</div>
+                                <div>$1,680</div>
+                            </li>
+                            <li>
                                 <div class="total_price_title">應付金額</div>
                                 <div class="total_price">$1,480</div>
                             </li>
                         </ul>
+                        <!-- 20250603 調整順序 end -->
                     </div>
                     <div class="recipient">
                         <div class="recipient_title">收件人資料</div>

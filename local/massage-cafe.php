@@ -14,24 +14,41 @@
                     <div class="twTitle">門市查詢</div>
                 </div>
             </div>
-            <div class="topMenuBox container">
-                <ul>
-                    <li>
-                        <a href="flagship-store.php">輝葉良品旗艦店</a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">實體門市</a>
-                    </li>
-                    <!-- 20250603 新增 start -->
-                    <li>
-                        <a href="global.php">輝葉餐飲集團</a>
-                    </li>
-                    <li class="active">
-                        <a href="massage-cafe.php">輝葉餐飲集團</a>
-                    </li>
-                    <!-- 20250603 新增 end -->
-                </ul>
+            <div class=" container">
+                <!-- 20250603 新增 start -->
+                <div class="product_sort">
+                    <div id="top-menu-ul-2" class="top-menu-ul-2">
+                        <div class="item_Menu">
+                            <div class="item_menu_Box">
+                                <ul class="item_menu_list slides">
+                                    <li>
+                                        <a href="flagship-store.php">輝葉良品旗艦店</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">實體門市</a>
+                                    </li>
+                                    <li>
+                                        <a href="global.php">輝葉餐飲集團</a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:;">輝葉放空站</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex-direction-nav">
+                            <a href="javascript:;" class="lbtn arrow flex-prev">
+                                <div></div>
+                            </a>
+                            <a href="javascript:;" class="rbtn arrow flex-next">
+                                <div></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- 20250603 新增 end -->
+
             <div class="sortBox container">
                 <div class="select">
                     <div class="m_title">門市區域</div>

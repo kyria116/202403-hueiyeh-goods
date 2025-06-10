@@ -274,7 +274,7 @@
                             <li>
                                 <div class="discount_item">使用折扣碼</div>
                                 <div class="input">
-                                    <input type="text" id="discount" name="discount"/>
+                                    <input type="text" id="discount" name="discount" />
                                     <div class="discount_coupon">88HAPPY折價券</div>
                                 </div>
                             </li>
@@ -295,13 +295,9 @@
                                     <div class="not_full">滿$20,000免運</div>
                                 </div>
                             </li>
-                            <!-- 20250603 調整順序 end -->
+
                         </ul>
                         <ul class="total">
-                            <li>
-                                <div>商品金額總計</div>
-                                <div>$1,680</div>
-                            </li>
                             <li>
                                 <div>滿件優惠折抵</div>
                                 <div>-$0</div>
@@ -327,10 +323,15 @@
                                 <div>$0</div>
                             </li>
                             <li>
+                                <div>商品金額總計</div>
+                                <div>$1,680</div>
+                            </li>
+                            <li>
                                 <div class="total_price_title">應付金額</div>
                                 <div class="total_price">$1,480</div>
                             </li>
                         </ul>
+                        <!-- 20250603 調整順序 end -->
                     </div>
                     <div class="recipient">
                         <div class="recipient_title">收件人資料</div>

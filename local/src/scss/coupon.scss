@@ -450,7 +450,27 @@ $product_color_5: #e30400;
     }
 }
 .points2 {
-    .registration_flex .form_title {
-        margin-top: 16px;
+    .registration_flex {
+        .form_block li {
+            &:last-child {
+                color: #000;
+            }
+            &:nth-last-child(2) {
+                color: #000;
+            }
+        }
+        .form_title {
+            margin-top: 16px;
+        }
+        .form_block {
+            &.expired {
+                li {
+                    color: #797979;
+                    div {
+                        color: #797979;
+                    }
+                }
+            }
+        }
     }
 }
