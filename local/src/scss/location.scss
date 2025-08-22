@@ -182,15 +182,15 @@
     .img {
         position: relative;
         flex: 0 0 45%;
-        max-height: 327px;
+        max-height: 100%;
         @include mediaquery(992px, 1440px) {
             flex: 0 0 50%;
         }
         @include mediaquery(null, 991px) {
-            max-height: 398px;
+            // max-height: 398px;
         }
         @include mediaquery(null, 768px) {
-            max-height: 511px;
+            // max-height: 100%;
             aspect-ratio: 1 / 0.729166;
         }
 
