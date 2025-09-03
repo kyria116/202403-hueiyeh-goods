@@ -298,6 +298,12 @@
 
                         </ul>
                         <ul class="total">
+                            <!-- 20250903 新增商品金額總計的 li start-->
+                            <li>
+                                <div>商品金額總計</div>
+                                <div>$1,680</div>
+                            </li>
+                            <!-- 20250903 新增商品金額總計的 li end-->
                             <li>
                                 <div>滿件優惠折抵</div>
                                 <div>-$0</div>
@@ -322,10 +328,7 @@
                                 <div>運費</div>
                                 <div>$0</div>
                             </li>
-                            <li>
-                                <div>商品金額總計</div>
-                                <div>$1,680</div>
-                            </li>
+                            <!-- 20250903 移除商品金額總計的 li -->
                             <li>
                                 <div class="total_price_title">應付金額</div>
                                 <div class="total_price">$1,480</div>

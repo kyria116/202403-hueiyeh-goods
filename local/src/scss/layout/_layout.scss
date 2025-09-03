@@ -137,6 +137,8 @@ a:hover {
     z-index: 999;
     background: #fff;
     pointer-events: none;
+
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
     &::before {
         content: "";
         position: absolute;
@@ -161,6 +163,9 @@ a:hover {
     mix-blend-mode: darken;
     position: relative;
     pointer-events: none;
+
+    background-clip: padding-box;
+    overflow: hidden;
     &:before,
     &:after {
         content: "";
