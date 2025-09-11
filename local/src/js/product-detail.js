@@ -6,7 +6,8 @@ $(function () {
 		if (winW > 767) {
 			marTop = 128
 		} else {
-			marTop = 24
+			// marTop = 24
+			marTop = 91
 		}
 		$('.productBox').css('margin-top', `${Number(marTop) + Number($('.fixedBuy').outerHeight())}px`)
 

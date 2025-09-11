@@ -50,7 +50,7 @@
                 <div class="fixedLeft">
                     <div class="img"><img src="dist/images/productPage/product_1.jpg" alt=""></div>
                     <div class="txt">
-                        <div class="fixedTitle"><i>伸波眠按摩床墊</i><span>迷霧黑</span></div>
+                        <div class="fixedTitle"><i>伸波眠按摩床墊伸波眠按摩床墊伸波眠按摩床墊</i><span>迷霧黑</span></div>
                         <div class="price">
                             <span class="specialOffer">$6,922</span>
                             <span class="originalPrice">$6,600</span>
